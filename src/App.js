@@ -22,16 +22,22 @@ const App = () => {
   // --- END AUDIO PLAYBACK STATE & REF FIX ---
 
   // Mock music data - each object is now a "pack" with multiple "tracks"
-  const [musicPacks, setMusicPacks] = useState([
+  // YOU WILL REPLACE THE CONTENT OF THIS musicPacks ARRAY WITH YOUR OWN DATA
+  // FIX: Removed setMusicPacks as it was unused and causing a build warning.
+  const [musicPacks] = useState([
     {
       id: 1,
-      title: 'Arabic oriental remixes 2025',
+      title: 'Deep House Essentials Vol. 1',
       artist: 'Various Artists',
-      genre: 'Oriental Remixes',
-      description: 'A curated selection of Edits and Extended Oriental remixes Curated by top DJs to ignite the dancefloor.',
-      cover: 'https://i.imgur.com/sua7apk.png', // Placeholder image
+      genre: 'Deep House',
+      description: 'A curated selection of soulful and groovy deep house tracks, perfect for warm-up sets.',
+      // REPLACE THIS WITH YOUR DIRECT IMGUR/OTHER HOSTING IMAGE URL
+      cover: 'https://placehold.co/400x400/22c55e/ffffff?text=Deep+House+Vol+1',
       tracks: [
-        { id: '1a', title: 'Midnight Groove', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+        // REPLACE THESE WITH YOUR OWN TRACK TITLES AND AUDIO PREVIEW PATHS
+        // Example for your local file:
+        { id: '1a', title: 'Midnight Groove (Your Version)', audioPreview: '/AUDIO/OR PREVIEW 1.mp3' },
+        // Use your Imgur direct links or other hosted links for other tracks
         { id: '1b', title: 'Soulful Sunrise', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
         { id: '1c', title: 'Velvet Horizon', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
         { id: '1d', title: 'After Hours Funk', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
@@ -40,13 +46,13 @@ const App = () => {
     },
     {
       id: 2,
-      title: 'AFRO ORIENTAL HOUSE',
-      artist: 'VARIOUS',
-      genre: 'AFRO-ORIENTAL',
-      description: 'Including freshest top hits arabic afro house , remixes and unreleased tracks of the year! ',
-      cover: 'https://i.imgur.com/IYiNzv9.png', // Placeholder image
+      title: 'Techno Power Pack Vol. 2',
+      artist: 'Underground Alliance',
+      genre: 'Techno',
+      description: 'Driving and intense techno cuts, designed for the darkest dancefloors.',
+      cover: 'https://placehold.co/400x400/ef4444/ffffff?text=Techno+Pack+Vol+2',
       tracks: [
-        { id: '2a', title: 'ROCK THE DANA DANA', audioPreview: '/AUDIO/OR PREVIEW 1.mp3' },
+        { id: '2a', title: 'Industrial Pulse', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
         { id: '2b', title: 'Distant Signal', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3' },
         { id: '2c', title: 'Rave Revival', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3' },
         { id: '2d', title: 'Subterranean Beat', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3' },
@@ -59,7 +65,7 @@ const App = () => {
       artist: 'Dream Weaver',
       genre: 'Progressive Trance',
       description: 'Soaring melodies and driving baselines for uplifting journeys into sound.',
-      cover: 'https://placehold.co/400x400/3b82f6/ffffff?text=Trance+Dreams', // Placeholder image
+      cover: 'https://placehold.co/400x400/3b82f6/ffffff?text=Trance+Dreams',
       tracks: [
         { id: '3a', title: 'Celestial Ascent', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3' },
         { id: '3b', title: 'Lunar Embrace', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3' },
@@ -74,7 +80,7 @@ const App = () => {
       artist: 'Bassline Cartel',
       genre: 'Drum & Bass',
       description: 'Smooth and soulful drum & bass, perfect for chillout and dancefloors alike.',
-      cover: 'https://placehold.co/400x400/f97316/ffffff?text=DnB+Funk+Bundle', // Placeholder image
+      cover: 'https://placehold.co/400x400/f97316/ffffff?text=DnB+Funk+Bundle',
       tracks: [
         { id: '4a', title: 'Flow State', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3' },
         { id: '4b', title: 'Jungle Whisper', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3' },
@@ -89,7 +95,7 @@ const App = () => {
       artist: 'Beat Innovator',
       genre: 'Future Bass',
       description: 'Catchy melodies and heavy drops for modern electronic sets and festivals.',
-      cover: 'https://placehold.co/400x400/a855f7/ffffff?text=Future+Bass+Vol+1', // Placeholder image
+      cover: 'https://placehold.co/400x400/a855f7/ffffff?text=Future+Bass+Vol+1',
       tracks: [
         { id: '5a', title: 'Neon Dreams', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-21.mp3' },
         { id: '5b', title: 'Pixel Heart', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-22.mp3' },
@@ -104,7 +110,7 @@ const App = () => {
       artist: 'Groove Machine',
       genre: 'Tech House',
       description: 'Minimal yet powerful tech house for energetic and driving club nights.',
-      cover: 'https://placehold.co/400x400/1e40af/ffffff?text=Tech+House+Vol+3', // Placeholder image
+      cover: 'https://placehold.co/400x400/1e40af/ffffff?text=Tech+House+Vol+3',
       tracks: [
         { id: '6a', title: 'Late Night Session', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-26.mp3' },
         { id: '6b', title: 'Warehouse Vibe', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-27.mp3' },
@@ -214,11 +220,6 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 to-purple-950 text-gray-100 font-inter antialiased overflow-x-hidden">
-      {/* Tailwind CSS CDN */}
-      {/* Removed from here and placed in public/index.html */}
-      {/* Inter font */}
-      {/* Removed from here and placed in public/index.html */}
-
       {/* Header */}
       <header className="bg-gray-900 bg-opacity-80 backdrop-blur-sm p-4 shadow-xl fixed w-full z-20 transition-all duration-300">
         <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -227,44 +228,48 @@ const App = () => {
           </h1>
           <ul className="flex flex-wrap justify-center gap-4 md:gap-8">
             <li>
-              <a
-                href="#home"
-                onClick={(e) => { e.preventDefault(); scrollToSection(homeRef, 'home'); }}
+              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              <button
+                onClick={() => scrollToSection(homeRef, 'home')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
-                  ${activeSection === 'home' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}`}
+                  ${activeSection === 'home' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}
+                  focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75`}
               >
                 Home
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#music"
-                onClick={(e) => { e.preventDefault(); scrollToSection(musicRef, 'music'); }}
+              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              <button
+                onClick={() => scrollToSection(musicRef, 'music')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
-                  ${activeSection === 'music' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}`}
+                  ${activeSection === 'music' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}
+                  focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75`}
               >
                 Music
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#about"
-                onClick={(e) => { e.preventDefault(); scrollToSection(aboutRef, 'about'); }}
+              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              <button
+                onClick={() => scrollToSection(aboutRef, 'about')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
-                  ${activeSection === 'about' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}`}
+                  ${activeSection === 'about' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}
+                  focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75`}
               >
                 About
-              </a>
+              </button>
             </li>
             <li>
-              <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); scrollToSection(contactRef, 'contact'); }}
+              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              <button
+                onClick={() => scrollToSection(contactRef, 'contact')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
-                  ${activeSection === 'contact' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}`}
+                  ${activeSection === 'contact' ? 'bg-emerald-600 text-white shadow-lg' : 'text-gray-300 hover:text-emerald-400 hover:bg-gray-700'}
+                  focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75`}
               >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
@@ -320,12 +325,12 @@ const App = () => {
           <span className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-24 h-2 bg-emerald-600 rounded-full opacity-70 z-0"></span>
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
-          {musicPacks.map(pack => ( // Changed from musicTracks to musicPacks
+          {musicPacks.map(pack => (
             <MusicCard
               key={pack.id}
-              pack={pack} // Pass the entire pack object
+              pack={pack}
               onPreview={handlePreview}
-              currentPlayingAudioUrl={currentlyPlayingAudioUrl} // Pass the stored URL
+              currentPlayingAudioUrl={currentlyPlayingAudioUrl}
               onBuyNow={handleBuyNow}
             />
           ))}
@@ -383,7 +388,7 @@ const App = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.65h-2.54V12h2.54V9.743c0-2.507 1.492-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.246 0-1.637.77-1.637 1.562V12h2.773l-.443 2.65h-2.33V21.88C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
           </a>
           <a href="#" className="hover:text-emerald-400 transition-colors duration-200" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.062 1.065.053 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153s.899 1.112 1.153 1.772c.248.638.412 1.363.465 2.428.052 1.066.062 1.409.062 4.122s-.01 3.056-.062 4.122c-.053 1.065-.217 1.79-.465 2.428-.254.66-.598 1.216-1.153 1.772s-1.112.899-1.772 1.153c-.638.248-1.363.412-2.428.465-1.066.052-1.409.062-4.122.062s-3.056-.01-4.122-.062c-1.065-.053-1.79-.217-2.428-.465-.66-.254-1.216-.598-1.772-1.153s-.899-1.112-1.153-1.772c-.248-.638-.412-1.363-.465-2.428-.052-1.066-.062-1.409-.062-4.122s.01-3.056.062-4.122c.053-1.065.217-1.79.465-2.428.254-.66.598-1.216 1.153-1.772s1.112-.899 1.772-1.153c.638-.248 1.363-.412 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.62c-2.717 0-3.048.01-4.097.054-.985.044-1.58.196-1.954.34-.4.152-.779.375-1.127.723-.348.348-.571.728-.723 1.127-.144.374-.296.969-.34 1.954-.044 1.049-.054 1.38-.054 4.097s.01 3.048.054 4.097c.044.985.196 1.58.34 1.954.152.4.375.779.723 1.127.348.348.728.571 1.127.723.374.144.969.296 1.954.34 1.049.044 1.38.054 4.097.054s3.048-.01 4.097-.054c.985-.044 1.58-.196 1.954-.34.4-.152.779-.375 1.127-.723.348-.348.571-.728.723-1.127.144-.374.296-.969.34-1.954.044-1.049.054-1.38.054-4.097s-.01-3.048-.054-4.097c-.044-.985-.196-1.58-.34-1.954-.152-.4-.375-.779-.723-1.127-.348-.348-.728-.571-1.127-.723-.374-.144-.969-.296-1.954-.34C15.056 3.63 14.717 3.62 12 3.62zm0 3.75a4.63 4.63 0 100 9.26 4.63 4.63 0 000-9.26zm0 1.62a3.01 3.01 0 110 6.02 3.01 3.01 0 010-6.02zM18.428 5.485a1.05 1.05 0 100 2.1 1.05 1.05 0 000-2.1z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.062 1.065.053 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153s.899 1.112 1.153 1.772c.248.638.412 1.363.465 2.428.052 1.066.062 1.409.062 4.122s-.01 3.056-.062 4.122c-.053 1.065-.217 1.79-.465 2.428-.254.66-.598 1.216-1.153 1.772s-1.112.899-1.772 1.153c-.638.248-1.363.412-2.428.465-1.066.052-1.409.062-4.122.062s-3.056-.01-4.122-.062c-1.065-.053-1.79-.217-2.428-.465-.66-.254-1.216-.598-1.772-1.153s-.899-1.112-1.153-1.772c-.248-.638-.412-1.363-.465-2.428-.052-1.066-.062-1.409-.062-4.122s.01-3.056.062-4.122c.053-1.065.217-1.79.465-2.428.254-.66.598-1.216 1.153-1.772s1.112-.899 1.772-1.153c.638-.248 1.363-.412 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.62c-2.717 0-3.048.01-4.097.054-.985.044-1.58.196-1.954.34-.4.152-.779.375-1.127.723-.348.348-.571.728-.723 1.127-.144.374-.296.969-.34 1.049-.044 1.38-.054 4.097s.01 3.048.054 4.097c.044.985.196 1.58.34 1.954.152.4.375.779.723 1.127.348.348.728.571 1.127.723.374.144.969.296 1.954.34 1.049.044 1.38.054 4.097.054s3.048-.01 4.097-.054c.985-.044 1.58-.196 1.954-.34.4-.152.779-.375 1.127-.723.348-.348.571-.728.723-1.127.144-.374.296-.969.34-1.954.044-1.049.054-1.38.054-4.097s-.01-3.048-.054-4.097c-.044-.985-.196-1.58-.34-1.954-.152-.4-.375-.779-.723-1.127-.348-.348-.728-.571-1.127-.723-.374-.144-.969-.296-1.954-.34C15.056 3.63 14.717 3.62 12 3.62zm0 3.75a4.63 4.63 0 100 9.26 4.63 4.63 0 000-9.26zm0 1.62a3.01 3.01 0 110 6.02 3.01 3.01 0 010-6.02zM18.428 5.485a1.05 1.05 0 100 2.1 1.05 1.05 0 000-2.1z"/></svg>
           </a>
           <a href="#" className="hover:text-emerald-400 transition-colors duration-200" aria-label="SoundCloud">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2.88 12.63c-1.196-.46-2.146-.66-2.87-.66-.99 0-1.74.5-2.02.9-.31.42-.3.94-.3 1.34s-.04.81.08 1.1c.14.33.4.58.74.74.39.19.86.29 1.41.29.98 0 1.83-.24 2.55-.71.5-.33.9-.76 1.18-1.2.3-.46.33-.92.33-1.27s.02-.79-.08-1.13c-.11-.37-.36-.66-.69-.87zM12 17c-1.18 0-2.17-.3-2.97-.84-.52-.35-.94-.8-1.21-1.32-.28-.53-.3-1.07-.3-1.57s-.04-1.03.08-1.42c.13-.42.39-.77.72-.99.38-.26.83-.4 1.35-.4.99 0 1.85.25 2.57.75.52.36.93.84 1.2 1.39.28.56.31 1.13.31 1.69s.02 1.09-.08 1.48c-.1.39-.35.7-.68.9-.38.23-.83.35-1.35.35zM12 7c-1.18 0-2.17-.3-2.97-.84-.52-.35-.94-.8-1.21-1.32-.28-.53-.3-1.07-.3-1.57s-.04-1.03.08-1.42c.13-.42.39-.77.72-.99.38-.26.83-.4 1.35-.4.99 0 1.85.25 2.57.75.52.36.93.84 1.2 1.39.28.56.31 1.13.31 1.69s.02 1.09-.08 1.48c-.1.39-.35.7-.68.9-.38.23-.83.35-1.35.35z"/></svg>
@@ -438,6 +443,8 @@ const MusicCard = ({ pack, onPreview, onBuyNow, currentPlayingAudioUrl }) => {
           <h5 className="text-lg font-semibold text-gray-200 mb-3">Track Previews:</h5>
           <ul className="space-y-2">
             {pack.tracks.map(track => {
+              // Ensure comparison is consistent:
+              // Use the raw audioPreview URL from the data for comparison
               const isTrackPlaying = currentPlayingAudioUrl === track.audioPreview;
               return (
                 <li key={track.id} className="flex items-center justify-between bg-gray-700 p-2 rounded-lg hover:bg-gray-600 transition-colors duration-200">
