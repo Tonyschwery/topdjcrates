@@ -38,7 +38,7 @@ const App = () => {
         // Example for your local file:
         { id: '1a', title: 'Midnight Groove (Your Version)', audioPreview: '/AUDIO/OR PREVIEW 1.mp3' },
         // Use your Imgur direct links or other hosted links for other tracks
-        { id: '1b', title: 'Soulful Sunrise', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
+        { id: '1b', title: 'Soulful Sunrise', audioPreview: '"C:\TOP DJ CRATES\public\AUDIO\OR PREVIEW 1.mp3"' },
         { id: '1c', title: 'Velvet Horizon', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
         { id: '1d', title: 'After Hours Funk', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
         { id: '1e', title: 'Urban Echoes', audioPreview: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
@@ -224,11 +224,11 @@ const App = () => {
       <header className="bg-gray-900 bg-opacity-80 backdrop-blur-sm p-4 shadow-xl fixed w-full z-20 transition-all duration-300">
         <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <h1 className="text-3xl font-extrabold text-emerald-400 mb-4 md:mb-0">
-            Your Sound Canvas
+            TOP DJ CRATES
           </h1>
           <ul className="flex flex-wrap justify-center gap-4 md:gap-8">
             <li>
-              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              {/* FIXED: Changed <a> to <button> for accessibility and to resolve React warning */}
               <button
                 onClick={() => scrollToSection(homeRef, 'home')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
@@ -239,7 +239,7 @@ const App = () => {
               </button>
             </li>
             <li>
-              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              {/* FIXED: Changed <a> to <button> for accessibility and to resolve React warning */}
               <button
                 onClick={() => scrollToSection(musicRef, 'music')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
@@ -250,7 +250,7 @@ const App = () => {
               </button>
             </li>
             <li>
-              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              {/* FIXED: Changed <a> to <button> for accessibility and to resolve React warning */}
               <button
                 onClick={() => scrollToSection(aboutRef, 'about')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
@@ -261,7 +261,7 @@ const App = () => {
               </button>
             </li>
             <li>
-              {/* FIX: Changed <a> to <button> for accessibility and to resolve React warning */}
+              {/* FIXED: Changed <a> to <button> for accessibility and to resolve React warning */}
               <button
                 onClick={() => scrollToSection(contactRef, 'contact')}
                 className={`text-lg px-3 py-1 rounded-full transition-all duration-300
@@ -381,18 +381,18 @@ const App = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 py-8 text-center text-gray-400 border-t border-gray-800">
-        <p className="text-md mb-4">&copy; {new Date().getFullYear()} Your Sound Canvas. All rights reserved.</p>
+        <p className="text-md mb-4">&copy; {new Date().getFullYear()} TOP DJ CRATES. All rights reserved.</p>
         <div className="flex justify-center space-x-6 text-2xl">
-          {/* Social media icons (using simple text/emojis, can replace with SVG/Font Awesome) */}
-          <a href="#" className="hover:text-emerald-400 transition-colors duration-200" aria-label="Facebook">
+          {/* Social media icons - NOW USING <button> elements */}
+          <button onClick={() => {}} className="hover:text-emerald-400 transition-colors duration-200" aria-label="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.65h-2.54V12h2.54V9.743c0-2.507 1.492-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.246 0-1.637.77-1.637 1.562V12h2.773l-.443 2.65h-2.33V21.88C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
-          </a>
-          <a href="#" className="hover:text-emerald-400 transition-colors duration-200" aria-label="Instagram">
+          </button>
+          <button onClick={() => {}} className="hover:text-emerald-400 transition-colors duration-200" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.062 1.065.053 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153s.899 1.112 1.153 1.772c.248.638.412 1.363.465 2.428.052 1.066.062 1.409.062 4.122s-.01 3.056-.062 4.122c-.053 1.065-.217 1.79-.465 2.428-.254.66-.598 1.216-1.153 1.772s-1.112.899-1.772 1.153c-.638.248-1.363.412-2.428.465-1.066.052-1.409.062-4.122.062s-3.056-.01-4.122-.062c-1.065-.053-1.79-.217-2.428-.465-.66-.254-1.216-.598-1.772-1.153s-.899-1.112-1.153-1.772c-.248-.638-.412-1.363-.465-2.428-.052-1.066-.062-1.409-.062-4.122s.01-3.056.062-4.122c.053-1.065.217-1.79.465-2.428.254-.66.598-1.216 1.153-1.772s1.112-.899 1.772-1.153c.638-.248 1.363-.412 2.428-.465C8.944 2.01 9.283 2 12 2zm0 1.62c-2.717 0-3.048.01-4.097.054-.985.044-1.58.196-1.954.34-.4.152-.779.375-1.127.723-.348.348-.571.728-.723 1.127-.144.374-.296.969-.34 1.049-.044 1.38-.054 4.097s.01 3.048.054 4.097c.044.985.196 1.58.34 1.954.152.4.375.779.723 1.127.348.348.728.571 1.127.723.374.144.969.296 1.954.34 1.049.044 1.38.054 4.097.054s3.048-.01 4.097-.054c.985-.044 1.58-.196 1.954-.34.4-.152.779-.375 1.127-.723.348-.348.571-.728.723-1.127.144-.374.296-.969.34-1.954.044-1.049.054-1.38.054-4.097s-.01-3.048-.054-4.097c-.044-.985-.196-1.58-.34-1.954-.152-.4-.375-.779-.723-1.127-.348-.348-.728-.571-1.127-.723-.374-.144-.969-.296-1.954-.34C15.056 3.63 14.717 3.62 12 3.62zm0 3.75a4.63 4.63 0 100 9.26 4.63 4.63 0 000-9.26zm0 1.62a3.01 3.01 0 110 6.02 3.01 3.01 0 010-6.02zM18.428 5.485a1.05 1.05 0 100 2.1 1.05 1.05 0 000-2.1z"/></svg>
-          </a>
-          <a href="#" className="hover:text-emerald-400 transition-colors duration-200" aria-label="SoundCloud">
+          </button>
+          <button onClick={() => {}} className="hover:text-emerald-400 transition-colors duration-200" aria-label="SoundCloud">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2.88 12.63c-1.196-.46-2.146-.66-2.87-.66-.99 0-1.74.5-2.02.9-.31.42-.3.94-.3 1.34s-.04.81.08 1.1c.14.33.4.58.74.74.39.19.86.29 1.41.29.98 0 1.83-.24 2.55-.71.5-.33.9-.76 1.18-1.2.3-.46.33-.92.33-1.27s.02-.79-.08-1.13c-.11-.37-.36-.66-.69-.87zM12 17c-1.18 0-2.17-.3-2.97-.84-.52-.35-.94-.8-1.21-1.32-.28-.53-.3-1.07-.3-1.57s-.04-1.03.08-1.42c.13-.42.39-.77.72-.99.38-.26.83-.4 1.35-.4.99 0 1.85.25 2.57.75.52.36.93.84 1.2 1.39.28.56.31 1.13.31 1.69s.02 1.09-.08 1.48c-.1.39-.35.7-.68.9-.38.23-.83.35-1.35.35zM12 7c-1.18 0-2.17-.3-2.97-.84-.52-.35-.94-.8-1.21-1.32-.28-.53-.3-1.07-.3-1.57s-.04-1.03.08-1.42c.13-.42.39-.77.72-.99.38-.26.83-.4 1.35-.4.99 0 1.85.25 2.57.75.52.36.93.84 1.2 1.39.28.56.31 1.13.31 1.69s.02 1.09-.08 1.48c-.1.39-.35.7-.68.9-.38.23-.83.35-1.35.35z"/></svg>
-          </a>
+          </button>
         </div>
       </footer>
 
