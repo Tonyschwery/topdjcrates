@@ -73,6 +73,24 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'this party getting hot (bollytech mashup)', audioPreview: 'https://audio-hosting.netlify.app/b2-this party getting hot (bollytech mashup) - dj baichun.mp3' },
         ] 
       },
+      { 
+        id: 21, 
+        title: 'Top AfroBeats & Shatta', 
+        artist: 'Various Artists', 
+        description: '80+ of the best Afrobeats and shatta edits for djs Ready to play WAV & MP3.', 
+        cover: 'https://i.imgur.com/xSZ570S.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'body temperature', audioPreview: 'https://audio-hosting.netlify.app/ab body temperature [judo edit].mp3' },
+          { id: '20b', title: 'kilometre (biice edit)', audioPreview: 'https://audio-hosting.netlify.app/ab burna boy - kilometre (biice edit).mp3' },
+          { id: '20c', title: 'whine up (bootleg)', audioPreview: 'https://audio-hosting.netlify.app/ab kyry & allexis x kat deluna - whine up (bootleg).mp3' },
+          { id: '20d', title: 'ms. jackson (caes edit)', audioPreview: 'https://audio-hosting.netlify.app/ab ms. jackson (caes edit).mp3' },
+          { id: '20e', title: 'work mami', audioPreview: 'https://audio-hosting.netlify.app/ab work mami (get ur freak on _flip_).mp3' },
+        ] 
+      },
   ]);
   const [currentlyPlayingAudioUrl, setCurrentlyPlayingAudioUrl] = useState(null);
   const audioPlayerRef = useRef(null);
