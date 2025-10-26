@@ -91,6 +91,24 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'work mami', audioPreview: 'https://audio-hosting.netlify.app/ab work mami (get ur freak on _flip_).mp3' },
         ] 
       },
+      { 
+        id: 22, 
+        title: 'Top Tech-House 2025', 
+        artist: 'Various Artists', 
+        description: 'This crate delivers 100+ club-ready tracks packed with rolling basslines and infectious vocal hooks. All files are DJ-edited in both WAV & MP3.', 
+        cover: 'https://i.imgur.com/GxMa8Mh.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'burna boy - tatata(hills remix)', audioPreview: 'https://audio-hosting.netlify.app/th burna boy - tatata (feat. travis scott) (hills remix).mp3' },
+          { id: '20b', title: 'rock this party (red cork edit)', audioPreview: 'https://audio-hosting.netlify.app/th bob sinclar x cruzy x mk - rock this party (red cork edit).mp3' },
+          { id: '20c', title: 'the bomb vs. anxiety', audioPreview: 'https://audio-hosting.netlify.app/th doechii - the bomb vs. anxiety (lxrenz remix) extended.mp3' },
+          { id: '20d', title: 'the weeknd - the hills (gonna drew edit)', audioPreview: 'https://audio-hosting.netlify.app/th the weeknd - the hills (gonna drew edit) [dropunited exclusive].mp3' },
+          { id: '20e', title: 'we be burnin esox remix', audioPreview: 'https://audio-hosting.netlify.app/th we be burnin esox remix sean paul.mp3' },
+        ] 
+      },
   ]);
   const [currentlyPlayingAudioUrl, setCurrentlyPlayingAudioUrl] = useState(null);
   const audioPlayerRef = useRef(null);
