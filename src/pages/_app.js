@@ -109,6 +109,24 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'we be burnin esox remix', audioPreview: 'https://audio-hosting.netlify.app/th we be burnin esox remix sean paul.mp3' },
         ] 
       },
+      { 
+        id: 23, 
+        title: 'Top Arabic Mashups & Remixes vol 4', 
+        artist: 'Various Artists', 
+        description: '60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.', 
+        cover: 'https://i.imgur.com/HF0BHDi.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
+          { id: '20b', title: 'habibi da ', audioPreview: 'https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3' },
+          { id: '20c', title: 'şașkin', audioPreview: 'https://audio-hosting.netlify.app/ar4 ilkay sencan & mahmut orhan - şașkın.mp3' },
+          { id: '20d', title: 'afya', audioPreview: 'https://audio-hosting.netlify.app/ar4 illness - afya.mp3' },
+          { id: '20e', title: 'satisfaction tseba edit', audioPreview: 'https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3' },
+        ] 
+      },
   ]);
   const [currentlyPlayingAudioUrl, setCurrentlyPlayingAudioUrl] = useState(null);
   const audioPlayerRef = useRef(null);
