@@ -130,6 +130,25 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'satisfaction tseba edit', audioPreview: 'https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3' },
         ] 
       },
+
+      { 
+        id: 24, 
+        title: 'Top Electro house & Mashups 2025', 
+        artist: 'Various Artists', 
+        description: '100+ Exclusive Tracks: A curated arsenal of the LATEST Electro house and club-ready remixes.', 
+        cover: 'https://i.imgur.com/zWiu4bH.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'Never be alone sos (mikashrine mashup)', audioPreview: 'https://audio-hosting.netlify.app/eh-david guetta & morten ft. aloe blacc vs. avicii - never be alone sos (mikashrine mashup).mp3' },
+          { id: '20b', title: 'Out of the dark & rather be (averix mashup) ', audioPreview: 'https://audio-hosting.netlify.app/eh - out of the dark & rather be (averix mashup).mp3' },
+          { id: '20c', title: 'Espresso x one more time rudeejay and da brozz mashup', audioPreview: 'https://audio-hosting.netlify.app/eh - espresso x one more time rudeejay and da brozz mashup.mp3' },
+          { id: '20d', title: 'Don t you worry child x Adagio', audioPreview: 'https://audio-hosting.netlify.app/eh - don t you worry child rencontre nocturne turn it around x adagio for square axwell i ingrosso reboot.mp3' },
+          { id: '20e', title: 'Paradise wellkrow no matter what edit', audioPreview: 'https://audio-hosting.netlify.app/eh - coldplay x telykast and xantz paradise wellkrow no matter what edit.mp3' },
+        ] 
+      },
   ]);
   const [currentlyPlayingAudioUrl, setCurrentlyPlayingAudioUrl] = useState(null);
   const audioPlayerRef = useRef(null);
