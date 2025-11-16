@@ -122,6 +122,36 @@ function MyApp({ Component, pageProps }) {
       { id: 12, title: 'Arabic Mashups & Remixes', artist: 'Various Artists', description: "130+ of the top Arabic hits remixes...", cover: 'https://i.imgur.com/mAFrPXj.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/ywmhnx', originalPrice: 35, discountedPrice: 25, tracks: [ { id: '12a', title: 'Satalana vs Joana', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - satalana vs joana.mp3' }, { id: '12b', title: 'Sabri alil', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - sabri alil.mp3' }, { id: '12c', title: 'kalamantina', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - kalamantina.mp3' }, { id: '12d', title: 'Haoulou', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - haoulou remix.mp3' }, { id: '12e', title: 'Ekhtiyarati vs Culo', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - ekhtiyarati vs culo.mp3' } ] },
       { id: 13, title: 'Arabic Mashups & Remixes vol 2', artist: 'Various Artists', description: '90+ exclusive Arabic mashups & remixes', cover: 'https://i.imgur.com/ySLfrg6.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/otval', originalPrice: 35, discountedPrice: 25, tracks: [ { id: '13a', title: 'Badna nwali3 el jaw x pitbull', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - badna nwali3 el jaw x pitbull.mp3' }, { id: '13b', title: 'Bhebak ya lebnan (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - bhebak ya lebnan (remix).mp3' }, { id: '13c', title: 'Bushret kheyr (edm remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - bushret kheyr (edm remix).mp3' }, { id: '13d', title: 'El ghazal rey2a (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - el ghazal rey2a (remix).mp3' }, { id: '13e', title: 'El salamou aaleykom (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - el salamou aaleykom (remix).mp3' }, ] },
       { id: 14, title: 'Arabic Mashups & Remixes vol 3', artist: 'Various Artists', description: '100+ tracks Our latest 2025 collection', cover: 'https://i.imgur.com/vvzp886.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/ujjrg', originalPrice: 35, discountedPrice: 25, tracks: [ { id: '14a', title: 'Akher dakka( dabke remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - akher dakka( dabke remix 2025).mp3' }, { id: '14b', title: 'Malekit jamal el kon(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - malekit jamal el kon(remix 2025).mp3' }, { id: '14c', title: 'Sabran(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - sabran(remix 2025).mp3' }, { id: '14d', title: 'Sagfa(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - sagfa(remix 2025).mp3' }, { id: '14e', title: 'Warana eh (remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - warana eh (remix 2025).mp3' }, ] },
+      { 
+        id: 23, 
+        title: 'Top Arabic Mashups & Remixes vol 4', 
+        artist: 'Various Artists', 
+        description: '60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.', 
+        cover: 'https://i.imgur.com/HF0BHDi.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
+          { id: '20b', title: 'habibi da ', audioPreview: 'https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3' },
+          { id: '20c', title: 'şașkin', audioPreview: 'https://audio-hosting.netlify.app/ar4 ilkay sencan & mahmut orhan - şașkın.mp3' },
+          { id: '20d', title: 'afya', audioPreview: 'https://audio-hosting.netlify.app/ar4 illness - afya.mp3' },
+          { id: '20e', title: 'satisfaction tseba edit', audioPreview: 'https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3' },
+        ] 
+      },
+      { 
+        id: 26, 
+        title: 'I WANT THEM ALL THE ARABIC MASHUPS & REMIXES', 
+        artist: 'Various Artists', 
+        description: '500 + Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.', 
+        cover: 'https://i.imgur.com/gCrZyab.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/dhklg',
+        demoLink: null,
+        originalPrice: 125, 
+        discountedPrice: 75, 
+       
+      },
       { id: 15, title: 'Top Arabic Wedding Playlist', artist: 'Various Artists', description: '30+ tracks for weddings & celebrations', cover: 'https://i.imgur.com/CjtG3jI.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/wmgit', originalPrice:35, discountedPrice: 25, tracks: [ { id: '15a', title: '3eress el ghawali', audioPreview: 'https://audio-hosting.netlify.app/tw-3eress el ghawali.mp3' }, { id: '15b', title: 'aarouss', audioPreview: 'https://audio-hosting.netlify.app/tw-aarouss.mp3' }, { id: '15c', title: 'Batalit soum w salleh', audioPreview: 'https://audio-hosting.netlify.app/tw-batalit soum w salleh.mp3' }, { id: '15d', title: 'Jannou behalaki', audioPreview: 'https://audio-hosting.netlify.app/tw-jannou behalaki.mp3' }, { id: '15e', title: 'Ya kel el deni', audioPreview: 'https://audio-hosting.netlify.app/tw-ya kel el deni.mp3' }, ] },
       { id: 16, title: 'I WANT THEM ALL !', artist: 'Various Artists', description: 'The Ultimate DJ Bundle', cover: 'https://i.imgur.com/b28OpXj.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms', demoLink: null, originalPrice: 300, discountedPrice: 199, tracks: [] },
       { id: 17, title: 'DANCEFLOOR WEAPONS', artist: 'Various Artists', description: 'The only crate you need to make people dance! Over 170+ selected WAV & MP3 tracks by our DJs.', cover: 'https://i.imgur.com/RI8Isa0.png', gumroadLink: 'https://topdjcrates.gumroad.com/l/gzren', originalPrice: 35, discountedPrice: 25, tracks: [ { id: '17a', title: 'Dancefloor Weapons (short preview)', audioPreview: 'https://audio-hosting.netlify.app/preview danfloor weapons.mp3' } ] },
@@ -199,24 +229,7 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'we be burnin esox remix', audioPreview: 'https://audio-hosting.netlify.app/th we be burnin esox remix sean paul.mp3' },
         ] 
       },
-      { 
-        id: 23, 
-        title: 'Top Arabic Mashups & Remixes vol 4', 
-        artist: 'Various Artists', 
-        description: '60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.', 
-        cover: 'https://i.imgur.com/HF0BHDi.png', 
-        gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
-        demoLink: null,
-        originalPrice: 35, 
-        discountedPrice: 25, 
-        tracks: [
-          { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
-          { id: '20b', title: 'habibi da ', audioPreview: 'https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3' },
-          { id: '20c', title: 'şașkin', audioPreview: 'https://audio-hosting.netlify.app/ar4 ilkay sencan & mahmut orhan - şașkın.mp3' },
-          { id: '20d', title: 'afya', audioPreview: 'https://audio-hosting.netlify.app/ar4 illness - afya.mp3' },
-          { id: '20e', title: 'satisfaction tseba edit', audioPreview: 'https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3' },
-        ] 
-      },
+      
 
       { 
         id: 24, 
