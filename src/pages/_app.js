@@ -236,6 +236,25 @@ function MyApp({ Component, pageProps }) {
           { id: '20e', title: 'Paradise wellkrow no matter what edit', audioPreview: 'https://audio-hosting.netlify.app/eh - coldplay x telykast and xantz paradise wellkrow no matter what edit.mp3' },
         ] 
       },
+
+      { 
+        id: 25, 
+        title: 'Top Reggaetton 2025', 
+        artist: 'Various Artists', 
+        description: '100+ of the BEST and LATEST hits dominating the charts and clubs', 
+        cover: 'https://i.imgur.com/LeocZlZ.png', 
+        gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
+        demoLink: null,
+        originalPrice: 35, 
+        discountedPrice: 25, 
+        tracks: [
+          { id: '20a', title: 'Nuevayol - onderkoffer & miqstar remix', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - bad bunny - nuevayol - onderkoffer & miqstar remix (intro - dirty).mp3' },
+          { id: '20b', title: 'Después de la 1 - dj blayox hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - cris mj & floyymenor - después de la 1 - dj blayox hype intro (clean).mp3' },
+          { id: '20c', title: 'Cuentale - dj xxplosive hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - david guetta, willy william & nicky jam - cuentale - dj xxplosive hype intro (clean).mp3' },
+          { id: '20d', title: 'floyymenor - byonce - gael borrego club edit', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - floyymenor - byonce - gael borrego club edit (clean).mp3' },
+          { id: '20e', title: 'karol g - latina foreva - etx hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - karol g - latina foreva - etx hype intro (clean).mp3' },
+        ] 
+      },
   ]);
   const [currentlyPlayingAudioUrl, setCurrentlyPlayingAudioUrl] = useState(null);
   const audioPlayerRef = useRef(null);
