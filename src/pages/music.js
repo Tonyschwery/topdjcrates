@@ -77,11 +77,59 @@ export default function MusicPage({
 
   const productSchemaScript = generateProductSchema();
   
+  // Get the crate from query parameter for dynamic meta tags
+  const crateId = router.isReady && router.query.crate ? parseInt(router.query.crate) : null;
+  const sharedCrate = crateId ? musicPacks.find(pack => pack.id === crateId) : null;
+  
+  // Get base URL for sharing
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.topdjcrates.com';
+  const shareUrl = sharedCrate ? `${baseUrl}/music?crate=${sharedCrate.id}` : `${baseUrl}/music`;
+  
   return (
     <>
       <Head>
-        <title>High-Quality DJ Music & Crates | TOP DJ CRATES</title>
-        <meta name="description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
+        {/* Dynamic meta tags for shared crate */}
+        {sharedCrate ? (
+          <>
+            <title>{sharedCrate.title} | TOP DJ CRATES</title>
+            <meta name="description" content={sharedCrate.description} />
+            
+            {/* Open Graph / Facebook */}
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={shareUrl} />
+            <meta property="og:title" content={`${sharedCrate.title} | TOP DJ CRATES`} />
+            <meta property="og:description" content={sharedCrate.description} />
+            <meta property="og:image" content={sharedCrate.cover} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:site_name" content="TOP DJ CRATES" />
+            
+            {/* Twitter Card */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:url" content={shareUrl} />
+            <meta name="twitter:title" content={`${sharedCrate.title} | TOP DJ CRATES`} />
+            <meta name="twitter:description" content={sharedCrate.description} />
+            <meta name="twitter:image" content={sharedCrate.cover} />
+          </>
+        ) : (
+          <>
+            <title>High-Quality DJ Music & Crates | TOP DJ CRATES</title>
+            <meta name="description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
+            
+            {/* Default Open Graph / Facebook */}
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={shareUrl} />
+            <meta property="og:title" content="High-Quality DJ Music & Crates | TOP DJ CRATES" />
+            <meta property="og:description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
+            <meta property="og:site_name" content="TOP DJ CRATES" />
+            
+            {/* Default Twitter Card */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:url" content={shareUrl} />
+            <meta name="twitter:title" content="High-Quality DJ Music & Crates | TOP DJ CRATES" />
+            <meta name="twitter:description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
+          </>
+        )}
         
         {/* --- ADDED THE PRODUCT SCHEMA SCRIPT TO THE HEAD --- */}
         {productSchemaScript && (
