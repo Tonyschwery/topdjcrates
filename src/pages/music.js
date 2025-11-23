@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import MusicCard from '@/components/MusicCard';
 
 export default function MusicPage({ 
@@ -10,6 +11,28 @@ export default function MusicPage({
   handlePreview = () => {}, 
   handleSeek = () => {} 
 }) {
+  const router = useRouter();
+  const crateRefs = useRef({});
+
+  // Scroll to specific crate when URL has query parameter
+  useEffect(() => {
+    if (router.isReady && router.query.crate) {
+      const crateId = parseInt(router.query.crate);
+      const crateElement = crateRefs.current[crateId];
+      
+      if (crateElement) {
+        // Small delay to ensure page is rendered
+        setTimeout(() => {
+          crateElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center' 
+          });
+          // Update URL without query param after scrolling (optional)
+          // router.replace('/music', undefined, { shallow: true });
+        }, 300);
+      }
+    }
+  }, [router.isReady, router.query.crate]);
 
   // --- NEW: GENERATE PRODUCT SCHEMA FOR SEO ---
   const generateProductSchema = () => {
@@ -75,15 +98,22 @@ export default function MusicPage({
         </section>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {musicPacks && musicPacks.map(pack => (
-            <MusicCard 
-              key={pack.id} 
-              pack={pack} 
-              onPreview={handlePreview} 
-              currentPlayingAudioUrl={currentlyPlayingAudioUrl} 
-              currentTrackProgress={currentTrackProgress} 
-              currentTrackDuration={currentTrackDuration} 
-              onSeek={handleSeek} 
-            />
+            <div
+              key={pack.id}
+              ref={(el) => {
+                if (el) crateRefs.current[pack.id] = el;
+              }}
+              id={`crate-${pack.id}`}
+            >
+              <MusicCard 
+                pack={pack} 
+                onPreview={handlePreview} 
+                currentPlayingAudioUrl={currentlyPlayingAudioUrl} 
+                currentTrackProgress={currentTrackProgress} 
+                currentTrackDuration={currentTrackDuration} 
+                onSeek={handleSeek} 
+              />
+            </div>
           ))}
         </div>
       </div>
