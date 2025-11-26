@@ -2,9 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import MusicCard from '@/components/MusicCard';
+import { musicPacks as initialMusicPacks } from '@/data/musicPacks';
 
 export default function MusicPage({ 
   musicPacks = [], 
+  sharedCrate = null,
+  shareUrl = '',
   currentlyPlayingAudioUrl = null, 
   currentTrackProgress = 0, 
   currentTrackDuration = 0, 
@@ -76,14 +79,6 @@ export default function MusicPage({
   };
 
   const productSchemaScript = generateProductSchema();
-  
-  // Get the crate from query parameter for dynamic meta tags
-  const crateId = router.isReady && router.query.crate ? parseInt(router.query.crate) : null;
-  const sharedCrate = crateId ? musicPacks.find(pack => pack.id === crateId) : null;
-  
-  // Get base URL for sharing
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.topdjcrates.com';
-  const shareUrl = sharedCrate ? `${baseUrl}/music?crate=${sharedCrate.id}` : `${baseUrl}/music`;
   
   return (
     <>
@@ -167,4 +162,31 @@ export default function MusicPage({
       </div>
     </>
   );
+}
+
+// Server-side props to generate proper meta tags for social sharing
+export async function getServerSideProps(context) {
+  const { crate } = context.query;
+  const baseUrl = 'https://www.topdjcrates.com';
+  
+  // If there's a crate query parameter, find the corresponding crate
+  let sharedCrate = null;
+  let shareUrl = `${baseUrl}/music`;
+  
+  if (crate) {
+    const crateId = parseInt(crate);
+    sharedCrate = initialMusicPacks.find(pack => pack.id === crateId);
+    
+    if (sharedCrate) {
+      shareUrl = `${baseUrl}/music?crate=${sharedCrate.id}`;
+    }
+  }
+  
+  return {
+    props: {
+      musicPacks: initialMusicPacks,
+      sharedCrate,
+      shareUrl,
+    },
+  };
 }
