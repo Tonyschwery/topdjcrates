@@ -95,6 +95,8 @@ export default function MusicPage({
             <meta property="og:title" content={`${sharedCrate.title} | TOP DJ CRATES`} />
             <meta property="og:description" content={sharedCrate.description} />
             <meta property="og:image" content={sharedCrate.cover} />
+            <meta property="og:image:secure_url" content={sharedCrate.cover} />
+            <meta property="og:image:type" content="image/png" />
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             <meta property="og:site_name" content="TOP DJ CRATES" />
