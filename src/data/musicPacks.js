@@ -468,5 +468,21 @@ export const musicPacks = [
       { id: '20e', title: 'karol g - latina foreva - etx hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - karol g - latina foreva - etx hype intro (clean).mp3' },
     ] 
   },
+
+  { 
+    id: 30, 
+    title: 'TOP NYE 2026 COUNTDOWN', 
+    artist: 'Various Artists', 
+    description: 'The countdown is on. Save hours of prep time with our exclusive NYE 2026 Countdowns. We give you total control—every countdown comes in 3 VERSIONS:', 
+    cover: 'https://i.imgur.com/uiGZLKH.jpeg', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/bjewmx',
+    demoLink: null,
+    originalPrice: 50, 
+    discountedPrice: 35, 
+    tracks: [
+      { id: '20a', title: 'PACK FAST PREVIEW', audioPreview: 'https://audio-hosting.netlify.app/top nye countdown (preview) 2026.mp3' },
+     
+    ] 
+  },
 ];
 
