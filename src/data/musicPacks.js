@@ -484,5 +484,24 @@ export const musicPacks = [
      
     ] 
   },
+  { 
+    id: 31, 
+    title: 'Top XMAS REMIXES', 
+    artist: 'Various Artists', 
+    description: '80+ of the BEST and LATEST XMAS REMIXES', 
+    cover: 'https://i.imgur.com/gSXkWng.png', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/lbwun',
+    demoLink: null,
+    originalPrice: 35, 
+    discountedPrice: 25, 
+    tracks: [
+      { id: '20a', title: 'Last christmas - richastic remix', audioPreview: 'https://audio-hosting.netlify.app/tx - ally brooke - last christmas - richastic remix.mp3' },
+      { id: '20b', title: 'Nuevayol - mfresh jingle bells toneplay edit', audioPreview: 'https://audio-hosting.netlify.app/tx - bad bunny - nuevayol - mfresh jingle bells toneplay edit.mp3' },
+      { id: '20c', title: 'Jingle bell rock - freejak remix', audioPreview: 'https://audio-hosting.netlify.app/tx - bobby helms - jingle bell rock - freejak remix.mp3' },
+      { id: '20d', title: 'A holly jolly christmas - dj bizzon she gon drop edit', audioPreview: 'https://audio-hosting.netlify.app/tx - burl ives - a holly jolly christmas - dj bizzon she gon drop edit.mp3' },
+      
+    ] 
+  },
+
 ];
 
