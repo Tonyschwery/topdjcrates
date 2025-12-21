@@ -18,6 +18,23 @@ export const musicPacks = [
     ] 
   },
   { 
+    id: 33, 
+    title: 'Arabic-Afro Vol. 2', 
+    artist: 'Various Artists', 
+    description: '79+ TOP SELECTED TRACKS!Step into a fusion of cultures...', 
+    cover: 'https://i.imgur.com/CoOw8gZ.jpeg', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/iusuwm', 
+    originalPrice: 35, 
+    discountedPrice: 25, 
+    tracks: [
+      { id: '1a', title: ' El Salamou Aleikom (Aares Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el salamou aleikom (aares remix).mp3' },
+      { id: '1b', title: 'El Sawareekh Laa Jayworx Boot Mix', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el sawareekh laa jayworx boot mix - jayworx.mp3' },
+      { id: '1c', title: 'Zurna II', audioPreview: 'https://audio-hosting.netlify.app/afv2 - badbox, hvmza, eliō - zurna ii.mp3' },
+      { id: '1d', title: 'Ghalban Yas Cepeda HABIBI AFRO HOUSE Remix', audioPreview: 'https://audio-hosting.netlify.app/afv2 - assala_ghalban_yas_cepeda_,_redsupa_habibi_afro_house_remix.mp3' },
+      { id: '1e', title: 'Amarain (Mayze X Faria Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - amr diab - amarain (mayze x faria remix).mp3' },
+    ] 
+  },
+  { 
     id: 2, 
     title: 'Afro-House Vol:1', 
     artist: 'Various Artists', 
