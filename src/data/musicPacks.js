@@ -103,8 +103,25 @@ export const musicPacks = [
       { id: '10e', title: 'Ta Ok (Afro house remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - ta ok lipy afrohouse remix.mp3' },
     ] 
   },
-  { 
-    id: 4, 
+  {
+    id: 27,
+    title: 'Afro-House Vol:5',
+    artist: 'Various Artists',
+    description: "Our legendary Afro House series returns! Vol 5 is massive, with 120+ tracks and over 50 exclusive edits you won't find anywhere else",
+    cover: 'https://i.imgur.com/0fTnooE.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/busoat',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '10a', title: 'The Drill (Nox house extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - alessa_khin,_dikiye_sound,_funko!_the_drill_extended_mix.mp3' },
+      { id: '10b', title: 'dana dana (Afro house remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - cheb_rayan,_avö_pt,_guapo_ao_dana_dana_feat_rima_francis.mp3' },
+      { id: '10c', title: 'valah (Extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - danny roma x manrix - valah (extended mix).mp3' },
+      { id: '10d', title: 'Shava (extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - dj dali, eden shalev - shava (extended mix).mp3' },
+      { id: '10e', title: 'Dame un beso (Extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - aaron sevilla, arkad3 - dame un beso (original mix).mp3' },
+    ]
+  },
+  {
+    id: 4,
     title: 'Top Funky House 2025', 
     artist: 'Various Artists', 
     description: '130+ handpicked fresh, high-energy selection...', 
