@@ -127,6 +127,7 @@ export const musicPacks = [
     description: 'MORE THAN 500 SELECTED TRACKS ,SAVE MORE AND GET ALL THE AFRO-HOUSE CRATES ON THE WEBSITE',
     cover: 'https://i.imgur.com/JFV3miY.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/finwx',
+    buttonText: 'Get Bundle',
     originalPrice: 150,
     discountedPrice: 99,
     tracks: []

@@ -17,6 +17,10 @@ export default function MusicPage({
   const router = useRouter();
   const crateRefs = useRef({});
 
+  // Separate bundle packs from regular packs
+  const bundlePacks = musicPacks.filter(pack => pack.buttonText === 'Get Bundle');
+  const regularPacks = musicPacks.filter(pack => pack.buttonText !== 'Get Bundle');
+
   // Scroll to specific crate when URL has query parameter
   useEffect(() => {
     if (router.isReady && router.query.crate) {
@@ -141,8 +145,44 @@ export default function MusicPage({
           <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">The Best DJ Crates Online</h1>
           <p className="text-lg md:text-xl text-text max-w-2xl mx-auto">High-quality, curated music for professional DJs. Stop searching and start playing.</p>
         </section>
+
+        {/* Bundle Packs Special Section */}
+        {bundlePacks.length > 0 && (
+          <section className="mb-20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                💰 Save More Time, More Money by Refreshing Your Library!
+              </h2>
+              <p className="text-xl text-text font-semibold">
+                Go for Bundle Offers
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
+              {bundlePacks.map(pack => (
+                <div
+                  key={pack.id}
+                  ref={(el) => {
+                    if (el) crateRefs.current[pack.id] = el;
+                  }}
+                  id={`crate-${pack.id}`}
+                >
+                  <MusicCard 
+                    pack={pack} 
+                    onPreview={handlePreview} 
+                    currentPlayingAudioUrl={currentlyPlayingAudioUrl} 
+                    currentTrackProgress={currentTrackProgress} 
+                    currentTrackDuration={currentTrackDuration} 
+                    onSeek={handleSeek} 
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Regular Music Packs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {musicPacks && musicPacks.map(pack => (
+          {regularPacks.map(pack => (
             <div
               key={pack.id}
               ref={(el) => {
