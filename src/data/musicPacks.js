@@ -175,14 +175,31 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RJe1bFI.png', 
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz', 
     demoLink: 'https://topdjcrates.gumroad.com/l/rtxwbh', 
-    originalPrice: 25, 
-    discountedPrice: 20, 
+    originalPrice: 35, 
+    discountedPrice: 25, 
     tracks: [
       { id: '6a', title: 'break my soul', audioPreview: 'https://audio-hosting.netlify.app/amapiano-break my soul.mp3' },
       { id: '6b', title: 'Breath', audioPreview: 'https://audio-hosting.netlify.app/amapiano-breath.mp3' },
       { id: '6c', title: 'My Love', audioPreview: 'https://audio-hosting.netlify.app/amapiano-my love.mp3' },
       { id: '6d', title: 'Rude Boy', audioPreview: 'https://audio-hosting.netlify.app/amapiano-rudeboy.mp3' },
       { id: '6e', title: 'Slim Shady', audioPreview: 'https://audio-hosting.netlify.app/amapiano-slim shady.mp3' },
+    ] 
+  },
+  { 
+    id: 66, 
+    title: 'Top Amapiano/Afro vol .2 ', 
+    artist: 'Various Artists', 
+    description: '88+ exclusive Amapiano and Exclusive Afro Edits...', 
+    cover: 'https://i.imgur.com/S6iI87o.jpeg', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/lgzaur', 
+    originalPrice: 35, 
+    discountedPrice: 25, 
+    tracks: [
+      { id: '6a', title: 'Brighter days - onderkoffer Remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - cajmere - brighter days - onderkoffer remix.mp3' },
+      { id: '6b', title: 'Bananza (belly dancer) - dj juize remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - akon - bananza (belly dancer) - dj juize remix (clean).mp3' },
+      { id: '6c', title: 'Rhythm of the night - Amapiano Mix', audioPreview: 'https://audio-hosting.netlify.app/am2 - corona - rhythm of the night - madness muv & dsm league remix.mp3' },
+      { id: '6d', title: 'New rules - a belgianly made mona lisa edit', audioPreview: 'https://audio-hosting.netlify.app/am2 - dua lipa - new rules - a belgianly made mona lisa edit.mp3' },
+      { id: '6e', title: 'Safari - 5 Hours Amapiano mix', audioPreview: 'https://audio-hosting.netlify.app/am2 - j balvin - safari - 5hours remix.mp3' },
     ] 
   },
   { 
