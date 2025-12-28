@@ -254,6 +254,23 @@ export const musicPacks = [
     ] 
   },
   { 
+    id: 44, 
+    title: 'Top Latin-House VOL.2', 
+    artist: 'Various Artists', 
+    description: 'The fiesta returns!79+ hand-selected tracks of pure Latin House energy.', 
+    cover: 'https://i.imgur.com/IwAc46b.png', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/vfpkjg', 
+    originalPrice: 35, 
+    discountedPrice: 25, 
+    tracks: [
+      { id: '11a', title: 'Edge of desire mk ita remix', audioPreview: 'https://audio-hosting.netlify.app/lh2 - edge of desire mk ita remix.mp3' },
+      { id: '11b', title: 'Andalucia', audioPreview: 'https://audio-hosting.netlify.app/lh2 - hugel & grossomoddo - andalucia.mp3' },
+      { id: '11c', title: 'Teka (remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - dj snake & peso pluma - teka (intro - clean).mp3' },
+      { id: '11d', title: 'lets go (5hours afro remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - david guetta - lets go (5hours afro remix).mp3' },
+      { id: '11e', title: 'Don t cha (heliograph and palau remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - don t cha heliograph and palau remix.mp3' },
+    ] 
+  },
+  { 
     id: 26, 
     title: 'Top Latin-Tech 2025', 
     artist: 'Various Artists', 
