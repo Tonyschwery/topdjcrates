@@ -406,13 +406,26 @@ export const musicPacks = [
     id: 16, 
     title: 'I WANT THEM ALL !', 
     artist: 'Various Artists', 
-    description: 'The Ultimate DJ Bundle', 
+    description: 'The Ultimate DJ Bundle more than 2000 tracks handpicked by our DJs', 
     cover: 'https://i.imgur.com/eNoK8jF.jpeg',
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms', 
     demoLink: null, 
     originalPrice: 500, 
     discountedPrice: 299, 
+    tracks: [] 
+  },
+  { 
+    id: 166, 
+    title: 'AFRO AMAPIANO REGGAETTON BUNDLE!', 
+    artist: 'Various Artists', 
+    description: 'Get 4 Handpicked Crates covering the biggest rhythms in the world: Amapiano, Afro, and Reggaeton. The perfect crossover toolkit. Refresh your library and SAVE 30% on this exclusive bundle!', 
+    cover: 'https://i.imgur.com/0rAG3WG.jpeg',
+    buttonText: 'Get Bundle',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/zirccy', 
+    demoLink: null, 
+    originalPrice: 100, 
+    discountedPrice: 69, 
     tracks: [] 
   },
   { 
