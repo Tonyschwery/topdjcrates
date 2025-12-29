@@ -407,12 +407,12 @@ export const musicPacks = [
     title: 'I WANT THEM ALL !', 
     artist: 'Various Artists', 
     description: 'The Ultimate DJ Bundle', 
-    cover: 'https://i.imgur.com/b28OpXj.png',
+    cover: 'https://i.imgur.com/eNoK8jF.jpeg',
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms', 
     demoLink: null, 
-    originalPrice: 300, 
-    discountedPrice: 199, 
+    originalPrice: 500, 
+    discountedPrice: 299, 
     tracks: [] 
   },
   { 
