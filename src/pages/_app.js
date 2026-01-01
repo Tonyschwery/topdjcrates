@@ -111,12 +111,13 @@ function MyApp({ Component, pageProps }) {
   const [currentTrackProgress, setCurrentTrackProgress] = useState(0);
   const [currentTrackDuration, setCurrentTrackDuration] = useState(0);
 
+
   // LOGIC FOR PROMO POP-UP
   useEffect(() => {
     if (router.pathname === '/' || router.pathname === '/music') {
       const timer = setTimeout(() => {
         setShowPopup(true);
-      }, 6000); 
+      }, 6000);
       return () => clearTimeout(timer);
     } else {
       setShowPopup(false);
@@ -244,9 +245,9 @@ function MyApp({ Component, pageProps }) {
         </main>
         <Footer />
         {showPopup && (
-          <PromoPopup 
-            onClose={() => setShowPopup(false)} 
-            purchaseLink="https://topdjcrates.gumroad.com/l/guvsms" 
+          <PromoPopup
+            onClose={() => setShowPopup(false)}
+            purchaseLink="https://topdjcrates.gumroad.com/l/guvsms"
           />
         )}
         <SocialProofPopup 

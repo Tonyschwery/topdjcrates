@@ -3,13 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 // I kept your existing carousel import
 import FeaturedCratesCarousel from '../components/FeaturedCratesCarousel';
-// 1. ADDED: This import for the new animation
-import FeaturedIntro from '../components/FeaturedIntro'; 
 import { musicPacks } from '../data/musicPacks'; 
 
 export default function Home({ musicPacks = [] }) {
-  // 2. ADDED: Logic to find the specific NYE pack (ID 30)
-  const nyePack = musicPacks.find(pack => pack.id === 30);
 
   return (
     <>
@@ -20,9 +16,6 @@ export default function Home({ musicPacks = [] }) {
           content="The ultimate source to download professional DJ music packs. Stop searching and start playing with exclusive, high-quality music crates curated for DJs."
         />
       </Head>
-      
-      {/* 3. ADDED: This displays the animation if the pack is found */}
-      {nyePack && <FeaturedIntro pack={nyePack} />}
 
       {/* --- EVERYTHING BELOW THIS IS YOUR ORIGINAL CODE PRESERVED --- */}
       <div className="px-4">
