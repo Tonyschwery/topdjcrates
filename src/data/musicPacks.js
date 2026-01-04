@@ -238,7 +238,7 @@ export const musicPacks = [
   },
   { 
     id: 9, 
-    title: 'Best of Disco House ', 
+    title: 'Top Disco House ', 
     artist: 'Various Artists', 
     description: '150+ Timeless Disco House edits...', 
     cover: 'https://i.imgur.com/xVxz9Qg.png', 
@@ -251,6 +251,23 @@ export const musicPacks = [
       { id: '9c', title: 'Le Freak', audioPreview: 'https://audio-hosting.netlify.app/disco-house - le freak.mp3' },
       { id: '9d', title: 'Dance the night', audioPreview: 'https://audio-hosting.netlify.app/disco-house - dance the night.mp3' },
       { id: '9e', title: 'Dance Lady', audioPreview: 'https://audio-hosting.netlify.app/disco-house - dance lady.mp3' },
+    ] 
+  },
+  { 
+    id: 99, 
+    title: 'Top Disco House vol.2', 
+    artist: 'Various Artists', 
+    description: '115+ Timeless Disco House edits...', 
+    cover: 'https://i.imgur.com/L3cHwOh.jpeg', 
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/piixrl', 
+    originalPrice: 35, 
+    discountedPrice: 25, 
+    tracks: [
+      { id: '9a', title: 'From Disco to disco', audioPreview: 'https://audio-hosting.netlify.app/dh2 - alle farben & majestic - from disco to disco.mp3' },
+      { id: '9b', title: 'Give me your lovin', audioPreview: 'https://audio-hosting.netlify.app/dh2 - armand van helden - give me your loving.mp3' },
+      { id: '9c', title: 'Stayin Alive', audioPreview: 'https://audio-hosting.netlify.app/dh2 - bee gees - stayin alive - graymatter remix.mp3' },
+      { id: '9d', title: 'Rock that body', audioPreview: 'https://audio-hosting.netlify.app/dh2 - black eyed peas - rock that body - rowka remix.mp3' },
+      { id: '9e', title: 'Thats the Way', audioPreview: 'https://audio-hosting.netlify.app/dh2 - k.c. & the sunshine band - thats the way - arzenic remix.mp3' },
     ] 
   },
   { 
