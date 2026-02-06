@@ -4,15 +4,15 @@ import { useRouter } from 'next/router';
 import MusicCard from '@/components/MusicCard';
 import { musicPacks as initialMusicPacks } from '@/data/musicPacks';
 
-export default function MusicPage({ 
-  musicPacks = [], 
+export default function MusicPage({
+  musicPacks = [],
   sharedCrate = null,
   shareUrl = '',
-  currentlyPlayingAudioUrl = null, 
-  currentTrackProgress = 0, 
-  currentTrackDuration = 0, 
-  handlePreview = () => {}, 
-  handleSeek = () => {} 
+  currentlyPlayingAudioUrl = null,
+  currentTrackProgress = 0,
+  currentTrackDuration = 0,
+  handlePreview = () => { },
+  handleSeek = () => { }
 }) {
   const router = useRouter();
   const crateRefs = useRef({});
@@ -26,13 +26,13 @@ export default function MusicPage({
     if (router.isReady && router.query.crate) {
       const crateId = parseInt(router.query.crate);
       const crateElement = crateRefs.current[crateId];
-      
+
       if (crateElement) {
         // Small delay to ensure page is rendered
         setTimeout(() => {
-          crateElement.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'center' 
+          crateElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
           });
           // Update URL without query param after scrolling (optional)
           // router.replace('/music', undefined, { shallow: true });
@@ -83,7 +83,7 @@ export default function MusicPage({
   };
 
   const productSchemaScript = generateProductSchema();
-  
+
   return (
     <>
       <Head>
@@ -92,7 +92,7 @@ export default function MusicPage({
           <>
             <title>{sharedCrate.title} | TOP DJ CRATES</title>
             <meta name="description" content={sharedCrate.description} />
-            
+
             {/* Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content={shareUrl} />
@@ -104,7 +104,7 @@ export default function MusicPage({
             <meta property="og:image:width" content="1200" />
             <meta property="og:image:height" content="630" />
             <meta property="og:site_name" content="TOP DJ CRATES" />
-            
+
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={shareUrl} />
@@ -116,14 +116,14 @@ export default function MusicPage({
           <>
             <title>High-Quality DJ Music & Crates | TOP DJ CRATES</title>
             <meta name="description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
-            
+
             {/* Default Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content={shareUrl} />
             <meta property="og:title" content="High-Quality DJ Music & Crates | TOP DJ CRATES" />
             <meta property="og:description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
             <meta property="og:site_name" content="TOP DJ CRATES" />
-            
+
             {/* Default Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={shareUrl} />
@@ -131,7 +131,7 @@ export default function MusicPage({
             <meta name="twitter:description" content="Save on high-quality DJ music. Browse the best DJ crates for Afro House, Funky House, Arabic Remixes, and more." />
           </>
         )}
-        
+
         {/* --- ADDED THE PRODUCT SCHEMA SCRIPT TO THE HEAD --- */}
         {productSchemaScript && (
           <script
@@ -166,13 +166,13 @@ export default function MusicPage({
                   }}
                   id={`crate-${pack.id}`}
                 >
-                  <MusicCard 
-                    pack={pack} 
-                    onPreview={handlePreview} 
-                    currentPlayingAudioUrl={currentlyPlayingAudioUrl} 
-                    currentTrackProgress={currentTrackProgress} 
-                    currentTrackDuration={currentTrackDuration} 
-                    onSeek={handleSeek} 
+                  <MusicCard
+                    pack={pack}
+                    onPreview={handlePreview}
+                    currentPlayingAudioUrl={currentlyPlayingAudioUrl}
+                    currentTrackProgress={currentTrackProgress}
+                    currentTrackDuration={currentTrackDuration}
+                    onSeek={handleSeek}
                   />
                 </div>
               ))}
@@ -180,27 +180,88 @@ export default function MusicPage({
           </section>
         )}
 
-        {/* Regular Music Packs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {regularPacks.map(pack => (
-            <div
-              key={pack.id}
-              ref={(el) => {
-                if (el) crateRefs.current[pack.id] = el;
-              }}
-              id={`crate-${pack.id}`}
-            >
-              <MusicCard 
-                pack={pack} 
-                onPreview={handlePreview} 
-                currentPlayingAudioUrl={currentlyPlayingAudioUrl} 
-                currentTrackProgress={currentTrackProgress} 
-                currentTrackDuration={currentTrackDuration} 
-                onSeek={handleSeek} 
-              />
-            </div>
-          ))}
-        </div>
+        {/* 2026 Releases Section */}
+        {(() => {
+          const packs2026 = regularPacks.filter(pack => pack.year === 2026);
+          const olderPacks = regularPacks.filter(pack => pack.year !== 2026);
+
+          return (
+            <>
+              {/* 2026 Separator & Grid */}
+              {packs2026.length > 0 && (
+                <div className="mb-20">
+                  <div className="relative flex items-center justify-center mb-12">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-gray-700"></div>
+                    </div>
+                    <div className="relative bg-background px-4">
+                      <span className="text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wider border-2 border-primary px-6 py-2 rounded-full shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+                        🔥 2026 Releases
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    {packs2026.map(pack => (
+                      <div
+                        key={pack.id}
+                        ref={(el) => {
+                          if (el) crateRefs.current[pack.id] = el;
+                        }}
+                        id={`crate-${pack.id}`}
+                      >
+                        <MusicCard
+                          pack={pack}
+                          onPreview={handlePreview}
+                          currentPlayingAudioUrl={currentlyPlayingAudioUrl}
+                          currentTrackProgress={currentTrackProgress}
+                          currentTrackDuration={currentTrackDuration}
+                          onSeek={handleSeek}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Previous Releases Header */}
+              {olderPacks.length > 0 && packs2026.length > 0 && (
+                <div className="relative flex items-center justify-center mb-12">
+                  <div className="absolute inset-0 flex items-center">
+                    <div className="w-full border-t border-gray-700"></div>
+                  </div>
+                  <div className="relative bg-background px-4">
+                    <h3 className="text-xl font-bold text-gray-400 uppercase tracking-widest">
+                      Previous Releases
+                    </h3>
+                  </div>
+                </div>
+              )}
+
+              {/* Previous Releases Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                {olderPacks.map(pack => (
+                  <div
+                    key={pack.id}
+                    ref={(el) => {
+                      if (el) crateRefs.current[pack.id] = el;
+                    }}
+                    id={`crate-${pack.id}`}
+                  >
+                    <MusicCard
+                      pack={pack}
+                      onPreview={handlePreview}
+                      currentPlayingAudioUrl={currentlyPlayingAudioUrl}
+                      currentTrackProgress={currentTrackProgress}
+                      currentTrackDuration={currentTrackDuration}
+                      onSeek={handleSeek}
+                    />
+                  </div>
+                ))}
+              </div>
+            </>
+          );
+        })()}
       </div>
     </>
   );
@@ -210,20 +271,20 @@ export default function MusicPage({
 export async function getServerSideProps(context) {
   const { crate } = context.query;
   const baseUrl = 'https://www.topdjcrates.com';
-  
+
   // If there's a crate query parameter, find the corresponding crate
   let sharedCrate = null;
   let shareUrl = `${baseUrl}/music`;
-  
+
   if (crate) {
     const crateId = parseInt(crate);
     sharedCrate = initialMusicPacks.find(pack => pack.id === crateId);
-    
+
     if (sharedCrate) {
       shareUrl = `${baseUrl}/music?crate=${sharedCrate.id}`;
     }
   }
-  
+
   return {
     props: {
       musicPacks: initialMusicPacks,
