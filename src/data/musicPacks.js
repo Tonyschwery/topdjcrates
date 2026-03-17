@@ -12,10 +12,28 @@ export const musicPacks = [
     discountedPrice: 25,
     tracks: [
       { id: '2026_1a', title: 'Andres suarez - hey! hey! (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - andres suarez - hey! hey! (original mix).mp3' },
-      { id: '2026_1b', title: 'bergerhaus - sun will shine another day (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - bergerhaus - sun will shine another day (original mix).mp3' },
-      { id: '2026_1b', title: 'Better than lex - party in amsterdam (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - better than lex - party in amsterdam (original mix).mp3' },
-      { id: '2026_1b', title: 'Cole vassallo - movin', audioPreview: 'https://audio-hosting.netlify.app/th26 - cole vassallo - movin.mp3' },
-      { id: '2026_1b', title: 'G-pol, answer - girls (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - g-pol, answer (cn) - girls (extended mix).mp3' },
+      { id: '2026_1b', title: 'bergerhaus - sun will shine another day (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26%20-%20bergerhaus%20-%20sun%20will%20shine%20another%20day%20(original%20mix).mp3' },
+      { id: '2026_1c', title: 'Better than lex - party in amsterdam (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - better than lex - party in amsterdam (original mix).mp3' },
+      { id: '2026_1d', title: 'Cole vassallo - movin', audioPreview: 'https://audio-hosting.netlify.app/th26 - cole vassallo - movin.mp3' },
+      { id: '2026_1e', title: 'G-pol, answer - girls (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - g-pol, answer (cn) - girls (extended mix).mp3' },
+    ]
+  }, {
+    id: 998,
+    year: 2026,
+    title: 'TOP AFRO HOUSE VOL :6',
+    artist: 'Various Artists',
+    description: 'The freshest sound of 2026 has arrived. TOP AFRO HOUSE VOL 6 delivers 146+ of the absolute latest, hand-selected tracks Available in WAV & MP3.',
+    cover: 'https://i.imgur.com/eGiqIo8.jpeg', // Placeholder image
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/unypc',
+    tracklistUrl: '/tracklists/TOPAFROHOUSEVOL6.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_1a', title: 'Twist sound - shaman (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6-twist sound - shaman (extended mix).mp3' },
+      { id: '2026_1b', title: 'Tufan uysal - new york (original mix)', audioPreview: 'https://audio-hosting.netlify.app/af6 - tufan uysal - new york (original mix).mp3' },
+      { id: '2026_1c', title: 'Hugelarviii - samarkand (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6 - hugel -samarkand (extended mix).mp3' },
+      { id: '2026_1d', title: 'kamafro - stayin alive afro disco mix', audioPreview: 'https://audio-hosting.netlify.app/af6 - richard grey lissat kamafro - stayin alive afro disco mix.mp3' },
+      { id: '2026_1e', title: 'Arkadyan - aventureros', audioPreview: 'https://audio-hosting.netlify.app/af6 -arkadyan - aventureros.mp3' },
     ]
   },
   {
