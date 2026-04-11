@@ -1,5 +1,24 @@
 export const musicPacks = [
   {
+    id: 997,
+    year: 2026,
+    title: 'Top organic/downtempo 2026 vol : 1',
+    artist: 'Various Artists',
+    description: 'The soul of 2026 captured in sound. 120+ handpicked organic house and downtempo tracks, blending earthy textures with deep, emotive grooves. Perfect for sunset sets and sophisticated dancefloors. Available in WAV & MP3.',
+    cover: 'https://i.imgur.com/C02wYNx.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/bejhmf',
+    tracklistUrl: '/tracklists/toporganichouse2026vol1.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_or1', title: 'Daniel williams - dancer', audioPreview: 'https://audio-hosting.netlify.app/od2026 - daniel williams - dancer (original mix).mp3' },
+      { id: '2026_or1', title: 'Greg ochman - sovva', audioPreview: 'https://audio-hosting.netlify.app/od2026 - greg ochman - sovva (extended mix).mp3' },
+      { id: '2026_or1', title: 'James martin - salt solace', audioPreview: 'https://audio-hosting.netlify.app/od2026 - james martin - salt solace (original mix).mp3' },
+      { id: '2026_or1', title: 'Kirr, belyi - tabalear', audioPreview: 'https://audio-hosting.netlify.app/od2026 - kirr, belyi - tabalear (extended mix).mp3' },
+      { id: '2026_or1', title: 'Manuchi, meyba hroove - pantelea', audioPreview: 'https://audio-hosting.netlify.app/od2026 - manuchi, meyba hroove - pantelea (original mix).mp3' }
+    ]
+  },
+  {
     id: 999,
     year: 2026,
     title: 'TOP TECH HOUSE 2026 VOL :1',
