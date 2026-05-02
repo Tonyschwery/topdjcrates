@@ -12,8 +12,8 @@ export const musicPacks = [
     discountedPrice: 25,
     tracks: [
       { id: '2026_oah1', title: 'Hussain al jassmi - Ma b7ebak', audioPreview: 'https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3' },
-      { id: '2026_oah2', title: 'Wahda wahda (remix)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-wahda%20wahda%20(remix).mp3' },
-      { id: '2026_oah3', title: 'Habait - Wassouf', audioPreview: 'https://audio-hosting.netlify.app/oah%20-habait.mp3' },
+      { id: '2026_oah2', title: 'Dystinct - Yama', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20dystinct%20-%20yama.mp3' },
+      { id: '2026_oah3', title: 'Hakim - El wala wala (prycewell blend)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20hakim%20-%20el%20wala%20wala%20(prycewell%20blend).mp3' },
       { id: '2026_oah4', title: 'El sod ayono (remix) - Hameed el chaiiri', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20el%20sod%20ayono%20(remix).mp3' },
       { id: '2026_oah5', title: 'Alabina - ishtar (fares remix)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20alabina%20-%20ishtar%20(fares%20remix).mp3' }
     ]
