@@ -1,5 +1,24 @@
 export const musicPacks = [
   {
+    id: 996,
+    year: 2026,
+    title: 'TOP ORIENTAL AFRO-HOUSE REMIXES 2026',
+    artist: 'Various Artists',
+    description: 'Get 75+ hand-selected remixes where mesmerizing Oriental melodies meet driving Afro-House rhythms.',
+    cover: 'https://i.imgur.com/72xuZpo.png', // Placeholder image
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/jmtsfp',
+    tracklistUrl: '/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_oah1', title: 'Hussain al jassmi - Ma b7ebak', audioPreview: 'https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3' },
+      { id: '2026_oah2', title: 'Wahda wahda (remix)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-wahda%20wahda%20(remix).mp3' },
+      { id: '2026_oah3', title: 'Habait - Wassouf', audioPreview: 'https://audio-hosting.netlify.app/oah%20-habait.mp3' },
+      { id: '2026_oah4', title: 'El sod ayono (remix) - Hameed el chaiiri', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20el%20sod%20ayono%20(remix).mp3' },
+      { id: '2026_oah5', title: 'Alabina - ishtar (fares remix)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20alabina%20-%20ishtar%20(fares%20remix).mp3' }
+    ]
+  },
+  {
     id: 997,
     year: 2026,
     title: 'Top organic/downtempo 2026 vol : 1',
