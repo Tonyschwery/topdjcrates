@@ -653,9 +653,23 @@ export const musicPacks = [
       { id: '20e', title: 'karol g - latina foreva - etx hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - karol g - latina foreva - etx hype intro (clean).mp3' },
     ]
   },
-
-
-
-
+  {
+    id: 1000,
+    year: 2026,
+    title: 'TOP ORIENTAL REMIXES 2026',
+    artist: 'Various Artists',
+    description: 'Get 124+ hand-selected tracks built by DJs, for DJs. From high-end luxury lounge vibes to driving peak-time anthems',
+    cover: 'https://i.imgur.com/crrjU87.png',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/glcpvr',
+    tracklistUrl: '/tracklists/TOPORIENTALREMIXES2026.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_or2_1', title: 'a la turka', audioPreview: 'https://audio-hosting.netlify.app/or26%20-a%20la%20turka.mp3' },
+      { id: '2026_or2_2', title: 'ya nas (remix)', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20ya%20nas%20(remix).mp3' },
+      { id: '2026_or2_3', title: 'terghalli', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20terghalli.mp3' },
+      { id: '2026_or2_4', title: 'sahby ya sahby - bahaa sultan', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20sahby%20ya%20sahby%20-%20bahaa%20sultan.mp3' },
+      { id: '2026_or2_5', title: 'beledna', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20beledna.mp3' }
+    ]
+  }
 ];
-
