@@ -44,8 +44,8 @@ const Header = () => {
             </Link> {/* Corrected Closing Tag */}
           </li>
           <li>
-            <Link href="/custom-mix" legacyBehavior>
-              <a className={`text-md transition-colors duration-300 ${router.pathname === '/custom-mix' ? activeClass : inactiveClass}`}>Custom Mix</a>
+            <Link href="/sonic-branding" legacyBehavior>
+              <a className={`text-md transition-colors duration-300 ${router.pathname === '/sonic-branding' ? activeClass : inactiveClass}`}>Sonic Branding</a>
             </Link> {/* Corrected Closing Tag */}
           </li>
           <li>
