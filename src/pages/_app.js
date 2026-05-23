@@ -187,6 +187,8 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
+  const promoCrate = musicPacks.find(pack => pack.id === 1001);
+
   const sharedProps = {
     musicPacks,
     currentlyPlayingAudioUrl,
@@ -244,10 +246,14 @@ function MyApp({ Component, pageProps }) {
           </AnimatePresence>
         </main>
         <Footer />
-        {showPopup && (
+        {showPopup && promoCrate && (
           <PromoPopup
             onClose={() => setShowPopup(false)}
-            purchaseLink="https://topdjcrates.gumroad.com/l/guvsms"
+            title={promoCrate.title}
+            subtitle="Our Best-Selling Crate! Get it now!"
+            image={promoCrate.cover}
+            purchaseLink={promoCrate.gumroadLink}
+            buttonText="Get It Now"
           />
         )}
         <SocialProofPopup 

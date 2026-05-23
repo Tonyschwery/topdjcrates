@@ -671,5 +671,24 @@ export const musicPacks = [
       { id: '2026_or2_4', title: 'sahby ya sahby - bahaa sultan', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20sahby%20ya%20sahby%20-%20bahaa%20sultan.mp3' },
       { id: '2026_or2_5', title: 'beledna', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20beledna.mp3' }
     ]
+  },
+  {
+    id: 1001,
+    year: 2026,
+    title: 'TOP INDIE DANCE 2026',
+    artist: 'Various Artists',
+    description: 'Our most requested crate of the year is live.  Get 101 hand-selected tracks defining the explosive Indie Dance movement. Heavy retro synths meet driving club basslines. The biggest trend in global dance music, fully DJ-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/udEuR19.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/pzorss',
+    tracklistUrl: '/tracklists/TOPINDIEDANCE2026.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_ti1', title: 'roland clark - i get deep roy rosenfeld extended remix', audioPreview: 'https://audio-hosting.netlify.app/ti26 - roland clark - i get deep roy rosenfeld extended remix.mp3' },
+      { id: '2026_ti2', title: 'jonk - toma la toma', audioPreview: 'https://audio-hosting.netlify.app/ti26 - jonk -toma la toma.mp3' },
+      { id: '2026_ti3', title: 'steve angello modern tales - darkness in me oi mosko yaffa edit', audioPreview: 'https://audio-hosting.netlify.app/ti26 - steve angello modern tales - darkness in me oi mosko yaffa edit.mp3' },
+      { id: '2026_ti4', title: 'the alan parsons project - sirius tapiero powder edit', audioPreview: 'https://audio-hosting.netlify.app/ti26 - the alan parsons project - sirius tapiero powder edit.mp3' },
+      { id: '2026_ti5', title: 'horeno - lochadora', audioPreview: 'https://audio-hosting.netlify.app/ti26 - horeno - lochadora.mp3' }
+    ]
   }
 ];
