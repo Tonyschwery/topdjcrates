@@ -10,10 +10,10 @@ export default function Home({ musicPacks = [] }) {
   return (
     <>
       <Head>
-        <title>Download Professional DJ Music Packs | TOP DJ CRATES</title>
+        <title>TOP DJ CRATES | Professional DJ Music Packs ($15 Limited Sale)</title>
         <meta 
           name="description" 
-          content="The ultimate source to download professional DJ music packs. Stop searching and start playing with exclusive, high-quality music crates curated for DJs."
+          content="Limited Flash Sale: All single DJ crates now just $15! Save big on high-quality, professional DJ crates. Newly added 2026 Reggaeton, Wedding Anthems, and Indie Dance crates are now live. Start playing what professional DJs actually use."
         />
       </Head>
 

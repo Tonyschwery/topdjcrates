@@ -8,6 +8,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PromoPopup from '@/components/PromoPopup';
 import SocialProofPopup from '@/components/SocialProofPopup';
+import CountdownBanner from '@/components/CountdownBanner';
 import { musicPacks as initialMusicPacks } from '@/data/musicPacks';
 
 const sampleNames = [
@@ -231,6 +232,7 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <div className="min-h-screen bg-background text-text font-sans antialiased">
+        <CountdownBanner />
         <Header />
         <main className="container mx-auto bg-vinyl-grooves">
           <AnimatePresence mode="wait">
