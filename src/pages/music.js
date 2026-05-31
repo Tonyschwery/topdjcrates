@@ -114,21 +114,21 @@ export default function MusicPage({
           </>
         ) : (
           <>
-            <title>Curated DJ Crates & Music Bundles | TOP DJ CRATES ($15 Flash Sale)</title>
-            <meta name="description" content="Save big with our limited $15 Flash Sale on all single DJ crates! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <title>Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)</title>
+            <meta name="description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
 
             {/* Default Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content={shareUrl} />
-            <meta property="og:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES ($15 Flash Sale)" />
-            <meta property="og:description" content="Save big with our limited $15 Flash Sale on all single DJ crates! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <meta property="og:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)" />
+            <meta property="og:description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
             <meta property="og:site_name" content="TOP DJ CRATES" />
 
             {/* Default Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={shareUrl} />
-            <meta name="twitter:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES ($15 Flash Sale)" />
-            <meta name="twitter:description" content="Save big with our limited $15 Flash Sale on all single DJ crates! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <meta name="twitter:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)" />
+            <meta name="twitter:description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
           </>
         )}
 

@@ -9,7 +9,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/jmtsfp',
     tracklistUrl: '/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_oah1', title: 'Hussain al jassmi - Ma b7ebak', audioPreview: 'https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3' },
       { id: '2026_oah2', title: 'Dystinct - Yama', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20dystinct%20-%20yama.mp3' },
@@ -28,7 +28,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/bejhmf',
     tracklistUrl: '/tracklists/toporganichouse2026vol1.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_or1', title: 'Daniel williams - dancer', audioPreview: 'https://audio-hosting.netlify.app/od2026 - daniel williams - dancer (original mix).mp3' },
       { id: '2026_or1', title: 'Greg ochman - sovva', audioPreview: 'https://audio-hosting.netlify.app/od2026 - greg ochman - sovva (extended mix).mp3' },
@@ -47,7 +47,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/biezqd',
     tracklistUrl: '/tracklists/TOPTECHHOUSE2026VOL1.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_1a', title: 'Andres suarez - hey! hey! (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - andres suarez - hey! hey! (original mix).mp3' },
       { id: '2026_1b', title: 'bergerhaus - sun will shine another day (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26%20-%20bergerhaus%20-%20sun%20will%20shine%20another%20day%20(original%20mix).mp3' },
@@ -65,7 +65,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/unypc',
     tracklistUrl: '/tracklists/TOPAFROHOUSEVOL6.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_1a', title: 'Twist sound - shaman (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6-twist sound - shaman (extended mix).mp3' },
       { id: '2026_1b', title: 'Tufan uysal - new york (original mix)', audioPreview: 'https://audio-hosting.netlify.app/af6 - tufan uysal - new york (original mix).mp3' },
@@ -83,7 +83,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/luilk',
     demoLink: 'https://topdjcrates.gumroad.com/l/ialts',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '1a', title: 'Baba (Rakkas remix) - Amr Diab', audioPreview: 'https://audio-hosting.netlify.app/baba (rakkas remix) - amr diab.mp3' },
       { id: '1b', title: 'Wayah (mike dokos edit)', audioPreview: 'https://audio-hosting.netlify.app/af 1 - amr diab - wayah (mike dokos edit) - preview.mp3' },
@@ -100,7 +100,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CoOw8gZ.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/iusuwm',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '1a', title: ' El Salamou Aleikom (Aares Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el salamou aleikom (aares remix).mp3' },
       { id: '1b', title: 'El Sawareekh Laa Jayworx Boot Mix', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el sawareekh laa jayworx boot mix - jayworx.mp3' },
@@ -118,7 +118,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cgfbzd',
     demoLink: 'https://topdjcrates.gumroad.com/l/kdkpn',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2a', title: 'Pasilda (sunnery james & ryan)', audioPreview: 'https://audio-hosting.netlify.app/ah 1 - afro medusa - pasilda (sunnery james & ryan) preview.mp3' },
       { id: '2b', title: 'Bandido (original mix)', audioPreview: 'https://audio-hosting.netlify.app/ah 1 - alex twin, rbør - bandido (original mix) - preview.mp3' },
@@ -135,7 +135,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/Ipgh8jP.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pcvdr',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '3a', title: 'nalingiyo (dr feel remix)', audioPreview: 'https://audio-hosting.netlify.app/eman s, ndlondlo - nalingiyo (dr feel remix)preview.mp3' },
       { id: '3b', title: 'hey mama', audioPreview: 'https://audio-hosting.netlify.app/emmanuel jal & check b - hey mamapreview.mp3' },
@@ -152,7 +152,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/VRYh4xL.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kkmby',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'Ta Ta Ta', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - ta ta ta.mp3' },
       { id: '10b', title: 'Secret id (this is america)', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - secret id (this is amerca).mp3' },
@@ -169,7 +169,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ziDyy8m.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kxzln',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'ma tnsani(Nox house remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - ma tnsani jamy nox house remix.mp3' },
       { id: '10b', title: 'jealousy (Kotto remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - khalil harrison - tyler icu - jealousy kidflo kotto remix.mp3' },
@@ -186,7 +186,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/0fTnooE.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/busoat',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'The Drill (Nox house extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - alessa_khin,_dikiye_sound,_funko!_the_drill_extended_mix.mp3' },
       { id: '10b', title: 'dana dana (Afro house remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - cheb_rayan,_avö_pt,_guapo_ao_dana_dana_feat_rima_francis.mp3' },
@@ -216,7 +216,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mjnzci',
     demoLink: 'https://topdjcrates.gumroad.com/l/f64Qe',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 20,
     tracks: [
       { id: '4a', title: 'A deeper love', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - paul adam, mia millet - a deeper love (extended mix) [there was jack] preview.mp3' },
       { id: '4b', title: 'You got the love (santify mix)', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - steve tosi - you got the love (santify mix)preview.mp3' },
@@ -233,7 +233,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/EbTJzgy.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '5a', title: 'Ma tnssani - Aya Vanco', audioPreview: 'https://audio-hosting.netlify.app/or - ma tnssani - aya vanco.mp3' },
       { id: '5b', title: 'Namaste', audioPreview: 'https://audio-hosting.netlify.app/od1 - heaven inc. - namaste (extended mix) [songuara tales]preview.mp3' },
@@ -251,7 +251,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz',
     demoLink: 'https://topdjcrates.gumroad.com/l/rtxwbh',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '6a', title: 'break my soul', audioPreview: 'https://audio-hosting.netlify.app/amapiano-break my soul.mp3' },
       { id: '6b', title: 'Breath', audioPreview: 'https://audio-hosting.netlify.app/amapiano-breath.mp3' },
@@ -268,7 +268,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/S6iI87o.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/lgzaur',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '6a', title: 'Brighter days - onderkoffer Remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - cajmere - brighter days - onderkoffer remix.mp3' },
       { id: '6b', title: 'Bananza (belly dancer) - dj juize remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - akon - bananza (belly dancer) - dj juize remix (clean).mp3' },
@@ -285,7 +285,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/bby1I0r.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '7a', title: 'Run this town', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - run this town.mp3' },
       { id: '7b', title: 'Samboosa (remix)', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - samboosa (remix).mp3' },
@@ -302,7 +302,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/C218Zts.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '8a', title: 'Friday', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - friday.mp3' },
       { id: '8b', title: 'Get it on tonight', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - get it on tonight.mp3' },
@@ -319,7 +319,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xVxz9Qg.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '9a', title: 'Mas que nada', audioPreview: 'https://audio-hosting.netlify.app/disco-house - mas que nada.mp3' },
       { id: '9b', title: 'Madan', audioPreview: 'https://audio-hosting.netlify.app/disco-house - madan.mp3' },
@@ -336,7 +336,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/L3cHwOh.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/piixrl',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '9a', title: 'From Disco to disco', audioPreview: 'https://audio-hosting.netlify.app/dh2 - alle farben & majestic - from disco to disco.mp3' },
       { id: '9b', title: 'Give me your lovin', audioPreview: 'https://audio-hosting.netlify.app/dh2 - armand van helden - give me your loving.mp3' },
@@ -353,7 +353,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/52TVI3A.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/eamxdq',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'Work', audioPreview: 'https://audio-hosting.netlify.app/latino-house - work.mp3' },
       { id: '11b', title: 'Stayin alive', audioPreview: 'https://audio-hosting.netlify.app/latino-house - stayin alive.mp3' },
@@ -370,7 +370,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/IwAc46b.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vfpkjg',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'Edge of desire mk ita remix', audioPreview: 'https://audio-hosting.netlify.app/lh2 - edge of desire mk ita remix.mp3' },
       { id: '11b', title: 'Andalucia', audioPreview: 'https://audio-hosting.netlify.app/lh2 - hugel & grossomoddo - andalucia.mp3' },
@@ -387,7 +387,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/9LJ0xGb.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ybmorl',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'lt - jamaican (bam bam) (extended mix) - hugel & solto', audioPreview: 'https://audio-hosting.netlify.app/lt - jamaican (bam bam) (extended mix) - hugel & solto.mp3' },
       { id: '11b', title: 'bad bunny - nuevayol - chango remix', audioPreview: 'https://audio-hosting.netlify.app/lt - bad bunny - nuevayol - chango remix (dirty).mp3' },
@@ -404,7 +404,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/mAFrPXj.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ywmhnx',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '12a', title: 'Satalana vs Joana', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - satalana vs joana.mp3' },
       { id: '12b', title: 'Sabri alil', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - sabri alil.mp3' },
@@ -421,7 +421,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ySLfrg6.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/otval',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '13a', title: 'Badna nwali3 el jaw x pitbull', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - badna nwali3 el jaw x pitbull.mp3' },
       { id: '13b', title: 'Bhebak ya lebnan (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - bhebak ya lebnan (remix).mp3' },
@@ -438,7 +438,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/vvzp886.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ujjrg',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '14a', title: 'Akher dakka( dabke remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - akher dakka( dabke remix 2025).mp3' },
       { id: '14b', title: 'Malekit jamal el kon(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - malekit jamal el kon(remix 2025).mp3' },
@@ -456,7 +456,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
       { id: '20b', title: 'habibi da ', audioPreview: 'https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3' },
@@ -485,7 +485,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CjtG3jI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmgit',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '15a', title: '3eress el ghawali', audioPreview: 'https://audio-hosting.netlify.app/tw-3eress el ghawali.mp3' },
       { id: '15b', title: 'aarouss', audioPreview: 'https://audio-hosting.netlify.app/tw-aarouss.mp3' },
@@ -540,7 +540,7 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RI8Isa0.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/gzren',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '17a', title: 'Dancefloor Weapons (short preview)', audioPreview: 'https://audio-hosting.netlify.app/preview danfloor weapons.mp3' },
     ]
@@ -554,7 +554,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmdgq',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: []
   },
   {
@@ -566,7 +566,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/rorrk',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '19a', title: 'espresso x maunja hi maunja (remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-espresso x maunja hi maunja (remix) - dj tejas tk & dj h7 seven.mp3' },
       { id: '19b', title: 'badshah o badshah (bstyle remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-badshah o badshah (bstyle remix) - dj baichun x dj barkha kaul.mp3' },
@@ -584,7 +584,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wxmazu',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'let the music play', audioPreview: 'https://audio-hosting.netlify.app/b2-let the music play - v-edit.mp3' },
       { id: '20b', title: 'mauja hi mauja (remix)', audioPreview: 'https://audio-hosting.netlify.app/b2-mauja hi mauja (remix) - dj kabira.mp3' },
@@ -602,7 +602,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'body temperature', audioPreview: 'https://audio-hosting.netlify.app/ab body temperature [judo edit].mp3' },
       { id: '20b', title: 'kilometre (biice edit)', audioPreview: 'https://audio-hosting.netlify.app/ab burna boy - kilometre (biice edit).mp3' },
@@ -620,7 +620,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'burna boy - tatata(hills remix)', audioPreview: 'https://audio-hosting.netlify.app/th burna boy - tatata (feat. travis scott) (hills remix).mp3' },
       { id: '20b', title: 'rock this party (red cork edit)', audioPreview: 'https://audio-hosting.netlify.app/th bob sinclar x cruzy x mk - rock this party (red cork edit).mp3' },
@@ -638,7 +638,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'Never be alone sos (mikashrine mashup)', audioPreview: 'https://audio-hosting.netlify.app/eh-david guetta & morten ft. aloe blacc vs. avicii - never be alone sos (mikashrine mashup).mp3' },
       { id: '20b', title: 'Out of the dark & rather be (averix mashup) ', audioPreview: 'https://audio-hosting.netlify.app/eh - out of the dark & rather be (averix mashup).mp3' },
@@ -656,7 +656,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
     demoLink: null,
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'Nuevayol - onderkoffer & miqstar remix', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - bad bunny - nuevayol - onderkoffer & miqstar remix (intro - dirty).mp3' },
       { id: '20b', title: 'Después de la 1 - dj blayox hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - cris mj & floyymenor - después de la 1 - dj blayox hype intro (clean).mp3' },
@@ -675,7 +675,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/glcpvr',
     tracklistUrl: '/tracklists/TOPORIENTALREMIXES2026.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_or2_1', title: 'a la turka', audioPreview: 'https://audio-hosting.netlify.app/or26%20-a%20la%20turka.mp3' },
       { id: '2026_or2_2', title: 'ya nas (remix)', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20ya%20nas%20(remix).mp3' },
@@ -694,7 +694,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pzorss',
     tracklistUrl: '/tracklists/TOPINDIEDANCE2026.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_ti1', title: 'roland clark - i get deep roy rosenfeld extended remix', audioPreview: 'https://audio-hosting.netlify.app/ti26 - roland clark - i get deep roy rosenfeld extended remix.mp3' },
       { id: '2026_ti2', title: 'jonk - toma la toma', audioPreview: 'https://audio-hosting.netlify.app/ti26 - jonk -toma la toma.mp3' },
@@ -713,7 +713,7 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ztccdi',
     tracklistUrl: '/tracklists/TOPREGGAETON2026.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_rg1', title: 'alvaro soler - animal', audioPreview: 'https://audio-hosting.netlify.app/r26 - alvaro soler - animal.mp3' },
       { id: '2026_rg2', title: 'iza, ciara & major lazer - evapora', audioPreview: 'https://audio-hosting.netlify.app/r26 - iza, ciara & major lazer - evapora.mp3' },
@@ -732,13 +732,32 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/temot',
     tracklistUrl: '/tracklists/TOPAFROBEAT.html',
     originalPrice: 35,
-    discountedPrice: 15,
+    discountedPrice: 25,
     tracks: [
       { id: '2026_ab1', title: 'dj snake & niniola - maradona riddim', audioPreview: 'https://audio-hosting.netlify.app/ab26 - dj snake & niniola - maradona riddim.mp3' },
       { id: '2026_ab2', title: 'shakira vs burna boy - dai dai', audioPreview: 'https://audio-hosting.netlify.app/ab26 - shakira vs burna boy - dai dai.mp3' },
       { id: '2026_ab3', title: 'kakalika - dope nation', audioPreview: 'https://audio-hosting.netlify.app/ab26 - kakalika - dope nation.mp3' },
       { id: '2026_ab4', title: 'king promise, mr eazi - mariana', audioPreview: 'https://audio-hosting.netlify.app/ab26 - king promise, mr eazi - mariana.mp3' },
       { id: '2026_ab5', title: 'unconditional - gyakie', audioPreview: 'https://audio-hosting.netlify.app/ab26 - unconditional - gyakie.mp3' }
+    ]
+  },
+  {
+    id: 1004,
+    year: 2026,
+    title: 'TOP DISCO REPRISE',
+    artist: 'Various Artists',
+    description: 'Get 102 hand-selected tracks featuring your favorite old-school classics remade into smooth, groovy disco edits. The ultimate soundtrack for bars, pubs, and coffee shops. Nostalgic vocals meet fresh basslines. Available in gig-ready WAV & MP3.',
+    cover: 'https://i.imgur.com/alKLN04.png',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/elhcmk',
+    tracklistUrl: '/tracklists/TOPDISCOREPRISE.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_dr1', title: 'ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit).mp3' },
+      { id: '2026_dr2', title: 'crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit).mp3' },
+      { id: '2026_dr3', title: 'billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit).mp3' },
+      { id: '2026_dr4', title: 'bananarama - venus (dario caminita revibe)', audioPreview: 'https://audio-hosting.netlify.app/dr - bananarama - venus (dario caminita revibe).mp3' },
+      { id: '2026_dr5', title: "kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit)", audioPreview: "https://audio-hosting.netlify.app/dr - kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit).mp3" }
     ]
   }
 ];

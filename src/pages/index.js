@@ -10,10 +10,10 @@ export default function Home({ musicPacks = [] }) {
   return (
     <>
       <Head>
-        <title>TOP DJ CRATES | Professional DJ Music Packs ($15 Limited Sale)</title>
+        <title>TOP DJ CRATES | Professional DJ Music Packs (40% OFF Code: LMS26)</title>
         <meta 
           name="description" 
-          content="Limited Flash Sale: All single DJ crates now just $15! Save big on high-quality, professional DJ crates. Newly added 2026 Reggaeton, Wedding Anthems, and Indie Dance crates are now live. Start playing what professional DJs actually use."
+          content="Use coupon code LMS26 at checkout for 40% OFF all items! Save big on high-quality, professional DJ crates. Newly added 2026 Reggaeton, Wedding Anthems, and Indie Dance crates are now live. Start playing what professional DJs actually use."
         />
       </Head>
 

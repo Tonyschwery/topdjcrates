@@ -57,13 +57,13 @@ const CountdownBanner = () => {
   return (
     <div className="bg-zinc-950 text-white border-b border-gold/30 py-2 px-4 text-center text-xs md:text-sm relative z-50 flex flex-col sm:flex-row justify-center items-center gap-2 md:gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.5)] animate-fade-in-up">
       {/* Sale Highlight Tag */}
-      <span className="bg-gold text-zinc-950 font-black text-[9px] md:text-[10px] tracking-widest uppercase px-2 py-0.5 rounded shadow-[0_0_10px_rgba(212,175,55,0.4)] animate-pulse">
-        ⚡ Limited Flash Sale
+      <span className="bg-gold text-zinc-950 font-black text-[9px] md:text-[10px] tracking-widest uppercase px-2 py-0.5 rounded shadow-[0_0_10px_rgba(212,175,55,0.4)]">
+        🏷️ Coupon Active
       </span>
 
       {/* Main Promo Text */}
-      <span className="font-extrabold tracking-wide text-gray-200">
-        ALL SINGLE CRATES ARE NOW JUST <span className="text-gold font-black underline decoration-double">$15</span>!
+      <span className="font-extrabold tracking-wide text-gray-200 flex items-center gap-1.5 flex-wrap justify-center">
+        USE COUPON CODE <span className="font-mono bg-zinc-900 border border-zinc-800 text-gold px-2.5 py-0.5 rounded font-black tracking-widest text-xs md:text-sm animate-pulse shadow-[0_0_10px_rgba(212,175,55,0.2)]">LMS26</span> AT CHECKOUT FOR <span className="text-gold font-black underline decoration-double">40% OFF</span> ALL ITEMS!
       </span>
 
       {/* Countdown Timer Wrapper */}
