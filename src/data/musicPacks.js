@@ -721,5 +721,24 @@ export const musicPacks = [
       { id: '2026_rg4', title: 'justin quiles - 7 am - de mision', audioPreview: 'https://audio-hosting.netlify.app/r26 - justin quiles - 7 am - de mision.mp3' },
       { id: '2026_rg5', title: 'rodolfo y su tipica ra7 - la colegiala - dj fasta remix', audioPreview: 'https://audio-hosting.netlify.app/r26 - rodolfo y su tipica ra7 - la colegiala - dj fasta remix.mp3' }
     ]
+  },
+  {
+    id: 1003,
+    year: 2026,
+    title: 'TOP AFROBEAT 2026',
+    artist: 'Various Artists',
+    description: 'Get 75 handpicked tracks defining the sound of Afrobeats in 2026. Curated strictly by our pro DJs, this crate brings the heat with smooth vocals and heavy club rhythms. Refresh your library instantly with 100% DJ-ready WAVs & MP3s.',
+    cover: 'https://i.imgur.com/Jhh9xP2.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/temot',
+    tracklistUrl: '/tracklists/TOPAFROBEAT.html',
+    originalPrice: 35,
+    discountedPrice: 15,
+    tracks: [
+      { id: '2026_ab1', title: 'dj snake & niniola - maradona riddim', audioPreview: 'https://audio-hosting.netlify.app/ab26 - dj snake & niniola - maradona riddim.mp3' },
+      { id: '2026_ab2', title: 'shakira vs burna boy - dai dai', audioPreview: 'https://audio-hosting.netlify.app/ab26 - shakira vs burna boy - dai dai.mp3' },
+      { id: '2026_ab3', title: 'kakalika - dope nation', audioPreview: 'https://audio-hosting.netlify.app/ab26 - kakalika - dope nation.mp3' },
+      { id: '2026_ab4', title: 'king promise, mr eazi - mariana', audioPreview: 'https://audio-hosting.netlify.app/ab26 - king promise, mr eazi - mariana.mp3' },
+      { id: '2026_ab5', title: 'unconditional - gyakie', audioPreview: 'https://audio-hosting.netlify.app/ab26 - unconditional - gyakie.mp3' }
+    ]
   }
 ];
