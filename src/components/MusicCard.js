@@ -22,6 +22,7 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
   };
 
   const handleGetCrateClick = () => {
+    // 1. Facebook Pixel initiate checkout tracking
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'InitiateCheckout', {
         content_name: pack.title,
@@ -29,6 +30,32 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
         content_type: 'product',
         value: pack.discountedPrice,
         currency: 'USD'
+      });
+    }
+
+    // 2. Google Analytics Tracking
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      // Standard GA4 Ecommerce Event
+      window.gtag('event', 'begin_checkout', {
+        value: pack.discountedPrice,
+        currency: 'USD',
+        items: [{
+          item_id: pack.id.toString(),
+          item_name: pack.title,
+          price: pack.discountedPrice,
+          quantity: 1,
+          item_category: pack.buttonText === 'Get Bundle' ? 'bundle' : 'crate',
+          item_category2: 'music'
+        }]
+      });
+
+      // Simple Custom GA4 Event
+      window.gtag('event', 'click_get_crate', {
+        event_category: 'engagement',
+        event_label: pack.title,
+        pack_id: pack.id,
+        price: pack.discountedPrice,
+        pack_type: pack.buttonText === 'Get Bundle' ? 'bundle' : 'crate'
       });
     }
   };
@@ -176,7 +203,17 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
             {pack.tracklistUrl && (
               <div className="mb-4">
                 <button
-                  onClick={() => setShowTracklistModal(true)}
+                  onClick={() => {
+                    setShowTracklistModal(true);
+                    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+                      window.gtag('event', 'view_tracklist', {
+                        event_category: 'engagement',
+                        event_label: pack.title,
+                        pack_id: pack.id,
+                        pack_type: 'music'
+                      });
+                    }
+                  }}
                   className="inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors border border-primary hover:border-white px-3 py-1 rounded-full"
                 >
                   <span className="mr-1">📄</span> View Full Tracklist

@@ -39,6 +39,16 @@ const Header = () => {
             </Link> {/* Corrected Closing Tag */}
           </li>
           <li>
+            <Link href="/video-dj-crates" legacyBehavior>
+              <a className={`text-md transition-colors duration-300 relative ${router.pathname === '/video-dj-crates' ? activeClass : inactiveClass}`}>
+                Video DJ Crates
+                <span className="absolute -top-3.5 -right-6.5 bg-red-600 text-white font-black text-[7px] tracking-wider uppercase px-1.5 py-0.5 rounded-full animate-pulse shadow-[0_0_8px_rgba(220,38,38,0.7)]">
+                  NEW
+                </span>
+              </a>
+            </Link>
+          </li>
+          <li>
             <Link href="/about" legacyBehavior>
               <a className={`text-md transition-colors duration-300 ${router.pathname === '/about' ? activeClass : inactiveClass}`}>About</a>
             </Link> {/* Corrected Closing Tag */}

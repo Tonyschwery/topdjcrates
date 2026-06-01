@@ -1,12 +1,14 @@
 import { musicPacks } from '@/data/musicPacks';
+import { videomusicPacks } from '@/data/videomusicPacks';
 
 const BASE_URL = 'https://www.topdjcrates.com';
 
-function generateSiteMap(packs) {
+function generateSiteMap(packs, videoPacks) {
   // Define static site routes
   const staticPages = [
     '',
     '/music',
+    '/video-dj-crates',
     '/about',
     '/contact',
     '/sonic-branding'
@@ -42,6 +44,19 @@ function generateSiteMap(packs) {
      `;
        })
        .join('')}
+     <!-- Dynamic Video DJ Crate URLs -->
+     ${videoPacks
+       .map(({ id }) => {
+         return `
+       <url>
+           <loc>${BASE_URL}/video-dj-crates?crate=${id}</loc>
+           <lastmod>${currentDate}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.7</priority>
+       </url>
+     `;
+       })
+       .join('')}
    </urlset>
  `;
 }
@@ -52,8 +67,8 @@ function SiteMap() {
 }
 
 export async function getServerSideProps({ res }) {
-  // Generate the dynamic XML content using data from musicPacks
-  const sitemap = generateSiteMap(musicPacks);
+  // Generate the dynamic XML content using data from musicPacks and videomusicPacks
+  const sitemap = generateSiteMap(musicPacks, videomusicPacks);
 
   // Set response headers and write raw XML sitemap
   res.setHeader('Content-Type', 'text/xml');
