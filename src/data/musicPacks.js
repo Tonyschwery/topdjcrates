@@ -759,5 +759,24 @@ export const musicPacks = [
       { id: '2026_dr4', title: 'bananarama - venus (dario caminita revibe)', audioPreview: 'https://audio-hosting.netlify.app/dr - bananarama - venus (dario caminita revibe).mp3' },
       { id: '2026_dr5', title: "kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit)", audioPreview: "https://audio-hosting.netlify.app/dr - kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit).mp3" }
     ]
+  },
+  {
+    id: 1005,
+    year: 2026,
+    title: 'TOP RUSSIAN REMIXES 2026',
+    artist: 'Various Artists',
+    description: 'Get 162 hand-selected tracks featuring the biggest Russian House hits and massive club remixes defining 2026. Deep, dark, and driving energy built for the dancefloor. 100% DJ-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/efwK5q0.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/itfqn',
+    tracklistUrl: '/tracklists/TOPRUSSIANREMIXES2026.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_trr1', title: 'a.v.g & согдиана - сердце - магнит (alexx slam remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - a.v.g & согдиана - сердце - магнит (alexx slam remix).mp3' },
+      { id: '2026_trr2', title: 'bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124', audioPreview: 'https://audio-hosting.netlify.app/trr26 - bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124.mp3' },
+      { id: '2026_trr3', title: 'aarne, bushido zho, anikv - тесно (hittz remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - aarne, bushido zho, anikv - тесно (hittz remix).mp3' },
+      { id: '2026_trr4', title: 'cream soda - подруга', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cream soda - подруга.mp3' },
+      { id: '2026_trr5', title: 'cygo - panda e (psproject & ecstaz remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cygo - panda e (psproject & ecstaz remix).mp3' }
+    ]
   }
 ];
