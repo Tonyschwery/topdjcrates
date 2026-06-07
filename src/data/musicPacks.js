@@ -778,5 +778,24 @@ export const musicPacks = [
       { id: '2026_trr4', title: 'cream soda - подруга', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cream soda - подруга.mp3' },
       { id: '2026_trr5', title: 'cygo - panda e (psproject & ecstaz remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cygo - panda e (psproject & ecstaz remix).mp3' }
     ]
+  },
+  {
+    id: 1006,
+    year: 2026,
+    title: 'TOP DANCE MASHUP & EDITS 2026',
+    artist: 'Various Artists',
+    description: 'Get 92 handpicked mashups and exclusive club edits defining the 2026 season. This is the one and only crate you need in your library to guarantee an explosive dancefloor. Familiar vocals meet heavy club drops. 100% DJ-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/QVLYas2.png',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/bbyetp',
+    tracklistUrl: '/tracklists/TOPdancemashup2026.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_td1', title: 'calvin harris & vidojean - how deep alemayo', audioPreview: 'https://audio-hosting.netlify.app/td26 - calvin harris & vidojean - how deep alemayo.mp3' },
+      { id: '2026_td2', title: 'fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026', audioPreview: 'https://audio-hosting.netlify.app/td26 - fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026.mp3' },
+      { id: '2026_td3', title: 'c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits)', audioPreview: 'https://audio-hosting.netlify.app/td26 - c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits).mp3' },
+      { id: '2026_td4', title: 'jamaican (bam bam) x edge of desire', audioPreview: 'https://audio-hosting.netlify.app/td26 - jamaican (bam bam) x edge of desire.mp3' },
+      { id: '2026_td5', title: 'skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway)', audioPreview: 'https://audio-hosting.netlify.app/td26 - skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway).mp3' }
+    ]
   }
 ];
