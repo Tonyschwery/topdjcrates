@@ -81,7 +81,6 @@ export const musicPacks = [
     description: '65+ TOP SELECTED TRACKS!Step into a fusion of cultures...',
     cover: 'https://i.imgur.com/ogJpPXF.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/luilk',
-    demoLink: 'https://topdjcrates.gumroad.com/l/ialts',
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -116,7 +115,6 @@ export const musicPacks = [
     description: '150+ Afro-House bangers Crafted by DJs, for DJs...',
     cover: 'https://i.imgur.com/gtXSZyl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cgfbzd',
-    demoLink: 'https://topdjcrates.gumroad.com/l/kdkpn',
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -214,7 +212,6 @@ export const musicPacks = [
     description: '130+ handpicked fresh, high-energy selection...',
     cover: 'https://i.imgur.com/xI7oBHM.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mjnzci',
-    demoLink: 'https://topdjcrates.gumroad.com/l/f64Qe',
     originalPrice: 35,
     discountedPrice: 20,
     tracks: [
@@ -249,7 +246,6 @@ export const musicPacks = [
     description: '160+ exclusive Amapiano and Exclusive Afro Edits...',
     cover: 'https://i.imgur.com/RJe1bFI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz',
-    demoLink: 'https://topdjcrates.gumroad.com/l/rtxwbh',
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -454,7 +450,6 @@ export const musicPacks = [
     description: '60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.',
     cover: 'https://i.imgur.com/HF0BHDi.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -473,7 +468,6 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/gCrZyab.png',
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/dhklg',
-    demoLink: null,
     originalPrice: 125,
     discountedPrice: 75,
   },
@@ -502,7 +496,6 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/mD76ogA.png',
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms',
-    demoLink: null,
     originalPrice: 700,
     discountedPrice: 350,
     tracks: []
@@ -515,7 +508,6 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/0rAG3WG.jpeg',
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zirccy',
-    demoLink: null,
     originalPrice: 100,
     discountedPrice: 69,
     tracks: []
@@ -552,7 +544,6 @@ export const musicPacks = [
     description: 'Get the groove! 99+ handpicked funky edits, ready to play. Instantly elevate your set with high-quality WAV and MP3 tracks.',
     cover: 'https://i.imgur.com/iYnKp6o.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmdgq',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: []
@@ -564,7 +555,6 @@ export const musicPacks = [
     description: '120+ of the best bollywood edits for djs Ready to play WAV & MP3.',
     cover: 'https://i.imgur.com/ztDN5Kl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/rorrk',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -582,7 +572,6 @@ export const musicPacks = [
     description: '120+ of the best bollywood edits for djs Ready to play WAV & MP3.',
     cover: 'https://i.imgur.com/9LVdxwB.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wxmazu',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -600,7 +589,6 @@ export const musicPacks = [
     description: '80+ of the best Afrobeats and shatta edits for djs Ready to play WAV & MP3.',
     cover: 'https://i.imgur.com/xSZ570S.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -618,7 +606,6 @@ export const musicPacks = [
     description: 'This crate delivers 100+ club-ready tracks packed with rolling basslines and infectious vocal hooks. All files are DJ-edited in both WAV & MP3.',
     cover: 'https://i.imgur.com/GxMa8Mh.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -636,7 +623,6 @@ export const musicPacks = [
     description: '100+ Exclusive Tracks: A curated arsenal of the LATEST Electro house and club-ready remixes.',
     cover: 'https://i.imgur.com/zWiu4bH.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [
@@ -654,7 +640,6 @@ export const musicPacks = [
     description: '100+ of the BEST and LATEST hits dominating the charts and clubs',
     cover: 'https://i.imgur.com/LeocZlZ.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
-    demoLink: null,
     originalPrice: 35,
     discountedPrice: 25,
     tracks: [

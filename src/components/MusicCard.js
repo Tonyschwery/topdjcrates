@@ -352,16 +352,6 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
           </div>
         </div>
 
-        {pack.demoLink && (
-          <a
-            href={pack.demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full mt-3 bg-zinc-800 text-text font-bold py-2 px-4 rounded-md text-center hover:bg-zinc-700 transition-colors duration-200"
-          >
-            Free Demo
-          </a>
-        )}
       </div>
 
       {/* Render Modal outside the card div, but inside the fragment */}
