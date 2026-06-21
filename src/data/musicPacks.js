@@ -782,5 +782,24 @@ export const musicPacks = [
       { id: '2026_td4', title: 'jamaican (bam bam) x edge of desire', audioPreview: 'https://audio-hosting.netlify.app/td26 - jamaican (bam bam) x edge of desire.mp3' },
       { id: '2026_td5', title: 'skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway)', audioPreview: 'https://audio-hosting.netlify.app/td26 - skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway).mp3' }
     ]
+  },
+  {
+    id: 1007,
+    year: 2026,
+    title: 'TOP DJ TRANSITIONS 2026',
+    artist: 'Various Artists',
+    description: 'Get 245 handpicked transition tracks designed to flawlessly jump from one speed to another. Move seamlessly across tempos and genres. The ultimate utility crate for any Open-Format DJ. 100% gig-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/pz83dA7.png',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/uieep',
+    tracklistUrl: '/tracklists/TOPdjtransitions.html',
+    originalPrice: 35,
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_tt1', title: 'bad bunny - callaita (transition edit 95-128 bootleg)', audioPreview: 'https://audio-hosting.netlify.app/tt - bad bunny - callaita (transition edit 95-128 bootleg).mp3' },
+      { id: '2026_tt2', title: 'daddy yankee - party to gasolina (culo to reggaeton sandunga)', audioPreview: 'https://audio-hosting.netlify.app/tt - daddy yankee - party to gasolina (culo to reggaeton sandunga).mp3' },
+      { id: '2026_tt3', title: 'dj katch - magalenha (110-126 transition)', audioPreview: 'https://audio-hosting.netlify.app/tt - dj katch - magalenha (110-126 transition).mp3' },
+      { id: '2026_tt4', title: 'dua lipa - levitating (120-103 transition)', audioPreview: 'https://audio-hosting.netlify.app/tt - dua lipa - levitating (120-103 transition).mp3' },
+      { id: '2026_tt5', title: 'fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125)', audioPreview: 'https://audio-hosting.netlify.app/tt - fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125).mp3' }
+    ]
   }
 ];
