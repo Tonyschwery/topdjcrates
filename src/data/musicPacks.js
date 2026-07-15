@@ -9,6 +9,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/jmtsfp',
     tracklistUrl: '/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '75+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_oah1', title: 'Hussain al jassmi - Ma b7ebak', audioPreview: 'https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3' },
@@ -28,6 +37,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/bejhmf',
     tracklistUrl: '/tracklists/toporganichouse2026vol1.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Organic / Downtempo',
+      trackCount: '120+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs","Lounge DJs"],
+      useCases: ["Sunset","Lounge","Beach Club"],
+      moods: ["Earthy","Chill","Deep"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_or1', title: 'Daniel williams - dancer', audioPreview: 'https://audio-hosting.netlify.app/od2026 - daniel williams - dancer (original mix).mp3' },
@@ -47,6 +65,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/biezqd',
     tracklistUrl: '/tracklists/TOPTECHHOUSE2026VOL1.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Tech House',
+      trackCount: '139+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
+      moods: ["Energetic","Danceable","Driving","Deep"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_1a', title: 'Andres suarez - hey! hey! (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - andres suarez - hey! hey! (original mix).mp3' },
@@ -65,6 +92,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/unypc',
     tracklistUrl: '/tracklists/TOPAFROHOUSEVOL6.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '146+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_1a', title: 'Twist sound - shaman (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6-twist sound - shaman (extended mix).mp3' },
@@ -82,6 +118,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ogJpPXF.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/luilk',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '65+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '1a', title: 'Baba (Rakkas remix) - Amr Diab', audioPreview: 'https://audio-hosting.netlify.app/baba (rakkas remix) - amr diab.mp3' },
@@ -99,6 +144,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CoOw8gZ.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/iusuwm',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '79+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '1a', title: ' El Salamou Aleikom (Aares Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el salamou aleikom (aares remix).mp3' },
@@ -116,6 +170,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/gtXSZyl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cgfbzd',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '150+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2a', title: 'Pasilda (sunnery james & ryan)', audioPreview: 'https://audio-hosting.netlify.app/ah 1 - afro medusa - pasilda (sunnery james & ryan) preview.mp3' },
@@ -133,6 +196,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/Ipgh8jP.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pcvdr',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '150+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '3a', title: 'nalingiyo (dr feel remix)', audioPreview: 'https://audio-hosting.netlify.app/eman s, ndlondlo - nalingiyo (dr feel remix)preview.mp3' },
@@ -150,6 +222,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/VRYh4xL.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kkmby',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '90+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'Ta Ta Ta', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - ta ta ta.mp3' },
@@ -167,6 +248,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ziDyy8m.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kxzln',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '120+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'ma tnsani(Nox house remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - ma tnsani jamy nox house remix.mp3' },
@@ -184,6 +274,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/0fTnooE.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/busoat',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '120+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '10a', title: 'The Drill (Nox house extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - alessa_khin,_dikiye_sound,_funko!_the_drill_extended_mix.mp3' },
@@ -200,6 +299,15 @@ export const musicPacks = [
     description: 'MORE THAN 500 SELECTED TRACKS ,SAVE MORE AND GET ALL THE AFRO-HOUSE CRATES ON THE WEBSITE',
     cover: 'https://i.imgur.com/JFV3miY.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/finwx',
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     buttonText: 'Get Bundle',
     originalPrice: 150,
     discountedPrice: 99,
@@ -213,6 +321,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xI7oBHM.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mjnzci',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Funky House',
+      trackCount: '130+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
+      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+    },
     discountedPrice: 20,
     tracks: [
       { id: '4a', title: 'A deeper love', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - paul adam, mia millet - a deeper love (extended mix) [there was jack] preview.mp3' },
@@ -230,6 +347,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/EbTJzgy.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Organic / Downtempo',
+      trackCount: '70+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs","Lounge DJs"],
+      useCases: ["Sunset","Lounge","Beach Club"],
+      moods: ["Earthy","Chill","Deep"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '5a', title: 'Ma tnssani - Aya Vanco', audioPreview: 'https://audio-hosting.netlify.app/or - ma tnssani - aya vanco.mp3' },
@@ -247,6 +373,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RJe1bFI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '160+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '6a', title: 'break my soul', audioPreview: 'https://audio-hosting.netlify.app/amapiano-break my soul.mp3' },
@@ -264,6 +399,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/S6iI87o.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/lgzaur',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '88+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '6a', title: 'Brighter days - onderkoffer Remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - cajmere - brighter days - onderkoffer remix.mp3' },
@@ -281,6 +425,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/bby1I0r.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Urban',
+      subGenre: 'R&B / Hip Hop',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
+      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '7a', title: 'Run this town', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - run this town.mp3' },
@@ -298,6 +451,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/C218Zts.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Urban',
+      subGenre: 'R&B / Hip Hop',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
+      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '8a', title: 'Friday', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - friday.mp3' },
@@ -315,6 +477,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xVxz9Qg.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Disco House',
+      trackCount: '150+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
+      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '9a', title: 'Mas que nada', audioPreview: 'https://audio-hosting.netlify.app/disco-house - mas que nada.mp3' },
@@ -332,6 +503,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/L3cHwOh.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/piixrl',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Disco House',
+      trackCount: '115+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
+      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '9a', title: 'From Disco to disco', audioPreview: 'https://audio-hosting.netlify.app/dh2 - alle farben & majestic - from disco to disco.mp3' },
@@ -349,6 +529,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/52TVI3A.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/eamxdq',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Latin',
+      subGenre: 'Latin House',
+      trackCount: '140+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Peak Time","Party"],
+      moods: ["Energetic","Danceable","Energetic","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'Work', audioPreview: 'https://audio-hosting.netlify.app/latino-house - work.mp3' },
@@ -366,6 +555,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/IwAc46b.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vfpkjg',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Latin',
+      subGenre: 'Latin House',
+      trackCount: '79+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Peak Time","Party"],
+      moods: ["Energetic","Danceable","Energetic","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'Edge of desire mk ita remix', audioPreview: 'https://audio-hosting.netlify.app/lh2 - edge of desire mk ita remix.mp3' },
@@ -383,6 +581,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/9LJ0xGb.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ybmorl',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Tech House',
+      trackCount: '85+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
+      moods: ["Energetic","Danceable","Driving","Deep"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '11a', title: 'lt - jamaican (bam bam) (extended mix) - hugel & solto', audioPreview: 'https://audio-hosting.netlify.app/lt - jamaican (bam bam) (extended mix) - hugel & solto.mp3' },
@@ -400,6 +607,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/mAFrPXj.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ywmhnx',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '130+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '12a', title: 'Satalana vs Joana', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - satalana vs joana.mp3' },
@@ -417,6 +633,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ySLfrg6.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/otval',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '90+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '13a', title: 'Badna nwali3 el jaw x pitbull', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - badna nwali3 el jaw x pitbull.mp3' },
@@ -434,6 +659,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/vvzp886.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ujjrg',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '14a', title: 'Akher dakka( dabke remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - akher dakka( dabke remix 2025).mp3' },
@@ -451,6 +685,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/HF0BHDi.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '60+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
@@ -466,6 +709,15 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: '500 + Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.',
     cover: 'https://i.imgur.com/gCrZyab.png',
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/dhklg',
     originalPrice: 125,
@@ -479,6 +731,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CjtG3jI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmgit',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '30+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '15a', title: '3eress el ghawali', audioPreview: 'https://audio-hosting.netlify.app/tw-3eress el ghawali.mp3' },
@@ -494,6 +755,15 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: 'The Ultimate DJ Bundle more than 3000 tracks handpicked by our DJs',
     cover: 'https://i.imgur.com/mD76ogA.png',
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms',
     originalPrice: 700,
@@ -506,6 +776,15 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: 'Get 4 Handpicked Crates covering the biggest rhythms in the world: Amapiano, Afro, and Reggaeton. The perfect crossover toolkit. Refresh your library and SAVE 30% on this exclusive bundle!',
     cover: 'https://i.imgur.com/0rAG3WG.jpeg',
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zirccy',
     originalPrice: 100,
@@ -518,6 +797,15 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: "Take the stress out of wedding season. 💍 Get 200+ hand-selected MP3s meticulously organized into 11 gig-ready folders (Doors Open, Dinner, Cake Cutting, Pop, Rock, R&B, Latin & more). We did the prep work so you don't have to. The ultimate, perfectly categorized survival kit for any Wedding DJ.",
     cover: 'https://i.imgur.com/HdDRrwh.png',
+      geoMetadata: {
+      primaryGenre: 'Urban',
+      subGenre: 'R&B / Hip Hop',
+      trackCount: '200+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
+      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+    },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mdyccb',
     originalPrice: 50,
@@ -532,6 +820,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RI8Isa0.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/gzren',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: '170+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '17a', title: 'Dancefloor Weapons (short preview)', audioPreview: 'https://audio-hosting.netlify.app/preview danfloor weapons.mp3' },
@@ -545,6 +842,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/iYnKp6o.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmdgq',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Funky House',
+      trackCount: '99+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
+      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+    },
     discountedPrice: 25,
     tracks: []
   },
@@ -556,6 +862,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ztDN5Kl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/rorrk',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Bollywood',
+      trackCount: '120+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Weddings","Desi Events"],
+      moods: ["Energetic","Danceable","Festive","High Energy"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '19a', title: 'espresso x maunja hi maunja (remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-espresso x maunja hi maunja (remix) - dj tejas tk & dj h7 seven.mp3' },
@@ -573,6 +888,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/9LVdxwB.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wxmazu',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Bollywood',
+      trackCount: '120+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Weddings","Desi Events"],
+      moods: ["Energetic","Danceable","Festive","High Energy"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'let the music play', audioPreview: 'https://audio-hosting.netlify.app/b2-let the music play - v-edit.mp3' },
@@ -590,6 +914,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xSZ570S.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: '80+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'body temperature', audioPreview: 'https://audio-hosting.netlify.app/ab body temperature [judo edit].mp3' },
@@ -607,6 +940,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/GxMa8Mh.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Tech House',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
+      moods: ["Energetic","Danceable","Driving","Deep"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'burna boy - tatata(hills remix)', audioPreview: 'https://audio-hosting.netlify.app/th burna boy - tatata (feat. travis scott) (hills remix).mp3' },
@@ -624,6 +966,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/zWiu4bH.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'Never be alone sos (mikashrine mashup)', audioPreview: 'https://audio-hosting.netlify.app/eh-david guetta & morten ft. aloe blacc vs. avicii - never be alone sos (mikashrine mashup).mp3' },
@@ -641,6 +992,15 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/LeocZlZ.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: '100+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '20a', title: 'Nuevayol - onderkoffer & miqstar remix', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - bad bunny - nuevayol - onderkoffer & miqstar remix (intro - dirty).mp3' },
@@ -660,6 +1020,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/glcpvr',
     tracklistUrl: '/tracklists/TOPORIENTALREMIXES2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'World',
+      subGenre: 'Arabic/Oriental',
+      trackCount: '124+',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
+      moods: ["Energetic","Danceable","Cultural","Festive"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_or2_1', title: 'a la turka', audioPreview: 'https://audio-hosting.netlify.app/or26%20-a%20la%20turka.mp3' },
@@ -679,6 +1048,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pzorss',
     tracklistUrl: '/tracklists/TOPINDIEDANCE2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Indie Dance',
+      trackCount: '101',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Club Sets","Late Night"],
+      moods: ["Energetic","Danceable","Retro","Driving"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_ti1', title: 'roland clark - i get deep roy rosenfeld extended remix', audioPreview: 'https://audio-hosting.netlify.app/ti26 - roland clark - i get deep roy rosenfeld extended remix.mp3' },
@@ -698,6 +1076,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ztccdi',
     tracklistUrl: '/tracklists/TOPREGGAETON2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Latin',
+      subGenre: 'Reggaeton',
+      trackCount: '83',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Mainstream","Party"],
+      moods: ["Energetic","Danceable","Upbeat","Party"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_rg1', title: 'alvaro soler - animal', audioPreview: 'https://audio-hosting.netlify.app/r26 - alvaro soler - animal.mp3' },
@@ -717,6 +1104,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/temot',
     tracklistUrl: '/tracklists/TOPAFROBEAT.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Afro-House',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
+      moods: ["Energetic","Danceable","Tribal","Groove"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_ab1', title: 'dj snake & niniola - maradona riddim', audioPreview: 'https://audio-hosting.netlify.app/ab26 - dj snake & niniola - maradona riddim.mp3' },
@@ -736,6 +1132,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/elhcmk',
     tracklistUrl: '/tracklists/TOPDISCOREPRISE.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'House',
+      subGenre: 'Disco House',
+      trackCount: '102',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
+      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_dr1', title: 'ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit).mp3' },
@@ -755,6 +1160,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/itfqn',
     tracklistUrl: '/tracklists/TOPRUSSIANREMIXES2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: '162',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_trr1', title: 'a.v.g & согдиана - сердце - магнит (alexx slam remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - a.v.g & согдиана - сердце - магнит (alexx slam remix).mp3' },
@@ -774,6 +1188,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/bbyetp',
     tracklistUrl: '/tracklists/TOPdancemashup2026.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_td1', title: 'calvin harris & vidojean - how deep alemayo', audioPreview: 'https://audio-hosting.netlify.app/td26 - calvin harris & vidojean - how deep alemayo.mp3' },
@@ -793,6 +1216,15 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uieep',
     tracklistUrl: '/tracklists/TOPdjtransitions.html',
     originalPrice: 35,
+      geoMetadata: {
+      primaryGenre: 'Electronic',
+      subGenre: 'Dance',
+      trackCount: 'Multiple',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs","Club DJs"],
+      useCases: ["Club Sets","DJ Mixes"],
+      moods: ["Energetic","Danceable"]
+    },
     discountedPrice: 25,
     tracks: [
       { id: '2026_tt1', title: 'bad bunny - callaita (transition edit 95-128 bootleg)', audioPreview: 'https://audio-hosting.netlify.app/tt - bad bunny - callaita (transition edit 95-128 bootleg).mp3' },
