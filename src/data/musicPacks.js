@@ -9,14 +9,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/jmtsfp',
     tracklistUrl: '/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '75+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -37,14 +36,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/bejhmf',
     tracklistUrl: '/tracklists/toporganichouse2026vol1.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Organic / Downtempo',
+    geoMetadata: {
+      genre: 'Organic / Downtempo',
       trackCount: '120+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs","Lounge DJs"],
-      useCases: ["Sunset","Lounge","Beach Club"],
-      moods: ["Earthy","Chill","Deep"]
+      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
+      useCases: ["Sunset", "Lounge", "Beach Club"],
+      moods: ["Earthy", "Chill", "Deep"]
     },
     discountedPrice: 25,
     tracks: [
@@ -65,14 +63,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/biezqd',
     tracklistUrl: '/tracklists/TOPTECHHOUSE2026VOL1.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Tech House',
+    geoMetadata: {
+      genre: 'Tech House',
       trackCount: '139+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
-      moods: ["Energetic","Danceable","Driving","Deep"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"]
     },
     discountedPrice: 25,
     tracks: [
@@ -92,14 +89,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/unypc',
     tracklistUrl: '/tracklists/TOPAFROHOUSEVOL6.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '146+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -118,14 +114,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ogJpPXF.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/luilk',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '65+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -144,14 +139,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CoOw8gZ.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/iusuwm',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '79+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -170,14 +164,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/gtXSZyl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cgfbzd',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '150+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -196,14 +189,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/Ipgh8jP.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pcvdr',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '150+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -222,14 +214,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/VRYh4xL.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kkmby',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '90+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -248,14 +239,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ziDyy8m.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/kxzln',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '120+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -274,14 +264,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/0fTnooE.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/busoat',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: '120+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -299,14 +288,13 @@ export const musicPacks = [
     description: 'MORE THAN 500 SELECTED TRACKS ,SAVE MORE AND GET ALL THE AFRO-HOUSE CRATES ON THE WEBSITE',
     cover: 'https://i.imgur.com/JFV3miY.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/finwx',
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Afro-House',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     buttonText: 'Get Bundle',
     originalPrice: 150,
@@ -321,14 +309,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xI7oBHM.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mjnzci',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Funky House',
+    geoMetadata: {
+      genre: 'Funky House',
       trackCount: '130+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
-      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
     },
     discountedPrice: 20,
     tracks: [
@@ -347,14 +334,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/EbTJzgy.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Organic / Downtempo',
+    geoMetadata: {
+      genre: 'Organic / Downtempo',
       trackCount: '70+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs","Lounge DJs"],
-      useCases: ["Sunset","Lounge","Beach Club"],
-      moods: ["Earthy","Chill","Deep"]
+      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
+      useCases: ["Sunset", "Lounge", "Beach Club"],
+      moods: ["Earthy", "Chill", "Deep"]
     },
     discountedPrice: 25,
     tracks: [
@@ -373,14 +359,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RJe1bFI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Amapiano/Afrobeats',
       trackCount: '160+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -399,14 +384,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/S6iI87o.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/lgzaur',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Amapiano/Afrobeats',
       trackCount: '88+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -425,14 +409,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/bby1I0r.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Urban',
-      subGenre: 'R&B / Hip Hop',
+    geoMetadata: {
+      genre: 'R&B / Hip Hop',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
-      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
     },
     discountedPrice: 25,
     tracks: [
@@ -451,14 +434,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/C218Zts.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Urban',
-      subGenre: 'R&B / Hip Hop',
+    geoMetadata: {
+      genre: 'R&B / Hip Hop',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
-      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
     },
     discountedPrice: 25,
     tracks: [
@@ -477,14 +459,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xVxz9Qg.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Disco House',
+    geoMetadata: {
+      genre: 'Disco House',
       trackCount: '150+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
-      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
     },
     discountedPrice: 25,
     tracks: [
@@ -503,14 +484,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/L3cHwOh.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/piixrl',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Disco House',
+    geoMetadata: {
+      genre: 'Disco House',
       trackCount: '115+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
-      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
     },
     discountedPrice: 25,
     tracks: [
@@ -529,14 +509,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/52TVI3A.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/eamxdq',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Latin',
-      subGenre: 'Latin House',
+    geoMetadata: {
+      genre: 'Latin House',
       trackCount: '140+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Peak Time","Party"],
-      moods: ["Energetic","Danceable","Energetic","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
+      moods: ["Energetic", "Danceable", "Energetic", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -555,14 +534,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/IwAc46b.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/vfpkjg',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Latin',
-      subGenre: 'Latin House',
+    geoMetadata: {
+      genre: 'Latin House',
       trackCount: '79+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Peak Time","Party"],
-      moods: ["Energetic","Danceable","Energetic","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
+      moods: ["Energetic", "Danceable", "Energetic", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -581,14 +559,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/9LJ0xGb.jpeg',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ybmorl',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Tech House',
+    geoMetadata: {
+      genre: 'Tech House',
       trackCount: '85+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
-      moods: ["Energetic","Danceable","Driving","Deep"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"]
     },
     discountedPrice: 25,
     tracks: [
@@ -607,14 +584,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/mAFrPXj.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ywmhnx',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '130+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -633,14 +609,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ySLfrg6.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/otval',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '90+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -659,14 +634,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/vvzp886.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ujjrg',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -685,14 +659,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/HF0BHDi.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '60+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -704,19 +677,18 @@ export const musicPacks = [
     ]
   },
   {
-    id: 26,
+    id: 1009,
     title: 'I WANT THEM ALL THE ARABIC MASHUPS & REMIXES',
     artist: 'Various Artists',
     description: '500 + Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.',
     cover: 'https://i.imgur.com/gCrZyab.png',
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/dhklg',
@@ -731,14 +703,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/CjtG3jI.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmgit',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '30+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -755,14 +726,13 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: 'The Ultimate DJ Bundle more than 3000 tracks handpicked by our DJs',
     cover: 'https://i.imgur.com/mD76ogA.png',
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms',
@@ -776,14 +746,13 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: 'Get 4 Handpicked Crates covering the biggest rhythms in the world: Amapiano, Afro, and Reggaeton. The perfect crossover toolkit. Refresh your library and SAVE 30% on this exclusive bundle!',
     cover: 'https://i.imgur.com/0rAG3WG.jpeg',
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Amapiano/Afrobeats',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zirccy',
@@ -797,14 +766,13 @@ export const musicPacks = [
     artist: 'Various Artists',
     description: "Take the stress out of wedding season. 💍 Get 200+ hand-selected MP3s meticulously organized into 11 gig-ready folders (Doors Open, Dinner, Cake Cutting, Pop, Rock, R&B, Latin & more). We did the prep work so you don't have to. The ultimate, perfectly categorized survival kit for any Wedding DJ.",
     cover: 'https://i.imgur.com/HdDRrwh.png',
-      geoMetadata: {
-      primaryGenre: 'Urban',
-      subGenre: 'R&B / Hip Hop',
+    geoMetadata: {
+      genre: 'Weddings',
       trackCount: '200+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Party","Urban Sets"],
-      moods: ["Energetic","Danceable","Upbeat","Bouncy"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
     },
     buttonText: 'Get Bundle',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/mdyccb',
@@ -820,14 +788,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/RI8Isa0.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/gzren',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: '170+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [
@@ -842,14 +809,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/iYnKp6o.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wmdgq',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Funky House',
+    geoMetadata: {
+      genre: 'Funky House',
       trackCount: '99+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
-      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
     },
     discountedPrice: 25,
     tracks: []
@@ -862,14 +828,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/ztDN5Kl.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/rorrk',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Bollywood',
+    geoMetadata: {
+      genre: 'Bollywood',
       trackCount: '120+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Weddings","Desi Events"],
-      moods: ["Energetic","Danceable","Festive","High Energy"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
+      moods: ["Energetic", "Danceable", "Festive", "High Energy"]
     },
     discountedPrice: 25,
     tracks: [
@@ -888,14 +853,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/9LVdxwB.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/wxmazu',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Bollywood',
+    geoMetadata: {
+      genre: 'Bollywood',
       trackCount: '120+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Weddings","Desi Events"],
-      moods: ["Energetic","Danceable","Festive","High Energy"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
+      moods: ["Energetic", "Danceable", "Festive", "High Energy"]
     },
     discountedPrice: 25,
     tracks: [
@@ -914,14 +878,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/xSZ570S.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Amapiano/Afrobeats',
       trackCount: '80+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -940,14 +903,13 @@ export const musicPacks = [
     cover: 'https://i.imgur.com/GxMa8Mh.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Tech House',
+    geoMetadata: {
+      genre: 'Tech House',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Peak Time","Late Night"],
-      moods: ["Energetic","Danceable","Driving","Deep"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"]
     },
     discountedPrice: 25,
     tracks: [
@@ -959,21 +921,20 @@ export const musicPacks = [
     ]
   },
   {
-    id: 24,
+    id: 1008,
     title: 'Top Electro house & Mashups 2025',
     artist: 'Various Artists',
     description: '100+ Exclusive Tracks: A curated arsenal of the LATEST Electro house and club-ready remixes.',
     cover: 'https://i.imgur.com/zWiu4bH.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [
@@ -986,20 +947,19 @@ export const musicPacks = [
   },
   {
     id: 25,
-    title: 'Top Reggaetton 2025',
+    title: 'Top Reggaeton 2025',
     artist: 'Various Artists',
     description: '100+ of the BEST and LATEST hits dominating the charts and clubs',
     cover: 'https://i.imgur.com/LeocZlZ.png',
     gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Reggaeton',
       trackCount: '100+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1020,14 +980,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/glcpvr',
     tracklistUrl: '/tracklists/TOPORIENTALREMIXES2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'World',
-      subGenre: 'Arabic/Oriental',
+    geoMetadata: {
+      genre: 'Arabic/Oriental',
       trackCount: '124+',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Specialty Events","Weddings"],
-      moods: ["Energetic","Danceable","Cultural","Festive"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1048,14 +1007,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/pzorss',
     tracklistUrl: '/tracklists/TOPINDIEDANCE2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Indie Dance',
+    geoMetadata: {
+      genre: 'Indie Dance',
       trackCount: '101',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Club Sets","Late Night"],
-      moods: ["Energetic","Danceable","Retro","Driving"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Club Sets", "Late Night"],
+      moods: ["Energetic", "Danceable", "Retro", "Driving"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1076,14 +1034,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/ztccdi',
     tracklistUrl: '/tracklists/TOPREGGAETON2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Latin',
-      subGenre: 'Reggaeton',
+    geoMetadata: {
+      genre: 'Reggaeton',
       trackCount: '83',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Mainstream","Party"],
-      moods: ["Energetic","Danceable","Upbeat","Party"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Mainstream", "Party"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Party"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1104,14 +1061,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/temot',
     tracklistUrl: '/tracklists/TOPAFROBEAT.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Afro-House',
+    geoMetadata: {
+      genre: 'Amapiano/Afrobeats',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Peak Time"],
-      moods: ["Energetic","Danceable","Tribal","Groove"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1132,14 +1088,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/elhcmk',
     tracklistUrl: '/tracklists/TOPDISCOREPRISE.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'House',
-      subGenre: 'Disco House',
+    geoMetadata: {
+      genre: 'Disco House',
       trackCount: '102',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes","Warm-up","Lounge","Party"],
-      moods: ["Energetic","Danceable","Groovy","Uplifting"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1160,14 +1115,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/itfqn',
     tracklistUrl: '/tracklists/TOPRUSSIANREMIXES2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: '162',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1188,14 +1142,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/bbyetp',
     tracklistUrl: '/tracklists/TOPdancemashup2026.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [
@@ -1216,14 +1169,13 @@ export const musicPacks = [
     gumroadLink: 'https://topdjcrates.gumroad.com/l/uieep',
     tracklistUrl: '/tracklists/TOPdjtransitions.html',
     originalPrice: 35,
-      geoMetadata: {
-      primaryGenre: 'Electronic',
-      subGenre: 'Dance',
+    geoMetadata: {
+      genre: 'Dance',
       trackCount: 'Multiple',
       fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs","Club DJs"],
-      useCases: ["Club Sets","DJ Mixes"],
-      moods: ["Energetic","Danceable"]
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"]
     },
     discountedPrice: 25,
     tracks: [

@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import MusicCard from '@/components/MusicCard';
+import FAQ from '@/components/FAQ';
 import { musicPacks as initialMusicPacks } from '@/data/musicPacks';
 
 export default function MusicPage({
@@ -16,10 +17,51 @@ export default function MusicPage({
 }) {
   const router = useRouter();
   const crateRefs = useRef({});
+  const resultsRef = useRef(null);
+  const isInitialMount = useRef(true);
+  const [selectedGenre, setSelectedGenre] = useState('All');
 
-  // Separate bundle packs from regular packs
-  const bundlePacks = musicPacks.filter(pack => pack.buttonText === 'Get Bundle');
-  const regularPacks = musicPacks.filter(pack => pack.buttonText !== 'Get Bundle');
+  // Extract unique genres for filter from the new genre tag. We trim spaces to be robust against manual entry typos.
+  const allGenres = [...new Set(musicPacks.map(pack => (pack.geoMetadata?.genre || '').trim()).filter(Boolean))].sort();
+  const uniqueGenres = ['All', 'Bundles/Offers', ...allGenres];
+
+  // Helper to determine if bundle is relevant to selected genre
+  const isBundleRelevant = (bundle, genre) => {
+    if (genre === 'All' || genre === 'Bundles/Offers') return true;
+    if (bundle.geoMetadata?.genre === genre) return true;
+
+    const title = (bundle.title || '').toLowerCase();
+    const desc = (bundle.description || '').toLowerCase();
+    const genreLower = genre.toLowerCase();
+    
+    // The global "I WANT THEM ALL !" bundle should show up everywhere
+    if (title === 'i want them all !') return true;
+    
+    // For crossover bundles (e.g., "Afro Amapiano Reggaeton Bundle"), check if 
+    // any key word from the selected genre is in the title or description.
+    const genreKeywords = genreLower.split(/[\/\s-]/).filter(w => w.length > 3);
+    for (const keyword of genreKeywords) {
+      if (title.includes(keyword) || desc.includes(keyword)) {
+        return true;
+      }
+    }
+    
+    return false;
+  };
+
+  // Separate bundle packs from regular packs and filter them
+  const bundlePacks = musicPacks.filter(pack => pack.buttonText === 'Get Bundle' && isBundleRelevant(pack, selectedGenre));
+  
+  const regularPacks = musicPacks.filter(pack => {
+    if (pack.buttonText === 'Get Bundle') return false;
+    if (selectedGenre === 'All') return true;
+    
+    // Robust string matching: trim and lowercase to prevent accidental spaces from hiding crates
+    const packGenre = (pack.geoMetadata?.genre || '').trim().toLowerCase();
+    const targetGenre = (selectedGenre || '').trim().toLowerCase();
+    
+    return packGenre === targetGenre;
+  });
 
   // Scroll to specific crate when URL has query parameter
   useEffect(() => {
@@ -41,6 +83,22 @@ export default function MusicPage({
     }
   }, [router.isReady, router.query.crate]);
 
+  // Auto-scroll to results when genre filter changes
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      if (resultsRef.current) {
+        setTimeout(() => {
+          // Calculate precise scroll position to bring results directly into view
+          // Increased offset significantly to scroll past all headers directly to the grid
+          const y = resultsRef.current.getBoundingClientRect().top + window.scrollY + 350;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [selectedGenre]);
+
   // --- NEW: GENERATE PRODUCT SCHEMA FOR SEO ---
   const generateProductSchema = () => {
     if (!musicPacks || musicPacks.length === 0) {
@@ -57,6 +115,16 @@ export default function MusicPage({
       'brand': {
         '@type': 'Brand',
         'name': 'TOP DJ CRATES'
+      },
+      'category': pack.geoMetadata?.genre || 'DJ Tools',
+      'keywords': [
+         pack.geoMetadata?.genre, 
+         ...(pack.geoMetadata?.moods || []), 
+         ...(pack.geoMetadata?.useCases || [])
+      ].filter(Boolean).join(', '),
+      'audience': {
+         '@type': 'Audience',
+         'audienceType': pack.geoMetadata?.targetAudience?.join(', ') || 'Professional DJs'
       },
       'offers': {
         '@type': 'Offer',
@@ -145,6 +213,35 @@ export default function MusicPage({
           <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">The Best DJ Crates Online</h1>
           <p className="text-lg md:text-xl text-text max-w-2xl mx-auto">High-quality, curated music for professional DJs. Stop searching and start playing.</p>
         </section>
+
+        {/* --- GENRE FILTER --- */}
+        <div className="flex justify-center mb-16 px-4">
+          <div className="relative w-full max-w-xs">
+            <label htmlFor="genre-filter" className="block text-sm font-semibold text-gray-400 mb-2 text-center uppercase tracking-wider">
+              Filter by Genre
+            </label>
+            <div className="relative">
+              <select
+                id="genre-filter"
+                value={selectedGenre}
+                onChange={(e) => setSelectedGenre(e.target.value)}
+                className="block w-full appearance-none bg-zinc-900 border-2 border-zinc-800 text-white font-bold py-3 px-4 rounded-xl focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors text-center cursor-pointer shadow-lg shadow-black/50"
+              >
+                {uniqueGenres.map(genre => (
+                  <option key={genre} value={genre}>{genre}</option>
+                ))}
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gold">
+                <svg className="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* --- END GENRE FILTER --- */}
+        
+        <div ref={resultsRef}></div>
 
         {/* Bundle Packs Special Section */}
         {bundlePacks.length > 0 && (
@@ -262,6 +359,9 @@ export default function MusicPage({
             </>
           );
         })()}
+
+        {/* Conversational SEO FAQ Section */}
+        <FAQ />
       </div>
     </>
   );

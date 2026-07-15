@@ -13,7 +13,12 @@ function generateGeoMetadata(title, description) {
   let moods = ['Energetic', 'Danceable'];
   let targetAudience = ['Professional DJs', 'Club DJs'];
   
-  if (text.includes('afro')) {
+  if (text.includes('afrobeat')) {
+    primaryGenre = 'Electronic';
+    subGenre = 'Afrobeat';
+    useCases.push('Warm-up', 'Peak Time', 'Party');
+    moods.push('Tribal', 'Groovy', 'Energetic');
+  } else if (text.includes('afro')) {
     primaryGenre = 'House';
     subGenre = 'Afro-House';
     useCases.push('Warm-up', 'Peak Time');
@@ -105,12 +110,16 @@ function generateGeoMetadata(title, description) {
 // We look for title and description to generate metadata, and then insert it before originalPrice, tracks, or buttonText
 const blockRegex = /({[^}]*?title:\s*(['"])(.*?)\2[^}]*?description:\s*(['"])(.*?)\4[^}]*?)(discountedPrice:|buttonText:|tracks:)/g;
 
-const newContent = content.replace(blockRegex, (match, prefix, q1, title, q2, description, suffix) => {
+let newContent = content.replace(blockRegex, (match, prefix, q1, title, q2, description, suffix) => {
   if (prefix.includes('geoMetadata')) return match; // Skip if already enriched
   
   const geoMetaStr = generateGeoMetadata(title, description);
   return prefix + geoMetaStr + '\n    ' + suffix;
 });
+
+// Fix duplicate IDs
+newContent = newContent.replace(/id: 24,(\s*artist: 'Various Artists',\s*description: '100\+ Exclusive Tracks: A curated arsenal of the LATEST Electro house)/g, "id: 124,\n    title: 'Top Electro house & Mashups 2025',$1");
+newContent = newContent.replace(/id: 26,(\s*artist: 'Various Artists',\s*description: '500 \+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups)/g, "id: 126,\n    title: 'I WANT THEM ALL THE ARABIC MASHUPS & REMIXES',$1");
 
 fs.writeFileSync(filePath, newContent, 'utf8');
 console.log('Successfully enriched musicPacks.js');
