@@ -1185,5 +1185,32 @@ export const musicPacks = [
       { id: '2026_tt4', title: 'dua lipa - levitating (120-103 transition)', audioPreview: 'https://audio-hosting.netlify.app/tt - dua lipa - levitating (120-103 transition).mp3' },
       { id: '2026_tt5', title: 'fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125)', audioPreview: 'https://audio-hosting.netlify.app/tt - fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125).mp3' }
     ]
+  },
+  {
+    id: 1008,
+    year: 2026,
+    title: 'TOP ORIENTAL REDRUMS & REMIXES',
+    artist: 'Various Artists',
+    description: 'Get 94 handpicked tracks, featuring legendary Oriental classics and new hits, all upgraded with heavy, DJ-friendly redrums and remixes. Flawlessly mix the timeless anthems your crowd loves. 100% gig-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/0cBigYq.png',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/hydxej',
+    tracklistUrl: '/tracklists/TOPARABICREDRUMS&REMIXES.html',
+    originalPrice: 35,
+    geoMetadata: {
+      genre: 'Oriental',
+      trackCount: '94',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Groovy"]
+    },
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_or1', title: 'ahmed sa3d - kol youm', audioPreview: 'https://audio-hosting.netlify.app/orr - ahmed sa3d - kol youm.mp3' },
+      { id: '2026_or2', title: 'akram hosny ft haifaa - law kont', audioPreview: 'https://audio-hosting.netlify.app/orr - akram hosny ft haifaa - law kont.mp3' },
+      { id: '2026_or3', title: 'amr diab - amken el sahar', audioPreview: 'https://audio-hosting.netlify.app/orr - amr diab - amken el sahar.mp3' },
+      { id: '2026_or4', title: 'fadl shaker - faker lama t2oly', audioPreview: 'https://audio-hosting.netlify.app/orr - fadl shaker - faker lama t2oly.mp3' },
+      { id: '2026_or5', title: 'hamak - la malama', audioPreview: 'https://audio-hosting.netlify.app/orr - hamak - la malama.mp3' }
+    ]
   }
 ];
