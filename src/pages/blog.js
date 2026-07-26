@@ -42,28 +42,41 @@ export default function BlogPage({ posts = [] }) {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group block bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-6 shadow-2xl backdrop-blur-sm transition-colors hover:border-gold/60"
+                  className="group block bg-zinc-900/40 border border-zinc-800/80 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm transition-colors hover:border-gold/60"
                 >
-                  <h3 className="text-xl font-bold text-primary mb-2 leading-snug group-hover:text-gold transition-colors">
-                    {post.title}
-                  </h3>
-
-                  {post.date && (
-                    <time
-                      dateTime={post.date}
-                      className="block text-xs uppercase tracking-wider text-zinc-500 mb-3"
-                    >
-                      {formatPostDate(post.date)}
-                    </time>
+                  {post.image && (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt || post.title}
+                      className="w-full aspect-video object-cover"
+                      loading="lazy"
+                    />
                   )}
 
-                  {post.excerpt && (
-                    <p className="text-text leading-relaxed mb-4">{post.excerpt}</p>
-                  )}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-primary mb-2 leading-snug group-hover:text-gold transition-colors">
+                      {post.title}
+                    </h3>
 
-                  <span className="text-sm font-bold text-gold">
-                    Read the article &rarr;
-                  </span>
+                    {post.date && (
+                      <time
+                        dateTime={post.date}
+                        className="block text-xs uppercase tracking-wider text-zinc-500 mb-3"
+                      >
+                        {formatPostDate(post.date)}
+                        {post.genre && <span className="text-gold"> &middot; {post.genre}</span>}
+                      </time>
+                    )}
+
+                    {post.excerpt && (
+                      <p className="text-text leading-relaxed mb-4">{post.excerpt}</p>
+                    )}
+
+                    <span className="text-sm font-bold text-gold">
+                      Read the article &rarr;
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>

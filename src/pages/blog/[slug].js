@@ -23,6 +23,13 @@ export default function BlogPostPage({ post }) {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={canonical} />
+        {post.image && (
+          <>
+            <meta property="og:image" content={`https://www.topdjcrates.com${post.image}`} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content={`https://www.topdjcrates.com${post.image}`} />
+          </>
+        )}
 
         {/* Structured data helps Google understand this is an article */}
         <script
@@ -34,6 +41,7 @@ export default function BlogPostPage({ post }) {
               headline: post.title,
               description: post.excerpt,
               datePublished: post.date || undefined,
+              image: post.image ? `https://www.topdjcrates.com${post.image}` : undefined,
               author: { '@type': 'Organization', name: post.author },
               publisher: { '@type': 'Organization', name: 'TOP DJ CRATES' },
               mainEntityOfPage: canonical,
@@ -62,8 +70,25 @@ export default function BlogPostPage({ post }) {
                 <time dateTime={post.date}>{formatPostDate(post.date)}</time>
               </>
             )}
+            {post.genre && (
+              <>
+                {' '}&middot;{' '}
+                <span className="text-gold">{post.genre}</span>
+              </>
+            )}
           </div>
         </header>
+
+        {/* AI-generated header image, when the pipeline produced one. */}
+        {post.image && (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={post.image}
+            alt={post.imageAlt || post.title}
+            className="w-full aspect-video object-cover rounded-2xl border border-zinc-800/80 shadow-2xl mb-12"
+            loading="eager"
+          />
+        )}
 
         {/*
           Markdown body. The arbitrary-variant classes below style the generated

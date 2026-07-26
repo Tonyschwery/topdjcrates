@@ -47,8 +47,10 @@ jobs:
         id: generate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Optional overrides — set these as repo variables if you want.
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          GEMINI_IMAGE_MODEL: ${{ vars.GEMINI_IMAGE_MODEL }}
           DRAFT_MODE: ${{ vars.DRAFT_MODE }}
         run: node scripts/generate-blog.js
 
@@ -58,7 +60,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add src/posts
+          git add src/posts public/images
 
           # If the script produced nothing new, exit cleanly instead of failing.
           if git diff --staged --quiet; then

@@ -4,27 +4,49 @@
  *
  * Daily SEO post generator for TOP DJ CRATES.
  *
- * Reads the existing posts in src/posts, asks Claude (with web search enabled)
- * to find a trending, high-intent DJ topic we haven't covered yet, writes a
- * full Markdown article with frontmatter, and saves it into src/posts/.
+ * 1. Asks Claude (with web search) for a trending, high-intent DJ topic we
+ *    haven't covered, and writes a full Markdown article.
+ * 2. Analyses that article to detect its electronic music genre and mood.
+ * 3. Builds a genre-matched, ultra-realistic image prompt.
+ * 4. Generates the image with Google's Nano Banana Pro (gemini-3-pro-image),
+ *    falling back to other model names automatically if that one is rejected.
+ * 5. Saves the image to public/images/ and links it in the frontmatter.
  *
  * Requires: Node 20+ (uses built-in fetch). No npm dependencies.
  *
  * Environment:
- *   ANTHROPIC_API_KEY  (required) — set as a GitHub repository secret
+ *   ANTHROPIC_API_KEY  (required) — GitHub repository secret
+ *   GEMINI_API_KEY     (optional) — GitHub repository secret. Without it the
+ *                                   post is still published, just without art.
  *   ANTHROPIC_MODEL    (optional) — defaults to claude-sonnet-5
+ *   GEMINI_IMAGE_MODEL (optional) — force one model; otherwise tries Pro first
  *   DRAFT_MODE         (optional) — "true" writes posts with draft: true
  */
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
-const API_URL = 'https://api.anthropic.com/v1/messages';
-const API_VERSION = '2023-06-01';
+const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+const ANTHROPIC_VERSION = '2023-06-01';
+const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts');
+const IMAGES_DIR = path.join(process.cwd(), 'public', 'images');
+
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 const DRAFT_MODE = String(process.env.DRAFT_MODE).toLowerCase() === 'true';
+
+// Google keeps renaming these between preview and stable. Rather than pin one
+// name and break at 3am, we try them in order and use whichever answers.
+// Set GEMINI_IMAGE_MODEL to force a single specific model.
+const IMAGE_MODEL_CHAIN = process.env.GEMINI_IMAGE_MODEL
+  ? [process.env.GEMINI_IMAGE_MODEL]
+  : [
+      'gemini-3-pro-image',          // Nano Banana Pro (stable)
+      'gemini-3-pro-image-preview',  // Nano Banana Pro (preview naming)
+      'gemini-3.1-flash-image',      // Nano Banana 2 — cheaper fallback
+    ];
 
 // ---------------------------------------------------------------------------
 // Small helpers
@@ -35,17 +57,24 @@ function fail(message) {
   process.exit(1);
 }
 
+function warn(message) {
+  console.warn(`[generate-blog] WARNING: ${message}`);
+}
+
 function log(message) {
   console.log(`[generate-blog] ${message}`);
 }
 
-/** Turn a title into a safe, lowercase, hyphenated filename. */
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function slugify(title) {
   return title
     .toLowerCase()
     .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')  // strip accents
-    .replace(/[^a-z0-9\s-]/g, '')     // drop punctuation
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-')
@@ -53,17 +82,14 @@ function slugify(title) {
     .replace(/-$/, '');
 }
 
-/** Today as YYYY-MM-DD in UTC. */
 function todayISO() {
   return new Date().toISOString().split('T')[0];
 }
 
-/** Escape a value so it is safe inside a double-quoted YAML string. */
 function yamlSafe(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"').trim();
 }
 
-/** Write a key=value pair to the GitHub Actions step output, if running there. */
 function setActionOutput(key, value) {
   if (!process.env.GITHUB_OUTPUT) return;
   const safe = String(value).replace(/\r?\n/g, ' ');
@@ -71,7 +97,395 @@ function setActionOutput(key, value) {
 }
 
 // ---------------------------------------------------------------------------
-// Read what we've already published, so we don't repeat ourselves
+// Genre presets — each one drives a distinct visual direction
+// ---------------------------------------------------------------------------
+
+const GENRE_PRESETS = {
+  techno: {
+    label: 'Techno',
+    match: ['techno', 'hard techno', 'industrial', 'peak time', 'warehouse'],
+    visual:
+      'a dark underground industrial club, raw concrete walls, moody strobe lights cutting through heavy atmospheric haze, racks of vintage hardware synthesisers and drum machines, cold steel and deep shadow, a single silhouetted figure behind the decks',
+    palette: 'monochrome steel blues and stark white strobe against near-black',
+  },
+  'afro-house': {
+    label: 'Afro House',
+    match: ['afro house', 'afro-house', 'afro tech', 'afrohouse', 'black coffee', 'tribal'],
+    visual:
+      'an open-air rooftop club at golden hour turning to dusk, organic warm textures, woven rattan and natural wood surfaces, vibrant tribal lighting in amber and deep orange, high-end Pioneer CDJ decks and a professional mixer, hand percussion resting beside the booth',
+    palette: 'warm amber, terracotta, and burnt gold with deep indigo shadows',
+  },
+  'tech-house': {
+    label: 'Tech House',
+    match: ['tech house', 'tech-house', 'groove', 'rolling bassline'],
+    visual:
+      'a packed intimate basement club, low ceiling, tight crowd energy just out of focus, clean modern DJ booth with Pioneer CDJs and a rotary mixer, crisp directional spotlights, condensation and motion blur',
+    palette: 'saturated magenta and cyan wash over warm skin tones',
+  },
+  amapiano: {
+    label: 'Amapiano',
+    match: ['amapiano', 'piano', 'log drum', 'yanos', '3-step', '3 step', 'kabza', 'maphorisa'],
+    visual:
+      'a vibrant South African outdoor party at dusk, string lights overhead, a relaxed stylish crowd, a DJ booth set up under a canopy with professional decks, warm township golden-hour light, shallow depth of field',
+    palette: 'sun-warmed gold, dusty rose, and deep violet twilight',
+  },
+  'uk-garage': {
+    label: 'UK Garage',
+    match: ['uk garage', 'ukg', 'speed garage', '2-step', 'two step', 'garage'],
+    visual:
+      'a late-nineties style London basement club, mirrored surfaces and chrome detailing, tight energetic crowd, classic turntables and a battle mixer, sharp white beams through low fog',
+    palette: 'chrome silver, electric blue, and rich club-carpet red',
+  },
+  'drum-and-bass': {
+    label: 'Drum & Bass',
+    match: ['drum and bass', 'drum & bass', 'dnb', 'd&b', 'jungle', 'breaks'],
+    visual:
+      'a cavernous warehouse rave, a towering stack of speaker cabinets, dense low fog pierced by rapid laser fans, a raised DJ platform with turntables, blurred motion of a dense crowd',
+    palette: 'acid green and ultraviolet against deep black',
+  },
+  'melodic-techno': {
+    label: 'Melodic Techno',
+    match: ['melodic techno', 'melodic house', 'progressive', 'organic house', 'afterlife'],
+    visual:
+      'a vast minimal venue with a single dramatic light installation, sparse architectural geometry, a lone figure at a clean modern booth, wide cinematic framing, atmospheric depth',
+    palette: 'deep midnight blue and cold white with a single warm accent',
+  },
+  'baile-funk': {
+    label: 'Baile Funk & Club',
+    match: ['baile funk', 'jersey club', 'baile', 'funk carioca', 'moombahton'],
+    visual:
+      'a raw high-energy street party at night, improvised sound system stacks, vivid coloured bulbs strung overhead, kinetic crowd motion, a DJ working a controller on a scaffold rig',
+    palette: 'hot pink, electric yellow, and tropical green under streetlight',
+  },
+  house: {
+    label: 'House',
+    match: ['deep house', 'jazz house', 'disco', 'soulful', 'house music', 'house'],
+    visual:
+      'a classic warm wood-panelled club interior, a glowing mirror ball scattering light, vintage rotary mixer and turntables, an unhurried crowd, rich analogue warmth',
+    palette: 'warm amber, deep burgundy, and soft gold',
+  },
+  default: {
+    label: 'Electronic',
+    match: [],
+    visual:
+      'a professional DJ booth in a modern club at peak hour, high-end Pioneer CDJ decks and mixer in sharp focus, atmospheric haze and directional stage lighting, a crowd softly blurred in the background',
+    palette: 'deep charcoal with warm gold highlights',
+  },
+};
+
+const GENRE_KEYS = Object.keys(GENRE_PRESETS).filter((k) => k !== 'default');
+
+/**
+ * Deterministic fallback: score the article text against each preset's keywords.
+ */
+function detectGenreByKeywords(markdown) {
+  const haystack = markdown.toLowerCase();
+  let best = { key: 'default', score: 0 };
+
+  for (const key of GENRE_KEYS) {
+    const preset = GENRE_PRESETS[key];
+    let score = 0;
+
+    for (const term of preset.match) {
+      // Count occurrences of each keyword.
+      const matches = haystack.split(term).length - 1;
+      score += matches * (term.includes(' ') ? 2 : 1); // multi-word terms weigh more
+    }
+
+    if (score > best.score) best = { key, score };
+  }
+
+  return best.key;
+}
+
+// ---------------------------------------------------------------------------
+// Anthropic: article generation
+// ---------------------------------------------------------------------------
+
+const SYSTEM_PROMPT = `You are the in-house SEO content writer for TOP DJ CRATES, a store selling curated, DJ-ready WAV music packs ("crates") to working DJs.
+
+BRAND VOICE — follow this precisely:
+- Punchy and direct. Short declarative sentences. Practitioner-to-practitioner, never marketing-speak.
+- Use **bold** for the load-bearing claims and key phrases. Roughly one bolded phrase per section.
+- Second person ("you", "your crate", "your set").
+- Name real tools and formats: Rekordbox, Serato, Virtual DJ, WAV, Camelot keys, BPM, intro/outro edits, acapella outs.
+- Respect the reader's time and skill. Never condescend. No filler.
+- Close by tying back to the product benefit: handpicked, high-quality WAV files, drag, drop, and play.
+
+RESEARCH:
+- Use the web search tool first to find what DJs and producers are actually searching for right now.
+- Prefer high-intent, commercially relevant angles over generic news.
+- Ground claims in real sources. Attribute figures in prose. Never invent statistics.
+- Paraphrase everything. Do not quote sources at length.
+
+OUTPUT FORMAT — this is critical:
+Return ONLY a Markdown document. No preamble, no code fences around the whole thing.
+It must begin with YAML frontmatter in exactly this shape:
+
+---
+title: "A specific, compelling, search-friendly title"
+date: "${'${DATE}'}"
+excerpt: "One or two sentences used as the meta description and card summary."
+keywords: "comma, separated, high intent, search terms"
+---
+
+Then the article body in pure Markdown.
+
+BODY RULES:
+- 900-1500 words.
+- Do NOT repeat the title as a heading — the site renders it from frontmatter.
+- Use ## and ### headings that read like real search queries where natural.
+- Pure Markdown only. No raw HTML tags — the renderer escapes them.
+- Include at least one numbered or bulleted list of practical steps.`;
+
+function buildUserPrompt(existingPosts) {
+  const alreadyCovered = existingPosts.length
+    ? existingPosts.map((p) => `- ${p.title}`).join('\n')
+    : '- (nothing published yet)';
+
+  return `Write today's blog post for TOP DJ CRATES.
+
+Today's date is ${todayISO()}.
+
+Search the web to identify ONE trending, high-intent topic relevant to working DJs and producers shopping for music packs, edits, or transition packs right now. Then write the full article on it.
+
+We have ALREADY published the following. Choose a genuinely different angle:
+${alreadyCovered}
+
+Return only the Markdown document, starting with the frontmatter block.`;
+}
+
+async function callAnthropic(apiKey, body, label) {
+  const maxAttempts = 3;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    log(`Anthropic ${label} (attempt ${attempt}/${maxAttempts})...`);
+
+    let response;
+    try {
+      response = await fetch(ANTHROPIC_URL, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-api-key': apiKey,
+          'anthropic-version': ANTHROPIC_VERSION,
+        },
+        body: JSON.stringify(body),
+      });
+    } catch (networkError) {
+      if (attempt === maxAttempts) throw new Error(`Network failure: ${networkError.message}`);
+      await sleep(attempt * 5000);
+      continue;
+    }
+
+    if (response.ok) {
+      const data = await response.json();
+      return (data.content || [])
+        .filter((block) => block.type === 'text')
+        .map((block) => block.text)
+        .join('')
+        .trim();
+    }
+
+    const errorBody = await response.text();
+
+    if (response.status === 401 || response.status === 403) {
+      fail(`Anthropic auth failed (${response.status}). Check ANTHROPIC_API_KEY.\n${errorBody}`);
+    }
+    if (response.status === 400) {
+      fail(`Anthropic bad request (400) — often an invalid model name.\n${errorBody}`);
+    }
+    if (attempt === maxAttempts) {
+      throw new Error(`Anthropic request failed (${response.status}).\n${errorBody}`);
+    }
+
+    await sleep(attempt * 10000);
+  }
+}
+
+function generateArticle(apiKey, existingPosts) {
+  return callAnthropic(
+    apiKey,
+    {
+      model: MODEL,
+      max_tokens: 8000,
+      system: SYSTEM_PROMPT.replace('${DATE}', todayISO()),
+      messages: [{ role: 'user', content: buildUserPrompt(existingPosts) }],
+      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 6 }],
+    },
+    'article generation'
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Step 2: analyse the finished article for genre + mood
+// ---------------------------------------------------------------------------
+
+async function analyseArticle(apiKey, markdown) {
+  const keywordGenre = detectGenreByKeywords(markdown);
+
+  const prompt = `Read this blog article and classify it.
+
+Return ONLY a JSON object, no code fences, no commentary, in exactly this shape:
+{"genre": "<one of: ${GENRE_KEYS.join(', ')}>", "mood": "<3-8 words describing the article's emotional tone and energy>"}
+
+The genre must be the dominant electronic music genre the article is about. If the article covers several, pick the one given the most weight. If none clearly dominates, use "default".
+
+The mood should describe atmosphere, not content. Examples: "urgent and confrontational, late-night intensity", "warm optimistic momentum, communal energy", "focused technical precision, workmanlike calm".
+
+ARTICLE:
+${markdown.slice(0, 6000)}`;
+
+  try {
+    const raw = await callAnthropic(
+      apiKey,
+      {
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 300,
+        messages: [{ role: 'user', content: prompt }],
+      },
+      'genre/mood analysis'
+    );
+
+    const cleaned = raw.replace(/```(?:json)?/g, '').trim();
+    const parsed = JSON.parse(cleaned.slice(cleaned.indexOf('{'), cleaned.lastIndexOf('}') + 1));
+
+    const genre = GENRE_PRESETS[parsed.genre] ? parsed.genre : keywordGenre;
+    const mood = (parsed.mood || '').trim() || 'high-energy nocturnal club atmosphere';
+
+    log(`Analysis: genre="${genre}", mood="${mood}"`);
+    return { genre, mood };
+  } catch (error) {
+    warn(`Genre/mood analysis failed (${error.message}). Falling back to keyword detection.`);
+    return { genre: keywordGenre, mood: 'high-energy nocturnal club atmosphere' };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Step 3: build the image prompt
+// ---------------------------------------------------------------------------
+
+function buildImagePrompt({ genre, mood, title }) {
+  const preset = GENRE_PRESETS[genre] || GENRE_PRESETS.default;
+
+  return [
+    `Ultra-realistic cinematic editorial photograph for an article titled "${title}".`,
+    `Scene: ${preset.visual}.`,
+    `Colour palette: ${preset.palette}.`,
+    `Mood and atmosphere: ${mood}.`,
+    'Shot on a full-frame camera with a fast prime lens, shallow depth of field, natural volumetric lighting, fine grain, razor-sharp focus on the foreground subject.',
+    'Photorealistic, 8K detail, clean, premium, professional commercial photography quality.',
+    'Composition: wide 16:9 landscape framing with clear negative space, suitable as a blog header image.',
+    'STRICT NEGATIVE CONSTRAINTS: absolutely no text of any kind, no lettering, no words, no signage, no captions, no watermarks, no logos, no brand marks, no visible screen interfaces or readable displays, no illustration, no cartoon, no 3D render, no CGI look, no distorted hands or faces, no oversaturation.',
+  ].join(' ');
+}
+
+// ---------------------------------------------------------------------------
+// Step 4: generate the image (Nano Banana Pro, falling back down the chain)
+// ---------------------------------------------------------------------------
+
+/** One single request. Throws an Error carrying .status on failure. */
+async function attemptImage({ apiKey, model, prompt, useAspectConfig }) {
+  const body = { contents: [{ parts: [{ text: prompt }] }] };
+
+  // Ask for a consistent wide header shape. Not every model accepts this,
+  // so the caller retries without it if the API rejects the field.
+  if (useAspectConfig) {
+    body.generationConfig = { imageConfig: { aspectRatio: '16:9' } };
+  }
+
+  const response = await fetch(`${GEMINI_BASE}/${model}:generateContent`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      // Sent as a header, never in the URL, so it stays out of logs.
+      'x-goog-api-key': apiKey,
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!response.ok) {
+    const text = await response.text();
+    const error = new Error(`HTTP ${response.status}: ${text.slice(0, 300)}`);
+    error.status = response.status;
+    throw error;
+  }
+
+  const data = await response.json();
+  const parts = data?.candidates?.[0]?.content?.parts || [];
+  const imagePart = parts.find((p) => p.inlineData?.data);
+
+  if (!imagePart) {
+    const textPart = parts.find((p) => p.text);
+    const error = new Error(
+      `Response contained no image data${textPart ? `: ${textPart.text.slice(0, 200)}` : ''}`
+    );
+    error.status = 200;
+    throw error;
+  }
+
+  return imagePart.inlineData;
+}
+
+function saveImage(inlineData, slug) {
+  const mimeType = inlineData.mimeType || 'image/png';
+  const extension = mimeType.includes('jpeg') ? 'jpg' : 'png';
+  const buffer = Buffer.from(inlineData.data, 'base64');
+
+  if (buffer.length < 5000) {
+    throw new Error(`Returned image is suspiciously small (${buffer.length} bytes).`);
+  }
+
+  fs.mkdirSync(IMAGES_DIR, { recursive: true });
+
+  // Unique filename: slug + short random suffix, so re-runs never collide.
+  const suffix = crypto.randomBytes(4).toString('hex');
+  const fileName = `${slug}-${suffix}.${extension}`;
+  fs.writeFileSync(path.join(IMAGES_DIR, fileName), buffer);
+
+  log(`Saved public/images/${fileName} (${Math.round(buffer.length / 1024)} KB)`);
+  return `/images/${fileName}`;
+}
+
+async function generateImage({ apiKey, prompt, slug }) {
+  let lastError;
+
+  for (const model of IMAGE_MODEL_CHAIN) {
+    // First try with the 16:9 request, then without it.
+    for (const useAspectConfig of [true, false]) {
+      for (let attempt = 1; attempt <= 3; attempt++) {
+        const shape = useAspectConfig ? ' [16:9]' : ' [default shape]';
+        log(`Image: ${model}${shape}, attempt ${attempt}/3...`);
+
+        try {
+          const inlineData = await attemptImage({ apiKey, model, prompt, useAspectConfig });
+          return saveImage(inlineData, slug);
+        } catch (error) {
+          lastError = error;
+
+          // Bad key — no other model will help, stop immediately.
+          if (error.status === 401 || error.status === 403) {
+            throw new Error(`Gemini auth failed (${error.status}). Check GEMINI_API_KEY.`);
+          }
+
+          // Unknown model or rejected field — retrying identically won't help.
+          if (error.status === 400 || error.status === 404) {
+            log(`  -> rejected (${error.status}), trying next option.`);
+            break;
+          }
+
+          // Overloaded (503) or rate limited (429) — wait and try again.
+          if (attempt < 3) await sleep(attempt * 8000);
+        }
+      }
+    }
+  }
+
+  throw new Error(`Every image model failed. Last error: ${lastError?.message || 'unknown'}`);
+}
+
+// ---------------------------------------------------------------------------
+// Existing posts, parsing, document assembly
 // ---------------------------------------------------------------------------
 
 function getExistingPosts() {
@@ -90,164 +504,17 @@ function getExistingPosts() {
 
       if (match) {
         const titleLine = match[1].match(/^title:\s*(.+)$/m);
-        if (titleLine) {
-          title = titleLine[1].trim().replace(/^["']|["']$/g, '');
-        }
+        if (titleLine) title = titleLine[1].trim().replace(/^["']|["']$/g, '');
       }
 
       return { fileName, title };
     });
 }
 
-// ---------------------------------------------------------------------------
-// Prompt construction
-// ---------------------------------------------------------------------------
-
-const SYSTEM_PROMPT = `You are the in-house SEO content writer for TOP DJ CRATES, a store selling curated, DJ-ready WAV music packs ("crates") to working DJs.
-
-BRAND VOICE — follow this precisely:
-- Punchy and direct. Short declarative sentences. Practitioner-to-practitioner, never marketing-speak.
-- Use **bold** for the load-bearing claims and key phrases. Roughly one bolded phrase per section.
-- Second person ("you", "your crate", "your set").
-- Name real tools and formats: Rekordbox, Serato, Virtual DJ, WAV, Camelot keys, BPM, intro/outro edits, acapella outs.
-- Respect the reader's time and skill. Never condescend. No filler, no "in today's fast-paced world".
-- Close by tying back to the product benefit: handpicked, high-quality WAV files, drag, drop, and play.
-
-RESEARCH:
-- Use the web search tool first to find what DJs and producers are actually searching for and talking about right now.
-- Prefer high-intent, commercially relevant angles (genres, edit formats, transition packs, crate organisation) over generic news.
-- Ground claims in real, current sources. Attribute figures in prose (e.g. "the IMS report tracked..."). Never invent statistics.
-- Paraphrase everything. Do not quote sources at length.
-
-OUTPUT FORMAT — this is critical:
-Return ONLY a Markdown document. No preamble, no explanation, no code fences around the whole thing.
-It must begin with YAML frontmatter in exactly this shape:
-
----
-title: "A specific, compelling, search-friendly title"
-date: "${'${DATE}'}"
-excerpt: "One or two sentences used as the meta description and card summary."
-keywords: "comma, separated, high intent, search terms"
----
-
-Then the article body in pure Markdown.
-
-BODY RULES:
-- 900-1500 words.
-- Do NOT repeat the H1 as a heading — the site renders the frontmatter title. Start with a strong opening paragraph.
-- Use ## and ### headings that read like real search queries where natural.
-- Use pure Markdown only. No raw HTML tags — the renderer escapes them.
-- Include at least one numbered or bulleted list of practical, actionable steps.`;
-
-function buildUserPrompt(existingPosts) {
-  const alreadyCovered = existingPosts.length
-    ? existingPosts.map((p) => `- ${p.title}`).join('\n')
-    : '- (nothing published yet)';
-
-  return `Write today's blog post for TOP DJ CRATES.
-
-Today's date is ${todayISO()}.
-
-Search the web to identify ONE trending, high-intent topic relevant to working DJs and producers shopping for music packs, edits, or transition packs right now. Then write the full article on it.
-
-We have ALREADY published the following. Choose a genuinely different angle — do not overlap with these:
-${alreadyCovered}
-
-Return only the Markdown document, starting with the frontmatter block.`;
-}
-
-// ---------------------------------------------------------------------------
-// Anthropic API call
-// ---------------------------------------------------------------------------
-
-async function callClaude(apiKey, existingPosts) {
-  const body = {
-    model: MODEL,
-    max_tokens: 8000,
-    system: SYSTEM_PROMPT.replace('${DATE}', todayISO()),
-    messages: [{ role: 'user', content: buildUserPrompt(existingPosts) }],
-    tools: [
-      {
-        type: 'web_search_20250305',
-        name: 'web_search',
-        max_uses: 6,
-      },
-    ],
-  };
-
-  const maxAttempts = 3;
-
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    log(`Calling Anthropic API (model: ${MODEL}, attempt ${attempt}/${maxAttempts})...`);
-
-    let response;
-    try {
-      response = await fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-          'x-api-key': apiKey,
-          'anthropic-version': API_VERSION,
-        },
-        body: JSON.stringify(body),
-      });
-    } catch (networkError) {
-      if (attempt === maxAttempts) fail(`Network failure: ${networkError.message}`);
-      await sleep(attempt * 5000);
-      continue;
-    }
-
-    if (response.ok) {
-      const data = await response.json();
-
-      // The response may interleave text with web_search_tool_result blocks.
-      // We only want the text Claude wrote.
-      const text = (data.content || [])
-        .filter((block) => block.type === 'text')
-        .map((block) => block.text)
-        .join('')
-        .trim();
-
-      if (!text) fail('The API returned no text content.');
-      return text;
-    }
-
-    const errorBody = await response.text();
-
-    // 401/400 are our fault — retrying will not help.
-    if (response.status === 401 || response.status === 403) {
-      fail(`Authentication failed (${response.status}). Check the ANTHROPIC_API_KEY secret.\n${errorBody}`);
-    }
-    if (response.status === 400) {
-      fail(`Bad request (400). Often an invalid model name.\n${errorBody}`);
-    }
-
-    // 429 and 5xx are worth retrying.
-    if (attempt === maxAttempts) {
-      fail(`API request failed after ${maxAttempts} attempts (${response.status}).\n${errorBody}`);
-    }
-
-    const waitMs = attempt * 10000;
-    log(`Got ${response.status}. Retrying in ${waitMs / 1000}s...`);
-    await sleep(waitMs);
-  }
-}
-
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-// ---------------------------------------------------------------------------
-// Clean up and validate the model's output
-// ---------------------------------------------------------------------------
-
 function normaliseMarkdown(raw) {
   let text = raw.trim();
-
-  // Strip a wrapping code fence if the model added one despite instructions.
   const fenced = text.match(/^```(?:markdown|md)?\r?\n([\s\S]*?)\r?\n```$/);
   if (fenced) text = fenced[1].trim();
-
   return text;
 }
 
@@ -269,8 +536,7 @@ function parseFrontmatter(markdown) {
   };
 }
 
-/** Rebuild the frontmatter so date, draft flag, and quoting are always correct. */
-function rebuildDocument(markdown, meta) {
+function rebuildDocument(markdown, meta, extras) {
   const body = markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
 
   const lines = [
@@ -281,9 +547,14 @@ function rebuildDocument(markdown, meta) {
     `keywords: "${yamlSafe(meta.keywords)}"`,
   ];
 
+  if (extras.image) {
+    lines.push(`image: "${yamlSafe(extras.image)}"`);
+    lines.push(`imageAlt: "${yamlSafe(extras.imageAlt)}"`);
+  }
+  if (extras.genre) lines.push(`genre: "${yamlSafe(extras.genre)}"`);
   if (DRAFT_MODE) lines.push('draft: true');
-  lines.push('---', '', body, '');
 
+  lines.push('---', '', body, '');
   return lines.join('\n');
 }
 
@@ -292,37 +563,36 @@ function rebuildDocument(markdown, meta) {
 // ---------------------------------------------------------------------------
 
 async function main() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const anthropicKey = process.env.ANTHROPIC_API_KEY;
+  const geminiKey = process.env.GEMINI_API_KEY;
 
-  if (!apiKey) {
+  if (!anthropicKey) {
     fail(
       'ANTHROPIC_API_KEY is not set.\n' +
-        'In GitHub: Settings > Secrets and variables > Actions > New repository secret.\n' +
-        'Locally: set it in your shell before running this script.'
+        'In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
     );
   }
 
   const existingPosts = getExistingPosts();
   log(`Found ${existingPosts.length} existing post(s).`);
 
-  const raw = await callClaude(apiKey, existingPosts);
+  // --- 1. Article -----------------------------------------------------------
+  const raw = await generateArticle(anthropicKey, existingPosts);
   const markdown = normaliseMarkdown(raw);
 
   const meta = parseFrontmatter(markdown);
   if (!meta || !meta.title) {
     fail(
-      'The generated document is missing valid frontmatter or a title. ' +
-        'Nothing was written. First 400 characters of the response:\n\n' +
+      'Generated document is missing valid frontmatter or a title. Nothing written.\n\n' +
         markdown.slice(0, 400)
     );
   }
 
   const wordCount = markdown.split(/\s+/).length;
   if (wordCount < 300) {
-    fail(`Generated post is only ~${wordCount} words. Refusing to publish it.`);
+    fail(`Generated post is only ~${wordCount} words. Refusing to publish.`);
   }
 
-  // Work out a filename, and never overwrite an existing post.
   let slug = slugify(meta.title) || `dj-crates-${todayISO()}`;
   let fileName = `${slug}.md`;
 
@@ -331,23 +601,49 @@ async function main() {
     fileName = `${slug}.md`;
   }
   if (fs.existsSync(path.join(POSTS_DIR, fileName))) {
-    log(`A post named ${fileName} already exists. Skipping today's run.`);
+    log(`${fileName} already exists. Skipping today's run.`);
     setActionOutput('slug', '');
     setActionOutput('title', 'skipped — duplicate');
     return;
   }
 
-  const document = rebuildDocument(markdown, meta);
-  const fullPath = path.join(POSTS_DIR, fileName);
+  // --- 2 & 3. Analyse and build the image prompt ----------------------------
+  const { genre, mood } = await analyseArticle(anthropicKey, markdown);
+  const preset = GENRE_PRESETS[genre] || GENRE_PRESETS.default;
+  const imagePrompt = buildImagePrompt({ genre, mood, title: meta.title });
 
-  fs.writeFileSync(fullPath, document, 'utf8');
+  // --- 4. Image (non-fatal: never lose the article over a failed image) -----
+  let imagePath = '';
+  const imageAlt = `${preset.label} DJ setup — editorial header image for ${meta.title}`;
 
-  log(`Wrote ${fileName} (~${wordCount} words)`);
+  if (!geminiKey) {
+    warn('GEMINI_API_KEY is not set. Publishing without a header image.');
+  } else {
+    try {
+      imagePath = await generateImage({ apiKey: geminiKey, prompt: imagePrompt, slug });
+    } catch (error) {
+      warn(`Image generation failed, publishing without art: ${error.message}`);
+    }
+  }
+
+  // --- 5. Write ------------------------------------------------------------
+  const document = rebuildDocument(markdown, meta, {
+    image: imagePath,
+    imageAlt,
+    genre: preset.label,
+  });
+
+  fs.writeFileSync(path.join(POSTS_DIR, fileName), document, 'utf8');
+
+  log(`Wrote ${fileName} (~${wordCount} words, genre: ${preset.label})`);
   log(`Title: ${meta.title}`);
-  if (DRAFT_MODE) log('DRAFT_MODE is on — this post will not appear on the live site.');
+  if (imagePath) log(`Image: ${imagePath}`);
+  if (DRAFT_MODE) log('DRAFT_MODE is on — this post stays off the live site.');
 
   setActionOutput('slug', slug);
   setActionOutput('title', meta.title);
+  setActionOutput('image', imagePath);
+  setActionOutput('genre', preset.label);
 }
 
 main().catch((error) => fail(error.stack || error.message));

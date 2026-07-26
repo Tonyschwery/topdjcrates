@@ -68,6 +68,11 @@ export function getSortedPostsMeta() {
       date: data.date ? new Date(data.date).toISOString() : null,
       excerpt: data.excerpt || data.description || '',
       author: data.author || 'TOP DJ CRATES',
+      // Header image written by scripts/generate-blog.js. Empty string rather
+      // than undefined, because getStaticProps can't serialise undefined.
+      image: data.image || '',
+      imageAlt: data.imageAlt || data.title || '',
+      genre: data.genre || '',
     }));
 
   // Newest first. Posts with no date sink to the bottom.
@@ -113,6 +118,9 @@ export async function getPostData(slug) {
     excerpt: data.excerpt || data.description || '',
     author: data.author || 'TOP DJ CRATES',
     keywords: data.keywords || '',
+    image: data.image || '',
+    imageAlt: data.imageAlt || data.title || '',
+    genre: data.genre || '',
   };
 }
 
