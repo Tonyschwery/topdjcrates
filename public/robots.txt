@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Search and AI crawlers can read everything.
+# Point them at the sitemap so new blog posts get found quickly.
+
+Sitemap: https://www.topdjcrates.com/sitemap.xml

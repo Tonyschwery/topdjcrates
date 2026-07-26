@@ -1,9 +1,10 @@
 import { musicPacks } from '@/data/musicPacks';
 import { videomusicPacks } from '@/data/videomusicPacks';
+import { getSortedPostsMeta } from '@/lib/posts';
 
 const BASE_URL = 'https://www.topdjcrates.com';
 
-function generateSiteMap(packs, videoPacks) {
+function generateSiteMap(packs, videoPacks, posts) {
   // Define static site routes
   const staticPages = [
     '',
@@ -11,7 +12,8 @@ function generateSiteMap(packs, videoPacks) {
     '/video-dj-crates',
     '/about',
     '/contact',
-    '/sonic-branding'
+    '/sonic-branding',
+    '/blog'
   ];
 
   const currentDate = new Date().toISOString();
@@ -57,6 +59,19 @@ function generateSiteMap(packs, videoPacks) {
      `;
        })
        .join('')}
+     <!-- Blog Post URLs -->
+     ${posts
+       .map(({ slug, date }) => {
+         return `
+       <url>
+           <loc>${BASE_URL}/blog/${slug}</loc>
+           <lastmod>${date || currentDate}</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
    </urlset>
  `;
 }
@@ -67,8 +82,9 @@ function SiteMap() {
 }
 
 export async function getServerSideProps({ res }) {
-  // Generate the dynamic XML content using data from musicPacks and videomusicPacks
-  const sitemap = generateSiteMap(musicPacks, videomusicPacks);
+  // Generate the dynamic XML content using packs and locally stored blog posts
+  const posts = getSortedPostsMeta();
+  const sitemap = generateSiteMap(musicPacks, videomusicPacks, posts);
 
   // Set response headers and write raw XML sitemap
   res.setHeader('Content-Type', 'text/xml');
