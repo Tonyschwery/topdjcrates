@@ -433,11 +433,7 @@ async function attemptImage({ apiKey, model, prompt, config }) {
   return imagePart.inlineData;
 }
 
-function saveImage(inlineData, slug) {
-  const mimeType = inlineData.mimeType || 'image/png';
-  const extension = mimeType.includes('jpeg') ? 'jpg' : 'png';
-  const buffer = Buffer.from(inlineData.data, 'base64');
-
+function saveImage(buffer, extension, slug) {
   if (buffer.length < 5000) {
     throw new Error(`Returned image is suspiciously small (${buffer.length} bytes).`);
   }
@@ -453,51 +449,148 @@ function saveImage(inlineData, slug) {
   return `/images/${fileName}`;
 }
 
-async function generateImage({ apiKey, prompt, slug }) {
+// --- Provider 1: Google Gemini (paid, best quality) ------------------------
+
+async function geminiImage(prompt) {
+  const apiKey = process.env.GEMINI_API_KEY;
   const failures = [];
 
   for (const model of IMAGE_MODEL_CHAIN) {
     for (const variant of BODY_VARIANTS) {
-      for (let attempt = 1; attempt <= 2; attempt++) {
-        log(`Image: ${model} [${variant.label}], attempt ${attempt}/2...`);
+      try {
+        log(`  Gemini: ${model} [${variant.label}]...`);
+        const inlineData = await attemptImage({ apiKey, model, prompt, config: variant.config });
+        const mimeType = inlineData.mimeType || 'image/png';
+        return {
+          buffer: Buffer.from(inlineData.data, 'base64'),
+          extension: mimeType.includes('jpeg') ? 'jpg' : 'png',
+        };
+      } catch (error) {
+        failures.push(`${model} [${variant.label}]: ${error.message.slice(0, 160)}`);
 
-        try {
-          const inlineData = await attemptImage({
-            apiKey,
-            model,
-            prompt,
-            config: variant.config,
-          });
-          return saveImage(inlineData, slug);
-        } catch (error) {
-          const note = `${model} [${variant.label}] -> ${error.message}`;
-          log(`  -> ${error.message.slice(0, 200)}`);
-
-          // Bad key — nothing else will work, stop immediately.
-          if (error.status === 401 || error.status === 403) {
-            throw new Error(`Gemini auth failed (${error.status}). Check GEMINI_API_KEY.`);
-          }
-
-          // Unknown model, rejected field, or no image in the reply.
-          // Repeating the identical request won't help — move to the next option.
-          if (error.status === 400 || error.status === 404 || error.status === 200) {
-            failures.push(note);
-            break;
-          }
-
-          // Overloaded (503) or rate limited (429) — wait, then try once more.
-          if (attempt < 2) {
-            await sleep(8000);
-          } else {
-            failures.push(note);
-          }
+        // Out of credits or bad key — no Gemini model will work. Give up fast
+        // so we move on to the free providers instead of hammering the API.
+        if ([401, 403, 429].includes(error.status)) {
+          throw new Error(`Gemini unavailable (${error.status}): ${error.message.slice(0, 200)}`);
         }
       }
     }
   }
 
-  // Report every distinct failure so the summary page shows the real cause.
-  throw new Error(`All image attempts failed.\n${failures.join('\n')}`);
+  throw new Error(failures.join(' | '));
+}
+
+// --- Provider 2: Cloudflare Workers AI (free tier, needs a free account) ---
+
+async function cloudflareImage(prompt) {
+  const accountId = process.env.CF_ACCOUNT_ID;
+  const token = process.env.CF_API_TOKEN;
+  const model = process.env.CF_IMAGE_MODEL || '@cf/black-forest-labs/flux-1-schnell';
+
+  const response = await fetch(
+    `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ prompt: prompt.slice(0, 2000) }),
+    }
+  );
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`HTTP ${response.status}: ${text.slice(0, 250)}`);
+  }
+
+  const contentType = response.headers.get('content-type') || '';
+
+  // Some Cloudflare models return raw image bytes, others return JSON
+  // with a base64 string. Handle both.
+  if (contentType.includes('application/json')) {
+    const data = await response.json();
+    const base64 = data?.result?.image;
+    if (!base64) throw new Error(`No image in response: ${JSON.stringify(data).slice(0, 250)}`);
+    return { buffer: Buffer.from(base64, 'base64'), extension: 'jpg' };
+  }
+
+  const arrayBuffer = await response.arrayBuffer();
+  return {
+    buffer: Buffer.from(arrayBuffer),
+    extension: contentType.includes('jpeg') ? 'jpg' : 'png',
+  };
+}
+
+// --- Provider 3: Pollinations (completely free, no account, no key) -------
+
+async function pollinationsImage(prompt) {
+  // Long prompts make unwieldy URLs, so trim to the important part.
+  const trimmed = prompt.slice(0, 1200);
+  const url =
+    `https://image.pollinations.ai/prompt/${encodeURIComponent(trimmed)}` +
+    `?width=1280&height=720&nologo=true&model=flux&seed=${Math.floor(Math.random() * 100000)}`;
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.startsWith('image/')) {
+    throw new Error(`Expected an image, got ${contentType}`);
+  }
+
+  const arrayBuffer = await response.arrayBuffer();
+  return {
+    buffer: Buffer.from(arrayBuffer),
+    extension: contentType.includes('jpeg') ? 'jpg' : 'png',
+  };
+}
+
+// --- Try each provider in turn --------------------------------------------
+
+async function generateImage({ prompt, slug }) {
+  const providers = [];
+
+  if (process.env.GEMINI_API_KEY) {
+    providers.push({ name: 'Gemini (paid)', run: geminiImage });
+  }
+  if (process.env.CF_ACCOUNT_ID && process.env.CF_API_TOKEN) {
+    providers.push({ name: 'Cloudflare (free)', run: cloudflareImage });
+  }
+  if (String(process.env.DISABLE_POLLINATIONS).toLowerCase() !== 'true') {
+    providers.push({ name: 'Pollinations (free)', run: pollinationsImage });
+  }
+
+  if (providers.length === 0) {
+    throw new Error('No image provider is configured.');
+  }
+
+  const failures = [];
+
+  for (const provider of providers) {
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      log(`Image provider: ${provider.name}, attempt ${attempt}/2...`);
+
+      try {
+        const { buffer, extension } = await provider.run(prompt);
+        log(`  -> success via ${provider.name}`);
+        return saveImage(buffer, extension, slug);
+      } catch (error) {
+        log(`  -> ${error.message.slice(0, 200)}`);
+
+        if (attempt === 2) {
+          failures.push(`${provider.name}: ${error.message.slice(0, 300)}`);
+        } else {
+          await sleep(5000);
+        }
+      }
+    }
+  }
+
+  throw new Error(`All image providers failed.\n\n${failures.join('\n\n')}`);
 }
 
 // ---------------------------------------------------------------------------
@@ -580,7 +673,6 @@ function rebuildDocument(markdown, meta, extras) {
 
 async function main() {
   const anthropicKey = process.env.ANTHROPIC_API_KEY;
-  const geminiKey = process.env.GEMINI_API_KEY;
 
   if (!anthropicKey) {
     fail(
@@ -632,17 +724,12 @@ async function main() {
   let imagePath = '';
   const imageAlt = `${preset.label} DJ setup — editorial header image for ${meta.title}`;
 
-  if (!geminiKey) {
-    warn('GEMINI_API_KEY is not set. Publishing without a header image.');
-    fs.writeFileSync('image-error.log', 'GEMINI_API_KEY is not set in GitHub Secrets.');
-  } else {
-    try {
-      imagePath = await generateImage({ apiKey: geminiKey, prompt: imagePrompt, slug });
-    } catch (error) {
-      warn(`Image generation failed, publishing without art: ${error.message}`);
-      // Written to a file so the workflow can show it on the run summary page.
-      fs.writeFileSync('image-error.log', error.message);
-    }
+  try {
+    imagePath = await generateImage({ prompt: imagePrompt, slug });
+  } catch (error) {
+    warn(`Image generation failed, publishing without art: ${error.message}`);
+    // Written to a file so the workflow can show it on the run summary page.
+    fs.writeFileSync('image-error.log', error.message);
   }
 
   // --- 5. Write ------------------------------------------------------------

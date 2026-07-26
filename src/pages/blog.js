@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import Script from 'next/script';
 import { getSortedPostsMeta } from '@/lib/posts';
 import { formatPostDate } from '@/lib/formatDate';
 
@@ -29,14 +28,9 @@ export default function BlogPage({ posts = [] }) {
 
         {/* ============================================================
             LOCAL POSTS (src/posts/*.md)
-            Rendered above the Soro embed. Hides itself when empty.
             ============================================================ */}
-        {posts.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-gold mb-6 tracking-tight">
-              Latest Articles
-            </h2>
-
+        {posts.length > 0 ? (
+          <section>
             <div className="grid gap-6 md:grid-cols-2">
               {posts.map((post) => (
                 <Link
@@ -81,20 +75,11 @@ export default function BlogPage({ posts = [] }) {
               ))}
             </div>
           </section>
+        ) : (
+          <p className="text-center text-zinc-500 py-20">
+            New articles are on the way. Check back soon.
+          </p>
         )}
-
-        {/* ============================================================
-            SORO EMBED — original code, untouched.
-            ============================================================ */}
-        <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-6 md:p-10 shadow-2xl backdrop-blur-sm min-h-[500px]">
-          <div id="soro-blog" className="w-full"></div>
-        </div>
-
-        {/* Safe loading of the blog embed script */}
-        <Script
-          src="https://app.trysoro.com/api/embed/ca934cbd-2453-4b40-9bab-c11d0fdaba58"
-          strategy="afterInteractive"
-        />
       </div>
     </>
   );
