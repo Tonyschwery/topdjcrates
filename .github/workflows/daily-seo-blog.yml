@@ -60,6 +60,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # The images folder may not exist if no picture was generated.
+          # Create it first so `git add` never fails on a missing path.
+          mkdir -p public/images
+
           git add src/posts public/images
 
           # If the script produced nothing new, exit cleanly instead of failing.
