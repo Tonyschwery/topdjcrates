@@ -1,0 +1,81 @@
+name: Daily SEO Blog Post
+
+# Runs every day at 03:00 UTC (06:00 Doha time).
+# Also runnable by hand from the Actions tab, which is how you should test it.
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Generate the post but do not commit it'
+        required: false
+        default: 'false'
+
+# Required so the job can push the generated post back to main.
+permissions:
+  contents: write
+
+# Never let two runs overlap and fight over the same branch.
+concurrency:
+  group: daily-seo-blog
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          # Needed so the commit we create can be pushed back.
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate today's blog post
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional overrides — set these as repo variables if you want.
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          DRAFT_MODE: ${{ vars.DRAFT_MODE }}
+        run: node scripts/generate-blog.js
+
+      - name: Commit and push the new post
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add src/posts
+
+          # If the script produced nothing new, exit cleanly instead of failing.
+          if git diff --staged --quiet; then
+            echo "No new post was generated. Nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "content: add ${{ steps.generate.outputs.slug }} [skip ci]"
+
+          # Rebase onto anything pushed while we were running, then push.
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Daily SEO Blog Post" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Slug: \`${{ steps.generate.outputs.slug }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Title: ${{ steps.generate.outputs.title }}" >> $GITHUB_STEP_SUMMARY

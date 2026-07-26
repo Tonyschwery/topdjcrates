@@ -1,8 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Script from 'next/script';
+import { getSortedPostsMeta } from '@/lib/posts';
+import { formatPostDate } from '@/lib/formatDate';
 
-export default function BlogPage() {
+export default function BlogPage({ posts = [] }) {
   return (
     <>
       <Head>
@@ -24,7 +27,52 @@ export default function BlogPage() {
           </p>
         </section>
 
-        {/* Embedded Soro Blog Container */}
+        {/* ============================================================
+            LOCAL POSTS (src/posts/*.md)
+            Rendered above the Soro embed. Hides itself when empty.
+            ============================================================ */}
+        {posts.length > 0 && (
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold text-gold mb-6 tracking-tight">
+              Latest Articles
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group block bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-6 shadow-2xl backdrop-blur-sm transition-colors hover:border-gold/60"
+                >
+                  <h3 className="text-xl font-bold text-primary mb-2 leading-snug group-hover:text-gold transition-colors">
+                    {post.title}
+                  </h3>
+
+                  {post.date && (
+                    <time
+                      dateTime={post.date}
+                      className="block text-xs uppercase tracking-wider text-zinc-500 mb-3"
+                    >
+                      {formatPostDate(post.date)}
+                    </time>
+                  )}
+
+                  {post.excerpt && (
+                    <p className="text-text leading-relaxed mb-4">{post.excerpt}</p>
+                  )}
+
+                  <span className="text-sm font-bold text-gold">
+                    Read the article &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ============================================================
+            SORO EMBED — original code, untouched.
+            ============================================================ */}
         <div className="bg-zinc-900/40 border border-zinc-800/80 rounded-2xl p-6 md:p-10 shadow-2xl backdrop-blur-sm min-h-[500px]">
           <div id="soro-blog" className="w-full"></div>
         </div>
@@ -37,4 +85,12 @@ export default function BlogPage() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      posts: getSortedPostsMeta(),
+    },
+  };
 }
