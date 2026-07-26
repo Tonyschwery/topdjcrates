@@ -83,5 +83,15 @@ jobs:
         run: |
           echo "### Daily SEO Blog Post" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- Slug: \`${{ steps.generate.outputs.slug }}\`" >> $GITHUB_STEP_SUMMARY
-          echo "- Title: ${{ steps.generate.outputs.title }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Title:** ${{ steps.generate.outputs.title }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **File:** \`${{ steps.generate.outputs.slug }}.md\`" >> $GITHUB_STEP_SUMMARY
+          echo "- **Genre:** ${{ steps.generate.outputs.genre }}" >> $GITHUB_STEP_SUMMARY
+          if [ -n "${{ steps.generate.outputs.image }}" ]; then
+            echo "- **Picture:** OK — \`${{ steps.generate.outputs.image }}\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Picture:** FAILED — see the reason below" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat image-error.log 2>/dev/null || echo "(no reason recorded)" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi

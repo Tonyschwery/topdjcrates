@@ -618,11 +618,14 @@ async function main() {
 
   if (!geminiKey) {
     warn('GEMINI_API_KEY is not set. Publishing without a header image.');
+    fs.writeFileSync('image-error.log', 'GEMINI_API_KEY is not set in GitHub Secrets.');
   } else {
     try {
       imagePath = await generateImage({ apiKey: geminiKey, prompt: imagePrompt, slug });
     } catch (error) {
       warn(`Image generation failed, publishing without art: ${error.message}`);
+      // Written to a file so the workflow can show it on the run summary page.
+      fs.writeFileSync('image-error.log', error.message);
     }
   }
 
