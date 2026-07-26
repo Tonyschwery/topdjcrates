@@ -384,15 +384,21 @@ function buildImagePrompt({ genre, mood, title }) {
 // Step 4: generate the image (Nano Banana Pro, falling back down the chain)
 // ---------------------------------------------------------------------------
 
-/** One single request. Throws an Error carrying .status on failure. */
-async function attemptImage({ apiKey, model, prompt, useAspectConfig }) {
-  const body = { contents: [{ parts: [{ text: prompt }] }] };
+/** Config variations to try, most-preferred first. */
+const BODY_VARIANTS = [
+  {
+    label: 'image mode + 16:9',
+    config: { responseModalities: ['TEXT', 'IMAGE'], imageConfig: { aspectRatio: '16:9' } },
+  },
+  { label: 'image mode', config: { responseModalities: ['TEXT', 'IMAGE'] } },
+  { label: '16:9 only', config: { imageConfig: { aspectRatio: '16:9' } } },
+  { label: 'plain request', config: null },
+];
 
-  // Ask for a consistent wide header shape. Not every model accepts this,
-  // so the caller retries without it if the API rejects the field.
-  if (useAspectConfig) {
-    body.generationConfig = { imageConfig: { aspectRatio: '16:9' } };
-  }
+/** One single request. Throws an Error carrying .status on failure. */
+async function attemptImage({ apiKey, model, prompt, config }) {
+  const body = { contents: [{ parts: [{ text: prompt }] }] };
+  if (config) body.generationConfig = config;
 
   const response = await fetch(`${GEMINI_BASE}/${model}:generateContent`, {
     method: 'POST',
@@ -448,40 +454,50 @@ function saveImage(inlineData, slug) {
 }
 
 async function generateImage({ apiKey, prompt, slug }) {
-  let lastError;
+  const failures = [];
 
   for (const model of IMAGE_MODEL_CHAIN) {
-    // First try with the 16:9 request, then without it.
-    for (const useAspectConfig of [true, false]) {
-      for (let attempt = 1; attempt <= 3; attempt++) {
-        const shape = useAspectConfig ? ' [16:9]' : ' [default shape]';
-        log(`Image: ${model}${shape}, attempt ${attempt}/3...`);
+    for (const variant of BODY_VARIANTS) {
+      for (let attempt = 1; attempt <= 2; attempt++) {
+        log(`Image: ${model} [${variant.label}], attempt ${attempt}/2...`);
 
         try {
-          const inlineData = await attemptImage({ apiKey, model, prompt, useAspectConfig });
+          const inlineData = await attemptImage({
+            apiKey,
+            model,
+            prompt,
+            config: variant.config,
+          });
           return saveImage(inlineData, slug);
         } catch (error) {
-          lastError = error;
+          const note = `${model} [${variant.label}] -> ${error.message}`;
+          log(`  -> ${error.message.slice(0, 200)}`);
 
-          // Bad key — no other model will help, stop immediately.
+          // Bad key — nothing else will work, stop immediately.
           if (error.status === 401 || error.status === 403) {
             throw new Error(`Gemini auth failed (${error.status}). Check GEMINI_API_KEY.`);
           }
 
-          // Unknown model or rejected field — retrying identically won't help.
-          if (error.status === 400 || error.status === 404) {
-            log(`  -> rejected (${error.status}), trying next option.`);
+          // Unknown model, rejected field, or no image in the reply.
+          // Repeating the identical request won't help — move to the next option.
+          if (error.status === 400 || error.status === 404 || error.status === 200) {
+            failures.push(note);
             break;
           }
 
-          // Overloaded (503) or rate limited (429) — wait and try again.
-          if (attempt < 3) await sleep(attempt * 8000);
+          // Overloaded (503) or rate limited (429) — wait, then try once more.
+          if (attempt < 2) {
+            await sleep(8000);
+          } else {
+            failures.push(note);
+          }
         }
       }
     }
   }
 
-  throw new Error(`Every image model failed. Last error: ${lastError?.message || 'unknown'}`);
+  // Report every distinct failure so the summary page shows the real cause.
+  throw new Error(`All image attempts failed.\n${failures.join('\n')}`);
 }
 
 // ---------------------------------------------------------------------------

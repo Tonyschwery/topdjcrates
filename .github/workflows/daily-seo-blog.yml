@@ -72,7 +72,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "content: add ${{ steps.generate.outputs.slug }} [skip ci]"
+          git commit -m "content: add ${{ steps.generate.outputs.slug }}"
 
           # Rebase onto anything pushed while we were running, then push.
           git pull --rebase origin main
@@ -92,6 +92,6 @@ jobs:
             echo "- **Picture:** FAILED — see the reason below" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            cat image-error.log 2>/dev/null || echo "(no reason recorded)" >> $GITHUB_STEP_SUMMARY
+            cat image-error.log >> $GITHUB_STEP_SUMMARY 2>/dev/null || echo "(no reason recorded)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
           fi
