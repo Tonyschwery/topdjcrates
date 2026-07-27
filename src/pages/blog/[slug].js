@@ -8,7 +8,7 @@ export default function BlogPostPage({ post }) {
   // Safety net: should never render because getStaticProps returns notFound.
   if (!post) return null;
 
-  const canonical = `https://www.topdjcrates.com/blog/${post.slug}`;
+  const canonical = `https://topdjcrates.com/blog/${post.slug}`;
 
   return (
     <>
@@ -23,11 +23,11 @@ export default function BlogPostPage({ post }) {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={canonical} />
-        {post.image && (
+            {post.image && (
           <>
-            <meta property="og:image" content={`https://www.topdjcrates.com${post.image}`} />
+            <meta property="og:image" content={`https://topdjcrates.com${post.image}`} />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content={`https://www.topdjcrates.com${post.image}`} />
+            <meta name="twitter:image" content={`https://topdjcrates.com${post.image}`} />
           </>
         )}
 
@@ -41,7 +41,7 @@ export default function BlogPostPage({ post }) {
               headline: post.title,
               description: post.excerpt,
               datePublished: post.date || undefined,
-              image: post.image ? `https://www.topdjcrates.com${post.image}` : undefined,
+              image: post.image ? `https://topdjcrates.com${post.image}` : undefined,
               author: { '@type': 'Organization', name: post.author },
               publisher: { '@type': 'Organization', name: 'TOP DJ CRATES' },
               mainEntityOfPage: canonical,

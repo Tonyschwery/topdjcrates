@@ -58,7 +58,7 @@ export default function ContactPage({ musicPacks = [] }) {
       <Head>
         <title>Contact TOP DJ CRATES | DJ Crates & Custom Mix Support</title>
         <meta name="description" content="Questions about our DJ crates, downloads, or a custom mix request? Reach the TOP DJ CRATES team directly — we usually reply within 24 hours." />
-        <link rel="canonical" href="https://www.topdjcrates.com/contact" />
+        <link rel="canonical" href="https://topdjcrates.com/contact" />
       </Head>
       <div className="px-4 py-16">
         <section id="contact" className="text-center">

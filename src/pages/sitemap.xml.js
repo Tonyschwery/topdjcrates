@@ -2,7 +2,7 @@ import { musicPacks } from '@/data/musicPacks';
 import { videomusicPacks } from '@/data/videomusicPacks';
 import { getSortedPostsMeta } from '@/lib/posts';
 
-const BASE_URL = 'https://www.topdjcrates.com';
+const BASE_URL = 'https://topdjcrates.com';
 
 function generateSiteMap(packs, videoPacks, posts) {
   // Define static site routes

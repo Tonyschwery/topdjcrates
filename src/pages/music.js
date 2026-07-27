@@ -375,7 +375,7 @@ export default function MusicPage({
 // Server-side props to generate proper meta tags for social sharing
 export async function getServerSideProps(context) {
   const { crate } = context.query;
-  const baseUrl = 'https://www.topdjcrates.com';
+  const baseUrl = 'https://topdjcrates.com';
 
   // If there's a crate query parameter, find the corresponding crate
   let sharedCrate = null;

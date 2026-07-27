@@ -14,6 +14,7 @@ export default function AboutPage({ musicPacks = [] }) {
           name="description" 
           content="Wondering where do DJs get their music from? Discover how TOP DJ CRATES provides the secret source for professionals to get high-quality, exclusive DJ music packs."
         />
+        <link rel="canonical" href="https://topdjcrates.com/about" />
       </Head>
       <div className="px-4 py-16">
         <section id="about" className="text-center">

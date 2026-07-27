@@ -17,6 +17,7 @@ export default function Home({ musicPacks = [], latestPosts = [] }) {
           name="description" 
           content="Use coupon code LMS26 at checkout for 40% OFF all items! Save big on high-quality, professional DJ crates. Newly added 2026 Reggaeton, Wedding Anthems, and Indie Dance crates are now live. Start playing what professional DJs actually use."
         />
+        <link rel="canonical" href="https://topdjcrates.com/" />
       </Head>
 
       {/* --- EVERYTHING BELOW THIS IS YOUR ORIGINAL CODE PRESERVED --- */}

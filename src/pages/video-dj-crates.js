@@ -196,7 +196,7 @@ export default function VideoCratesPage({
 
             {/* Default Open Graph / Facebook */}
             <meta property="og:type" content="website" />
-            <meta property="og:url" content={shareUrl || 'https://www.topdjcrates.com/video-dj-crates'} />
+            <meta property="og:url" content={shareUrl || 'https://topdjcrates.com/video-dj-crates'} />
             <meta property="og:title" content="Premium VJ & Video DJ Crates | TOP DJ CRATES (40% OFF Code: LMS26)" />
             <meta property="og:description" content="Elevate your visual sets with premium high-definition VJ video crates. Meticulously compiled music videos and custom edits formatted perfectly in MP4. Use code LMS26 for 40% OFF!" />
             <meta property="og:image" content="https://i.imgur.com/30xrVla.png" />
@@ -204,7 +204,7 @@ export default function VideoCratesPage({
 
             {/* Default Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:url" content={shareUrl || 'https://www.topdjcrates.com/video-dj-crates'} />
+            <meta name="twitter:url" content={shareUrl || 'https://topdjcrates.com/video-dj-crates'} />
             <meta name="twitter:title" content="Premium VJ & Video DJ Crates | TOP DJ CRATES (40% OFF Code: LMS26)" />
             <meta name="twitter:description" content="Elevate your visual sets with premium high-definition VJ video crates. Meticulously compiled music videos and custom edits formatted perfectly in MP4. Use code LMS26 for 40% OFF!" />
             <meta name="twitter:image" content="https://i.imgur.com/30xrVla.png" />
@@ -212,7 +212,7 @@ export default function VideoCratesPage({
         )}
 
         {/* Canonical URL */}
-        <link rel="canonical" href={shareUrl || 'https://www.topdjcrates.com/video-dj-crates'} />
+        <link rel="canonical" href={shareUrl || 'https://topdjcrates.com/video-dj-crates'} />
 
         {/* Schema.org Product List Markup */}
         {productSchemaScript && (
@@ -441,7 +441,7 @@ export default function VideoCratesPage({
 // Server-side props to generate proper meta tags for social sharing
 export async function getServerSideProps(context) {
   const { crate } = context.query;
-  const baseUrl = 'https://www.topdjcrates.com';
+  const baseUrl = 'https://topdjcrates.com';
 
   // If there's a crate query parameter, find the corresponding crate
   let sharedCrate = null;
