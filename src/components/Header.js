@@ -49,6 +49,11 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link href="/blog" legacyBehavior>
+              <a className={`text-md transition-colors duration-300 ${router.pathname.startsWith('/blog') ? activeClass : inactiveClass}`}>Blog</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/about" legacyBehavior>
               <a className={`text-md transition-colors duration-300 ${router.pathname === '/about' ? activeClass : inactiveClass}`}>About</a>
             </Link> {/* Corrected Closing Tag */}
