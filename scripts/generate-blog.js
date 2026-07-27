@@ -9,8 +9,8 @@
  *    directly from this script via a tool-use loop.
  * 2. Analyses that article to detect its electronic music genre and mood.
  * 3. Builds a genre-matched, ultra-realistic image prompt.
- * 4. Generates the image with Google's Nano Banana Pro (gemini-3-pro-image),
- *    falling back to other model names automatically if that one is rejected.
+ * 4. Generates the image with Cloudflare Workers AI, falling back to
+ *    Pollinations if Cloudflare is unavailable.
  * 5. Saves the image to public/images/ and links it in the frontmatter.
  *
  * Requires: Node 20+ (uses built-in fetch). No npm dependencies.
@@ -20,10 +20,10 @@
  *   BRAVE_API_KEY      (required for research) — GitHub repository secret.
  *                                   Without it the post is still written, but
  *                                   from the model's own knowledge, ungrounded.
- *   GEMINI_API_KEY     (optional) — GitHub repository secret. Without it the
- *                                   post is still published, just without art.
+ *   CF_ACCOUNT_ID      (optional) — Cloudflare Workers AI, primary image source
+ *   CF_API_TOKEN       (optional) — pairs with CF_ACCOUNT_ID
  *   ANTHROPIC_MODEL    (optional) — defaults to claude-sonnet-5
- *   GEMINI_IMAGE_MODEL (optional) — force one model; otherwise tries Pro first
+ *   CF_IMAGE_MODEL     (optional) — override the Cloudflare image model
  *   DRAFT_MODE         (optional) — "true" writes posts with draft: true
  */
 
@@ -33,7 +33,6 @@ const crypto = require('crypto');
 
 const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
 const ANTHROPIC_VERSION = '2023-06-01';
-const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 const BRAVE_URL = 'https://api.search.brave.com/res/v1/web/search';
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts');
@@ -46,17 +45,6 @@ const DRAFT_MODE = String(process.env.DRAFT_MODE).toLowerCase() === 'true';
 // back-and-forth rounds with Claude before we give up.
 const MAX_SEARCHES = 6;
 const MAX_ROUNDS = 10;
-
-// Google keeps renaming these between preview and stable. Rather than pin one
-// name and break at 3am, we try them in order and use whichever answers.
-// Set GEMINI_IMAGE_MODEL to force a single specific model.
-const IMAGE_MODEL_CHAIN = process.env.GEMINI_IMAGE_MODEL
-  ? [process.env.GEMINI_IMAGE_MODEL]
-  : [
-      'gemini-3-pro-image',          // Nano Banana Pro (stable)
-      'gemini-3-pro-image-preview',  // Nano Banana Pro (preview naming)
-      'gemini-3.1-flash-image',      // Nano Banana 2 — cheaper fallback
-    ];
 
 // ---------------------------------------------------------------------------
 // Small helpers
@@ -553,57 +541,8 @@ function buildImagePrompt({ genre, mood, title }) {
 }
 
 // ---------------------------------------------------------------------------
-// Step 4: generate the image (Nano Banana Pro, falling back down the chain)
+// Step 4: generate the image (Cloudflare Workers AI, Pollinations as backup)
 // ---------------------------------------------------------------------------
-
-/** Config variations to try, most-preferred first. */
-const BODY_VARIANTS = [
-  {
-    label: 'image mode + 16:9',
-    config: { responseModalities: ['TEXT', 'IMAGE'], imageConfig: { aspectRatio: '16:9' } },
-  },
-  { label: 'image mode', config: { responseModalities: ['TEXT', 'IMAGE'] } },
-  { label: '16:9 only', config: { imageConfig: { aspectRatio: '16:9' } } },
-  { label: 'plain request', config: null },
-];
-
-/** One single request. Throws an Error carrying .status on failure. */
-async function attemptImage({ apiKey, model, prompt, config }) {
-  const body = { contents: [{ parts: [{ text: prompt }] }] };
-  if (config) body.generationConfig = config;
-
-  const response = await fetch(`${GEMINI_BASE}/${model}:generateContent`, {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      // Sent as a header, never in the URL, so it stays out of logs.
-      'x-goog-api-key': apiKey,
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!response.ok) {
-    const text = await response.text();
-    const error = new Error(`HTTP ${response.status}: ${text.slice(0, 300)}`);
-    error.status = response.status;
-    throw error;
-  }
-
-  const data = await response.json();
-  const parts = data?.candidates?.[0]?.content?.parts || [];
-  const imagePart = parts.find((p) => p.inlineData?.data);
-
-  if (!imagePart) {
-    const textPart = parts.find((p) => p.text);
-    const error = new Error(
-      `Response contained no image data${textPart ? `: ${textPart.text.slice(0, 200)}` : ''}`
-    );
-    error.status = 200;
-    throw error;
-  }
-
-  return imagePart.inlineData;
-}
 
 function saveImage(buffer, extension, slug) {
   if (buffer.length < 5000) {
@@ -621,38 +560,7 @@ function saveImage(buffer, extension, slug) {
   return `/images/${fileName}`;
 }
 
-// --- Provider 1: Google Gemini (paid, best quality) ------------------------
-
-async function geminiImage(prompt) {
-  const apiKey = process.env.GEMINI_API_KEY;
-  const failures = [];
-
-  for (const model of IMAGE_MODEL_CHAIN) {
-    for (const variant of BODY_VARIANTS) {
-      try {
-        log(`  Gemini: ${model} [${variant.label}]...`);
-        const inlineData = await attemptImage({ apiKey, model, prompt, config: variant.config });
-        const mimeType = inlineData.mimeType || 'image/png';
-        return {
-          buffer: Buffer.from(inlineData.data, 'base64'),
-          extension: mimeType.includes('jpeg') ? 'jpg' : 'png',
-        };
-      } catch (error) {
-        failures.push(`${model} [${variant.label}]: ${error.message.slice(0, 160)}`);
-
-        // Out of credits or bad key — no Gemini model will work. Give up fast
-        // so we move on to the free providers instead of hammering the API.
-        if ([401, 403, 429].includes(error.status)) {
-          throw new Error(`Gemini unavailable (${error.status}): ${error.message.slice(0, 200)}`);
-        }
-      }
-    }
-  }
-
-  throw new Error(failures.join(' | '));
-}
-
-// --- Provider 2: Cloudflare Workers AI (free tier, needs a free account) ---
+// --- Provider 1: Cloudflare Workers AI (free tier) ------------------------
 
 async function cloudflareImage(prompt) {
   const accountId = process.env.CF_ACCOUNT_ID;
@@ -694,7 +602,7 @@ async function cloudflareImage(prompt) {
   };
 }
 
-// --- Provider 3: Pollinations (completely free, no account, no key) -------
+// --- Provider 2: Pollinations (completely free, no account, no key) -------
 
 async function pollinationsImage(prompt) {
   // Long prompts make unwieldy URLs, so trim to the important part.
@@ -726,9 +634,6 @@ async function pollinationsImage(prompt) {
 async function generateImage({ prompt, slug }) {
   const providers = [];
 
-  if (process.env.GEMINI_API_KEY) {
-    providers.push({ name: 'Gemini (paid)', run: geminiImage });
-  }
   if (process.env.CF_ACCOUNT_ID && process.env.CF_API_TOKEN) {
     providers.push({ name: 'Cloudflare (free)', run: cloudflareImage });
   }
