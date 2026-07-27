@@ -4,8 +4,9 @@
  *
  * Daily SEO post generator for TOP DJ CRATES.
  *
- * 1. Asks Claude (with web search) for a trending, high-intent DJ topic we
- *    haven't covered, and writes a full Markdown article.
+ * 1. Asks Claude for a trending, high-intent DJ topic we haven't covered, and
+ *    writes a full Markdown article. Research is done with Brave Search, called
+ *    directly from this script via a tool-use loop.
  * 2. Analyses that article to detect its electronic music genre and mood.
  * 3. Builds a genre-matched, ultra-realistic image prompt.
  * 4. Generates the image with Google's Nano Banana Pro (gemini-3-pro-image),
@@ -16,6 +17,9 @@
  *
  * Environment:
  *   ANTHROPIC_API_KEY  (required) — GitHub repository secret
+ *   BRAVE_API_KEY      (required for research) — GitHub repository secret.
+ *                                   Without it the post is still written, but
+ *                                   from the model's own knowledge, ungrounded.
  *   GEMINI_API_KEY     (optional) — GitHub repository secret. Without it the
  *                                   post is still published, just without art.
  *   ANTHROPIC_MODEL    (optional) — defaults to claude-sonnet-5
@@ -30,12 +34,18 @@ const crypto = require('crypto');
 const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
 const ANTHROPIC_VERSION = '2023-06-01';
 const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
+const BRAVE_URL = 'https://api.search.brave.com/res/v1/web/search';
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts');
 const IMAGES_DIR = path.join(process.cwd(), 'public', 'images');
 
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 const DRAFT_MODE = String(process.env.DRAFT_MODE).toLowerCase() === 'true';
+
+// How many Brave searches one article is allowed, and how many
+// back-and-forth rounds with Claude before we give up.
+const MAX_SEARCHES = 6;
+const MAX_ROUNDS = 10;
 
 // Google keeps renaming these between preview and stable. Rather than pin one
 // name and break at 3am, we try them in order and use whichever answers.
@@ -199,6 +209,110 @@ function detectGenreByKeywords(markdown) {
 }
 
 // ---------------------------------------------------------------------------
+// Brave Search
+// ---------------------------------------------------------------------------
+
+// The free tier allows roughly one query per second, so we space calls out.
+let lastBraveCall = 0;
+
+/**
+ * Runs one Brave web search and returns the results as plain text for Claude.
+ * Never throws — a failed search returns an explanatory string so the model can
+ * carry on and write the article rather than the whole run dying.
+ */
+async function braveSearch(query, count = 8) {
+  const apiKey = process.env.BRAVE_API_KEY;
+
+  if (!apiKey) {
+    warn('BRAVE_API_KEY is not set — search is unavailable this run.');
+    return 'Search is unavailable: no API key configured. Write the article from your own knowledge and avoid citing specific figures or recent releases.';
+  }
+
+  if (!query) {
+    return 'No query was supplied. Send a short, specific search phrase.';
+  }
+
+  const sinceLast = Date.now() - lastBraveCall;
+  if (sinceLast < 1200) await sleep(1200 - sinceLast);
+  lastBraveCall = Date.now();
+
+  log(`  Brave search: "${query}"`);
+
+  let response;
+  try {
+    response = await fetch(`${BRAVE_URL}?q=${encodeURIComponent(query)}&count=${count}`, {
+      headers: {
+        accept: 'application/json',
+        'accept-encoding': 'gzip',
+        // Sent as a header, never in the URL, so it stays out of logs.
+        'x-subscription-token': apiKey,
+      },
+    });
+  } catch (networkError) {
+    warn(`Brave network failure: ${networkError.message}`);
+    return `Search failed (network error): ${networkError.message}. Try once more, then write with what you have.`;
+  }
+
+  if (response.status === 429) {
+    warn('Brave rate limit hit — pausing.');
+    await sleep(3000);
+    return 'Search was rate limited. Try at most one more query, then write the article with what you already have.';
+  }
+
+  if (response.status === 401 || response.status === 403) {
+    warn(`Brave rejected the key (${response.status}). Check BRAVE_API_KEY.`);
+    return 'Search is unavailable: the API key was rejected. Write the article from your own knowledge and avoid citing specific figures.';
+  }
+
+  if (!response.ok) {
+    const text = await response.text();
+    warn(`Brave returned HTTP ${response.status}.`);
+    return `Search failed (HTTP ${response.status}): ${text.slice(0, 200)}`;
+  }
+
+  const data = await response.json();
+  const results = data?.web?.results || [];
+
+  if (results.length === 0) {
+    return `No results found for "${query}". Try a different phrasing.`;
+  }
+
+  return results
+    .slice(0, count)
+    .map((result, index) => {
+      // Brave wraps matched terms in <strong> tags — strip them.
+      const snippet = (result.description || '').replace(/<\/?strong>/g, '');
+      const age = result.age || result.page_age;
+      return [
+        `${index + 1}. ${result.title}`,
+        `   ${result.url}`,
+        `   ${snippet}`,
+        age ? `   Published: ${age}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n');
+    })
+    .join('\n\n');
+}
+
+/** Tool definition handed to Claude. */
+const BRAVE_TOOL = {
+  name: 'brave_search',
+  description:
+    'Search the live web using Brave. Returns numbered results with titles, URLs, snippets and publication dates. Use it to find what DJs and producers are searching for and discussing right now.',
+  input_schema: {
+    type: 'object',
+    properties: {
+      query: {
+        type: 'string',
+        description: 'The search query. Keep it short and specific, like a real search.',
+      },
+    },
+    required: ['query'],
+  },
+};
+
+// ---------------------------------------------------------------------------
 // Anthropic: article generation
 // ---------------------------------------------------------------------------
 
@@ -213,13 +327,13 @@ BRAND VOICE — follow this precisely:
 - Close by tying back to the product benefit: handpicked, high-quality WAV files, drag, drop, and play.
 
 RESEARCH:
-- Use the web search tool first to find what DJs and producers are actually searching for right now.
+- Use the brave_search tool first to find what DJs and producers are actually searching for right now. Run several searches before you start writing.
 - Prefer high-intent, commercially relevant angles over generic news.
-- Ground claims in real sources. Attribute figures in prose. Never invent statistics.
+- Ground claims in the search results. Attribute figures in prose. Never invent statistics.
 - Paraphrase everything. Do not quote sources at length.
 
 OUTPUT FORMAT — this is critical:
-Return ONLY a Markdown document. No preamble, no code fences around the whole thing.
+When you have finished researching, return ONLY a Markdown document. No preamble, no code fences around the whole thing.
 It must begin with YAML frontmatter in exactly this shape:
 
 ---
@@ -255,7 +369,11 @@ ${alreadyCovered}
 Return only the Markdown document, starting with the frontmatter block.`;
 }
 
-async function callAnthropic(apiKey, body, label) {
+/**
+ * One Anthropic request with retries. Returns the raw parsed response body so
+ * callers can inspect content blocks and stop_reason.
+ */
+async function callAnthropicRaw(apiKey, body, label) {
   const maxAttempts = 3;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
@@ -279,12 +397,7 @@ async function callAnthropic(apiKey, body, label) {
     }
 
     if (response.ok) {
-      const data = await response.json();
-      return (data.content || [])
-        .filter((block) => block.type === 'text')
-        .map((block) => block.text)
-        .join('')
-        .trim();
+      return await response.json();
     }
 
     const errorBody = await response.text();
@@ -303,17 +416,76 @@ async function callAnthropic(apiKey, body, label) {
   }
 }
 
-function generateArticle(apiKey, existingPosts) {
-  return callAnthropic(
-    apiKey,
-    {
-      model: MODEL,
-      max_tokens: 8000,
-      system: SYSTEM_PROMPT.replace('${DATE}', todayISO()),
-      messages: [{ role: 'user', content: buildUserPrompt(existingPosts) }],
-      tools: [{ type: 'web_search_20250305', name: 'web_search', max_uses: 6 }],
-    },
-    'article generation'
+/** Convenience wrapper: returns just the joined text of a response. */
+async function callAnthropic(apiKey, body, label) {
+  const data = await callAnthropicRaw(apiKey, body, label);
+  return (data.content || [])
+    .filter((block) => block.type === 'text')
+    .map((block) => block.text)
+    .join('')
+    .trim();
+}
+
+/**
+ * Tool-use loop: Claude asks for searches, we run them against Brave and hand
+ * the results back, until it stops asking and writes the article.
+ */
+async function generateArticle(apiKey, existingPosts) {
+  const messages = [{ role: 'user', content: buildUserPrompt(existingPosts) }];
+  let searchesUsed = 0;
+
+  for (let round = 1; round <= MAX_ROUNDS; round++) {
+    const data = await callAnthropicRaw(
+      apiKey,
+      {
+        model: MODEL,
+        max_tokens: 8000,
+        system: SYSTEM_PROMPT.replace('${DATE}', todayISO()),
+        messages,
+        tools: [BRAVE_TOOL],
+      },
+      `article round ${round}`
+    );
+
+    const blocks = data.content || [];
+    const toolUses = blocks.filter((block) => block.type === 'tool_use');
+
+    // No tool requested — this is the finished article.
+    if (data.stop_reason !== 'tool_use' || toolUses.length === 0) {
+      log(`Article written after ${searchesUsed} search(es).`);
+      return blocks
+        .filter((block) => block.type === 'text')
+        .map((block) => block.text)
+        .join('')
+        .trim();
+    }
+
+    messages.push({ role: 'assistant', content: blocks });
+
+    const toolResults = [];
+    for (const toolUse of toolUses) {
+      let result;
+
+      if (searchesUsed >= MAX_SEARCHES) {
+        result =
+          'Search budget for this run is exhausted. Write the full article now using what you have already found.';
+      } else {
+        searchesUsed++;
+        result = await braveSearch(String(toolUse.input?.query || '').trim());
+      }
+
+      toolResults.push({
+        type: 'tool_result',
+        tool_use_id: toolUse.id,
+        content: result,
+      });
+    }
+
+    messages.push({ role: 'user', content: toolResults });
+  }
+
+  throw new Error(
+    `Article generation did not finish within ${MAX_ROUNDS} rounds. Aborting rather than publishing a partial post.`
   );
 }
 
@@ -679,6 +851,15 @@ async function main() {
       'ANTHROPIC_API_KEY is not set.\n' +
         'In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
     );
+  }
+
+  if (!process.env.BRAVE_API_KEY) {
+    warn(
+      'BRAVE_API_KEY is not set. The post will be written without live research.\n' +
+        '           In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
+    );
+  } else {
+    log('Brave Search is configured.');
   }
 
   const existingPosts = getExistingPosts();

@@ -47,6 +47,8 @@ jobs:
         id: generate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Research provider. Without this the post is written unresearched.
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           # Free image fallback — optional, only used if both are set.
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
