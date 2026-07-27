@@ -207,6 +207,11 @@ export default function MusicPage({
             dangerouslySetInnerHTML={{ __html: productSchemaScript }}
           />
         )}
+
+        {/* Canonical URL — tells Google this is THE official page for "dj crates" so it stops
+            splitting ranking signal between this page, query-param variants (?crate=44),
+            and unrelated pages like /sonic-branding that happen to share brand terms. */}
+        <link rel="canonical" href={shareUrl || 'https://www.topdjcrates.com/music'} />
       </Head>
       <div className="px-4 py-16">
         <section className="text-center mb-16">

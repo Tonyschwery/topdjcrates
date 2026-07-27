@@ -314,6 +314,12 @@ BRAND VOICE — follow this precisely:
 - Respect the reader's time and skill. Never condescend. No filler.
 - Close by tying back to the product benefit: handpicked, high-quality WAV files, drag, drop, and play.
 
+KEYWORD STRATEGY — this is grounded in our real Google Search Console data, not guesswork:
+- Our site ALREADY ranks well (position 2-5 on Google) for generic, high-intent, buyer-ready phrases: "dj crates", "dj crates for sale", "dj crates download", "dj music crates". These phrases convert. Use natural variations of them somewhere in every post (title, intro, or headings) — e.g. "Afro House DJ Crates for Sale", "Amapiano DJ Pack Download".
+- Our site currently has ZERO search visibility for genre-specific terms (afro house, amapiano, tech house, etc.) despite writing about them daily. This is the real opportunity: every post should combine a SPECIFIC genre/technique keyword with one of the proven buyer-intent phrases above, rather than a generic trend headline alone.
+- Prefer titles shaped like: "[Genre/technique] + [DJ crates/pack/download] + [for sale/download/2026]" over vague trend-chasing titles. Concrete example of the right shape: "Amapiano DJ Crates for Sale: The 2026 Log Drum Essentials" beats "Why Amapiano Is Taking Over 2026".
+- Always naturally work in the words "DJ crates", "DJ pack", or "download" at least once in the title or first paragraph — these are the words people actually search, confirmed from live data.
+
 RESEARCH:
 - Use the brave_search tool first to find what DJs and producers are actually searching for right now. Run several searches before you start writing.
 - Prefer high-intent, commercially relevant angles over generic news.
