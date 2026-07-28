@@ -707,6 +707,20 @@ function normaliseMarkdown(raw) {
   let text = raw.trim();
   const fenced = text.match(/^```(?:markdown|md)?\r?\n([\s\S]*?)\r?\n```$/);
   if (fenced) text = fenced[1].trim();
+
+  // Sometimes the model adds a stray sentence or two before the frontmatter
+  // block (e.g. "Good enough grounding. I'll write the article on...").
+  // If the text doesn't already start with the frontmatter marker, jump
+  // forward to the first line that is exactly "---" and discard everything
+  // before it.
+  if (!/^---\r?\n/.test(text)) {
+    const marker = text.search(/(^|\n)---\r?\n/);
+    if (marker !== -1) {
+      const start = text.indexOf('---', marker);
+      text = text.slice(start).trim();
+    }
+  }
+
   return text;
 }
 
