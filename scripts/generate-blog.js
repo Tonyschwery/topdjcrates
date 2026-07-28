@@ -760,14 +760,14 @@ async function main() {
   if (!anthropicKey) {
     fail(
       'ANTHROPIC_API_KEY is not set.\n' +
-        'In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
+      'In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
     );
   }
 
   if (!process.env.BRAVE_API_KEY) {
     warn(
       'BRAVE_API_KEY is not set. The post will be written without live research.\n' +
-        '           In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
+      '           In GitHub: Settings > Secrets and variables > Actions > New repository secret.'
     );
   } else {
     log('Brave Search is configured.');
@@ -784,7 +784,7 @@ async function main() {
   if (!meta || !meta.title) {
     fail(
       'Generated document is missing valid frontmatter or a title. Nothing written.\n\n' +
-        markdown.slice(0, 400)
+      markdown.slice(0, 400)
     );
   }
 
@@ -840,6 +840,7 @@ async function main() {
 
   setActionOutput('slug', slug);
   setActionOutput('title', meta.title);
+  setActionOutput('excerpt', meta.excerpt);
   setActionOutput('image', imagePath);
   setActionOutput('genre', preset.label);
 }

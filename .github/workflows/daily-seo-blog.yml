@@ -83,6 +83,17 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
+      - name: Post to Facebook, Instagram, and Threads
+        if: github.event.inputs.dry_run != 'true' && steps.generate.outputs.slug != ''
+        env:
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          POST_SLUG: ${{ steps.generate.outputs.slug }}
+          POST_TITLE: ${{ steps.generate.outputs.title }}
+          POST_EXCERPT: ${{ steps.generate.outputs.excerpt }}
+          POST_IMAGE: ${{ steps.generate.outputs.image }}
+        run: node scripts/post-to-buffer.js
+
       - name: Summary
         if: always()
         run: |
