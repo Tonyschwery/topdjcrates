@@ -86,7 +86,7 @@ async function postToChannel(token, { channelId, label, text, imageUrl }) {
     text,
     channelId,
     schedulingType: 'automatic',
-    mode: 'addToQueue',
+    mode: 'shareNow',
   };
 
   if (imageUrl) {
