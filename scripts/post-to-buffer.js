@@ -119,6 +119,42 @@ function buildPostUrl(slug) {
   return `${SITE_URL}/blog/${slug}`;
 }
 
+/**
+ * After we push, Netlify has to rebuild the whole site before the new image
+ * actually exists at its public URL. That takes a couple of minutes. Buffer
+ * fetches the image itself, so if we hand it the URL too early it just gets a
+ * 404 and rejects the post.
+ *
+ * So: poll the URL until it responds, up to `maxWaitMs`. Returns true if the
+ * image went live, false if we gave up waiting.
+ */
+async function waitForImage(imageUrl, maxWaitMs = 5 * 60 * 1000, intervalMs = 15000) {
+  const deadline = Date.now() + maxWaitMs;
+  let attempt = 0;
+
+  while (Date.now() < deadline) {
+    attempt++;
+
+    try {
+      const response = await fetch(imageUrl, { method: 'HEAD' });
+      const contentType = response.headers.get('content-type') || '';
+
+      if (response.ok && contentType.startsWith('image/')) {
+        log(`Image is live (after ${attempt} check(s)).`);
+        return true;
+      }
+
+      log(`  Image not ready yet (HTTP ${response.status}). Waiting...`);
+    } catch (error) {
+      log(`  Image check failed (${error.message}). Waiting...`);
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, intervalMs));
+  }
+
+  return false;
+}
+
 async function main() {
   const token = process.env.BUFFER_ACCESS_TOKEN;
   if (!token) {
@@ -136,11 +172,23 @@ async function main() {
   }
 
   const postUrl = buildPostUrl(slug);
-  const imageUrl = image ? `${SITE_URL}${image}` : '';
+  let imageUrl = image ? `${SITE_URL}${image}` : '';
 
   log(`Posting "${title}" to Facebook, Instagram, and Threads...`);
   log(`Article link: ${postUrl}`);
-  if (imageUrl) log(`Image: ${imageUrl}`);
+
+  // Wait for Netlify to finish deploying before handing the URL to Buffer.
+  if (imageUrl) {
+    log(`Image: ${imageUrl}`);
+    log('Waiting for the site to finish deploying so the image is reachable...');
+
+    const ready = await waitForImage(imageUrl);
+
+    if (!ready) {
+      warn('Image never became reachable. Posting without it rather than failing.');
+      imageUrl = '';
+    }
+  }
 
   const results = [];
 
