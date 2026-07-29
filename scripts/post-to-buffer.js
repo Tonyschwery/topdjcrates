@@ -81,16 +81,20 @@ const CREATE_POST_MUTATION = `
  * Creates one post on one channel. Never throws — a failure on one platform
  * shouldn't stop the others from posting. Returns true/false for the summary.
  */
-async function postToChannel(token, { channelId, label, text, imageUrl }) {
+async function postToChannel(token, { channelId, label, text, imageUrl, metadata }) {
   const input = {
     text,
     channelId,
     schedulingType: 'automatic',
     mode: 'shareNow',
+    // Buffer requires this field to always be present, even when empty.
+    assets: imageUrl ? [{ image: { url: imageUrl } }] : [],
   };
 
-  if (imageUrl) {
-    input.assets = [{ image: { url: imageUrl } }];
+  // Network-specific settings. Facebook, for example, refuses the post unless
+  // we tell it whether this is a normal post, a story, or a reel.
+  if (metadata) {
+    input.metadata = metadata;
   }
 
   try {
@@ -147,6 +151,7 @@ async function main() {
       label: 'Facebook',
       text: `${title}\n\n${excerpt}\n\nRead the full breakdown: ${postUrl}`,
       imageUrl,
+      metadata: { facebook: { type: 'post' } },
     })
   );
 
