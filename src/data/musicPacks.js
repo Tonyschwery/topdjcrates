@@ -1,1243 +1,2413 @@
 export const musicPacks = [
   {
-    id: 996,
-    year: 2026,
-    title: 'TOP ORIENTAL AFRO-HOUSE REMIXES 2026',
-    artist: 'Various Artists',
-    description: 'Get 75+ hand-selected remixes where mesmerizing Oriental melodies meet driving Afro-House rhythms.',
-    cover: 'https://i.imgur.com/72xuZpo.png', // Placeholder image
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/jmtsfp',
-    tracklistUrl: '/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html',
-    originalPrice: 35,
+    id: 166,
+    title: "AFRO AMAPIANO REGGAETTON BUNDLE!",
+    artist: "Various Artists",
+    description:
+      "Get 4 Handpicked Crates covering the biggest rhythms in the world: Amapiano, Afro, and Reggaeton. The perfect crossover toolkit. Refresh your library and SAVE 30% on this exclusive bundle!",
+    cover: "https://i.imgur.com/0rAG3WG.jpeg",
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '75+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Amapiano/Afrobeats",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_oah1', title: 'Hussain al jassmi - Ma b7ebak', audioPreview: 'https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3' },
-      { id: '2026_oah2', title: 'Dystinct - Yama', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20dystinct%20-%20yama.mp3' },
-      { id: '2026_oah3', title: 'Hakim - El wala wala (prycewell blend)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20hakim%20-%20el%20wala%20wala%20(prycewell%20blend).mp3' },
-      { id: '2026_oah4', title: 'El sod ayono (remix) - Hameed el chaiiri', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20el%20sod%20ayono%20(remix).mp3' },
-      { id: '2026_oah5', title: 'Alabina - ishtar (fares remix)', audioPreview: 'https://audio-hosting.netlify.app/oah%20-%20alabina%20-%20ishtar%20(fares%20remix).mp3' }
-    ]
-  },
-  {
-    id: 997,
-    year: 2026,
-    title: 'Top organic/downtempo 2026 vol : 1',
-    artist: 'Various Artists',
-    description: 'The soul of 2026 captured in sound. 120+ handpicked organic house and downtempo tracks, blending earthy textures with deep, emotive grooves. Perfect for sunset sets and sophisticated dancefloors. Available in WAV & MP3.',
-    cover: 'https://i.imgur.com/C02wYNx.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/bejhmf',
-    tracklistUrl: '/tracklists/toporganichouse2026vol1.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Organic / Downtempo',
-      trackCount: '120+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
-      useCases: ["Sunset", "Lounge", "Beach Club"],
-      moods: ["Earthy", "Chill", "Deep"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_or1', title: 'Daniel williams - dancer', audioPreview: 'https://audio-hosting.netlify.app/od2026 - daniel williams - dancer (original mix).mp3' },
-      { id: '2026_or1', title: 'Greg ochman - sovva', audioPreview: 'https://audio-hosting.netlify.app/od2026 - greg ochman - sovva (extended mix).mp3' },
-      { id: '2026_or1', title: 'James martin - salt solace', audioPreview: 'https://audio-hosting.netlify.app/od2026 - james martin - salt solace (original mix).mp3' },
-      { id: '2026_or1', title: 'Kirr, belyi - tabalear', audioPreview: 'https://audio-hosting.netlify.app/od2026 - kirr, belyi - tabalear (extended mix).mp3' },
-      { id: '2026_or1', title: 'Manuchi, meyba hroove - pantelea', audioPreview: 'https://audio-hosting.netlify.app/od2026 - manuchi, meyba hroove - pantelea (original mix).mp3' }
-    ]
-  },
-  {
-    id: 999,
-    year: 2026,
-    title: 'TOP TECH HOUSE 2026 VOL :1',
-    artist: 'Various Artists',
-    description: 'The first drop of the year is massive. 139+ fresh tracks defining the sound of 2026. Rolling basslines, tight grooves, and peak-time energy. Be the first to break these tracks. Available in WAV & MP3.',
-    cover: 'https://i.imgur.com/1GxMvef.png', // Placeholder image
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/biezqd',
-    tracklistUrl: '/tracklists/TOPTECHHOUSE2026VOL1.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Tech House',
-      trackCount: '139+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
-      moods: ["Energetic", "Danceable", "Driving", "Deep"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_1a', title: 'Andres suarez - hey! hey! (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - andres suarez - hey! hey! (original mix).mp3' },
-      { id: '2026_1b', title: 'bergerhaus - sun will shine another day (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26%20-%20bergerhaus%20-%20sun%20will%20shine%20another%20day%20(original%20mix).mp3' },
-      { id: '2026_1c', title: 'Better than lex - party in amsterdam (original mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - better than lex - party in amsterdam (original mix).mp3' },
-      { id: '2026_1d', title: 'Cole vassallo - movin', audioPreview: 'https://audio-hosting.netlify.app/th26 - cole vassallo - movin.mp3' },
-      { id: '2026_1e', title: 'G-pol, answer - girls (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/th26 - g-pol, answer (cn) - girls (extended mix).mp3' },
-    ]
-  }, {
-    id: 998,
-    year: 2026,
-    title: 'TOP AFRO HOUSE VOL :6',
-    artist: 'Various Artists',
-    description: 'The freshest sound of 2026 has arrived. TOP AFRO HOUSE VOL 6 delivers 146+ of the absolute latest, hand-selected tracks Available in WAV & MP3.',
-    cover: 'https://i.imgur.com/eGiqIo8.jpeg', // Placeholder image
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/unypc',
-    tracklistUrl: '/tracklists/TOPAFROHOUSEVOL6.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '146+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_1a', title: 'Twist sound - shaman (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6-twist sound - shaman (extended mix).mp3' },
-      { id: '2026_1b', title: 'Tufan uysal - new york (original mix)', audioPreview: 'https://audio-hosting.netlify.app/af6 - tufan uysal - new york (original mix).mp3' },
-      { id: '2026_1c', title: 'Hugelarviii - samarkand (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af6 - hugel -samarkand (extended mix).mp3' },
-      { id: '2026_1d', title: 'kamafro - stayin alive afro disco mix', audioPreview: 'https://audio-hosting.netlify.app/af6 - richard grey lissat kamafro - stayin alive afro disco mix.mp3' },
-      { id: '2026_1e', title: 'Arkadyan - aventureros', audioPreview: 'https://audio-hosting.netlify.app/af6 -arkadyan - aventureros.mp3' },
-    ]
-  },
-  {
-    id: 1,
-    title: 'Arabic-Afro Vol. 1',
-    artist: 'Various Artists',
-    description: '65+ TOP SELECTED TRACKS!Step into a fusion of cultures...',
-    cover: 'https://i.imgur.com/ogJpPXF.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/luilk',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '65+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '1a', title: 'Baba (Rakkas remix) - Amr Diab', audioPreview: 'https://audio-hosting.netlify.app/baba (rakkas remix) - amr diab.mp3' },
-      { id: '1b', title: 'Wayah (mike dokos edit)', audioPreview: 'https://audio-hosting.netlify.app/af 1 - amr diab - wayah (mike dokos edit) - preview.mp3' },
-      { id: '1c', title: 'Zurna (original mix)', audioPreview: 'https://audio-hosting.netlify.app/af 1 - badbox - zurna (original mix) - preview.mp3' },
-      { id: '1d', title: 'Ayababa (tunisian mix)', audioPreview: 'https://audio-hosting.netlify.app/yababa (tunisian mix) - pablo fierro.mp3' },
-      { id: '1e', title: 'dj phellix - ayooni', audioPreview: 'https://audio-hosting.netlify.app/dj phellix - ayooni.mp3' },
-    ]
-  },
-  {
-    id: 33,
-    title: 'Arabic-Afro Vol. 2',
-    artist: 'Various Artists',
-    description: '79+ TOP SELECTED TRACKS!Step into a fusion of cultures...',
-    cover: 'https://i.imgur.com/CoOw8gZ.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/iusuwm',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '79+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '1a', title: ' El Salamou Aleikom (Aares Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el salamou aleikom (aares remix).mp3' },
-      { id: '1b', title: 'El Sawareekh Laa Jayworx Boot Mix', audioPreview: 'https://audio-hosting.netlify.app/afv2 - el sawareekh laa jayworx boot mix - jayworx.mp3' },
-      { id: '1c', title: 'Zurna II', audioPreview: 'https://audio-hosting.netlify.app/afv2 - badbox, hvmza, eliō - zurna ii.mp3' },
-      { id: '1d', title: 'Ghalban Yas Cepeda HABIBI AFRO HOUSE Remix', audioPreview: 'https://audio-hosting.netlify.app/afv2 - assala_ghalban_yas_cepeda_,_redsupa_habibi_afro_house_remix.mp3' },
-      { id: '1e', title: 'Amarain (Mayze X Faria Remix)', audioPreview: 'https://audio-hosting.netlify.app/afv2 - amr diab - amarain (mayze x faria remix).mp3' },
-    ]
+    buttonText: "Get Bundle",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/zirccy",
+    originalPrice: 100,
+    discountedPrice: 69,
+    tracks: [],
   },
   {
     id: 2,
-    title: 'Afro-House Vol:1',
-    artist: 'Various Artists',
-    description: '150+ Afro-House bangers Crafted by DJs, for DJs...',
-    cover: 'https://i.imgur.com/gtXSZyl.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/cgfbzd',
+    title: "Afro-House Vol:1",
+    artist: "Various Artists",
+    description: "150+ Afro-House bangers Crafted by DJs, for DJs...",
+    cover: "https://i.imgur.com/gtXSZyl.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/cgfbzd",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '150+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "150+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2a', title: 'Pasilda (sunnery james & ryan)', audioPreview: 'https://audio-hosting.netlify.app/ah 1 - afro medusa - pasilda (sunnery james & ryan) preview.mp3' },
-      { id: '2b', title: 'Bandido (original mix)', audioPreview: 'https://audio-hosting.netlify.app/ah 1 - alex twin, rbør - bandido (original mix) - preview.mp3' },
-      { id: '2c', title: 'No sabia (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/no sabia.mp3' },
-      { id: '2d', title: 'Gabss - batucada', audioPreview: 'https://audio-hosting.netlify.app/batucada.mp3' },
-      { id: '2e', title: 'Afro chooz (dj chus remix)', audioPreview: 'https://audio-hosting.netlify.app/afrochooz.mp3' },
-    ]
+      {
+        id: "2a",
+        title: "Pasilda (sunnery james & ryan)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah 1 - afro medusa - pasilda (sunnery james & ryan) preview.mp3",
+      },
+      {
+        id: "2b",
+        title: "Bandido (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah 1 - alex twin, rbør - bandido (original mix) - preview.mp3",
+      },
+      {
+        id: "2c",
+        title: "No sabia (extended mix)",
+        audioPreview: "https://audio-hosting.netlify.app/no sabia.mp3",
+      },
+      {
+        id: "2d",
+        title: "Gabss - batucada",
+        audioPreview: "https://audio-hosting.netlify.app/batucada.mp3",
+      },
+      {
+        id: "2e",
+        title: "Afro chooz (dj chus remix)",
+        audioPreview: "https://audio-hosting.netlify.app/afrochooz.mp3",
+      },
+    ],
   },
   {
     id: 3,
-    title: 'Afro-House Vol:2',
-    artist: 'Various Artists',
-    description: '150+ Afro-House bangers Crafted by DJs, for DJs...',
-    cover: 'https://i.imgur.com/Ipgh8jP.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/pcvdr',
+    title: "Afro-House Vol:2",
+    artist: "Various Artists",
+    description: "150+ Afro-House bangers Crafted by DJs, for DJs...",
+    cover: "https://i.imgur.com/Ipgh8jP.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/pcvdr",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '150+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "150+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '3a', title: 'nalingiyo (dr feel remix)', audioPreview: 'https://audio-hosting.netlify.app/eman s, ndlondlo - nalingiyo (dr feel remix)preview.mp3' },
-      { id: '3b', title: 'hey mama', audioPreview: 'https://audio-hosting.netlify.app/emmanuel jal & check b - hey mamapreview.mp3' },
-      { id: '3c', title: 'pjanoo (marasi remix)', audioPreview: 'https://audio-hosting.netlify.app/erci prydz - pjanoo (marasi remix)preview.mp3' },
-      { id: '3d', title: 'cosmos balata nozao remix', audioPreview: 'https://audio-hosting.netlify.app/fab from toulouse - cosmos balata nozao remix preview.mp3' },
-      { id: '3e', title: 'tocas miracle vidojean x oliver l', audioPreview: 'https://audio-hosting.netlify.app/fragma - tocas miracle vidojean x oliver l preview.mp3' },
-    ]
+      {
+        id: "3a",
+        title: "nalingiyo (dr feel remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eman s, ndlondlo - nalingiyo (dr feel remix)preview.mp3",
+      },
+      {
+        id: "3b",
+        title: "hey mama",
+        audioPreview:
+          "https://audio-hosting.netlify.app/emmanuel jal & check b - hey mamapreview.mp3",
+      },
+      {
+        id: "3c",
+        title: "pjanoo (marasi remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/erci prydz - pjanoo (marasi remix)preview.mp3",
+      },
+      {
+        id: "3d",
+        title: "cosmos balata nozao remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fab from toulouse - cosmos balata nozao remix preview.mp3",
+      },
+      {
+        id: "3e",
+        title: "tocas miracle vidojean x oliver l",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fragma - tocas miracle vidojean x oliver l preview.mp3",
+      },
+    ],
   },
   {
     id: 10,
-    title: 'Afro-House Vol:3',
-    artist: 'Various Artists',
-    description: '90+ handpicked Afro-House tracks...',
-    cover: 'https://i.imgur.com/VRYh4xL.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/kkmby',
+    title: "Afro-House Vol:3",
+    artist: "Various Artists",
+    description: "90+ handpicked Afro-House tracks...",
+    cover: "https://i.imgur.com/VRYh4xL.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/kkmby",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '90+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "90+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '10a', title: 'Ta Ta Ta', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - ta ta ta.mp3' },
-      { id: '10b', title: 'Secret id (this is america)', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - secret id (this is amerca).mp3' },
-      { id: '10c', title: 'Goosebumps', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - goosebumps.mp3' },
-      { id: '10d', title: 'Dame un grrrr', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - dame un grrrr.mp3' },
-      { id: '10e', title: 'Beggin', audioPreview: 'https://audio-hosting.netlify.app/afro-house 3 - beggin.mp3' },
-    ]
+      {
+        id: "10a",
+        title: "Ta Ta Ta",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afro-house 3 - ta ta ta.mp3",
+      },
+      {
+        id: "10b",
+        title: "Secret id (this is america)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afro-house 3 - secret id (this is amerca).mp3",
+      },
+      {
+        id: "10c",
+        title: "Goosebumps",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afro-house 3 - goosebumps.mp3",
+      },
+      {
+        id: "10d",
+        title: "Dame un grrrr",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afro-house 3 - dame un grrrr.mp3",
+      },
+      {
+        id: "10e",
+        title: "Beggin",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afro-house 3 - beggin.mp3",
+      },
+    ],
   },
   {
     id: 24,
-    title: 'Afro-House Vol:4',
-    artist: 'Various Artists',
-    description: "Our legendary Afro House series returns! Vol 4 is massive, with 120+ tracks and over 50 exclusive edits you won't find anywhere else",
-    cover: 'https://i.imgur.com/ziDyy8m.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/kxzln',
+    title: "Afro-House Vol:4",
+    artist: "Various Artists",
+    description:
+      "Our legendary Afro House series returns! Vol 4 is massive, with 120+ tracks and over 50 exclusive edits you won't find anywhere else",
+    cover: "https://i.imgur.com/ziDyy8m.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/kxzln",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '120+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "120+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '10a', title: 'ma tnsani(Nox house remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - ma tnsani jamy nox house remix.mp3' },
-      { id: '10b', title: 'jealousy (Kotto remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - khalil harrison - tyler icu - jealousy kidflo kotto remix.mp3' },
-      { id: '10c', title: 'Music is the way out', audioPreview: 'https://audio-hosting.netlify.app/ah4 - music is the way out shehzad k vip edit.mp3' },
-      { id: '10d', title: 'Temperature (Mika levin remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - sean paul temperature mika levin remix final.mp3' },
-      { id: '10e', title: 'Ta Ok (Afro house remix)', audioPreview: 'https://audio-hosting.netlify.app/ah4 - ta ok lipy afrohouse remix.mp3' },
-    ]
+      {
+        id: "10a",
+        title: "ma tnsani(Nox house remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah4 - ma tnsani jamy nox house remix.mp3",
+      },
+      {
+        id: "10b",
+        title: "jealousy (Kotto remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah4 - khalil harrison - tyler icu - jealousy kidflo kotto remix.mp3",
+      },
+      {
+        id: "10c",
+        title: "Music is the way out",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah4 - music is the way out shehzad k vip edit.mp3",
+      },
+      {
+        id: "10d",
+        title: "Temperature (Mika levin remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah4 - sean paul temperature mika levin remix final.mp3",
+      },
+      {
+        id: "10e",
+        title: "Ta Ok (Afro house remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ah4 - ta ok lipy afrohouse remix.mp3",
+      },
+    ],
   },
   {
     id: 27,
-    title: 'Afro-House Vol:5',
-    artist: 'Various Artists',
-    description: "Our legendary Afro House series returns! Vol 5 is massive, with 120+ tracks and over 50 exclusive edits you won't find anywhere else",
-    cover: 'https://i.imgur.com/0fTnooE.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/busoat',
+    title: "Afro-House Vol:5",
+    artist: "Various Artists",
+    description:
+      "Our legendary Afro House series returns! Vol 5 is massive, with 120+ tracks and over 50 exclusive edits you won't find anywhere else",
+    cover: "https://i.imgur.com/0fTnooE.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/busoat",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: '120+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "120+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '10a', title: 'The Drill (Nox house extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - alessa_khin,_dikiye_sound,_funko!_the_drill_extended_mix.mp3' },
-      { id: '10b', title: 'dana dana (Afro house remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - cheb_rayan,_avö_pt,_guapo_ao_dana_dana_feat_rima_francis.mp3' },
-      { id: '10c', title: 'valah (Extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - danny roma x manrix - valah (extended mix).mp3' },
-      { id: '10d', title: 'Shava (extended remix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - dj dali, eden shalev - shava (extended mix).mp3' },
-      { id: '10e', title: 'Dame un beso (Extended mix)', audioPreview: 'https://audio-hosting.netlify.app/af5 - aaron sevilla, arkad3 - dame un beso (original mix).mp3' },
-    ]
-  },
-  {
-    id: 28,
-    title: 'THE ULTIMATE AFRO HOUSE BUNDLE',
-    artist: 'Various Artists',
-    description: 'MORE THAN 500 SELECTED TRACKS ,SAVE MORE AND GET ALL THE AFRO-HOUSE CRATES ON THE WEBSITE',
-    cover: 'https://i.imgur.com/JFV3miY.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/finwx',
-    geoMetadata: {
-      genre: 'Afro-House',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    buttonText: 'Get Bundle',
-    originalPrice: 150,
-    discountedPrice: 99,
-    tracks: []
-  },
-  {
-    id: 4,
-    title: 'Top Funky House 2025',
-    artist: 'Various Artists',
-    description: '130+ handpicked fresh, high-energy selection...',
-    cover: 'https://i.imgur.com/xI7oBHM.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/mjnzci',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Funky House',
-      trackCount: '130+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
-    },
-    discountedPrice: 20,
-    tracks: [
-      { id: '4a', title: 'A deeper love', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - paul adam, mia millet - a deeper love (extended mix) [there was jack] preview.mp3' },
-      { id: '4b', title: 'You got the love (santify mix)', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - steve tosi - you got the love (santify mix)preview.mp3' },
-      { id: '4c', title: 'Oceancake', audioPreview: 'https://audio-hosting.netlify.app/fh 1 - the beatbangers - oceancake (extended mix)preview.mp3' },
-      { id: '4d', title: 'Let there be house', audioPreview: 'https://audio-hosting.netlify.app/fh 1 -jackers revenge - let there be house (original mix) [save the nightlife]preview.mp3' },
-      { id: '4e', title: 'I need u tonight', audioPreview: 'https://audio-hosting.netlify.app/fh 1 -footloserz - i need u tonight (extended mix) [radical funk]preview.mp3' },
-    ]
-  },
-  {
-    id: 5,
-    title: 'Top Organic/Downtempo 2025',
-    artist: 'Various Artists',
-    description: '70+ handpicked smooth blend of earthy textures...',
-    cover: 'https://i.imgur.com/EbTJzgy.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Organic / Downtempo',
-      trackCount: '70+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
-      useCases: ["Sunset", "Lounge", "Beach Club"],
-      moods: ["Earthy", "Chill", "Deep"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '5a', title: 'Ma tnssani - Aya Vanco', audioPreview: 'https://audio-hosting.netlify.app/or - ma tnssani - aya vanco.mp3' },
-      { id: '5b', title: 'Namaste', audioPreview: 'https://audio-hosting.netlify.app/od1 - heaven inc. - namaste (extended mix) [songuara tales]preview.mp3' },
-      { id: '5c', title: 'Follower', audioPreview: 'https://audio-hosting.netlify.app/od1 - cereus - follower (original mix) [monada]preview.mp3' },
-      { id: '5d', title: 'Ancient era', audioPreview: 'https://audio-hosting.netlify.app/od1 - agassi - ancient era (original mix) [lump records]preview.mp3' },
-      { id: '5e', title: 'Pana cand nu te iubeam', audioPreview: 'https://audio-hosting.netlify.app/od1 - adrian saguna - pana cand nu te iubeam (original mix) [go deeva records]preview.mp3' },
-    ]
-  },
-  {
-    id: 6,
-    title: 'Top Amapiano/Afro',
-    artist: 'Various Artists',
-    description: '160+ exclusive Amapiano and Exclusive Afro Edits...',
-    cover: 'https://i.imgur.com/RJe1bFI.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/vxrpz',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Amapiano/Afrobeats',
-      trackCount: '160+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '6a', title: 'break my soul', audioPreview: 'https://audio-hosting.netlify.app/amapiano-break my soul.mp3' },
-      { id: '6b', title: 'Breath', audioPreview: 'https://audio-hosting.netlify.app/amapiano-breath.mp3' },
-      { id: '6c', title: 'My Love', audioPreview: 'https://audio-hosting.netlify.app/amapiano-my love.mp3' },
-      { id: '6d', title: 'Rude Boy', audioPreview: 'https://audio-hosting.netlify.app/amapiano-rudeboy.mp3' },
-      { id: '6e', title: 'Slim Shady', audioPreview: 'https://audio-hosting.netlify.app/amapiano-slim shady.mp3' },
-    ]
-  },
-  {
-    id: 66,
-    title: 'Top Amapiano/Afro vol .2 ',
-    artist: 'Various Artists',
-    description: '88+ exclusive Amapiano and Exclusive Afro Edits...',
-    cover: 'https://i.imgur.com/S6iI87o.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/lgzaur',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Amapiano/Afrobeats',
-      trackCount: '88+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '6a', title: 'Brighter days - onderkoffer Remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - cajmere - brighter days - onderkoffer remix.mp3' },
-      { id: '6b', title: 'Bananza (belly dancer) - dj juize remix', audioPreview: 'https://audio-hosting.netlify.app/am2 - akon - bananza (belly dancer) - dj juize remix (clean).mp3' },
-      { id: '6c', title: 'Rhythm of the night - Amapiano Mix', audioPreview: 'https://audio-hosting.netlify.app/am2 - corona - rhythm of the night - madness muv & dsm league remix.mp3' },
-      { id: '6d', title: 'New rules - a belgianly made mona lisa edit', audioPreview: 'https://audio-hosting.netlify.app/am2 - dua lipa - new rules - a belgianly made mona lisa edit.mp3' },
-      { id: '6e', title: 'Safari - 5 Hours Amapiano mix', audioPreview: 'https://audio-hosting.netlify.app/am2 - j balvin - safari - 5hours remix.mp3' },
-    ]
-  },
-  {
-    id: 7,
-    title: 'Top R&B /Hip Hop',
-    artist: 'Various Artists',
-    description: 'Over 100+ professionally curated hits...',
-    cover: 'https://i.imgur.com/bby1I0r.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'R&B / Hip Hop',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
-      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '7a', title: 'Run this town', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - run this town.mp3' },
-      { id: '7b', title: 'Samboosa (remix)', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - samboosa (remix).mp3' },
-      { id: '7c', title: 'Shake your ass', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - shake your ass.mp3' },
-      { id: '7d', title: 'The next episode (remix)', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - the next episode (remix).mp3' },
-      { id: '7e', title: 'This is how we do it', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 1 - this is how we do it.mp3' },
-    ]
-  },
-  {
-    id: 8,
-    title: 'Top R&B /Hip Hop # 2',
-    artist: 'Various Artists',
-    description: 'Over 100+ professionally curated hits...',
-    cover: 'https://i.imgur.com/C218Zts.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'R&B / Hip Hop',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
-      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '8a', title: 'Friday', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - friday.mp3' },
-      { id: '8b', title: 'Get it on tonight', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - get it on tonight.mp3' },
-      { id: '8c', title: 'Groove thang', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - groove thang.mp3' },
-      { id: '8d', title: 'Hit em up', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - hit em up.mp3' },
-      { id: '8e', title: 'No money no problems', audioPreview: 'https://audio-hosting.netlify.app/rnb- pack 2 - no money no problems.mp3' },
-    ]
-  },
-  {
-    id: 9,
-    title: 'Top Disco House ',
-    artist: 'Various Artists',
-    description: '150+ Timeless Disco House edits...',
-    cover: 'https://i.imgur.com/xVxz9Qg.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/cezue',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Disco House',
-      trackCount: '150+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '9a', title: 'Mas que nada', audioPreview: 'https://audio-hosting.netlify.app/disco-house - mas que nada.mp3' },
-      { id: '9b', title: 'Madan', audioPreview: 'https://audio-hosting.netlify.app/disco-house - madan.mp3' },
-      { id: '9c', title: 'Le Freak', audioPreview: 'https://audio-hosting.netlify.app/disco-house - le freak.mp3' },
-      { id: '9d', title: 'Dance the night', audioPreview: 'https://audio-hosting.netlify.app/disco-house - dance the night.mp3' },
-      { id: '9e', title: 'Dance Lady', audioPreview: 'https://audio-hosting.netlify.app/disco-house - dance lady.mp3' },
-    ]
-  },
-  {
-    id: 99,
-    title: 'Top Disco House vol.2',
-    artist: 'Various Artists',
-    description: '115+ Timeless Disco House edits...',
-    cover: 'https://i.imgur.com/L3cHwOh.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/piixrl',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Disco House',
-      trackCount: '115+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '9a', title: 'From Disco to disco', audioPreview: 'https://audio-hosting.netlify.app/dh2 - alle farben & majestic - from disco to disco.mp3' },
-      { id: '9b', title: 'Give me your lovin', audioPreview: 'https://audio-hosting.netlify.app/dh2 - armand van helden - give me your loving.mp3' },
-      { id: '9c', title: 'Stayin Alive', audioPreview: 'https://audio-hosting.netlify.app/dh2 - bee gees - stayin alive - graymatter remix.mp3' },
-      { id: '9d', title: 'Rock that body', audioPreview: 'https://audio-hosting.netlify.app/dh2 - black eyed peas - rock that body - rowka remix.mp3' },
-      { id: '9e', title: 'Thats the Way', audioPreview: 'https://audio-hosting.netlify.app/dh2 - k.c. & the sunshine band - thats the way - arzenic remix.mp3' },
-    ]
-  },
-  {
-    id: 11,
-    title: 'Top Latin-House',
-    artist: 'Various Artists',
-    description: '140+ The only crate you need...',
-    cover: 'https://i.imgur.com/52TVI3A.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/eamxdq',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Latin House',
-      trackCount: '140+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
-      moods: ["Energetic", "Danceable", "Energetic", "Festive"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '11a', title: 'Work', audioPreview: 'https://audio-hosting.netlify.app/latino-house - work.mp3' },
-      { id: '11b', title: 'Stayin alive', audioPreview: 'https://audio-hosting.netlify.app/latino-house - stayin alive.mp3' },
-      { id: '11c', title: 'Shake Body', audioPreview: 'https://audio-hosting.netlify.app/latino-house - shake body.mp3' },
-      { id: '11d', title: 'Rehab', audioPreview: 'https://audio-hosting.netlify.app/latino-house - rehab.mp3' },
-      { id: '11e', title: 'El Mariachi', audioPreview: 'https://audio-hosting.netlify.app/latino-house - el mariachi.mp3' },
-    ]
-  },
-  {
-    id: 44,
-    title: 'Top Latin-House VOL.2',
-    artist: 'Various Artists',
-    description: 'The fiesta returns!79+ hand-selected tracks of pure Latin House energy.',
-    cover: 'https://i.imgur.com/IwAc46b.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/vfpkjg',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Latin House',
-      trackCount: '79+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
-      moods: ["Energetic", "Danceable", "Energetic", "Festive"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '11a', title: 'Edge of desire mk ita remix', audioPreview: 'https://audio-hosting.netlify.app/lh2 - edge of desire mk ita remix.mp3' },
-      { id: '11b', title: 'Andalucia', audioPreview: 'https://audio-hosting.netlify.app/lh2 - hugel & grossomoddo - andalucia.mp3' },
-      { id: '11c', title: 'Teka (remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - dj snake & peso pluma - teka (intro - clean).mp3' },
-      { id: '11d', title: 'lets go (5hours afro remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - david guetta - lets go (5hours afro remix).mp3' },
-      { id: '11e', title: 'Don t cha (heliograph and palau remix)', audioPreview: 'https://audio-hosting.netlify.app/lh2 - don t cha heliograph and palau remix.mp3' },
-    ]
-  },
-  {
-    id: 26,
-    title: 'Top Latin-Tech 2025',
-    artist: 'Various Artists',
-    description: '85+ of the grooviest tracks where rolling Tech House meets Tribal rhythm.',
-    cover: 'https://i.imgur.com/9LJ0xGb.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/ybmorl',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Tech House',
-      trackCount: '85+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
-      moods: ["Energetic", "Danceable", "Driving", "Deep"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '11a', title: 'lt - jamaican (bam bam) (extended mix) - hugel & solto', audioPreview: 'https://audio-hosting.netlify.app/lt - jamaican (bam bam) (extended mix) - hugel & solto.mp3' },
-      { id: '11b', title: 'bad bunny - nuevayol - chango remix', audioPreview: 'https://audio-hosting.netlify.app/lt - bad bunny - nuevayol - chango remix (dirty).mp3' },
-      { id: '11c', title: 'la vida es un carnaval - eddie boy vs burman boys', audioPreview: 'https://audio-hosting.netlify.app/lt - celia cruz - la vida es un carnaval - eddie boy vs burman boys 100-128 transition.mp3' },
-      { id: '11d', title: 'dj snake & peso pluma - teka - bontan remix', audioPreview: 'https://audio-hosting.netlify.app/lt - dj snake & peso pluma - teka - bontan remix.mp3' },
-      { id: '11e', title: 'la camisa negra - aanse & mlvr remix', audioPreview: 'https://audio-hosting.netlify.app/lt - juanes - la camisa negra - aanse & mlvr remix.mp3' },
-    ]
+      {
+        id: "10a",
+        title: "The Drill (Nox house extended remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af5 - alessa_khin,_dikiye_sound,_funko!_the_drill_extended_mix.mp3",
+      },
+      {
+        id: "10b",
+        title: "dana dana (Afro house remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af5 - cheb_rayan,_avö_pt,_guapo_ao_dana_dana_feat_rima_francis.mp3",
+      },
+      {
+        id: "10c",
+        title: "valah (Extended remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af5 - danny roma x manrix - valah (extended mix).mp3",
+      },
+      {
+        id: "10d",
+        title: "Shava (extended remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af5 - dj dali, eden shalev - shava (extended mix).mp3",
+      },
+      {
+        id: "10e",
+        title: "Dame un beso (Extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af5 - aaron sevilla, arkad3 - dame un beso (original mix).mp3",
+      },
+    ],
   },
   {
     id: 12,
-    title: 'Arabic Mashups & Remixes',
-    artist: 'Various Artists',
+    title: "Arabic Mashups & Remixes",
+    artist: "Various Artists",
     description: "130+ of the top Arabic hits remixes...",
-    cover: 'https://i.imgur.com/mAFrPXj.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/ywmhnx',
+    cover: "https://i.imgur.com/mAFrPXj.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/ywmhnx",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '130+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Arabic/Oriental",
+      trackCount: "130+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '12a', title: 'Satalana vs Joana', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - satalana vs joana.mp3' },
-      { id: '12b', title: 'Sabri alil', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - sabri alil.mp3' },
-      { id: '12c', title: 'kalamantina', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - kalamantina.mp3' },
-      { id: '12d', title: 'Haoulou', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - haoulou remix.mp3' },
-      { id: '12e', title: 'Ekhtiyarati vs Culo', audioPreview: 'https://audio-hosting.netlify.app/arabic-remix - ekhtiyarati vs culo.mp3' },
-    ]
+      {
+        id: "12a",
+        title: "Satalana vs Joana",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic-remix - satalana vs joana.mp3",
+      },
+      {
+        id: "12b",
+        title: "Sabri alil",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic-remix - sabri alil.mp3",
+      },
+      {
+        id: "12c",
+        title: "kalamantina",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic-remix - kalamantina.mp3",
+      },
+      {
+        id: "12d",
+        title: "Haoulou",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic-remix - haoulou remix.mp3",
+      },
+      {
+        id: "12e",
+        title: "Ekhtiyarati vs Culo",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic-remix - ekhtiyarati vs culo.mp3",
+      },
+    ],
   },
   {
     id: 13,
-    title: 'Arabic Mashups & Remixes vol 2',
-    artist: 'Various Artists',
-    description: '90+ exclusive Arabic mashups & remixes',
-    cover: 'https://i.imgur.com/ySLfrg6.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/otval',
+    title: "Arabic Mashups & Remixes vol 2",
+    artist: "Various Artists",
+    description: "90+ exclusive Arabic mashups & remixes",
+    cover: "https://i.imgur.com/ySLfrg6.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/otval",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '90+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Arabic/Oriental",
+      trackCount: "90+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '13a', title: 'Badna nwali3 el jaw x pitbull', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - badna nwali3 el jaw x pitbull.mp3' },
-      { id: '13b', title: 'Bhebak ya lebnan (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - bhebak ya lebnan (remix).mp3' },
-      { id: '13c', title: 'Bushret kheyr (edm remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - bushret kheyr (edm remix).mp3' },
-      { id: '13d', title: 'El ghazal rey2a (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - el ghazal rey2a (remix).mp3' },
-      { id: '13e', title: 'El salamou aaleykom (remix)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 2 - el salamou aaleykom (remix).mp3' },
-    ]
+      {
+        id: "13a",
+        title: "Badna nwali3 el jaw x pitbull",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 2 - badna nwali3 el jaw x pitbull.mp3",
+      },
+      {
+        id: "13b",
+        title: "Bhebak ya lebnan (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 2 - bhebak ya lebnan (remix).mp3",
+      },
+      {
+        id: "13c",
+        title: "Bushret kheyr (edm remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 2 - bushret kheyr (edm remix).mp3",
+      },
+      {
+        id: "13d",
+        title: "El ghazal rey2a (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 2 - el ghazal rey2a (remix).mp3",
+      },
+      {
+        id: "13e",
+        title: "El salamou aaleykom (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 2 - el salamou aaleykom (remix).mp3",
+      },
+    ],
   },
   {
     id: 14,
-    title: 'Arabic Mashups & Remixes vol 3',
-    artist: 'Various Artists',
-    description: '100+ tracks Our latest 2025 collection',
-    cover: 'https://i.imgur.com/vvzp886.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/ujjrg',
+    title: "Arabic Mashups & Remixes vol 3",
+    artist: "Various Artists",
+    description: "100+ tracks Our latest 2025 collection",
+    cover: "https://i.imgur.com/vvzp886.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/ujjrg",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Arabic/Oriental",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '14a', title: 'Akher dakka( dabke remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - akher dakka( dabke remix 2025).mp3' },
-      { id: '14b', title: 'Malekit jamal el kon(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - malekit jamal el kon(remix 2025).mp3' },
-      { id: '14c', title: 'Sabran(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - sabran(remix 2025).mp3' },
-      { id: '14d', title: 'Sagfa(remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - sagfa(remix 2025).mp3' },
-      { id: '14e', title: 'Warana eh (remix 2025)', audioPreview: 'https://audio-hosting.netlify.app/arabic pack 3 - warana eh (remix 2025).mp3' },
-    ]
+      {
+        id: "14a",
+        title: "Akher dakka( dabke remix 2025)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 3 - akher dakka( dabke remix 2025).mp3",
+      },
+      {
+        id: "14b",
+        title: "Malekit jamal el kon(remix 2025)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 3 - malekit jamal el kon(remix 2025).mp3",
+      },
+      {
+        id: "14c",
+        title: "Sabran(remix 2025)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 3 - sabran(remix 2025).mp3",
+      },
+      {
+        id: "14d",
+        title: "Sagfa(remix 2025)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 3 - sagfa(remix 2025).mp3",
+      },
+      {
+        id: "14e",
+        title: "Warana eh (remix 2025)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/arabic pack 3 - warana eh (remix 2025).mp3",
+      },
+    ],
   },
   {
-    id: 23,
-    title: 'Top Arabic Mashups & Remixes vol 4',
-    artist: 'Various Artists',
-    description: '60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.',
-    cover: 'https://i.imgur.com/HF0BHDi.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/sekly',
+    id: 1,
+    title: "Arabic-Afro Vol. 1",
+    artist: "Various Artists",
+    description: "65+ TOP SELECTED TRACKS!Step into a fusion of cultures...",
+    cover: "https://i.imgur.com/ogJpPXF.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/luilk",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '60+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Arabic/Oriental",
+      trackCount: "65+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '20a', title: 'cisummi', audioPreview: 'https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3' },
-      { id: '20b', title: 'habibi da ', audioPreview: 'https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3' },
-      { id: '20c', title: 'şașkin', audioPreview: 'https://audio-hosting.netlify.app/ar4 ilkay sencan & mahmut orhan - şașkın.mp3' },
-      { id: '20d', title: 'afya', audioPreview: 'https://audio-hosting.netlify.app/ar4 illness - afya.mp3' },
-      { id: '20e', title: 'satisfaction tseba edit', audioPreview: 'https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3' },
-    ]
+      {
+        id: "1a",
+        title: "Baba (Rakkas remix) - Amr Diab",
+        audioPreview:
+          "https://audio-hosting.netlify.app/baba (rakkas remix) - amr diab.mp3",
+      },
+      {
+        id: "1b",
+        title: "Wayah (mike dokos edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af 1 - amr diab - wayah (mike dokos edit) - preview.mp3",
+      },
+      {
+        id: "1c",
+        title: "Zurna (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af 1 - badbox - zurna (original mix) - preview.mp3",
+      },
+      {
+        id: "1d",
+        title: "Ayababa (tunisian mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/yababa (tunisian mix) - pablo fierro.mp3",
+      },
+      {
+        id: "1e",
+        title: "dj phellix - ayooni",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dj phellix - ayooni.mp3",
+      },
+    ],
+  },
+  {
+    id: 33,
+    title: "Arabic-Afro Vol. 2",
+    artist: "Various Artists",
+    description: "79+ TOP SELECTED TRACKS!Step into a fusion of cultures...",
+    cover: "https://i.imgur.com/CoOw8gZ.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/iusuwm",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "79+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "1a",
+        title: " El Salamou Aleikom (Aares Remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afv2 - el salamou aleikom (aares remix).mp3",
+      },
+      {
+        id: "1b",
+        title: "El Sawareekh Laa Jayworx Boot Mix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afv2 - el sawareekh laa jayworx boot mix - jayworx.mp3",
+      },
+      {
+        id: "1c",
+        title: "Zurna II",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afv2 - badbox, hvmza, eliō - zurna ii.mp3",
+      },
+      {
+        id: "1d",
+        title: "Ghalban Yas Cepeda HABIBI AFRO HOUSE Remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afv2 - assala_ghalban_yas_cepeda_,_redsupa_habibi_afro_house_remix.mp3",
+      },
+      {
+        id: "1e",
+        title: "Amarain (Mayze X Faria Remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/afv2 - amr diab - amarain (mayze x faria remix).mp3",
+      },
+    ],
+  },
+  {
+    id: 17,
+    title: "DANCEFLOOR WEAPONS",
+    artist: "Various Artists",
+    description:
+      "The only crate you need to make people dance! Over 170+ selected WAV & MP3 tracks by our DJs.",
+    cover: "https://i.imgur.com/RI8Isa0.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/gzren",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Dance",
+      trackCount: "170+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "17a",
+        title: "Dancefloor Weapons (short preview)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/preview danfloor weapons.mp3",
+      },
+    ],
+  },
+  {
+    id: 16,
+    title: "I WANT THEM ALL !",
+    artist: "Various Artists",
+    description:
+      "The Ultimate DJ Bundle more than 3000 tracks handpicked by our DJs",
+    cover: "https://i.imgur.com/mD76ogA.png",
+    geoMetadata: {
+      genre: "Dance",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"],
+    },
+    buttonText: "Get Bundle",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/guvsms",
+    originalPrice: 700,
+    discountedPrice: 350,
+    tracks: [],
   },
   {
     id: 1009,
-    title: 'I WANT THEM ALL THE ARABIC MASHUPS & REMIXES',
-    artist: 'Various Artists',
-    description: '500 + Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.',
-    cover: 'https://i.imgur.com/gCrZyab.png',
+    title: "I WANT THEM ALL THE ARABIC MASHUPS & REMIXES",
+    artist: "Various Artists",
+    description:
+      "500 + Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.",
+    cover: "https://i.imgur.com/gCrZyab.png",
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Arabic/Oriental",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
     },
-    buttonText: 'Get Bundle',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/dhklg',
+    buttonText: "Get Bundle",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/dhklg",
     originalPrice: 125,
     discountedPrice: 75,
   },
   {
-    id: 15,
-    title: 'Top Arabic Wedding Playlist',
-    artist: 'Various Artists',
-    description: '30+ tracks for weddings & celebrations',
-    cover: 'https://i.imgur.com/CjtG3jI.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/wmgit',
-    originalPrice: 35,
+    id: 28,
+    title: "THE ULTIMATE AFRO HOUSE BUNDLE",
+    artist: "Various Artists",
+    description:
+      "MORE THAN 500 SELECTED TRACKS ,SAVE MORE AND GET ALL THE AFRO-HOUSE CRATES ON THE WEBSITE",
+    cover: "https://i.imgur.com/JFV3miY.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/finwx",
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '30+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '15a', title: '3eress el ghawali', audioPreview: 'https://audio-hosting.netlify.app/tw-3eress el ghawali.mp3' },
-      { id: '15b', title: 'aarouss', audioPreview: 'https://audio-hosting.netlify.app/tw-aarouss.mp3' },
-      { id: '15c', title: 'Batalit soum w salleh', audioPreview: 'https://audio-hosting.netlify.app/tw-batalit soum w salleh.mp3' },
-      { id: '15d', title: 'Jannou behalaki', audioPreview: 'https://audio-hosting.netlify.app/tw-jannou behalaki.mp3' },
-      { id: '15e', title: 'Ya kel el deni', audioPreview: 'https://audio-hosting.netlify.app/tw-ya kel el deni.mp3' },
-    ]
-  },
-  {
-    id: 16,
-    title: 'I WANT THEM ALL !',
-    artist: 'Various Artists',
-    description: 'The Ultimate DJ Bundle more than 3000 tracks handpicked by our DJs',
-    cover: 'https://i.imgur.com/mD76ogA.png',
-    geoMetadata: {
-      genre: 'Dance',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
-    },
-    buttonText: 'Get Bundle',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/guvsms',
-    originalPrice: 700,
-    discountedPrice: 350,
-    tracks: []
-  },
-  {
-    id: 166,
-    title: 'AFRO AMAPIANO REGGAETTON BUNDLE!',
-    artist: 'Various Artists',
-    description: 'Get 4 Handpicked Crates covering the biggest rhythms in the world: Amapiano, Afro, and Reggaeton. The perfect crossover toolkit. Refresh your library and SAVE 30% on this exclusive bundle!',
-    cover: 'https://i.imgur.com/0rAG3WG.jpeg',
-    geoMetadata: {
-      genre: 'Amapiano/Afrobeats',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro-House",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
-    buttonText: 'Get Bundle',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/zirccy',
-    originalPrice: 100,
-    discountedPrice: 69,
-    tracks: []
-  },
-  {
-    id: 167,
-    title: 'TOP WEDDING ANTHEMS',
-    artist: 'Various Artists',
-    description: "Take the stress out of wedding season. 💍 Get 200+ hand-selected MP3s meticulously organized into 11 gig-ready folders (Doors Open, Dinner, Cake Cutting, Pop, Rock, R&B, Latin & more). We did the prep work so you don't have to. The ultimate, perfectly categorized survival kit for any Wedding DJ.",
-    cover: 'https://i.imgur.com/HdDRrwh.png',
-    geoMetadata: {
-      genre: 'Weddings',
-      trackCount: '200+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
-      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"]
-    },
-    buttonText: 'Get Bundle',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/mdyccb',
-    originalPrice: 50,
-    discountedPrice: 30,
-    tracks: []
-  },
-  {
-    id: 17,
-    title: 'DANCEFLOOR WEAPONS',
-    artist: 'Various Artists',
-    description: 'The only crate you need to make people dance! Over 170+ selected WAV & MP3 tracks by our DJs.',
-    cover: 'https://i.imgur.com/RI8Isa0.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/gzren',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Dance',
-      trackCount: '170+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '17a', title: 'Dancefloor Weapons (short preview)', audioPreview: 'https://audio-hosting.netlify.app/preview danfloor weapons.mp3' },
-    ]
-  },
-  {
-    id: 18,
-    title: 'Top Funky Edits',
-    artist: 'Various Artists',
-    description: 'Get the groove! 99+ handpicked funky edits, ready to play. Instantly elevate your set with high-quality WAV and MP3 tracks.',
-    cover: 'https://i.imgur.com/iYnKp6o.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/wmdgq',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Funky House',
-      trackCount: '99+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
-    },
-    discountedPrice: 25,
-    tracks: []
-  },
-  {
-    id: 19,
-    title: 'Top Bollywood DJ Edits & Mashups pack 1',
-    artist: 'Various Artists',
-    description: '120+ of the best bollywood edits for djs Ready to play WAV & MP3.',
-    cover: 'https://i.imgur.com/ztDN5Kl.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/rorrk',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Bollywood',
-      trackCount: '120+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
-      moods: ["Energetic", "Danceable", "Festive", "High Energy"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '19a', title: 'espresso x maunja hi maunja (remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-espresso x maunja hi maunja (remix) - dj tejas tk & dj h7 seven.mp3' },
-      { id: '19b', title: 'badshah o badshah (bstyle remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-badshah o badshah (bstyle remix) - dj baichun x dj barkha kaul.mp3' },
-      { id: '19c', title: 'all black (remix)', audioPreview: 'https://audio-hosting.netlify.app/b1-all black (remix) - dj kabira.mp3' },
-      { id: '19d', title: 'aisa jadu (techno mashup)', audioPreview: 'https://audio-hosting.netlify.app/b1-aisa jadu (techno mashup) - dj baichun.mp3' },
-      { id: '19e', title: 'aaj ki raat (desi tech mix)', audioPreview: 'https://audio-hosting.netlify.app/b1-aaj ki raat (desi tech mix) - dj avishek dinda.mp3' },
-    ]
-  },
-  {
-    id: 20,
-    title: 'Top Bollywood DJ Edits & Mashups pack 2',
-    artist: 'Various Artists',
-    description: '120+ of the best bollywood edits for djs Ready to play WAV & MP3.',
-    cover: 'https://i.imgur.com/9LVdxwB.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/wxmazu',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Bollywood',
-      trackCount: '120+',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
-      moods: ["Energetic", "Danceable", "Festive", "High Energy"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '20a', title: 'let the music play', audioPreview: 'https://audio-hosting.netlify.app/b2-let the music play - v-edit.mp3' },
-      { id: '20b', title: 'mauja hi mauja (remix)', audioPreview: 'https://audio-hosting.netlify.app/b2-mauja hi mauja (remix) - dj kabira.mp3' },
-      { id: '20c', title: 'nain matakka (remix)', audioPreview: 'https://audio-hosting.netlify.app/b2-nain matakka (remix) - cherry muzik.mp3' },
-      { id: '20d', title: 'pardesi (desi tech mix)', audioPreview: 'https://audio-hosting.netlify.app/b2-pardesi (desi tech mix) - dj avishek dinda.mp3' },
-      { id: '20e', title: 'this party getting hot (bollytech mashup)', audioPreview: 'https://audio-hosting.netlify.app/b2-this party getting hot (bollytech mashup) - dj baichun.mp3' },
-    ]
+    buttonText: "Get Bundle",
+    originalPrice: 150,
+    discountedPrice: 99,
+    tracks: [],
   },
   {
     id: 21,
-    title: 'Top AfroBeats & Shatta',
-    artist: 'Various Artists',
-    description: '80+ of the best Afrobeats and shatta edits for djs Ready to play WAV & MP3.',
-    cover: 'https://i.imgur.com/xSZ570S.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/equnz',
+    title: "Top AfroBeats & Shatta",
+    artist: "Various Artists",
+    description:
+      "80+ of the best Afrobeats and shatta edits for djs Ready to play WAV & MP3.",
+    cover: "https://i.imgur.com/xSZ570S.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/equnz",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Amapiano/Afrobeats',
-      trackCount: '80+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Amapiano/Afrobeats",
+      trackCount: "80+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '20a', title: 'body temperature', audioPreview: 'https://audio-hosting.netlify.app/ab body temperature [judo edit].mp3' },
-      { id: '20b', title: 'kilometre (biice edit)', audioPreview: 'https://audio-hosting.netlify.app/ab burna boy - kilometre (biice edit).mp3' },
-      { id: '20c', title: 'whine up (bootleg)', audioPreview: 'https://audio-hosting.netlify.app/ab kyry & allexis x kat deluna - whine up (bootleg).mp3' },
-      { id: '20d', title: 'ms. jackson (caes edit)', audioPreview: 'https://audio-hosting.netlify.app/ab ms. jackson (caes edit).mp3' },
-      { id: '20e', title: 'work mami', audioPreview: 'https://audio-hosting.netlify.app/ab work mami (get ur freak on _flip_).mp3' },
-    ]
+      {
+        id: "20a",
+        title: "body temperature",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab body temperature [judo edit].mp3",
+      },
+      {
+        id: "20b",
+        title: "kilometre (biice edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab burna boy - kilometre (biice edit).mp3",
+      },
+      {
+        id: "20c",
+        title: "whine up (bootleg)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab kyry & allexis x kat deluna - whine up (bootleg).mp3",
+      },
+      {
+        id: "20d",
+        title: "ms. jackson (caes edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab ms. jackson (caes edit).mp3",
+      },
+      {
+        id: "20e",
+        title: "work mami",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab work mami (get ur freak on _flip_).mp3",
+      },
+    ],
   },
   {
-    id: 22,
-    title: 'Top Tech-House 2025',
-    artist: 'Various Artists',
-    description: 'This crate delivers 100+ club-ready tracks packed with rolling basslines and infectious vocal hooks. All files are DJ-edited in both WAV & MP3.',
-    cover: 'https://i.imgur.com/GxMa8Mh.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/uhiofy',
+    id: 6,
+    title: "Top Amapiano/Afro",
+    artist: "Various Artists",
+    description: "160+ exclusive Amapiano and Exclusive Afro Edits...",
+    cover: "https://i.imgur.com/RJe1bFI.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/vxrpz",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Tech House',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Amapiano/Afrobeats",
+      trackCount: "160+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
-      moods: ["Energetic", "Danceable", "Driving", "Deep"]
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '20a', title: 'burna boy - tatata(hills remix)', audioPreview: 'https://audio-hosting.netlify.app/th burna boy - tatata (feat. travis scott) (hills remix).mp3' },
-      { id: '20b', title: 'rock this party (red cork edit)', audioPreview: 'https://audio-hosting.netlify.app/th bob sinclar x cruzy x mk - rock this party (red cork edit).mp3' },
-      { id: '20c', title: 'the bomb vs. anxiety', audioPreview: 'https://audio-hosting.netlify.app/th doechii - the bomb vs. anxiety (lxrenz remix) extended.mp3' },
-      { id: '20d', title: 'the weeknd - the hills (gonna drew edit)', audioPreview: 'https://audio-hosting.netlify.app/th the weeknd - the hills (gonna drew edit) [dropunited exclusive].mp3' },
-      { id: '20e', title: 'we be burnin esox remix', audioPreview: 'https://audio-hosting.netlify.app/th we be burnin esox remix sean paul.mp3' },
-    ]
+      {
+        id: "6a",
+        title: "break my soul",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano-break my soul.mp3",
+      },
+      {
+        id: "6b",
+        title: "Breath",
+        audioPreview: "https://audio-hosting.netlify.app/amapiano-breath.mp3",
+      },
+      {
+        id: "6c",
+        title: "My Love",
+        audioPreview: "https://audio-hosting.netlify.app/amapiano-my love.mp3",
+      },
+      {
+        id: "6d",
+        title: "Rude Boy",
+        audioPreview: "https://audio-hosting.netlify.app/amapiano-rudeboy.mp3",
+      },
+      {
+        id: "6e",
+        title: "Slim Shady",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano-slim shady.mp3",
+      },
+    ],
+  },
+  {
+    id: 66,
+    title: "Top Amapiano/Afro vol .2 ",
+    artist: "Various Artists",
+    description: "88+ exclusive Amapiano and Exclusive Afro Edits...",
+    cover: "https://i.imgur.com/S6iI87o.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/lgzaur",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Amapiano/Afrobeats",
+      trackCount: "88+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "6a",
+        title: "Brighter days - onderkoffer Remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/am2 - cajmere - brighter days - onderkoffer remix.mp3",
+      },
+      {
+        id: "6b",
+        title: "Bananza (belly dancer) - dj juize remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/am2 - akon - bananza (belly dancer) - dj juize remix (clean).mp3",
+      },
+      {
+        id: "6c",
+        title: "Rhythm of the night - Amapiano Mix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/am2 - corona - rhythm of the night - madness muv & dsm league remix.mp3",
+      },
+      {
+        id: "6d",
+        title: "New rules - a belgianly made mona lisa edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/am2 - dua lipa - new rules - a belgianly made mona lisa edit.mp3",
+      },
+      {
+        id: "6e",
+        title: "Safari - 5 Hours Amapiano mix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/am2 - j balvin - safari - 5hours remix.mp3",
+      },
+    ],
+  },
+  {
+    id: 23,
+    title: "Top Arabic Mashups & Remixes vol 4",
+    artist: "Various Artists",
+    description:
+      "60+ Exclusive Tracks: A curated arsenal of the LATEST Arabic mashups and club-ready remixes.",
+    cover: "https://i.imgur.com/HF0BHDi.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/sekly",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "60+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "20a",
+        title: "cisummi",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ar4 cisummi - zin dyali (arabic afro house).mp3",
+      },
+      {
+        id: "20b",
+        title: "habibi da ",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ar4 hisham abbas - habibi da (dj phellix x idin gorji arabic afro house remix).mp3",
+      },
+      {
+        id: "20c",
+        title: "şașkin",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ar4 ilkay sencan & mahmut orhan - şașkın.mp3",
+      },
+      {
+        id: "20d",
+        title: "afya",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ar4 illness - afya.mp3",
+      },
+      {
+        id: "20e",
+        title: "satisfaction tseba edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ar4 satisfaction tseba edit.mp3",
+      },
+    ],
+  },
+  {
+    id: 15,
+    title: "Top Arabic Wedding Playlist",
+    artist: "Various Artists",
+    description: "30+ tracks for weddings & celebrations",
+    cover: "https://i.imgur.com/CjtG3jI.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/wmgit",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "30+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "15a",
+        title: "3eress el ghawali",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tw-3eress el ghawali.mp3",
+      },
+      {
+        id: "15b",
+        title: "aarouss",
+        audioPreview: "https://audio-hosting.netlify.app/tw-aarouss.mp3",
+      },
+      {
+        id: "15c",
+        title: "Batalit soum w salleh",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tw-batalit soum w salleh.mp3",
+      },
+      {
+        id: "15d",
+        title: "Jannou behalaki",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tw-jannou behalaki.mp3",
+      },
+      {
+        id: "15e",
+        title: "Ya kel el deni",
+        audioPreview: "https://audio-hosting.netlify.app/tw-ya kel el deni.mp3",
+      },
+    ],
+  },
+  {
+    id: 19,
+    title: "Top Bollywood DJ Edits & Mashups pack 1",
+    artist: "Various Artists",
+    description:
+      "120+ of the best bollywood edits for djs Ready to play WAV & MP3.",
+    cover: "https://i.imgur.com/ztDN5Kl.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/rorrk",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Bollywood",
+      trackCount: "120+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
+      moods: ["Energetic", "Danceable", "Festive", "High Energy"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "19a",
+        title: "espresso x maunja hi maunja (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b1-espresso x maunja hi maunja (remix) - dj tejas tk & dj h7 seven.mp3",
+      },
+      {
+        id: "19b",
+        title: "badshah o badshah (bstyle remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b1-badshah o badshah (bstyle remix) - dj baichun x dj barkha kaul.mp3",
+      },
+      {
+        id: "19c",
+        title: "all black (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b1-all black (remix) - dj kabira.mp3",
+      },
+      {
+        id: "19d",
+        title: "aisa jadu (techno mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b1-aisa jadu (techno mashup) - dj baichun.mp3",
+      },
+      {
+        id: "19e",
+        title: "aaj ki raat (desi tech mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b1-aaj ki raat (desi tech mix) - dj avishek dinda.mp3",
+      },
+    ],
+  },
+  {
+    id: 20,
+    title: "Top Bollywood DJ Edits & Mashups pack 2",
+    artist: "Various Artists",
+    description:
+      "120+ of the best bollywood edits for djs Ready to play WAV & MP3.",
+    cover: "https://i.imgur.com/9LVdxwB.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/wxmazu",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Bollywood",
+      trackCount: "120+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Weddings", "Desi Events"],
+      moods: ["Energetic", "Danceable", "Festive", "High Energy"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "20a",
+        title: "let the music play",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b2-let the music play - v-edit.mp3",
+      },
+      {
+        id: "20b",
+        title: "mauja hi mauja (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b2-mauja hi mauja (remix) - dj kabira.mp3",
+      },
+      {
+        id: "20c",
+        title: "nain matakka (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b2-nain matakka (remix) - cherry muzik.mp3",
+      },
+      {
+        id: "20d",
+        title: "pardesi (desi tech mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b2-pardesi (desi tech mix) - dj avishek dinda.mp3",
+      },
+      {
+        id: "20e",
+        title: "this party getting hot (bollytech mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/b2-this party getting hot (bollytech mashup) - dj baichun.mp3",
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Top Disco House ",
+    artist: "Various Artists",
+    description: "150+ Timeless Disco House edits...",
+    cover: "https://i.imgur.com/xVxz9Qg.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Disco House",
+      trackCount: "150+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "9a",
+        title: "Mas que nada",
+        audioPreview:
+          "https://audio-hosting.netlify.app/disco-house - mas que nada.mp3",
+      },
+      {
+        id: "9b",
+        title: "Madan",
+        audioPreview:
+          "https://audio-hosting.netlify.app/disco-house - madan.mp3",
+      },
+      {
+        id: "9c",
+        title: "Le Freak",
+        audioPreview:
+          "https://audio-hosting.netlify.app/disco-house - le freak.mp3",
+      },
+      {
+        id: "9d",
+        title: "Dance the night",
+        audioPreview:
+          "https://audio-hosting.netlify.app/disco-house - dance the night.mp3",
+      },
+      {
+        id: "9e",
+        title: "Dance Lady",
+        audioPreview:
+          "https://audio-hosting.netlify.app/disco-house - dance lady.mp3",
+      },
+    ],
+  },
+  {
+    id: 99,
+    title: "Top Disco House vol.2",
+    artist: "Various Artists",
+    description: "115+ Timeless Disco House edits...",
+    cover: "https://i.imgur.com/L3cHwOh.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/piixrl",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Disco House",
+      trackCount: "115+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "9a",
+        title: "From Disco to disco",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dh2 - alle farben & majestic - from disco to disco.mp3",
+      },
+      {
+        id: "9b",
+        title: "Give me your lovin",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dh2 - armand van helden - give me your loving.mp3",
+      },
+      {
+        id: "9c",
+        title: "Stayin Alive",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dh2 - bee gees - stayin alive - graymatter remix.mp3",
+      },
+      {
+        id: "9d",
+        title: "Rock that body",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dh2 - black eyed peas - rock that body - rowka remix.mp3",
+      },
+      {
+        id: "9e",
+        title: "Thats the Way",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dh2 - k.c. & the sunshine band - thats the way - arzenic remix.mp3",
+      },
+    ],
   },
   {
     id: 1008,
-    title: 'Top Electro house & Mashups 2025',
-    artist: 'Various Artists',
-    description: '100+ Exclusive Tracks: A curated arsenal of the LATEST Electro house and club-ready remixes.',
-    cover: 'https://i.imgur.com/zWiu4bH.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/zfcds',
+    title: "Top Electro house & Mashups 2025",
+    artist: "Various Artists",
+    description:
+      "100+ Exclusive Tracks: A curated arsenal of the LATEST Electro house and club-ready remixes.",
+    cover: "https://i.imgur.com/zWiu4bH.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/zfcds",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Dance',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Dance",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
+      moods: ["Energetic", "Danceable"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '20a', title: 'Never be alone sos (mikashrine mashup)', audioPreview: 'https://audio-hosting.netlify.app/eh-david guetta & morten ft. aloe blacc vs. avicii - never be alone sos (mikashrine mashup).mp3' },
-      { id: '20b', title: 'Out of the dark & rather be (averix mashup) ', audioPreview: 'https://audio-hosting.netlify.app/eh - out of the dark & rather be (averix mashup).mp3' },
-      { id: '20c', title: 'Espresso x one more time rudeejay and da brozz mashup', audioPreview: 'https://audio-hosting.netlify.app/eh - espresso x one more time rudeejay and da brozz mashup.mp3' },
-      { id: '20d', title: 'Don t you worry child x Adagio', audioPreview: 'https://audio-hosting.netlify.app/eh - don t you worry child rencontre nocturne turn it around x adagio for square axwell i ingrosso reboot.mp3' },
-      { id: '20e', title: 'Paradise wellkrow no matter what edit', audioPreview: 'https://audio-hosting.netlify.app/eh - coldplay x telykast and xantz paradise wellkrow no matter what edit.mp3' },
-    ]
+      {
+        id: "20a",
+        title: "Never be alone sos (mikashrine mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eh-david guetta & morten ft. aloe blacc vs. avicii - never be alone sos (mikashrine mashup).mp3",
+      },
+      {
+        id: "20b",
+        title: "Out of the dark & rather be (averix mashup) ",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eh - out of the dark & rather be (averix mashup).mp3",
+      },
+      {
+        id: "20c",
+        title: "Espresso x one more time rudeejay and da brozz mashup",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eh - espresso x one more time rudeejay and da brozz mashup.mp3",
+      },
+      {
+        id: "20d",
+        title: "Don t you worry child x Adagio",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eh - don t you worry child rencontre nocturne turn it around x adagio for square axwell i ingrosso reboot.mp3",
+      },
+      {
+        id: "20e",
+        title: "Paradise wellkrow no matter what edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/eh - coldplay x telykast and xantz paradise wellkrow no matter what edit.mp3",
+      },
+    ],
+  },
+  {
+    id: 18,
+    title: "Top Funky Edits",
+    artist: "Various Artists",
+    description:
+      "Get the groove! 99+ handpicked funky edits, ready to play. Instantly elevate your set with high-quality WAV and MP3 tracks.",
+    cover: "https://i.imgur.com/iYnKp6o.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/wmdgq",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Funky House",
+      trackCount: "99+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
+    },
+    discountedPrice: 25,
+    tracks: [],
+  },
+  {
+    id: 4,
+    title: "Top Funky House 2025",
+    artist: "Various Artists",
+    description: "130+ handpicked fresh, high-energy selection...",
+    cover: "https://i.imgur.com/xI7oBHM.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/mjnzci",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Funky House",
+      trackCount: "130+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
+    },
+    discountedPrice: 20,
+    tracks: [
+      {
+        id: "4a",
+        title: "A deeper love",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fh 1 - paul adam, mia millet - a deeper love (extended mix) [there was jack] preview.mp3",
+      },
+      {
+        id: "4b",
+        title: "You got the love (santify mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fh 1 - steve tosi - you got the love (santify mix)preview.mp3",
+      },
+      {
+        id: "4c",
+        title: "Oceancake",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fh 1 - the beatbangers - oceancake (extended mix)preview.mp3",
+      },
+      {
+        id: "4d",
+        title: "Let there be house",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fh 1 -jackers revenge - let there be house (original mix) [save the nightlife]preview.mp3",
+      },
+      {
+        id: "4e",
+        title: "I need u tonight",
+        audioPreview:
+          "https://audio-hosting.netlify.app/fh 1 -footloserz - i need u tonight (extended mix) [radical funk]preview.mp3",
+      },
+    ],
+  },
+  {
+    id: 11,
+    title: "Top Latin-House",
+    artist: "Various Artists",
+    description: "140+ The only crate you need...",
+    cover: "https://i.imgur.com/52TVI3A.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/eamxdq",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Latin House",
+      trackCount: "140+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
+      moods: ["Energetic", "Danceable", "Energetic", "Festive"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "11a",
+        title: "Work",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latino-house - work.mp3",
+      },
+      {
+        id: "11b",
+        title: "Stayin alive",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latino-house - stayin alive.mp3",
+      },
+      {
+        id: "11c",
+        title: "Shake Body",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latino-house - shake body.mp3",
+      },
+      {
+        id: "11d",
+        title: "Rehab",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latino-house - rehab.mp3",
+      },
+      {
+        id: "11e",
+        title: "El Mariachi",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latino-house - el mariachi.mp3",
+      },
+    ],
+  },
+  {
+    id: 44,
+    title: "Top Latin-House VOL.2",
+    artist: "Various Artists",
+    description:
+      "The fiesta returns!79+ hand-selected tracks of pure Latin House energy.",
+    cover: "https://i.imgur.com/IwAc46b.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/vfpkjg",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Latin House",
+      trackCount: "79+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Party"],
+      moods: ["Energetic", "Danceable", "Energetic", "Festive"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "11a",
+        title: "Edge of desire mk ita remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lh2 - edge of desire mk ita remix.mp3",
+      },
+      {
+        id: "11b",
+        title: "Andalucia",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lh2 - hugel & grossomoddo - andalucia.mp3",
+      },
+      {
+        id: "11c",
+        title: "Teka (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lh2 - dj snake & peso pluma - teka (intro - clean).mp3",
+      },
+      {
+        id: "11d",
+        title: "lets go (5hours afro remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lh2 - david guetta - lets go (5hours afro remix).mp3",
+      },
+      {
+        id: "11e",
+        title: "Don t cha (heliograph and palau remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lh2 - don t cha heliograph and palau remix.mp3",
+      },
+    ],
+  },
+  {
+    id: 26,
+    title: "Top Latin-Tech 2025",
+    artist: "Various Artists",
+    description:
+      "85+ of the grooviest tracks where rolling Tech House meets Tribal rhythm.",
+    cover: "https://i.imgur.com/9LJ0xGb.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/ybmorl",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Tech House",
+      trackCount: "85+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "11a",
+        title: "lt - jamaican (bam bam) (extended mix) - hugel & solto",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lt - jamaican (bam bam) (extended mix) - hugel & solto.mp3",
+      },
+      {
+        id: "11b",
+        title: "bad bunny - nuevayol - chango remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lt - bad bunny - nuevayol - chango remix (dirty).mp3",
+      },
+      {
+        id: "11c",
+        title: "la vida es un carnaval - eddie boy vs burman boys",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lt - celia cruz - la vida es un carnaval - eddie boy vs burman boys 100-128 transition.mp3",
+      },
+      {
+        id: "11d",
+        title: "dj snake & peso pluma - teka - bontan remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lt - dj snake & peso pluma - teka - bontan remix.mp3",
+      },
+      {
+        id: "11e",
+        title: "la camisa negra - aanse & mlvr remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/lt - juanes - la camisa negra - aanse & mlvr remix.mp3",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Top Organic/Downtempo 2025",
+    artist: "Various Artists",
+    description: "70+ handpicked smooth blend of earthy textures...",
+    cover: "https://i.imgur.com/EbTJzgy.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Organic / Downtempo",
+      trackCount: "70+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
+      useCases: ["Sunset", "Lounge", "Beach Club"],
+      moods: ["Earthy", "Chill", "Deep"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "5a",
+        title: "Ma tnssani - Aya Vanco",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or - ma tnssani - aya vanco.mp3",
+      },
+      {
+        id: "5b",
+        title: "Namaste",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od1 - heaven inc. - namaste (extended mix) [songuara tales]preview.mp3",
+      },
+      {
+        id: "5c",
+        title: "Follower",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od1 - cereus - follower (original mix) [monada]preview.mp3",
+      },
+      {
+        id: "5d",
+        title: "Ancient era",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od1 - agassi - ancient era (original mix) [lump records]preview.mp3",
+      },
+      {
+        id: "5e",
+        title: "Pana cand nu te iubeam",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od1 - adrian saguna - pana cand nu te iubeam (original mix) [go deeva records]preview.mp3",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Top R&B /Hip Hop",
+    artist: "Various Artists",
+    description: "Over 100+ professionally curated hits...",
+    cover: "https://i.imgur.com/bby1I0r.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "R&B / Hip Hop",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "7a",
+        title: "Run this town",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 1 - run this town.mp3",
+      },
+      {
+        id: "7b",
+        title: "Samboosa (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 1 - samboosa (remix).mp3",
+      },
+      {
+        id: "7c",
+        title: "Shake your ass",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 1 - shake your ass.mp3",
+      },
+      {
+        id: "7d",
+        title: "The next episode (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 1 - the next episode (remix).mp3",
+      },
+      {
+        id: "7e",
+        title: "This is how we do it",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 1 - this is how we do it.mp3",
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Top R&B /Hip Hop # 2",
+    artist: "Various Artists",
+    description: "Over 100+ professionally curated hits...",
+    cover: "https://i.imgur.com/C218Zts.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "R&B / Hip Hop",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "8a",
+        title: "Friday",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 2 - friday.mp3",
+      },
+      {
+        id: "8b",
+        title: "Get it on tonight",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 2 - get it on tonight.mp3",
+      },
+      {
+        id: "8c",
+        title: "Groove thang",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 2 - groove thang.mp3",
+      },
+      {
+        id: "8d",
+        title: "Hit em up",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 2 - hit em up.mp3",
+      },
+      {
+        id: "8e",
+        title: "No money no problems",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rnb- pack 2 - no money no problems.mp3",
+      },
+    ],
   },
   {
     id: 25,
-    title: 'Top Reggaeton 2025',
-    artist: 'Various Artists',
-    description: '100+ of the BEST and LATEST hits dominating the charts and clubs',
-    cover: 'https://i.imgur.com/LeocZlZ.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/axtzde',
+    title: "Top Reggaeton 2025",
+    artist: "Various Artists",
+    description:
+      "100+ of the BEST and LATEST hits dominating the charts and clubs",
+    cover: "https://i.imgur.com/LeocZlZ.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/axtzde",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Reggaeton',
-      trackCount: '100+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Reggaeton",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
+      moods: ["Energetic", "Danceable"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '20a', title: 'Nuevayol - onderkoffer & miqstar remix', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - bad bunny - nuevayol - onderkoffer & miqstar remix (intro - dirty).mp3' },
-      { id: '20b', title: 'Después de la 1 - dj blayox hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - cris mj & floyymenor - después de la 1 - dj blayox hype intro (clean).mp3' },
-      { id: '20c', title: 'Cuentale - dj xxplosive hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - david guetta, willy william & nicky jam - cuentale - dj xxplosive hype intro (clean).mp3' },
-      { id: '20d', title: 'floyymenor - byonce - gael borrego club edit', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - floyymenor - byonce - gael borrego club edit (clean).mp3' },
-      { id: '20e', title: 'karol g - latina foreva - etx hype intro', audioPreview: 'https://audio-hosting.netlify.app/reggaetton - karol g - latina foreva - etx hype intro (clean).mp3' },
-    ]
+      {
+        id: "20a",
+        title: "Nuevayol - onderkoffer & miqstar remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/reggaetton - bad bunny - nuevayol - onderkoffer & miqstar remix (intro - dirty).mp3",
+      },
+      {
+        id: "20b",
+        title: "Después de la 1 - dj blayox hype intro",
+        audioPreview:
+          "https://audio-hosting.netlify.app/reggaetton - cris mj & floyymenor - después de la 1 - dj blayox hype intro (clean).mp3",
+      },
+      {
+        id: "20c",
+        title: "Cuentale - dj xxplosive hype intro",
+        audioPreview:
+          "https://audio-hosting.netlify.app/reggaetton - david guetta, willy william & nicky jam - cuentale - dj xxplosive hype intro (clean).mp3",
+      },
+      {
+        id: "20d",
+        title: "floyymenor - byonce - gael borrego club edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/reggaetton - floyymenor - byonce - gael borrego club edit (clean).mp3",
+      },
+      {
+        id: "20e",
+        title: "karol g - latina foreva - etx hype intro",
+        audioPreview:
+          "https://audio-hosting.netlify.app/reggaetton - karol g - latina foreva - etx hype intro (clean).mp3",
+      },
+    ],
   },
   {
-    id: 1000,
-    year: 2026,
-    title: 'TOP ORIENTAL REMIXES 2026',
-    artist: 'Various Artists',
-    description: 'Get 124+ hand-selected tracks built by DJs, for DJs. From high-end luxury lounge vibes to driving peak-time anthems',
-    cover: 'https://i.imgur.com/crrjU87.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/glcpvr',
-    tracklistUrl: '/tracklists/TOPORIENTALREMIXES2026.html',
+    id: 22,
+    title: "Top Tech-House 2025",
+    artist: "Various Artists",
+    description:
+      "This crate delivers 100+ club-ready tracks packed with rolling basslines and infectious vocal hooks. All files are DJ-edited in both WAV & MP3.",
+    cover: "https://i.imgur.com/GxMa8Mh.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/uhiofy",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Arabic/Oriental',
-      trackCount: '124+',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Tech House",
+      trackCount: "100+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
-      moods: ["Energetic", "Danceable", "Cultural", "Festive"]
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2026_or2_1', title: 'a la turka', audioPreview: 'https://audio-hosting.netlify.app/or26%20-a%20la%20turka.mp3' },
-      { id: '2026_or2_2', title: 'ya nas (remix)', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20ya%20nas%20(remix).mp3' },
-      { id: '2026_or2_3', title: 'terghalli', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20terghalli.mp3' },
-      { id: '2026_or2_4', title: 'sahby ya sahby - bahaa sultan', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20sahby%20ya%20sahby%20-%20bahaa%20sultan.mp3' },
-      { id: '2026_or2_5', title: 'beledna', audioPreview: 'https://audio-hosting.netlify.app/or26%20-%20beledna.mp3' }
-    ]
+      {
+        id: "20a",
+        title: "burna boy - tatata(hills remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th burna boy - tatata (feat. travis scott) (hills remix).mp3",
+      },
+      {
+        id: "20b",
+        title: "rock this party (red cork edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th bob sinclar x cruzy x mk - rock this party (red cork edit).mp3",
+      },
+      {
+        id: "20c",
+        title: "the bomb vs. anxiety",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th doechii - the bomb vs. anxiety (lxrenz remix) extended.mp3",
+      },
+      {
+        id: "20d",
+        title: "the weeknd - the hills (gonna drew edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th the weeknd - the hills (gonna drew edit) [dropunited exclusive].mp3",
+      },
+      {
+        id: "20e",
+        title: "we be burnin esox remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th we be burnin esox remix sean paul.mp3",
+      },
+    ],
   },
   {
-    id: 1001,
-    year: 2026,
-    title: 'TOP INDIE DANCE 2026',
-    artist: 'Various Artists',
-    description: 'Our most requested crate of the year is live.  Get 101 hand-selected tracks defining the explosive Indie Dance movement. Heavy retro synths meet driving club basslines. The biggest trend in global dance music, fully DJ-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/udEuR19.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/pzorss',
-    tracklistUrl: '/tracklists/TOPINDIEDANCE2026.html',
-    originalPrice: 35,
+    id: 167,
+    title: "TOP WEDDING ANTHEMS",
+    artist: "Various Artists",
+    description:
+      "Take the stress out of wedding season. 💍 Get 200+ hand-selected MP3s meticulously organized into 11 gig-ready folders (Doors Open, Dinner, Cake Cutting, Pop, Rock, R&B, Latin & more). We did the prep work so you don't have to. The ultimate, perfectly categorized survival kit for any Wedding DJ.",
+    cover: "https://i.imgur.com/HdDRrwh.png",
     geoMetadata: {
-      genre: 'Indie Dance',
-      trackCount: '101',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Weddings",
+      trackCount: "200+",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Club Sets", "Late Night"],
-      moods: ["Energetic", "Danceable", "Retro", "Driving"]
+      useCases: ["Club Sets", "DJ Mixes", "Party", "Urban Sets"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Bouncy"],
     },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_ti1', title: 'roland clark - i get deep roy rosenfeld extended remix', audioPreview: 'https://audio-hosting.netlify.app/ti26 - roland clark - i get deep roy rosenfeld extended remix.mp3' },
-      { id: '2026_ti2', title: 'jonk - toma la toma', audioPreview: 'https://audio-hosting.netlify.app/ti26 - jonk -toma la toma.mp3' },
-      { id: '2026_ti3', title: 'steve angello modern tales - darkness in me oi mosko yaffa edit', audioPreview: 'https://audio-hosting.netlify.app/ti26 - steve angello modern tales - darkness in me oi mosko yaffa edit.mp3' },
-      { id: '2026_ti4', title: 'the alan parsons project - sirius tapiero powder edit', audioPreview: 'https://audio-hosting.netlify.app/ti26 - the alan parsons project - sirius tapiero powder edit.mp3' },
-      { id: '2026_ti5', title: 'horeno - lochadora', audioPreview: 'https://audio-hosting.netlify.app/ti26 - horeno - lochadora.mp3' }
-    ]
+    buttonText: "Get Bundle",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/mdyccb",
+    originalPrice: 50,
+    discountedPrice: 30,
+    tracks: [],
   },
   {
-    id: 1002,
+    id: 1010,
     year: 2026,
-    title: 'TOP REGGAETON 2026',
-    artist: 'Various Artists',
-    description: 'Get 83 hand-selected tracks and exclusive edits defining the sound of Reggaeton in 2026. From heavy club perreo to smooth commercial urban grooves, this crate is 100% DJ-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/zjDYUD2.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/ztccdi',
-    tracklistUrl: '/tracklists/TOPREGGAETON2026.html',
+    title: "TOP AFRO HOUSE VOL 7",
+    artist: "Various Artists",
+    description:
+      "Get 95 handpicked tracks defining the absolute best in Afro House and Afro Tech. Deep basslines, heavy tribal percussion, and soul-stirring vocals. A premium, zero-filler collection 100% DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/PnY3uUu.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/zjmzhs",
+    tracklistUrl: "/tracklists/TOPAFROHOUSE7.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Reggaeton',
-      trackCount: '83',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Afro House",
+      trackCount: "95",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Mainstream", "Party"],
-      moods: ["Energetic", "Danceable", "Upbeat", "Party"]
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2026_rg1', title: 'alvaro soler - animal', audioPreview: 'https://audio-hosting.netlify.app/r26 - alvaro soler - animal.mp3' },
-      { id: '2026_rg2', title: 'iza, ciara & major lazer - evapora', audioPreview: 'https://audio-hosting.netlify.app/r26 - iza, ciara & major lazer - evapora.mp3' },
-      { id: '2026_rg3', title: 'j balvin & ryan castro - una a la vez', audioPreview: 'https://audio-hosting.netlify.app/r26 - j balvin & ryan castro - una a la vez.mp3' },
-      { id: '2026_rg4', title: 'justin quiles - 7 am - de mision', audioPreview: 'https://audio-hosting.netlify.app/r26 - justin quiles - 7 am - de mision.mp3' },
-      { id: '2026_rg5', title: 'rodolfo y su tipica ra7 - la colegiala - dj fasta remix', audioPreview: 'https://audio-hosting.netlify.app/r26 - rodolfo y su tipica ra7 - la colegiala - dj fasta remix.mp3' }
-    ]
+      {
+        id: "2026_tah1",
+        title: "aaron sevilla, flavor plus, bhx1 - touch it (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tah7 - aaron sevilla, flavor plus, bhx1 - touch it (original mix).mp3",
+      },
+      {
+        id: "2026_tah2",
+        title:
+          "agoria & blase - you're not alone (moblack & simone santagati remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tah7 - agoria & blase - you're not alone (moblack & simone santagati remix).mp3",
+      },
+      {
+        id: "2026_tah3",
+        title: "ash damon - ohh (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tah7 - ash damon - ohh (extended mix).mp3",
+      },
+      {
+        id: "2026_tah4",
+        title: "aytiwan, harmonique (it) - believe (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tah7 - aytiwan, harmonique (it) - believe (original mix).mp3",
+      },
+      {
+        id: "2026_tah5",
+        title: "bad bunny - baile inolvidable (klasse col hamayak jan edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tah7 - bad bunny - baile inolvidable (klasse col hamayak jan edit).mp3",
+      },
+    ],
+  },
+  {
+    id: 998,
+    year: 2026,
+    title: "TOP AFRO HOUSE VOL :6",
+    artist: "Various Artists",
+    description:
+      "The freshest sound of 2026 has arrived. TOP AFRO HOUSE VOL 6 delivers 146+ of the absolute latest, hand-selected tracks Available in WAV & MP3.",
+    cover: "https://i.imgur.com/eGiqIo8.jpeg", // Placeholder image
+    gumroadLink: "https://topdjcrates.gumroad.com/l/unypc",
+    tracklistUrl: "/tracklists/TOPAFROHOUSEVOL6.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Afro-House",
+      trackCount: "146+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_1a",
+        title: "Twist sound - shaman (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af6-twist sound - shaman (extended mix).mp3",
+      },
+      {
+        id: "2026_1b",
+        title: "Tufan uysal - new york (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af6 - tufan uysal - new york (original mix).mp3",
+      },
+      {
+        id: "2026_1c",
+        title: "Hugelarviii - samarkand (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af6 - hugel -samarkand (extended mix).mp3",
+      },
+      {
+        id: "2026_1d",
+        title: "kamafro - stayin alive afro disco mix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af6 - richard grey lissat kamafro - stayin alive afro disco mix.mp3",
+      },
+      {
+        id: "2026_1e",
+        title: "Arkadyan - aventureros",
+        audioPreview:
+          "https://audio-hosting.netlify.app/af6 -arkadyan - aventureros.mp3",
+      },
+    ],
   },
   {
     id: 1003,
     year: 2026,
-    title: 'TOP AFROBEAT 2026',
-    artist: 'Various Artists',
-    description: 'Get 75 handpicked tracks defining the sound of Afrobeats in 2026. Curated strictly by our pro DJs, this crate brings the heat with smooth vocals and heavy club rhythms. Refresh your library instantly with 100% DJ-ready WAVs & MP3s.',
-    cover: 'https://i.imgur.com/Jhh9xP2.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/temot',
-    tracklistUrl: '/tracklists/TOPAFROBEAT.html',
+    title: "TOP AFROBEAT 2026",
+    artist: "Various Artists",
+    description:
+      "Get 75 handpicked tracks defining the sound of Afrobeats in 2026. Curated strictly by our pro DJs, this crate brings the heat with smooth vocals and heavy club rhythms. Refresh your library instantly with 100% DJ-ready WAVs & MP3s.",
+    cover: "https://i.imgur.com/Jhh9xP2.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/temot",
+    tracklistUrl: "/tracklists/TOPAFROBEAT.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Amapiano/Afrobeats',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Amapiano/Afrobeats",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Tribal", "Groove"]
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2026_ab1', title: 'dj snake & niniola - maradona riddim', audioPreview: 'https://audio-hosting.netlify.app/ab26 - dj snake & niniola - maradona riddim.mp3' },
-      { id: '2026_ab2', title: 'shakira vs burna boy - dai dai', audioPreview: 'https://audio-hosting.netlify.app/ab26 - shakira vs burna boy - dai dai.mp3' },
-      { id: '2026_ab3', title: 'kakalika - dope nation', audioPreview: 'https://audio-hosting.netlify.app/ab26 - kakalika - dope nation.mp3' },
-      { id: '2026_ab4', title: 'king promise, mr eazi - mariana', audioPreview: 'https://audio-hosting.netlify.app/ab26 - king promise, mr eazi - mariana.mp3' },
-      { id: '2026_ab5', title: 'unconditional - gyakie', audioPreview: 'https://audio-hosting.netlify.app/ab26 - unconditional - gyakie.mp3' }
-    ]
-  },
-  {
-    id: 1004,
-    year: 2026,
-    title: 'TOP DISCO REPRISE',
-    artist: 'Various Artists',
-    description: 'Get 102 hand-selected tracks featuring your favorite old-school classics remade into smooth, groovy disco edits. The ultimate soundtrack for bars, pubs, and coffee shops. Nostalgic vocals meet fresh basslines. Available in gig-ready WAV & MP3.',
-    cover: 'https://i.imgur.com/alKLN04.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/elhcmk',
-    tracklistUrl: '/tracklists/TOPDISCOREPRISE.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Disco House',
-      trackCount: '102',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_dr1', title: 'ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit).mp3' },
-      { id: '2026_dr2', title: 'crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit).mp3' },
-      { id: '2026_dr3', title: 'billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit)', audioPreview: 'https://audio-hosting.netlify.app/dr - billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit).mp3' },
-      { id: '2026_dr4', title: 'bananarama - venus (dario caminita revibe)', audioPreview: 'https://audio-hosting.netlify.app/dr - bananarama - venus (dario caminita revibe).mp3' },
-      { id: '2026_dr5', title: "kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit)", audioPreview: "https://audio-hosting.netlify.app/dr - kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit).mp3" }
-    ]
-  },
-  {
-    id: 1005,
-    year: 2026,
-    title: 'TOP RUSSIAN REMIXES 2026',
-    artist: 'Various Artists',
-    description: 'Get 162 hand-selected tracks featuring the biggest Russian House hits and massive club remixes defining 2026. Deep, dark, and driving energy built for the dancefloor. 100% DJ-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/efwK5q0.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/itfqn',
-    tracklistUrl: '/tracklists/TOPRUSSIANREMIXES2026.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Dance',
-      trackCount: '162',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_trr1', title: 'a.v.g & согдиана - сердце - магнит (alexx slam remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - a.v.g & согдиана - сердце - магнит (alexx slam remix).mp3' },
-      { id: '2026_trr2', title: 'bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124', audioPreview: 'https://audio-hosting.netlify.app/trr26 - bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124.mp3' },
-      { id: '2026_trr3', title: 'aarne, bushido zho, anikv - тесно (hittz remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - aarne, bushido zho, anikv - тесно (hittz remix).mp3' },
-      { id: '2026_trr4', title: 'cream soda - подруга', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cream soda - подруга.mp3' },
-      { id: '2026_trr5', title: 'cygo - panda e (psproject & ecstaz remix)', audioPreview: 'https://audio-hosting.netlify.app/trr26 - cygo - panda e (psproject & ecstaz remix).mp3' }
-    ]
+      {
+        id: "2026_ab1",
+        title: "dj snake & niniola - maradona riddim",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab26 - dj snake & niniola - maradona riddim.mp3",
+      },
+      {
+        id: "2026_ab2",
+        title: "shakira vs burna boy - dai dai",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab26 - shakira vs burna boy - dai dai.mp3",
+      },
+      {
+        id: "2026_ab3",
+        title: "kakalika - dope nation",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab26 - kakalika - dope nation.mp3",
+      },
+      {
+        id: "2026_ab4",
+        title: "king promise, mr eazi - mariana",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab26 - king promise, mr eazi - mariana.mp3",
+      },
+      {
+        id: "2026_ab5",
+        title: "unconditional - gyakie",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ab26 - unconditional - gyakie.mp3",
+      },
+    ],
   },
   {
     id: 1006,
     year: 2026,
-    title: 'TOP DANCE MASHUP & EDITS 2026',
-    artist: 'Various Artists',
-    description: 'Get 92 handpicked mashups and exclusive club edits defining the 2026 season. This is the one and only crate you need in your library to guarantee an explosive dancefloor. Familiar vocals meet heavy club drops. 100% DJ-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/QVLYas2.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/bbyetp',
-    tracklistUrl: '/tracklists/TOPdancemashup2026.html',
+    title: "TOP DANCE MASHUP & EDITS 2026",
+    artist: "Various Artists",
+    description:
+      "Get 92 handpicked mashups and exclusive club edits defining the 2026 season. This is the one and only crate you need in your library to guarantee an explosive dancefloor. Familiar vocals meet heavy club drops. 100% DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/QVLYas2.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/bbyetp",
+    tracklistUrl: "/tracklists/TOPdancemashup2026.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Dance',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Dance",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
+      moods: ["Energetic", "Danceable"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2026_td1', title: 'calvin harris & vidojean - how deep alemayo', audioPreview: 'https://audio-hosting.netlify.app/td26 - calvin harris & vidojean - how deep alemayo.mp3' },
-      { id: '2026_td2', title: 'fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026', audioPreview: 'https://audio-hosting.netlify.app/td26 - fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026.mp3' },
-      { id: '2026_td3', title: 'c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits)', audioPreview: 'https://audio-hosting.netlify.app/td26 - c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits).mp3' },
-      { id: '2026_td4', title: 'jamaican (bam bam) x edge of desire', audioPreview: 'https://audio-hosting.netlify.app/td26 - jamaican (bam bam) x edge of desire.mp3' },
-      { id: '2026_td5', title: 'skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway)', audioPreview: 'https://audio-hosting.netlify.app/td26 - skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway).mp3' }
-    ]
-  },
-  {
-    id: 1007,
-    year: 2026,
-    title: 'TOP DJ TRANSITIONS 2026',
-    artist: 'Various Artists',
-    description: 'Get 245 handpicked transition tracks designed to flawlessly jump from one speed to another. Move seamlessly across tempos and genres. The ultimate utility crate for any Open-Format DJ. 100% gig-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/pz83dA7.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/uieep',
-    tracklistUrl: '/tracklists/TOPdjtransitions.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Dance',
-      trackCount: 'Multiple',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes"],
-      moods: ["Energetic", "Danceable"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_tt1', title: 'bad bunny - callaita (transition edit 95-128 bootleg)', audioPreview: 'https://audio-hosting.netlify.app/tt - bad bunny - callaita (transition edit 95-128 bootleg).mp3' },
-      { id: '2026_tt2', title: 'daddy yankee - party to gasolina (culo to reggaeton sandunga)', audioPreview: 'https://audio-hosting.netlify.app/tt - daddy yankee - party to gasolina (culo to reggaeton sandunga).mp3' },
-      { id: '2026_tt3', title: 'dj katch - magalenha (110-126 transition)', audioPreview: 'https://audio-hosting.netlify.app/tt - dj katch - magalenha (110-126 transition).mp3' },
-      { id: '2026_tt4', title: 'dua lipa - levitating (120-103 transition)', audioPreview: 'https://audio-hosting.netlify.app/tt - dua lipa - levitating (120-103 transition).mp3' },
-      { id: '2026_tt5', title: 'fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125)', audioPreview: 'https://audio-hosting.netlify.app/tt - fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125).mp3' }
-    ]
-  },
-  {
-    id: 1008,
-    year: 2026,
-    title: 'TOP ORIENTAL REDRUMS & REMIXES',
-    artist: 'Various Artists',
-    description: 'Get 94 handpicked tracks, featuring legendary Oriental classics and new hits, all upgraded with heavy, DJ-friendly redrums and remixes. Flawlessly mix the timeless anthems your crowd loves. 100% gig-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/0cBigYq.png',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/hydxej',
-    tracklistUrl: '/tracklists/TOPARABICREDRUMS&REMIXES.html',
-    originalPrice: 35,
-    geoMetadata: {
-      genre: 'Oriental',
-      trackCount: '94',
-      fileFormats: ['WAV', 'MP3'],
-      targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Groovy"]
-    },
-    discountedPrice: 25,
-    tracks: [
-      { id: '2026_or1', title: 'ahmed sa3d - kol youm', audioPreview: 'https://audio-hosting.netlify.app/orr - ahmed sa3d - kol youm.mp3' },
-      { id: '2026_or2', title: 'akram hosny ft haifaa - law kont', audioPreview: 'https://audio-hosting.netlify.app/orr - akram hosny ft haifaa - law kont.mp3' },
-      { id: '2026_or3', title: 'amr diab - amken el sahar', audioPreview: 'https://audio-hosting.netlify.app/orr - amr diab - amken el sahar.mp3' },
-      { id: '2026_or4', title: 'fadl shaker - faker lama t2oly', audioPreview: 'https://audio-hosting.netlify.app/orr - fadl shaker - faker lama t2oly.mp3' },
-      { id: '2026_or5', title: 'hamak - la malama', audioPreview: 'https://audio-hosting.netlify.app/orr - hamak - la malama.mp3' }
-    ]
+      {
+        id: "2026_td1",
+        title: "calvin harris & vidojean - how deep alemayo",
+        audioPreview:
+          "https://audio-hosting.netlify.app/td26 - calvin harris & vidojean - how deep alemayo.mp3",
+      },
+      {
+        id: "2026_td2",
+        title:
+          "fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026",
+        audioPreview:
+          "https://audio-hosting.netlify.app/td26 - fatman scoop x the crooklyn clan x fedde le grand - be faithful 2026.mp3",
+      },
+      {
+        id: "2026_td3",
+        title:
+          "c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/td26 - c-bunny, bruno mars - feel it vs. treasure (gelltrix mashup) (mashups, dj edits).mp3",
+      },
+      {
+        id: "2026_td4",
+        title: "jamaican (bam bam) x edge of desire",
+        audioPreview:
+          "https://audio-hosting.netlify.app/td26 - jamaican (bam bam) x edge of desire.mp3",
+      },
+      {
+        id: "2026_td5",
+        title:
+          "skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/td26 - skales ft. mc fioti - shake body vs bum bum tam tam (rolando rodriguez mashup segway).mp3",
+      },
+    ],
   },
   {
     id: 1009,
     year: 2026,
-    title: 'TOP DISCO HOUSE VOL.3',
-    artist: 'Various Artists',
-    description: 'Refresh your playlist with 102 handpicked tracks of pure groove. Packed with fresh edits and exclusive remixes, this is the ultimate feel-good Disco House collection. 100% gig-ready in WAV & MP3.',
-    cover: 'https://i.imgur.com/xif5Fhp.jpeg',
-    gumroadLink: 'https://topdjcrates.gumroad.com/l/dsuakj',
-    tracklistUrl: '/tracklists/TOPDISCOHOUSE3.html',
+    title: "TOP DISCO HOUSE VOL.3",
+    artist: "Various Artists",
+    description:
+      "Refresh your playlist with 102 handpicked tracks of pure groove. Packed with fresh edits and exclusive remixes, this is the ultimate feel-good Disco House collection. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/xif5Fhp.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/dsuakj",
+    tracklistUrl: "/tracklists/TOPDISCOHOUSE3.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: 'Disco House',
-      trackCount: '102',
-      fileFormats: ['WAV', 'MP3'],
+      genre: "Disco House",
+      trackCount: "102",
+      fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
-      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
     },
     discountedPrice: 25,
     tracks: [
-      { id: '2026_tdh1', title: "metallica - unforgiven (kue's french touch mix)", audioPreview: "https://audio-hosting.netlify.app/tdh3 - metallica - unforgiven (kue's french touch mix).mp3" },
-      { id: '2026_tdh2', title: 'phil disco - phonic disco (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - phil disco - phonic disco (extended mix).mp3' },
-      { id: '2026_tdh3', title: 'spooki - party in me (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - spooki - party in me (extended mix).mp3' },
-      { id: '2026_tdh4', title: "vassy & mind electric - on me (kue's studio 54 mix) (extended mix)", audioPreview: "https://audio-hosting.netlify.app/tdh3 - vassy & mind electric - on me (kue's studio 54 mix) (extended mix).mp3" },
-      { id: '2026_tdh5', title: 'zerb ft kiki gyan - 24h in a disco', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - zerb ft kiki gyan - 24h in a disco.mp3' }
-    ]
-  }
+      {
+        id: "2026_tdh1",
+        title: "metallica - unforgiven (kue's french touch mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tdh3 - metallica - unforgiven (kue's french touch mix).mp3",
+      },
+      {
+        id: "2026_tdh2",
+        title: "phil disco - phonic disco (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tdh3 - phil disco - phonic disco (extended mix).mp3",
+      },
+      {
+        id: "2026_tdh3",
+        title: "spooki - party in me (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tdh3 - spooki - party in me (extended mix).mp3",
+      },
+      {
+        id: "2026_tdh4",
+        title:
+          "vassy & mind electric - on me (kue's studio 54 mix) (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tdh3 - vassy & mind electric - on me (kue's studio 54 mix) (extended mix).mp3",
+      },
+      {
+        id: "2026_tdh5",
+        title: "zerb ft kiki gyan - 24h in a disco",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tdh3 - zerb ft kiki gyan - 24h in a disco.mp3",
+      },
+    ],
+  },
+  {
+    id: 1004,
+    year: 2026,
+    title: "TOP DISCO REPRISE",
+    artist: "Various Artists",
+    description:
+      "Get 102 hand-selected tracks featuring your favorite old-school classics remade into smooth, groovy disco edits. The ultimate soundtrack for bars, pubs, and coffee shops. Nostalgic vocals meet fresh basslines. Available in gig-ready WAV & MP3.",
+    cover: "https://i.imgur.com/alKLN04.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/elhcmk",
+    tracklistUrl: "/tracklists/TOPDISCOREPRISE.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Disco House",
+      trackCount: "102",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_dr1",
+        title:
+          "ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dr - ew&f - boogie wonderland (dennis blaze hype quantized redrum) (dennisblaze edit).mp3",
+      },
+      {
+        id: "2026_dr2",
+        title:
+          "crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dr - crystal waters vs the bucketheads - gypsy woman (bootleg brothers bomb mix) (barbangerz edit).mp3",
+      },
+      {
+        id: "2026_dr3",
+        title:
+          "billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dr - billy ocean - caribbean queen (party pupils remix) (se) (barbangerz edit).mp3",
+      },
+      {
+        id: "2026_dr4",
+        title: "bananarama - venus (dario caminita revibe)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dr - bananarama - venus (dario caminita revibe).mp3",
+      },
+      {
+        id: "2026_dr5",
+        title:
+          "kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/dr - kc & the sunshine band - that's the way i like it (party pupils remix) (se) (barbangerz edit).mp3",
+      },
+    ],
+  },
+  {
+    id: 1007,
+    year: 2026,
+    title: "TOP DJ TRANSITIONS 2026",
+    artist: "Various Artists",
+    description:
+      "Get 245 handpicked transition tracks designed to flawlessly jump from one speed to another. Move seamlessly across tempos and genres. The ultimate utility crate for any Open-Format DJ. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/pz83dA7.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/uieep",
+    tracklistUrl: "/tracklists/TOPdjtransitions.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Dance",
+      trackCount: "Multiple",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_tt1",
+        title: "bad bunny - callaita (transition edit 95-128 bootleg)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tt - bad bunny - callaita (transition edit 95-128 bootleg).mp3",
+      },
+      {
+        id: "2026_tt2",
+        title: "daddy yankee - party to gasolina (culo to reggaeton sandunga)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tt - daddy yankee - party to gasolina (culo to reggaeton sandunga).mp3",
+      },
+      {
+        id: "2026_tt3",
+        title: "dj katch - magalenha (110-126 transition)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tt - dj katch - magalenha (110-126 transition).mp3",
+      },
+      {
+        id: "2026_tt4",
+        title: "dua lipa - levitating (120-103 transition)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tt - dua lipa - levitating (120-103 transition).mp3",
+      },
+      {
+        id: "2026_tt5",
+        title:
+          "fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tt - fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125).mp3",
+      },
+    ],
+  },
+  {
+    id: 1001,
+    year: 2026,
+    title: "TOP INDIE DANCE 2026",
+    artist: "Various Artists",
+    description:
+      "Our most requested crate of the year is live.  Get 101 hand-selected tracks defining the explosive Indie Dance movement. Heavy retro synths meet driving club basslines. The biggest trend in global dance music, fully DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/udEuR19.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/pzorss",
+    tracklistUrl: "/tracklists/TOPINDIEDANCE2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Indie Dance",
+      trackCount: "101",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Club Sets", "Late Night"],
+      moods: ["Energetic", "Danceable", "Retro", "Driving"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_ti1",
+        title: "roland clark - i get deep roy rosenfeld extended remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ti26 - roland clark - i get deep roy rosenfeld extended remix.mp3",
+      },
+      {
+        id: "2026_ti2",
+        title: "jonk - toma la toma",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ti26 - jonk -toma la toma.mp3",
+      },
+      {
+        id: "2026_ti3",
+        title:
+          "steve angello modern tales - darkness in me oi mosko yaffa edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ti26 - steve angello modern tales - darkness in me oi mosko yaffa edit.mp3",
+      },
+      {
+        id: "2026_ti4",
+        title: "the alan parsons project - sirius tapiero powder edit",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ti26 - the alan parsons project - sirius tapiero powder edit.mp3",
+      },
+      {
+        id: "2026_ti5",
+        title: "horeno - lochadora",
+        audioPreview:
+          "https://audio-hosting.netlify.app/ti26 - horeno - lochadora.mp3",
+      },
+    ],
+  },
+  {
+    id: 997,
+    year: 2026,
+    title: "Top organic/downtempo 2026 vol : 1",
+    artist: "Various Artists",
+    description:
+      "The soul of 2026 captured in sound. 120+ handpicked organic house and downtempo tracks, blending earthy textures with deep, emotive grooves. Perfect for sunset sets and sophisticated dancefloors. Available in WAV & MP3.",
+    cover: "https://i.imgur.com/C02wYNx.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/bejhmf",
+    tracklistUrl: "/tracklists/toporganichouse2026vol1.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Organic / Downtempo",
+      trackCount: "120+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs", "Lounge DJs"],
+      useCases: ["Sunset", "Lounge", "Beach Club"],
+      moods: ["Earthy", "Chill", "Deep"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_or1",
+        title: "Daniel williams - dancer",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od2026 - daniel williams - dancer (original mix).mp3",
+      },
+      {
+        id: "2026_or1",
+        title: "Greg ochman - sovva",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od2026 - greg ochman - sovva (extended mix).mp3",
+      },
+      {
+        id: "2026_or1",
+        title: "James martin - salt solace",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od2026 - james martin - salt solace (original mix).mp3",
+      },
+      {
+        id: "2026_or1",
+        title: "Kirr, belyi - tabalear",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od2026 - kirr, belyi - tabalear (extended mix).mp3",
+      },
+      {
+        id: "2026_or1",
+        title: "Manuchi, meyba hroove - pantelea",
+        audioPreview:
+          "https://audio-hosting.netlify.app/od2026 - manuchi, meyba hroove - pantelea (original mix).mp3",
+      },
+    ],
+  },
+  {
+    id: 996,
+    year: 2026,
+    title: "TOP ORIENTAL AFRO-HOUSE REMIXES 2026",
+    artist: "Various Artists",
+    description:
+      "Get 75+ hand-selected remixes where mesmerizing Oriental melodies meet driving Afro-House rhythms.",
+    cover: "https://i.imgur.com/72xuZpo.png", // Placeholder image
+    gumroadLink: "https://topdjcrates.gumroad.com/l/jmtsfp",
+    tracklistUrl: "/tracklists/TOPORIENTALAFROHOUSEREMIXES2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "75+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_oah1",
+        title: "Hussain al jassmi - Ma b7ebak",
+        audioPreview:
+          "https://audio-hosting.netlify.app/oah%20-ma%20b7ebak%20(remix).mp3",
+      },
+      {
+        id: "2026_oah2",
+        title: "Dystinct - Yama",
+        audioPreview:
+          "https://audio-hosting.netlify.app/oah%20-%20dystinct%20-%20yama.mp3",
+      },
+      {
+        id: "2026_oah3",
+        title: "Hakim - El wala wala (prycewell blend)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/oah%20-%20hakim%20-%20el%20wala%20wala%20(prycewell%20blend).mp3",
+      },
+      {
+        id: "2026_oah4",
+        title: "El sod ayono (remix) - Hameed el chaiiri",
+        audioPreview:
+          "https://audio-hosting.netlify.app/oah%20-%20el%20sod%20ayono%20(remix).mp3",
+      },
+      {
+        id: "2026_oah5",
+        title: "Alabina - ishtar (fares remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/oah%20-%20alabina%20-%20ishtar%20(fares%20remix).mp3",
+      },
+    ],
+  },
+  {
+    id: 1008,
+    year: 2026,
+    title: "TOP ORIENTAL REDRUMS & REMIXES",
+    artist: "Various Artists",
+    description:
+      "Get 94 handpicked tracks, featuring legendary Oriental classics and new hits, all upgraded with heavy, DJ-friendly redrums and remixes. Flawlessly mix the timeless anthems your crowd loves. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/0cBigYq.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/hydxej",
+    tracklistUrl: "/tracklists/TOPARABICREDRUMS&REMIXES.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Oriental",
+      trackCount: "94",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Groovy"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_or1",
+        title: "ahmed sa3d - kol youm",
+        audioPreview:
+          "https://audio-hosting.netlify.app/orr - ahmed sa3d - kol youm.mp3",
+      },
+      {
+        id: "2026_or2",
+        title: "akram hosny ft haifaa - law kont",
+        audioPreview:
+          "https://audio-hosting.netlify.app/orr - akram hosny ft haifaa - law kont.mp3",
+      },
+      {
+        id: "2026_or3",
+        title: "amr diab - amken el sahar",
+        audioPreview:
+          "https://audio-hosting.netlify.app/orr - amr diab - amken el sahar.mp3",
+      },
+      {
+        id: "2026_or4",
+        title: "fadl shaker - faker lama t2oly",
+        audioPreview:
+          "https://audio-hosting.netlify.app/orr - fadl shaker - faker lama t2oly.mp3",
+      },
+      {
+        id: "2026_or5",
+        title: "hamak - la malama",
+        audioPreview:
+          "https://audio-hosting.netlify.app/orr - hamak - la malama.mp3",
+      },
+    ],
+  },
+  {
+    id: 1000,
+    year: 2026,
+    title: "TOP ORIENTAL REMIXES 2026",
+    artist: "Various Artists",
+    description:
+      "Get 124+ hand-selected tracks built by DJs, for DJs. From high-end luxury lounge vibes to driving peak-time anthems",
+    cover: "https://i.imgur.com/crrjU87.png",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/glcpvr",
+    tracklistUrl: "/tracklists/TOPORIENTALREMIXES2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "124+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Specialty Events", "Weddings"],
+      moods: ["Energetic", "Danceable", "Cultural", "Festive"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_or2_1",
+        title: "a la turka",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or26%20-a%20la%20turka.mp3",
+      },
+      {
+        id: "2026_or2_2",
+        title: "ya nas (remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or26%20-%20ya%20nas%20(remix).mp3",
+      },
+      {
+        id: "2026_or2_3",
+        title: "terghalli",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or26%20-%20terghalli.mp3",
+      },
+      {
+        id: "2026_or2_4",
+        title: "sahby ya sahby - bahaa sultan",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or26%20-%20sahby%20ya%20sahby%20-%20bahaa%20sultan.mp3",
+      },
+      {
+        id: "2026_or2_5",
+        title: "beledna",
+        audioPreview:
+          "https://audio-hosting.netlify.app/or26%20-%20beledna.mp3",
+      },
+    ],
+  },
+  {
+    id: 1002,
+    year: 2026,
+    title: "TOP REGGAETON 2026",
+    artist: "Various Artists",
+    description:
+      "Get 83 hand-selected tracks and exclusive edits defining the sound of Reggaeton in 2026. From heavy club perreo to smooth commercial urban grooves, this crate is 100% DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/zjDYUD2.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/ztccdi",
+    tracklistUrl: "/tracklists/TOPREGGAETON2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Reggaeton",
+      trackCount: "83",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Mainstream", "Party"],
+      moods: ["Energetic", "Danceable", "Upbeat", "Party"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_rg1",
+        title: "alvaro soler - animal",
+        audioPreview:
+          "https://audio-hosting.netlify.app/r26 - alvaro soler - animal.mp3",
+      },
+      {
+        id: "2026_rg2",
+        title: "iza, ciara & major lazer - evapora",
+        audioPreview:
+          "https://audio-hosting.netlify.app/r26 - iza, ciara & major lazer - evapora.mp3",
+      },
+      {
+        id: "2026_rg3",
+        title: "j balvin & ryan castro - una a la vez",
+        audioPreview:
+          "https://audio-hosting.netlify.app/r26 - j balvin & ryan castro - una a la vez.mp3",
+      },
+      {
+        id: "2026_rg4",
+        title: "justin quiles - 7 am - de mision",
+        audioPreview:
+          "https://audio-hosting.netlify.app/r26 - justin quiles - 7 am - de mision.mp3",
+      },
+      {
+        id: "2026_rg5",
+        title: "rodolfo y su tipica ra7 - la colegiala - dj fasta remix",
+        audioPreview:
+          "https://audio-hosting.netlify.app/r26 - rodolfo y su tipica ra7 - la colegiala - dj fasta remix.mp3",
+      },
+    ],
+  },
+  {
+    id: 1005,
+    year: 2026,
+    title: "TOP RUSSIAN REMIXES 2026",
+    artist: "Various Artists",
+    description:
+      "Get 162 hand-selected tracks featuring the biggest Russian House hits and massive club remixes defining 2026. Deep, dark, and driving energy built for the dancefloor. 100% DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/efwK5q0.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/itfqn",
+    tracklistUrl: "/tracklists/TOPRUSSIANREMIXES2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Dance",
+      trackCount: "162",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes"],
+      moods: ["Energetic", "Danceable"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_trr1",
+        title: "a.v.g & согдиана - сердце - магнит (alexx slam remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/trr26 - a.v.g & согдиана - сердце - магнит (alexx slam remix).mp3",
+      },
+      {
+        id: "2026_trr2",
+        title:
+          "bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124",
+        audioPreview:
+          "https://audio-hosting.netlify.app/trr26 - bloodhound gang - the bad touch (tim bird & ruslan mishin remix) 124.mp3",
+      },
+      {
+        id: "2026_trr3",
+        title: "aarne, bushido zho, anikv - тесно (hittz remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/trr26 - aarne, bushido zho, anikv - тесно (hittz remix).mp3",
+      },
+      {
+        id: "2026_trr4",
+        title: "cream soda - подруга",
+        audioPreview:
+          "https://audio-hosting.netlify.app/trr26 - cream soda - подруга.mp3",
+      },
+      {
+        id: "2026_trr5",
+        title: "cygo - panda e (psproject & ecstaz remix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/trr26 - cygo - panda e (psproject & ecstaz remix).mp3",
+      },
+    ],
+  },
+  {
+    id: 999,
+    year: 2026,
+    title: "TOP TECH HOUSE 2026 VOL :1",
+    artist: "Various Artists",
+    description:
+      "The first drop of the year is massive. 139+ fresh tracks defining the sound of 2026. Rolling basslines, tight grooves, and peak-time energy. Be the first to break these tracks. Available in WAV & MP3.",
+    cover: "https://i.imgur.com/1GxMvef.png", // Placeholder image
+    gumroadLink: "https://topdjcrates.gumroad.com/l/biezqd",
+    tracklistUrl: "/tracklists/TOPTECHHOUSE2026VOL1.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Tech House",
+      trackCount: "139+",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Late Night"],
+      moods: ["Energetic", "Danceable", "Driving", "Deep"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_1a",
+        title: "Andres suarez - hey! hey! (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th26 - andres suarez - hey! hey! (original mix).mp3",
+      },
+      {
+        id: "2026_1b",
+        title: "bergerhaus - sun will shine another day (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th26%20-%20bergerhaus%20-%20sun%20will%20shine%20another%20day%20(original%20mix).mp3",
+      },
+      {
+        id: "2026_1c",
+        title: "Better than lex - party in amsterdam (original mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th26 - better than lex - party in amsterdam (original mix).mp3",
+      },
+      {
+        id: "2026_1d",
+        title: "Cole vassallo - movin",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th26 - cole vassallo - movin.mp3",
+      },
+      {
+        id: "2026_1e",
+        title: "G-pol, answer - girls (extended mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/th26 - g-pol, answer (cn) - girls (extended mix).mp3",
+      },
+    ],
+  },
 ];
