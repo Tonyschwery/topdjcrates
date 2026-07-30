@@ -1212,5 +1212,32 @@ export const musicPacks = [
       { id: '2026_or4', title: 'fadl shaker - faker lama t2oly', audioPreview: 'https://audio-hosting.netlify.app/orr - fadl shaker - faker lama t2oly.mp3' },
       { id: '2026_or5', title: 'hamak - la malama', audioPreview: 'https://audio-hosting.netlify.app/orr - hamak - la malama.mp3' }
     ]
+  },
+  {
+    id: 1009,
+    year: 2026,
+    title: 'TOP DISCO HOUSE VOL.3',
+    artist: 'Various Artists',
+    description: 'Refresh your playlist with 102 handpicked tracks of pure groove. Packed with fresh edits and exclusive remixes, this is the ultimate feel-good Disco House collection. 100% gig-ready in WAV & MP3.',
+    cover: 'https://i.imgur.com/xif5Fhp.jpeg',
+    gumroadLink: 'https://topdjcrates.gumroad.com/l/dsuakj',
+    tracklistUrl: '/tracklists/TOPDISCOHOUSE3.html',
+    originalPrice: 35,
+    geoMetadata: {
+      genre: 'Disco House',
+      trackCount: '102',
+      fileFormats: ['WAV', 'MP3'],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Lounge", "Party"],
+      moods: ["Energetic", "Danceable", "Groovy", "Uplifting"]
+    },
+    discountedPrice: 25,
+    tracks: [
+      { id: '2026_tdh1', title: "metallica - unforgiven (kue's french touch mix)", audioPreview: "https://audio-hosting.netlify.app/tdh3 - metallica - unforgiven (kue's french touch mix).mp3" },
+      { id: '2026_tdh2', title: 'phil disco - phonic disco (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - phil disco - phonic disco (extended mix).mp3' },
+      { id: '2026_tdh3', title: 'spooki - party in me (extended mix)', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - spooki - party in me (extended mix).mp3' },
+      { id: '2026_tdh4', title: "vassy & mind electric - on me (kue's studio 54 mix) (extended mix)", audioPreview: "https://audio-hosting.netlify.app/tdh3 - vassy & mind electric - on me (kue's studio 54 mix) (extended mix).mp3" },
+      { id: '2026_tdh5', title: 'zerb ft kiki gyan - 24h in a disco', audioPreview: 'https://audio-hosting.netlify.app/tdh3 - zerb ft kiki gyan - 24h in a disco.mp3' }
+    ]
   }
 ];
