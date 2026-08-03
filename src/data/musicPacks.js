@@ -1820,7 +1820,7 @@ export const musicPacks = [
     ],
   },
   {
-    id: 1009,
+    id: 1011,
     year: 2026,
     title: "TOP DISCO HOUSE VOL.3",
     artist: "Various Artists",
@@ -2145,7 +2145,7 @@ export const musicPacks = [
     ],
   },
   {
-    id: 1008,
+    id: 1012,
     year: 2026,
     title: "TOP ORIENTAL REDRUMS & REMIXES",
     artist: "Various Artists",
