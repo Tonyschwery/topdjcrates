@@ -37,6 +37,10 @@ const BRAVE_URL = 'https://api.search.brave.com/res/v1/web/search';
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'posts');
 const IMAGES_DIR = path.join(process.cwd(), 'public', 'images');
+const CATALOGUE_FILE = path.join(process.cwd(), 'src', 'data', 'musicPacks.js');
+
+// Public base URL, used to build absolute links to crates inside articles.
+const SITE_URL = 'https://topdjcrates.com';
 
 const MODEL = process.env.ANTHROPIC_MODEL || 'claude-sonnet-5';
 const DRAFT_MODE = String(process.env.DRAFT_MODE).toLowerCase() === 'true';
@@ -92,6 +96,76 @@ function setActionOutput(key, value) {
   if (!process.env.GITHUB_OUTPUT) return;
   const safe = String(value).replace(/\r?\n/g, ' ');
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `${key}=${safe}\n`);
+}
+
+// ---------------------------------------------------------------------------
+// Live product catalogue — read fresh from the site's own data file
+// ---------------------------------------------------------------------------
+
+/**
+ * Reads src/data/musicPacks.js and pulls out every crate's id, title and genre.
+ * The catalogue is ALWAYS current: add a crate to the site and the next blog
+ * post can link to it, with no code change here ever again.
+ * Never throws — on failure we write the article without product links.
+ */
+function loadCatalogue() {
+  if (!fs.existsSync(CATALOGUE_FILE)) {
+    warn(`Catalogue not found at ${CATALOGUE_FILE} — writing without product links.`);
+    return [];
+  }
+
+  let source;
+  try {
+    source = fs.readFileSync(CATALOGUE_FILE, 'utf8');
+  } catch (error) {
+    warn(`Could not read the catalogue (${error.message}) — writing without product links.`);
+    return [];
+  }
+
+  const crates = [];
+  const seen = new Set();
+
+  for (const chunk of source.split(/\n  \{\s*\n/)) {
+    const id = chunk.match(/^\s*id:\s*(\d+)\s*,/m);
+    const title = chunk.match(/^\s*title:\s*["'](.+?)["']\s*,/m);
+    const genre = chunk.match(/^\s*genre:\s*["'](.+?)["']\s*,/m);
+
+    if (!id || !title) continue;
+
+    const cleanTitle = title[1].trim();
+    const key = `${id[1]}|${cleanTitle}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    crates.push({
+      id: id[1],
+      title: cleanTitle,
+      genre: genre ? genre[1].trim() : 'Unspecified',
+      url: `${SITE_URL}/music?crate=${id[1]}`,
+    });
+  }
+
+  return crates;
+}
+
+/** Formats the catalogue as a grouped plain list for the prompt. */
+function formatCatalogue(crates) {
+  if (crates.length === 0) return '(catalogue unavailable this run)';
+
+  const byGenre = {};
+  for (const crate of crates) {
+    (byGenre[crate.genre] = byGenre[crate.genre] || []).push(crate);
+  }
+
+  return Object.keys(byGenre)
+    .sort()
+    .map((genre) => {
+      const items = byGenre[genre]
+        .map((crate) => `  - "${crate.title}" -> ${crate.url}`)
+        .join('\n');
+      return `${genre}:\n${items}`;
+    })
+    .join('\n\n');
 }
 
 // ---------------------------------------------------------------------------
@@ -320,6 +394,14 @@ KEYWORD STRATEGY — this is grounded in our real Google Search Console data, no
 - Prefer titles shaped like: "[Genre/technique] + [DJ crates/pack/download] + [for sale/download/2026]" over vague trend-chasing titles. Concrete example of the right shape: "Amapiano DJ Crates for Sale: The 2026 Log Drum Essentials" beats "Why Amapiano Is Taking Over 2026".
 - Always naturally work in the words "DJ crates", "DJ pack", or "download" at least once in the title or first paragraph — these are the words people actually search, confirmed from live data.
 
+LINKING TO OUR CRATES — every post must earn its keep commercially:
+- You will be given OUR LIVE CATALOGUE: the real crate titles we currently sell, with their exact URLs. It is regenerated from the store on every run, so it is always accurate. Never invent a crate title or URL that is not on that list.
+- Wherever a crate on that list genuinely fits the topic, link to it inline using its EXACT title as the link text, in normal Markdown: [TOP AFRO HOUSE VOL 7](https://topdjcrates.com/music?crate=1010). Weave links into the body where they help the reader, not dumped in a block at the end.
+- Aim for 2-4 crate links per article. Only link crates that are actually relevant — a forced link is worse than no link.
+- If the topic is a genre or style we do NOT currently stock, that is fine, write it anyway: it still brings in search traffic. In that case, do not pretend we sell it. Point readers to the closest relevant crates we DO have, or link the main store page [browse the full crate library](https://topdjcrates.com/music).
+- Always include at least one link to https://topdjcrates.com/music somewhere in the article.
+- Naming our real crate titles in the prose is good: it puts our exact product names into Google's index.
+
 RESEARCH:
 - Use the brave_search tool first to find what DJs and producers are actually searching for right now. Run several searches before you start writing.
 - Prefer high-intent, commercially relevant angles over generic news.
@@ -346,7 +428,7 @@ BODY RULES:
 - Pure Markdown only. No raw HTML tags — the renderer escapes them.
 - Include at least one numbered or bulleted list of practical steps.`;
 
-function buildUserPrompt(existingPosts) {
+function buildUserPrompt(existingPosts, crates) {
   const alreadyCovered = existingPosts.length
     ? existingPosts.map((p) => `- ${p.title}`).join('\n')
     : '- (nothing published yet)';
@@ -356,6 +438,11 @@ function buildUserPrompt(existingPosts) {
 Today's date is ${todayISO()}.
 
 Search the web to identify ONE trending, high-intent topic relevant to working DJs and producers shopping for music packs, edits, or transition packs right now. Then write the full article on it.
+
+Give preference to topics where we already have matching crates in stock (see the catalogue below) — those posts convert. But a genuinely strong trending topic outside our stock is still worth writing; just link honestly to the closest crates we do have.
+
+OUR LIVE CATALOGUE — these are the ONLY crates that exist. Use these exact titles and URLs when linking:
+${formatCatalogue(crates)}
 
 We have ALREADY published the following. Choose a genuinely different angle:
 ${alreadyCovered}
@@ -424,8 +511,8 @@ async function callAnthropic(apiKey, body, label) {
  * Tool-use loop: Claude asks for searches, we run them against Brave and hand
  * the results back, until it stops asking and writes the article.
  */
-async function generateArticle(apiKey, existingPosts) {
-  const messages = [{ role: 'user', content: buildUserPrompt(existingPosts) }];
+async function generateArticle(apiKey, existingPosts, crates) {
+  const messages = [{ role: 'user', content: buildUserPrompt(existingPosts, crates) }];
   let searchesUsed = 0;
 
   for (let round = 1; round <= MAX_ROUNDS; round++) {
@@ -790,8 +877,17 @@ async function main() {
   const existingPosts = getExistingPosts();
   log(`Found ${existingPosts.length} existing post(s).`);
 
+  const crates = loadCatalogue();
+  if (crates.length === 0) {
+    warn('No crates were read from the catalogue — this post will have no product links.');
+  } else {
+    const genres = [...new Set(crates.map((c) => c.genre))];
+    log(`Catalogue loaded: ${crates.length} crates across ${genres.length} genres.`);
+    log(`  Genres in stock: ${genres.sort().join(', ')}`);
+  }
+
   // --- 1. Article -----------------------------------------------------------
-  const raw = await generateArticle(anthropicKey, existingPosts);
+  const raw = await generateArticle(anthropicKey, existingPosts, crates);
   const markdown = normaliseMarkdown(raw);
 
   const meta = parseFrontmatter(markdown);
