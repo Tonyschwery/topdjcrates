@@ -193,6 +193,11 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
         <div>
           <div className="relative">
             <img src={pack.cover} alt={pack.title} className="w-full aspect-square object-cover rounded-md mb-4" />
+            {pack.badge && (
+              <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-sm uppercase tracking-widest shadow-[0_0_10px_rgba(220,38,38,0.8)] rotate-3 z-10 animate-pulse border border-red-400">
+                {pack.badge}
+              </div>
+            )}
           </div>
           <h3 className="text-xl font-bold mb-2 text-text">{pack.title}</h3>
           <p className="text-gray-400 mb-4 text-sm">{pack.description}</p>
