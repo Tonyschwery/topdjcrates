@@ -1,56 +1,30 @@
 export const musicPacks = [
   {
-    id: 1011,
+    id: 1012,
     year: 2026,
-    title: "TOP RAKKAS MUSIC EDITS & REMIXES",
+    title: "TOP SOCA HITS",
     artist: "Various Artists",
     description:
-      "Get 50 exclusive remixes and edits featuring the biggest, most well-known Arabic artists. Engineered strictly for DJs, these high-energy Rakkas anthems are guaranteed to make the room move. 100% gig-ready in WAV & MP3.",
-    cover: "https://i.imgur.com/CW75XoS.jpeg",
-    badge: "EXCLUSIVE",
-    gumroadLink: "https://sparkfile.gumroad.com/l/suzjrg",
-    tracklistUrl: "/tracklists/RAKKAS1.html",
-    originalPrice: 175,
+      "Get 103 handpicked Soca hits, all featuring DJ-friendly Intro Clean edits. Perfect for seamless mixing and completely safe for any crowd. The ultimate high-energy Caribbean toolkit, 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/xTd2kvf.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/iexbe",
+    tracklistUrl: "/tracklists/SOCA.html",
+    originalPrice: 35,
     geoMetadata: {
-      genre: "Arabic/Oriental",
-      trackCount: "50",
+      genre: "Soca/Caribbean",
+      trackCount: "103",
       fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Driving"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
+      moods: ["Energetic", "Danceable", "Caribbean"],
     },
-    discountedPrice: 100,
+    discountedPrice: 25,
     tracks: [
       {
-        id: "2026_rak1",
-        title: "bass essma3 meni vs la colegiala (rakkas mashup)",
+        id: "2026_soca1",
+        title: "Check the Vibe (Short Mix Preview)",
         audioPreview:
-          "https://audio-hosting.netlify.app/rakkas - bass essma3 meni vs la colegiala (rakkas mashup).mp3",
-      },
-      {
-        id: "2026_rak2",
-        title:
-          "gel gel gel scooby doo pa pa - dynstinct,lvbel c5 and pitbull (rakkas mashup)",
-        audioPreview:
-          "https://audio-hosting.netlify.app/rakkas - gel gel gel scooby doo pa pa - dynstinct,lvbel c5 and pitbull (rakkas mashup).mp3",
-      },
-      {
-        id: "2026_rak3",
-        title: "cute get busy - nawal el zoghbi (rakkas mashup)",
-        audioPreview:
-          "https://audio-hosting.netlify.app/rakks - cute get busy - nawal el zoghbi (rakkas mashup).mp3",
-      },
-      {
-        id: "2026_rak4",
-        title: "chou el matloub - haifa (rakkas edit)",
-        audioPreview:
-          "https://audio-hosting.netlify.app/rakkas - chou el matloub - haifa (rakkas edit).mp3",
-      },
-      {
-        id: "2026_rak5",
-        title: "chou hal iyam - ziad rahbani (rakkas disco mix)",
-        audioPreview:
-          "https://audio-hosting.netlify.app/rakkas - chou hal iyam - ziad rahbani (rakkas disco mix).mp3",
+          "https://audio-hosting.netlify.app/soca- short preview.mp3",
       },
     ],
   },
@@ -2302,6 +2276,61 @@ export const musicPacks = [
         title: "beledna",
         audioPreview:
           "https://audio-hosting.netlify.app/or26%20-%20beledna.mp3",
+      },
+    ],
+  },
+  {
+    id: 1011,
+    year: 2026,
+    title: "TOP RAKKAS MUSIC EDITS & REMIXES",
+    artist: "Various Artists",
+    description:
+      "Get 50 exclusive remixes and edits featuring the biggest, most well-known Arabic artists. Engineered strictly for DJs, these high-energy Rakkas anthems are guaranteed to make the room move. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/CW75XoS.jpeg",
+    badge: "EXCLUSIVE",
+    gumroadLink: "https://sparkfile.gumroad.com/l/suzjrg",
+    tracklistUrl: "/tracklists/RAKKAS1.html",
+    originalPrice: 175,
+    geoMetadata: {
+      genre: "Arabic/Oriental",
+      trackCount: "50",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Driving"],
+    },
+    discountedPrice: 100,
+    tracks: [
+      {
+        id: "2026_rak1",
+        title: "bass essma3 meni vs la colegiala (rakkas mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rakkas - bass essma3 meni vs la colegiala (rakkas mashup).mp3",
+      },
+      {
+        id: "2026_rak2",
+        title:
+          "gel gel gel scooby doo pa pa - dynstinct,lvbel c5 and pitbull (rakkas mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rakkas - gel gel gel scooby doo pa pa - dynstinct,lvbel c5 and pitbull (rakkas mashup).mp3",
+      },
+      {
+        id: "2026_rak3",
+        title: "cute get busy - nawal el zoghbi (rakkas mashup)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rakks - cute get busy - nawal el zoghbi (rakkas mashup).mp3",
+      },
+      {
+        id: "2026_rak4",
+        title: "chou el matloub - haifa (rakkas edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rakkas - chou el matloub - haifa (rakkas edit).mp3",
+      },
+      {
+        id: "2026_rak5",
+        title: "chou hal iyam - ziad rahbani (rakkas disco mix)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/rakkas - chou hal iyam - ziad rahbani (rakkas disco mix).mp3",
       },
     ],
   },
