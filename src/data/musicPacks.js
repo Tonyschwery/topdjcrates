@@ -6,7 +6,7 @@ export const musicPacks = [
     artist: "Various Artists",
     description:
       "Get 96 handpicked tracks defining the absolute best in Latino House for the 2026 season. Vibrant brass, heavy percussion, and driving club basslines. A premium, zero-filler collection perfectly DJ-ready in WAV & MP3.",
-    cover: "",
+    cover: "https://i.imgur.com/1aNBwbi.jpeg",
     gumroadLink: "https://topdjcrates.gumroad.com/l/erwds",
     tracklistUrl: "/tracklists/TOPLATIN262.html",
     originalPrice: 35,
