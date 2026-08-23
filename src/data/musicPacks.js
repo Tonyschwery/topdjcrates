@@ -1,30 +1,55 @@
 export const musicPacks = [
   {
-    id: 1012,
+    id: 1013,
     year: 2026,
-    title: "TOP SOCA HITS",
+    title: "TOP LATINO HOUSE 2026",
     artist: "Various Artists",
     description:
-      "Get 103 handpicked Soca hits, all featuring DJ-friendly Intro Clean edits. Perfect for seamless mixing and completely safe for any crowd. The ultimate high-energy Caribbean toolkit, 100% gig-ready in WAV & MP3.",
-    cover: "https://i.imgur.com/xTd2kvf.jpeg",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/iexbe",
-    tracklistUrl: "/tracklists/SOCA.html",
+      "Get 96 handpicked tracks defining the absolute best in Latino House for the 2026 season. Vibrant brass, heavy percussion, and driving club basslines. A premium, zero-filler collection perfectly DJ-ready in WAV & MP3.",
+    cover: "",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/erwds",
+    tracklistUrl: "/tracklists/TOPLATIN262.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: "Soca/Caribbean",
-      trackCount: "103",
+      genre: "Latino House",
+      trackCount: "96",
       fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
-      moods: ["Energetic", "Danceable", "Caribbean"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Latin", "Vibrant"],
     },
     discountedPrice: 25,
     tracks: [
       {
-        id: "2026_soca1",
-        title: "Check the Vibe (Short Mix Preview)",
+        id: "2026_lat1",
+        title:
+          "movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel",
         audioPreview:
-          "https://audio-hosting.netlify.app/soca- short preview.mp3",
+          "https://audio-hosting.netlify.app/latinhouse26 - movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel.mp3",
+      },
+      {
+        id: "2026_lat2",
+        title: "sinnerman - aaron sevilla, dj care, mikrobeats",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - sinnerman - aaron sevilla, dj care, mikrobeats.mp3",
+      },
+      {
+        id: "2026_lat3",
+        title: "sombrita - zaava",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - sombrita - zaava.mp3",
+      },
+      {
+        id: "2026_lat4",
+        title: "the power (mk ita 'cut' remix) - snap",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - the power (mk ita 'cut' remix) - snap.mp3",
+      },
+      {
+        id: "2026_lat5",
+        title: "adagio for strings (nolek edit) - tiësto",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - adagio for strings (nolek edit) - tiësto.mp3",
       },
     ],
   },
@@ -2438,6 +2463,35 @@ export const musicPacks = [
         title: "cygo - panda e (psproject & ecstaz remix)",
         audioPreview:
           "https://audio-hosting.netlify.app/trr26 - cygo - panda e (psproject & ecstaz remix).mp3",
+      },
+    ],
+  },
+  {
+    id: 1012,
+    year: 2026,
+    title: "TOP SOCA HITS",
+    artist: "Various Artists",
+    description:
+      "Get 103 handpicked Soca hits, all featuring DJ-friendly Intro Clean edits. Perfect for seamless mixing and completely safe for any crowd. The ultimate high-energy Caribbean toolkit, 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/xTd2kvf.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/iexbe",
+    tracklistUrl: "/tracklists/SOCA.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Soca/Caribbean",
+      trackCount: "103",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
+      moods: ["Energetic", "Danceable", "Caribbean"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_soca1",
+        title: "Check the Vibe (Short Mix Preview)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/soca- short preview.mp3",
       },
     ],
   },
