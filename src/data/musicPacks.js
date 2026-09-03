@@ -1,55 +1,55 @@
 export const musicPacks = [
   {
-    id: 1013,
+    id: 1014,
     year: 2026,
-    title: "TOP LATINO HOUSE 2026",
+    title: "TOP INDIE DANCE 2026 VOL 2",
     artist: "Various Artists",
     description:
-      "Get 96 handpicked tracks defining the absolute best in Latino House for the 2026 season. Vibrant brass, heavy percussion, and driving club basslines. A premium, zero-filler collection perfectly DJ-ready in WAV & MP3.",
-    cover: "https://i.imgur.com/1aNBwbi.jpeg",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/erwds",
-    tracklistUrl: "/tracklists/TOPLATIN262.html",
+      "THE HOTTEST NEW SOUND: INDIE DANCE 2026 VOL 2 | Get 81 newly handpicked tracks defining the hottest Indie Dance and Dark Disco trends. Gritty synths meet heavy club grooves, curated perfectly for an unforgettable set. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/H4tU6YU.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/nngsl",
+    tracklistUrl: "/tracklists/TOPINDIEDANCE262.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: "Latino House",
-      trackCount: "96",
+      genre: "Indie Dance / Dark Disco",
+      trackCount: "81",
       fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
       useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
-      moods: ["Energetic", "Danceable", "Latin", "Vibrant"],
+      moods: ["Gritty", "Dark", "Groove", "Energetic"],
     },
     discountedPrice: 25,
     tracks: [
       {
-        id: "2026_lat1",
+        id: "2026_ind1",
         title:
-          "movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel",
+          "can't decide (airbender & roi power edit) - locky, max dean, luke dean",
         audioPreview:
-          "https://audio-hosting.netlify.app/latinhouse26 - movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel.mp3",
+          "https://audio-hosting.netlify.app/indiedance2 - can't decide (airbender & roi power edit) - locky, max dean, luke dean.mp3",
       },
       {
-        id: "2026_lat2",
-        title: "sinnerman - aaron sevilla, dj care, mikrobeats",
+        id: "2026_ind2",
+        title: "dance avec moi - original mix - stefano mapo",
         audioPreview:
-          "https://audio-hosting.netlify.app/latinhouse26 - sinnerman - aaron sevilla, dj care, mikrobeats.mp3",
+          "https://audio-hosting.netlify.app/indiedance2 - dance avec moi - original mix - stefano mapo.mp3",
       },
       {
-        id: "2026_lat3",
-        title: "sombrita - zaava",
+        id: "2026_ind3",
+        title: "ring the bell - tom & collins",
         audioPreview:
-          "https://audio-hosting.netlify.app/latinhouse26 - sombrita - zaava.mp3",
+          "https://audio-hosting.netlify.app/indiedance2 - ring the bell - tom & collins.mp3",
       },
       {
-        id: "2026_lat4",
-        title: "the power (mk ita 'cut' remix) - snap",
+        id: "2026_ind4",
+        title: "rockafeller skank (roi power edit)",
         audioPreview:
-          "https://audio-hosting.netlify.app/latinhouse26 - the power (mk ita 'cut' remix) - snap.mp3",
+          "https://audio-hosting.netlify.app/indiedance2 - rockafeller skank (roi power edit).mp3",
       },
       {
-        id: "2026_lat5",
-        title: "adagio for strings (nolek edit) - tiësto",
+        id: "2026_ind5",
+        title: "teke - extended mix - bauha, lara (mx)",
         audioPreview:
-          "https://audio-hosting.netlify.app/latinhouse26 - adagio for strings (nolek edit) - tiësto.mp3",
+          "https://audio-hosting.netlify.app/indiedance2 - teke - extended mix - bauha, lara (mx).mp3",
       },
     ],
   },
@@ -2089,6 +2089,60 @@ export const musicPacks = [
         title: "horeno - lochadora",
         audioPreview:
           "https://audio-hosting.netlify.app/ti26 - horeno - lochadora.mp3",
+      },
+    ],
+  },
+  {
+    id: 1013,
+    year: 2026,
+    title: "TOP LATINO HOUSE 2026",
+    artist: "Various Artists",
+    description:
+      "Get 96 handpicked tracks defining the absolute best in Latino House for the 2026 season. Vibrant brass, heavy percussion, and driving club basslines. A premium, zero-filler collection perfectly DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/1aNBwbi.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/erwds",
+    tracklistUrl: "/tracklists/TOPLATIN262.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Latino House",
+      trackCount: "96",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Latin", "Vibrant"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_lat1",
+        title:
+          "movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - movin' to the sun (mike violinist x matt&madmax remix) - ultra naté, hugel, imael angel.mp3",
+      },
+      {
+        id: "2026_lat2",
+        title: "sinnerman - aaron sevilla, dj care, mikrobeats",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - sinnerman - aaron sevilla, dj care, mikrobeats.mp3",
+      },
+      {
+        id: "2026_lat3",
+        title: "sombrita - zaava",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - sombrita - zaava.mp3",
+      },
+      {
+        id: "2026_lat4",
+        title: "the power (mk ita 'cut' remix) - snap",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - the power (mk ita 'cut' remix) - snap.mp3",
+      },
+      {
+        id: "2026_lat5",
+        title: "adagio for strings (nolek edit) - tiësto",
+        audioPreview:
+          "https://audio-hosting.netlify.app/latinhouse26 - adagio for strings (nolek edit) - tiësto.mp3",
       },
     ],
   },
