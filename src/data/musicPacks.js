@@ -1,55 +1,54 @@
 export const musicPacks = [
   {
-    id: 1014,
+    id: 1015,
     year: 2026,
-    title: "TOP INDIE DANCE 2026 VOL 2",
+    title: "TOP MELODIC HOUSE 2026",
     artist: "Various Artists",
     description:
-      "THE HOTTEST NEW SOUND: INDIE DANCE 2026 VOL 2 | Get 81 newly handpicked tracks defining the hottest Indie Dance and Dark Disco trends. Gritty synths meet heavy club grooves, curated perfectly for an unforgettable set. 100% gig-ready in WAV & MP3.",
-    cover: "https://i.imgur.com/H4tU6YU.jpeg",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/nngsl",
-    tracklistUrl: "/tracklists/TOPINDIEDANCE262.html",
+      "Get 103 handpicked tracks defining the absolute best in Melodic House for the 2026 season. Soaring synthesizers, emotional build-ups, and driving club basslines. A premium TopDJCrates collection that is 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/LJR0yOh.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/xkzfn",
+    tracklistUrl: "/tracklists/TOPIMELODICHOUSE2026.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: "Indie Dance / Dark Disco",
-      trackCount: "81",
+      genre: "Melodic House",
+      trackCount: "103",
       fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
-      moods: ["Gritty", "Dark", "Groove", "Energetic"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
+      moods: ["Emotional", "Driving", "Soaring", "Deep"],
     },
     discountedPrice: 25,
     tracks: [
       {
-        id: "2026_ind1",
-        title:
-          "can't decide (airbender & roi power edit) - locky, max dean, luke dean",
+        id: "2026_mel1",
+        title: "afterglow - matrx",
         audioPreview:
-          "https://audio-hosting.netlify.app/indiedance2 - can't decide (airbender & roi power edit) - locky, max dean, luke dean.mp3",
+          "https://audio-hosting.netlify.app/tmh26 - afterglow - matrx.mp3",
       },
       {
-        id: "2026_ind2",
-        title: "dance avec moi - original mix - stefano mapo",
+        id: "2026_mel2",
+        title: "credence - sonickraft",
         audioPreview:
-          "https://audio-hosting.netlify.app/indiedance2 - dance avec moi - original mix - stefano mapo.mp3",
+          "https://audio-hosting.netlify.app/tmh26 - credence - sonickraft.mp3",
       },
       {
-        id: "2026_ind3",
-        title: "ring the bell - tom & collins",
+        id: "2026_mel3",
+        title: "katanga - yamil",
         audioPreview:
-          "https://audio-hosting.netlify.app/indiedance2 - ring the bell - tom & collins.mp3",
+          "https://audio-hosting.netlify.app/tmh26 - katanga - yamil.mp3",
       },
       {
-        id: "2026_ind4",
-        title: "rockafeller skank (roi power edit)",
+        id: "2026_mel4",
+        title: "paloma - johnwaynes",
         audioPreview:
-          "https://audio-hosting.netlify.app/indiedance2 - rockafeller skank (roi power edit).mp3",
+          "https://audio-hosting.netlify.app/tmh26 - paloma - johnwaynes.mp3",
       },
       {
-        id: "2026_ind5",
-        title: "teke - extended mix - bauha, lara (mx)",
+        id: "2026_mel5",
+        title: "take control - solara",
         audioPreview:
-          "https://audio-hosting.netlify.app/indiedance2 - teke - extended mix - bauha, lara (mx).mp3",
+          "https://audio-hosting.netlify.app/tmh26 - take control - solara.mp3",
       },
     ],
   },
@@ -2035,6 +2034,60 @@ export const musicPacks = [
           "fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125)",
         audioPreview:
           "https://audio-hosting.netlify.app/tt - fatman scoop, faith evans, crooklyn clan - be faithful (dj allan transition up edit 101-125).mp3",
+      },
+    ],
+  },
+  {
+    id: 1014,
+    year: 2026,
+    title: "TOP INDIE DANCE 2026 VOL 2",
+    artist: "Various Artists",
+    description:
+      "THE HOTTEST NEW SOUND: INDIE DANCE 2026 VOL 2 | Get 81 newly handpicked tracks defining the hottest Indie Dance and Dark Disco trends. Gritty synths meet heavy club grooves, curated perfectly for an unforgettable set. 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/H4tU6YU.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/nngsl",
+    tracklistUrl: "/tracklists/TOPINDIEDANCE262.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Indie Dance / Dark Disco",
+      trackCount: "81",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time"],
+      moods: ["Gritty", "Dark", "Groove", "Energetic"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_ind1",
+        title:
+          "can't decide (airbender & roi power edit) - locky, max dean, luke dean",
+        audioPreview:
+          "https://audio-hosting.netlify.app/indiedance2 - can't decide (airbender & roi power edit) - locky, max dean, luke dean.mp3",
+      },
+      {
+        id: "2026_ind2",
+        title: "dance avec moi - original mix - stefano mapo",
+        audioPreview:
+          "https://audio-hosting.netlify.app/indiedance2 - dance avec moi - original mix - stefano mapo.mp3",
+      },
+      {
+        id: "2026_ind3",
+        title: "ring the bell - tom & collins",
+        audioPreview:
+          "https://audio-hosting.netlify.app/indiedance2 - ring the bell - tom & collins.mp3",
+      },
+      {
+        id: "2026_ind4",
+        title: "rockafeller skank (roi power edit)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/indiedance2 - rockafeller skank (roi power edit).mp3",
+      },
+      {
+        id: "2026_ind5",
+        title: "teke - extended mix - bauha, lara (mx)",
+        audioPreview:
+          "https://audio-hosting.netlify.app/indiedance2 - teke - extended mix - bauha, lara (mx).mp3",
       },
     ],
   },
