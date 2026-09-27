@@ -1,54 +1,54 @@
 export const musicPacks = [
   {
-    id: 1015,
+    id: 1016,
     year: 2026,
-    title: "TOP MELODIC HOUSE 2026",
+    title: "TOP FUNK/DISCO 2026",
     artist: "Various Artists",
     description:
-      "Get 103 handpicked tracks defining the absolute best in Melodic House for the 2026 season. Soaring synthesizers, emotional build-ups, and driving club basslines. A premium TopDJCrates collection that is 100% gig-ready in WAV & MP3.",
-    cover: "https://i.imgur.com/LJR0yOh.jpeg",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/xkzfn",
-    tracklistUrl: "/tracklists/TOPIMELODICHOUSE2026.html",
+      "Get 143 handpicked tracks, featuring a premium blend of fresh funk/disco anthems and brand-new club remixes of the biggest 80s classics. Iconic nostalgic vocals paired with modern, driving house beats. The ultimate feel-good toolkit, 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/SA0tnwa.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/pgabzf",
+    tracklistUrl: "/tracklists/TOPFUNKDISCO.html",
     originalPrice: 35,
     geoMetadata: {
-      genre: "Melodic House",
-      trackCount: "103",
+      genre: "Funk / Disco House",
+      trackCount: "143",
       fileFormats: ["WAV", "MP3"],
       targetAudience: ["Professional DJs", "Club DJs"],
-      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
-      moods: ["Emotional", "Driving", "Soaring", "Deep"],
+      useCases: ["Club Sets", "DJ Mixes", "Feel-good"],
+      moods: ["Nostalgic", "Upbeat", "Driving", "Feel-good"],
     },
     discountedPrice: 25,
     tracks: [
       {
-        id: "2026_mel1",
-        title: "afterglow - matrx",
+        id: "2026_fun1",
+        title: "akalelo - joi n'juno",
         audioPreview:
-          "https://audio-hosting.netlify.app/tmh26 - afterglow - matrx.mp3",
+          "https://audio-hosting.netlify.app/tfd26 - akalelo - joi n'juno.mp3",
       },
       {
-        id: "2026_mel2",
-        title: "credence - sonickraft",
+        id: "2026_fun2",
+        title: "nibolowa - 1da banton",
         audioPreview:
-          "https://audio-hosting.netlify.app/tmh26 - credence - sonickraft.mp3",
+          "https://audio-hosting.netlify.app/tfd26 - nibolowa - 1da banton.mp3",
       },
       {
-        id: "2026_mel3",
-        title: "katanga - yamil",
+        id: "2026_fun3",
+        title: "stand up - da lukas, stella brown",
         audioPreview:
-          "https://audio-hosting.netlify.app/tmh26 - katanga - yamil.mp3",
+          "https://audio-hosting.netlify.app/tfd26 - stand up - da lukas, stella brown.mp3",
       },
       {
-        id: "2026_mel4",
-        title: "paloma - johnwaynes",
+        id: "2026_fun4",
+        title: "dance, dance, dance (yowsah,yowsah,yowsah) - chic - 118",
         audioPreview:
-          "https://audio-hosting.netlify.app/tmh26 - paloma - johnwaynes.mp3",
+          "https://audio-hosting.netlify.app/tfd26 -dance, dance, dance (yowsah,yowsah,yowsah) - chic - 118.mp3",
       },
       {
-        id: "2026_mel5",
-        title: "take control - solara",
+        id: "2026_fun5",
+        title: "mr. cool - jo paciello, soultrain",
         audioPreview:
-          "https://audio-hosting.netlify.app/tmh26 - take control - solara.mp3",
+          "https://audio-hosting.netlify.app/tfd26 -mr. cool - jo paciello, soultrain.mp3",
       },
     ],
   },
@@ -2196,6 +2196,59 @@ export const musicPacks = [
         title: "adagio for strings (nolek edit) - tiësto",
         audioPreview:
           "https://audio-hosting.netlify.app/latinhouse26 - adagio for strings (nolek edit) - tiësto.mp3",
+      },
+    ],
+  },
+  {
+    id: 1015,
+    year: 2026,
+    title: "TOP MELODIC HOUSE 2026",
+    artist: "Various Artists",
+    description:
+      "Get 103 handpicked tracks defining the absolute best in Melodic House for the 2026 season. Soaring synthesizers, emotional build-ups, and driving club basslines. A premium TopDJCrates collection that is 100% gig-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/LJR0yOh.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/xkzfn",
+    tracklistUrl: "/tracklists/TOPIMELODICHOUSE2026.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Melodic House",
+      trackCount: "103",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Peak Time", "Warm-up"],
+      moods: ["Emotional", "Driving", "Soaring", "Deep"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_mel1",
+        title: "afterglow - matrx",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tmh26 - afterglow - matrx.mp3",
+      },
+      {
+        id: "2026_mel2",
+        title: "credence - sonickraft",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tmh26 - credence - sonickraft.mp3",
+      },
+      {
+        id: "2026_mel3",
+        title: "katanga - yamil",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tmh26 - katanga - yamil.mp3",
+      },
+      {
+        id: "2026_mel4",
+        title: "paloma - johnwaynes",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tmh26 - paloma - johnwaynes.mp3",
+      },
+      {
+        id: "2026_mel5",
+        title: "take control - solara",
+        audioPreview:
+          "https://audio-hosting.netlify.app/tmh26 - take control - solara.mp3",
       },
     ],
   },
