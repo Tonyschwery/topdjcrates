@@ -1,5 +1,58 @@
 export const musicPacks = [
   {
+    id: 1017,
+    year: 2026,
+    title: "TOP AMAPIANO 2026",
+    artist: "Various Artists",
+    description:
+      "Get 97 handpicked tracks defining the absolute best in Amapiano for the 2026 season. Heavy log drums, soulful chords, and infectious percussion. A premium, zero-filler collection perfectly DJ-ready in WAV & MP3.",
+    cover: "https://i.imgur.com/c2EkBbU.jpeg",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/ovwklv",
+    tracklistUrl: "/tracklists/TOPAMAPIANO26.html",
+    originalPrice: 35,
+    geoMetadata: {
+      genre: "Amapiano/Afrobeats",
+      trackCount: "97",
+      fileFormats: ["WAV", "MP3"],
+      targetAudience: ["Professional DJs", "Club DJs"],
+      useCases: ["Club Sets", "DJ Mixes", "Warm-up", "Peak Time"],
+      moods: ["Energetic", "Danceable", "Tribal", "Groove"],
+    },
+    discountedPrice: 25,
+    tracks: [
+      {
+        id: "2026_ama1",
+        title: "ain't no sunshine (lincoln baio & frequency x remix) - loony",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano26 - ain't no sunshine (lincoln baio & frequency x remix) - loony.mp3",
+      },
+      {
+        id: "2026_ama2",
+        title: "aura salad - mavo, sssoundgawd",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano26 - aura salad - mavo, sssoundgawd.mp3",
+      },
+      {
+        id: "2026_ama3",
+        title: "caught up (lisa louise remix) - usher",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano26 - caught up (lisa louise remix) - usher.mp3",
+      },
+      {
+        id: "2026_ama4",
+        title: "hit the road jack x shay'mpempe (soes edit) - ray charles",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano26 - hit the road jack x shay'mpempe (soes edit) - ray charles.mp3",
+      },
+      {
+        id: "2026_ama5",
+        title: "it's not right but it's okay (egnever edit) - whitney houston",
+        audioPreview:
+          "https://audio-hosting.netlify.app/amapiano26 - it's not right but it's okay (egnever edit) - whitney houston.mp3",
+      },
+    ],
+  },
+  {
     id: 1016,
     year: 2026,
     title: "TOP FUNK/DISCO 2026",
