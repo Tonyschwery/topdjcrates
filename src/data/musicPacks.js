@@ -1492,7 +1492,7 @@ export const musicPacks = [
     artist: "Various Artists",
     description: "Over 100+ professionally curated hits...",
     cover: "https://i.imgur.com/bby1I0r.png",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/dfdrca",
     originalPrice: 35,
     geoMetadata: {
       genre: "R&B / Hip Hop",
@@ -1542,7 +1542,7 @@ export const musicPacks = [
     artist: "Various Artists",
     description: "Over 100+ professionally curated hits...",
     cover: "https://i.imgur.com/C218Zts.png",
-    gumroadLink: "https://topdjcrates.gumroad.com/l/cezue",
+    gumroadLink: "https://topdjcrates.gumroad.com/l/prppd",
     originalPrice: 35,
     geoMetadata: {
       genre: "R&B / Hip Hop",
