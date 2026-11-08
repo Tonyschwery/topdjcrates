@@ -192,7 +192,12 @@ const MusicCard = ({ pack, onPreview, currentPlayingAudioUrl, currentTrackProgre
       <div className="bg-zinc-900 rounded-lg shadow-lg p-4 flex flex-col justify-between h-full group relative">
         <div>
           <div className="relative">
-            <img src={pack.cover} alt={pack.title} className="w-full aspect-square object-cover rounded-md mb-4" />
+            <img
+              src={pack.cover}
+              alt={`${pack.title} — ${pack.geoMetadata?.genre || 'Curated'} DJ Crate (WAV & MP3)`}
+              loading="lazy"
+              className="w-full aspect-square object-cover rounded-md mb-4"
+            />
             {pack.badge && (
               <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-sm uppercase tracking-widest shadow-[0_0_10px_rgba(220,38,38,0.8)] rotate-3 z-10 animate-pulse border border-red-400">
                 {pack.badge}

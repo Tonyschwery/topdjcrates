@@ -109,6 +109,7 @@ export default function MusicPage({
     const productSchemas = musicPacks.map(pack => ({
       '@type': 'Product',
       'name': pack.title,
+      'url': `https://topdjcrates.com/music?crate=${pack.id}`,
       'image': pack.cover,
       'description': pack.description,
       'sku': pack.id.toString(), // A unique ID for the product
@@ -128,13 +129,23 @@ export default function MusicPage({
       },
       'offers': {
         '@type': 'Offer',
-        'url': pack.gumroadLink,
+        'url': `https://topdjcrates.com/music?crate=${pack.id}`,
         'priceCurrency': 'USD',
         'price': pack.discountedPrice.toFixed(2),
         'availability': 'https://schema.org/InStock',
         'priceValidUntil': new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0] // Valid for 1 year
       }
     }));
+
+    if (sharedCrate) {
+      const singleSchema = productSchemas.find(p => p.sku === sharedCrate.id.toString());
+      if (singleSchema) {
+        return JSON.stringify({
+          '@context': 'https://schema.org',
+          ...singleSchema,
+        });
+      }
+    }
 
     // Create a main schema that lists all the products on the page
     const itemListSchema = {
@@ -158,13 +169,17 @@ export default function MusicPage({
         {/* Dynamic meta tags for shared crate */}
         {sharedCrate ? (
           <>
-            <title>{sharedCrate.title} | TOP DJ CRATES</title>
+            <title>{`${sharedCrate.title} — DJ Crate & Music Pack Download (WAV & MP3) | TOP DJ CRATES`}</title>
             <meta name="description" content={sharedCrate.description} />
+            <meta
+              name="keywords"
+              content={`${sharedCrate.title}, ${sharedCrate.geoMetadata?.genre || 'DJ'} DJ crate, ${sharedCrate.geoMetadata?.genre || 'DJ'} music pack download, WAV DJ crates, MP3 DJ crates, Rekordbox, Serato, TOP DJ CRATES`}
+            />
 
             {/* Open Graph / Facebook */}
-            <meta property="og:type" content="website" />
+            <meta property="og:type" content="product" />
             <meta property="og:url" content={shareUrl} />
-            <meta property="og:title" content={`${sharedCrate.title} | TOP DJ CRATES`} />
+            <meta property="og:title" content={`${sharedCrate.title} — DJ Crate & Music Pack Download (WAV & MP3) | TOP DJ CRATES`} />
             <meta property="og:description" content={sharedCrate.description} />
             <meta property="og:image" content={sharedCrate.cover} />
             <meta property="og:image:secure_url" content={sharedCrate.cover} />
@@ -176,27 +191,33 @@ export default function MusicPage({
             {/* Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={shareUrl} />
-            <meta name="twitter:title" content={`${sharedCrate.title} | TOP DJ CRATES`} />
+            <meta name="twitter:title" content={`${sharedCrate.title} — DJ Crate & Music Pack Download (WAV & MP3) | TOP DJ CRATES`} />
             <meta name="twitter:description" content={sharedCrate.description} />
             <meta name="twitter:image" content={sharedCrate.cover} />
           </>
         ) : (
           <>
-            <title>Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)</title>
-            <meta name="description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <title>Curated DJ Crates & Music Packs for Sale (WAV & MP3) | TOP DJ CRATES</title>
+            <meta name="description" content="Use coupon code LMS26 for 40% OFF! Browse and download curated DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental, Latin House & Weddings." />
+            <meta
+              name="keywords"
+              content="DJ crates for sale, curated DJ crates, DJ music packs download, Afro House DJ crate, Amapiano DJ crate, Tech House crate, Melodic House crate, Funk Disco House crate, Reggaeton DJ crate, Arabic Oriental DJ remixes, Indie Dance DJ crate"
+            />
 
             {/* Default Open Graph / Facebook */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content={shareUrl} />
-            <meta property="og:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)" />
-            <meta property="og:description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <meta property="og:title" content="Curated DJ Crates & Music Packs for Sale (WAV & MP3) | TOP DJ CRATES" />
+            <meta property="og:description" content="Use coupon code LMS26 for 40% OFF! Browse and download curated DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental, Latin House & Weddings." />
+            <meta property="og:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
             <meta property="og:site_name" content="TOP DJ CRATES" />
 
             {/* Default Twitter Card */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:url" content={shareUrl} />
-            <meta name="twitter:title" content="Curated DJ Crates & Music Bundles | TOP DJ CRATES (40% OFF Code: LMS26)" />
-            <meta name="twitter:description" content="Use coupon code LMS26 at checkout for 40% OFF all items! Browse professional crates for Afro House, Funky House, and newly added 2026 Reggaeton, Wedding Anthems & Indie Dance crates." />
+            <meta name="twitter:title" content="Curated DJ Crates & Music Packs for Sale (WAV & MP3) | TOP DJ CRATES" />
+            <meta name="twitter:description" content="Use coupon code LMS26 for 40% OFF! Browse and download curated DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental, Latin House & Weddings." />
+            <meta name="twitter:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
           </>
         )}
 
@@ -211,7 +232,7 @@ export default function MusicPage({
         {/* Canonical URL — tells Google this is THE official page for "dj crates" so it stops
             splitting ranking signal between this page, query-param variants (?crate=44),
             and unrelated pages like /sonic-branding that happen to share brand terms. */}
-        <link rel="canonical" href={shareUrl || 'https://www.topdjcrates.com/music'} />
+        <link rel="canonical" href={shareUrl || 'https://topdjcrates.com/music'} />
       </Head>
       <div className="px-4 py-16">
         <section className="text-center mb-16">

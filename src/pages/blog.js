@@ -8,11 +8,31 @@ export default function BlogPage({ posts = [] }) {
   return (
     <>
       <Head>
-        <title>Blog | TOP DJ CRATES</title>
+        <title>DJ Crates Blog — Mixing Guides, Genre Blueprints & 2026 Crate Releases | TOP DJ CRATES</title>
         <meta
           name="description"
-          content="Stay updated with the latest music trends, DJ tips, Afro-House releases, and exclusive crates on TOP DJ CRATES."
+          content="Read practical DJ mixing guides, BPM transition blueprints, and 2026 crate spotlights for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, and Arabic/Oriental DJs."
         />
+        <meta
+          name="keywords"
+          content="DJ blog, DJ crates blog, how to mix Amapiano, Afro House mixing guide, Tech House DJ crates, DJ transition packs, Rekordbox crate organization, Serato DJ tips"
+        />
+        <link rel="canonical" href="https://topdjcrates.com/blog" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://topdjcrates.com/blog" />
+        <meta property="og:title" content="DJ Crates Blog — Mixing Guides & 2026 Crate Releases | TOP DJ CRATES" />
+        <meta property="og:description" content="Practical DJ mixing guides, BPM transition blueprints, and 2026 crate spotlights for working club, lounge, and event DJs." />
+        <meta property="og:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
+        <meta property="og:site_name" content="TOP DJ CRATES" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://topdjcrates.com/blog" />
+        <meta name="twitter:title" content="DJ Crates Blog — Mixing Guides & 2026 Crate Releases | TOP DJ CRATES" />
+        <meta name="twitter:description" content="Practical DJ mixing guides, BPM transition blueprints, and 2026 crate spotlights for working club, lounge, and event DJs." />
+        <meta name="twitter:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
       </Head>
 
       <div className="px-4 py-16 max-w-6xl mx-auto">

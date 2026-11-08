@@ -25,7 +25,7 @@ Track through any current soca pool and you'll see the same spread: 128 groovy c
 
 Soca edits move fast and disappear faster. Riddim versions, clean intros, and carnival-specific VIP mixes get uploaded to pools and taken down within a season. If you're relying on streaming apps or random YouTube rips, you're one dead link away from an awkward silence at 1am on the road. A **soca DJ pack download** you actually own — sitting on your drive, tagged and ready — is the only way to guarantee the record is there when you need it.
 
-That's the whole pitch behind [TOP SOCA HITS](https://topdjcrates.com/music?crate=1012): a curated crate of carnival-ready soca, pulled together so you're not hunting for a clean intro edit five minutes before doors.
+That's the whole pitch behind [TOP SOCA HITS](https://topdjcrates.com/music?crate=1019): a curated crate of carnival-ready soca, pulled together so you're not hunting for a clean intro edit five minutes before doors.
 
 ## Building the set: groovy to power, without the crash
 

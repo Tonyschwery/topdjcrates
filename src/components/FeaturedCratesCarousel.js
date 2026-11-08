@@ -33,10 +33,15 @@ const FeaturedCratesCarousel = ({ musicPacks }) => {
     >
       {musicPacks.map((pack) => (
         <SwiperSlide key={pack.id}>
-          <Link href="/music" passHref>
+          <Link href={`/music?crate=${pack.id}`} passHref>
             {/* This is your exact card design from index.js */}
             <div className="bg-zinc-900 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group h-full">
-              <img src={pack.cover} alt={pack.title} className="w-full h-auto object-cover group-hover:opacity-80 transition-opacity" />
+              <img
+                src={pack.cover}
+                alt={`${pack.title} — ${pack.geoMetadata?.genre || 'Curated'} DJ Crate (WAV & MP3)`}
+                loading="lazy"
+                className="w-full h-auto object-cover group-hover:opacity-80 transition-opacity"
+              />
               <div className="p-4">
                 <h3 className="font-bold text-lg text-primary truncate">{pack.title}</h3>
                 <p className="text-sm text-gray-400">{pack.artist || 'Various Artists'}</p>

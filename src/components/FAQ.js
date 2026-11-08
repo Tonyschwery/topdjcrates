@@ -19,7 +19,15 @@ const FAQ = () => {
     },
     {
       question: "Do you offer music for cultural and specialty events?",
-      answer: "Yes! We have a massive selection of crossover and cultural genres. From Bollywood edits to Arabic, Oriental, Reggaeton, and Afro-House anthems, you'll be ready for any international crowd."
+      answer: "Yes! We have a massive selection of crossover and cultural genres. From Bollywood edits to Arabic, Oriental, Rakkas, Reggaeton, Soca, Amapiano, and Afro-House anthems, you'll be ready for any international crowd."
+    },
+    {
+      question: "Are the DJ crates compatible with Rekordbox, Serato, Virtual DJ, and Pioneer CDJs?",
+      answer: "Yes — 100%. Every crate comes as uncompressed WAV and 320kbps MP3 files with clean intros, outros, and club-ready mastering. Simply drag and drop the files straight into Rekordbox, Serato DJ Pro, Virtual DJ, Traktor, or export to USB for Pioneer CDJs."
+    },
+    {
+      question: "How is buying a DJ crate different from a monthly DJ record pool subscription?",
+      answer: "Unlike monthly record pools where you spend hours digging through thousands of filler tracks and lose access when you cancel, TOP DJ CRATES gives you permanent, one-time-purchase ownership of zero-filler, handpicked club weapons in lossless WAV & MP3."
     }
   ];
 

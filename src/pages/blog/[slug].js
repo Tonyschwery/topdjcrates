@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getAllPostSlugs, getPostData } from '@/lib/posts';
+import { getAllPostSlugs, getPostData, getSortedPostsMeta } from '@/lib/posts';
 import { formatPostDate } from '@/lib/formatDate';
 
-export default function BlogPostPage({ post }) {
+export default function BlogPostPage({ post, relatedPosts = [] }) {
   // Safety net: should never render because getStaticProps returns notFound.
   if (!post) return null;
 
@@ -23,28 +23,72 @@ export default function BlogPostPage({ post }) {
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:url" content={canonical} />
-            {post.image && (
+        <meta property="og:site_name" content="TOP DJ CRATES" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        {post.image && (
           <>
             <meta property="og:image" content={`https://topdjcrates.com${post.image}`} />
-            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:image" content={`https://topdjcrates.com${post.image}`} />
           </>
         )}
 
-        {/* Structured data helps Google understand this is an article */}
+        {/* Structured data helps Google understand this is an article + breadcrumb hierarchy */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'BlogPosting',
-              headline: post.title,
-              description: post.excerpt,
-              datePublished: post.date || undefined,
-              image: post.image ? `https://topdjcrates.com${post.image}` : undefined,
-              author: { '@type': 'Organization', name: post.author },
-              publisher: { '@type': 'Organization', name: 'TOP DJ CRATES' },
-              mainEntityOfPage: canonical,
+              '@graph': [
+                {
+                  '@type': 'BlogPosting',
+                  headline: post.title,
+                  description: post.excerpt,
+                  keywords: post.keywords || undefined,
+                  articleSection: post.genre || 'DJ Music Crates',
+                  datePublished: post.date || undefined,
+                  dateModified: post.date || undefined,
+                  image: post.image ? `https://topdjcrates.com${post.image}` : undefined,
+                  author: { '@type': 'Organization', name: post.author, url: 'https://topdjcrates.com/' },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'TOP DJ CRATES',
+                    url: 'https://topdjcrates.com/',
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: 'https://i.imgur.com/c2EkBbU.jpeg',
+                    },
+                  },
+                  mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': canonical,
+                  },
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  itemListElement: [
+                    {
+                      '@type': 'ListItem',
+                      position: 1,
+                      name: 'Home',
+                      item: 'https://topdjcrates.com/',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 2,
+                      name: 'Blog',
+                      item: 'https://topdjcrates.com/blog',
+                    },
+                    {
+                      '@type': 'ListItem',
+                      position: 3,
+                      name: post.title,
+                      item: canonical,
+                    },
+                  ],
+                },
+              ],
             }),
           }}
         />
@@ -120,6 +164,35 @@ export default function BlogPostPage({ post }) {
             Browse the Crates
           </Link>
         </div>
+
+        {relatedPosts.length > 0 && (
+          <aside className="mt-16 pt-10 border-t border-zinc-800">
+            <h2 className="text-2xl font-bold text-primary mb-6">
+              More DJ Guides &amp; Crate Spotlights
+            </h2>
+            <div className="grid gap-6 md:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={`/blog/${related.slug}`}
+                  className="group block bg-zinc-900/40 border border-zinc-800/80 rounded-xl overflow-hidden transition-colors hover:border-gold/60 p-4"
+                >
+                  {related.genre && (
+                    <span className="block text-xs font-semibold uppercase tracking-wider text-gold mb-2">
+                      {related.genre}
+                    </span>
+                  )}
+                  <h3 className="text-base font-bold text-primary group-hover:text-gold transition-colors leading-snug mb-2">
+                    {related.title}
+                  </h3>
+                  <span className="text-xs font-bold text-gold">
+                    Read guide &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </aside>
+        )}
       </article>
     </>
   );
@@ -140,5 +213,12 @@ export async function getStaticProps({ params }) {
     return { notFound: true };
   }
 
-  return { props: { post } };
+  const allPosts = getSortedPostsMeta().filter((p) => p.slug !== post.slug);
+  const sameGenre = post.genre
+    ? allPosts.filter((p) => p.genre && p.genre.toLowerCase() === post.genre.toLowerCase())
+    : [];
+  const otherPosts = allPosts.filter((p) => !sameGenre.some((s) => s.slug === p.slug));
+  const relatedPosts = [...sameGenre, ...otherPosts].slice(0, 3);
+
+  return { props: { post, relatedPosts } };
 }

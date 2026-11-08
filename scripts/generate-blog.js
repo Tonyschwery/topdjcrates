@@ -127,12 +127,12 @@ function loadCatalogue() {
 
   for (const chunk of source.split(/\n  \{\s*\n/)) {
     const id = chunk.match(/^\s*id:\s*(\d+)\s*,/m);
-    const title = chunk.match(/^\s*title:\s*["'](.+?)["']\s*,/m);
-    const genre = chunk.match(/^\s*genre:\s*["'](.+?)["']\s*,/m);
+    const title = chunk.match(/^\s*title:\s*(["'])(.+?)\1\s*,/m);
+    const genre = chunk.match(/^\s*genre:\s*(["'])(.+?)\1\s*,/m);
 
     if (!id || !title) continue;
 
-    const cleanTitle = title[1].trim();
+    const cleanTitle = title[2].trim();
     const key = `${id[1]}|${cleanTitle}`;
     if (seen.has(key)) continue;
     seen.add(key);
@@ -140,7 +140,7 @@ function loadCatalogue() {
     crates.push({
       id: id[1],
       title: cleanTitle,
-      genre: genre ? genre[1].trim() : 'Unspecified',
+      genre: genre ? genre[2].trim() : 'Unspecified',
       url: `${SITE_URL}/music?crate=${id[1]}`,
     });
   }
@@ -173,13 +173,6 @@ function formatCatalogue(crates) {
 // ---------------------------------------------------------------------------
 
 const GENRE_PRESETS = {
-  techno: {
-    label: 'Techno',
-    match: ['techno', 'hard techno', 'industrial', 'peak time', 'warehouse'],
-    visual:
-      'a dark underground industrial club, raw concrete walls, moody strobe lights cutting through heavy atmospheric haze, racks of vintage hardware synthesisers and drum machines, cold steel and deep shadow, a single silhouetted figure behind the decks',
-    palette: 'monochrome steel blues and stark white strobe against near-black',
-  },
   'afro-house': {
     label: 'Afro House',
     match: ['afro house', 'afro-house', 'afro tech', 'afrohouse', 'black coffee', 'tribal'],
@@ -187,54 +180,68 @@ const GENRE_PRESETS = {
       'an open-air rooftop club at golden hour turning to dusk, organic warm textures, woven rattan and natural wood surfaces, vibrant tribal lighting in amber and deep orange, high-end Pioneer CDJ decks and a professional mixer, hand percussion resting beside the booth',
     palette: 'warm amber, terracotta, and burnt gold with deep indigo shadows',
   },
-  'tech-house': {
-    label: 'Tech House',
-    match: ['tech house', 'tech-house', 'groove', 'rolling bassline'],
-    visual:
-      'a packed intimate basement club, low ceiling, tight crowd energy just out of focus, clean modern DJ booth with Pioneer CDJs and a rotary mixer, crisp directional spotlights, condensation and motion blur',
-    palette: 'saturated magenta and cyan wash over warm skin tones',
-  },
   amapiano: {
-    label: 'Amapiano',
-    match: ['amapiano', 'piano', 'log drum', 'yanos', '3-step', '3 step', 'kabza', 'maphorisa'],
+    label: 'Amapiano & Afrobeats',
+    match: ['amapiano', 'afrobeats', 'afrobeat', 'shatta', 'log drum', 'yanos', 'kabza', 'maphorisa'],
     visual:
       'a vibrant South African outdoor party at dusk, string lights overhead, a relaxed stylish crowd, a DJ booth set up under a canopy with professional decks, warm township golden-hour light, shallow depth of field',
     palette: 'sun-warmed gold, dusty rose, and deep violet twilight',
   },
-  'uk-garage': {
-    label: 'UK Garage',
-    match: ['uk garage', 'ukg', 'speed garage', '2-step', 'two step', 'garage'],
+  'tech-house': {
+    label: 'Tech House',
+    match: ['tech house', 'tech-house', 'latin-tech', 'groove', 'rolling bassline'],
     visual:
-      'a late-nineties style London basement club, mirrored surfaces and chrome detailing, tight energetic crowd, classic turntables and a battle mixer, sharp white beams through low fog',
-    palette: 'chrome silver, electric blue, and rich club-carpet red',
+      'a packed intimate basement club, low ceiling, tight crowd energy just out of focus, clean modern DJ booth with Pioneer CDJs and a rotary mixer, crisp directional spotlights, condensation and motion blur',
+    palette: 'saturated magenta and cyan wash over warm skin tones',
   },
-  'drum-and-bass': {
-    label: 'Drum & Bass',
-    match: ['drum and bass', 'drum & bass', 'dnb', 'd&b', 'jungle', 'breaks'],
-    visual:
-      'a cavernous warehouse rave, a towering stack of speaker cabinets, dense low fog pierced by rapid laser fans, a raised DJ platform with turntables, blurred motion of a dense crowd',
-    palette: 'acid green and ultraviolet against deep black',
-  },
-  'melodic-techno': {
-    label: 'Melodic Techno',
-    match: ['melodic techno', 'melodic house', 'progressive', 'organic house', 'afterlife'],
+  'melodic-house': {
+    label: 'Melodic House',
+    match: ['melodic house', 'melodic', 'progressive', 'afterlife'],
     visual:
       'a vast minimal venue with a single dramatic light installation, sparse architectural geometry, a lone figure at a clean modern booth, wide cinematic framing, atmospheric depth',
     palette: 'deep midnight blue and cold white with a single warm accent',
   },
-  'baile-funk': {
-    label: 'Baile Funk & Club',
-    match: ['baile funk', 'jersey club', 'baile', 'funk carioca', 'moombahton'],
+  'disco-funk': {
+    label: 'Funk & Disco House',
+    match: ['disco house', 'funk', 'disco', 'funky house', '80s', 'revibe', 'reprise'],
     visual:
-      'a raw high-energy street party at night, improvised sound system stacks, vivid coloured bulbs strung overhead, kinetic crowd motion, a DJ working a controller on a scaffold rig',
-    palette: 'hot pink, electric yellow, and tropical green under streetlight',
+      'a classic warm wood-panelled club interior, a glowing mirror ball scattering light, vintage rotary mixer and Pioneer CDJs, an energetic crowd, rich analogue warmth',
+    palette: 'warm amber, deep burgundy, magenta, and soft gold',
   },
-  house: {
-    label: 'House',
-    match: ['deep house', 'jazz house', 'disco', 'soulful', 'house music', 'house'],
+  'indie-dance': {
+    label: 'Indie Dance & Dark Disco',
+    match: ['indie dance', 'dark disco', 'indie'],
     visual:
-      'a classic warm wood-panelled club interior, a glowing mirror ball scattering light, vintage rotary mixer and turntables, an unhurried crowd, rich analogue warmth',
-    palette: 'warm amber, deep burgundy, and soft gold',
+      'a moody underground club with neon tube lighting and retro synthesisers, atmospheric haze, a stylish crowd in silhouette, professional DJ booth with CDJs in sharp focus',
+    palette: 'crimson red, electric purple, and deep shadow',
+  },
+  'organic-downtempo': {
+    label: 'Organic House & Downtempo',
+    match: ['organic house', 'downtempo', 'organic'],
+    visual:
+      'a sunset beach club and desert terrace Lounge, natural stone and driftwood decor, warm lantern light, a DJ playing on professional CDJs overlooking a relaxed sunset crowd',
+    palette: 'earthy terracotta, desert sand gold, and twilight blue',
+  },
+  'latin-reggaeton': {
+    label: 'Latin House & Reggaeton',
+    match: ['latin house', 'latino house', 'reggaeton', 'soca', 'caribbean', 'latin'],
+    visual:
+      'a high-energy tropical open-air club at night, warm spotlights, palm silhouettes, kinetic dancefloor motion, a professional DJ booth with Pioneer CDJs in sharp foreground focus',
+    palette: 'vibrant coral, warm gold, and tropical emerald',
+  },
+  'arabic-oriental': {
+    label: 'Arabic & Oriental',
+    match: ['arabic', 'oriental', 'rakkas', 'redrums'],
+    visual:
+      'a luxurious Middle Eastern rooftop lounge and club at night, ornate geometric lantern lighting, warm golden haze, a modern DJ booth with Pioneer CDJs in sharp focus',
+    palette: 'rich gold, deep crimson, and midnight bronze',
+  },
+  'open-format': {
+    label: 'Open Format & Mashups',
+    match: ['mashup', 'transitions', 'r&b', 'hip hop', 'wedding', 'bollywood', 'russian', 'dancefloor'],
+    visual:
+      'a high-energy luxury club and event venue at peak hour, dynamic stage lighting, confetti and atmospheric haze, professional Pioneer CDJ decks and mixer in sharp foreground focus',
+    palette: 'warm gold, electric blue, and deep charcoal',
   },
   default: {
     label: 'Electronic',
@@ -394,13 +401,17 @@ KEYWORD STRATEGY — this is grounded in our real Google Search Console data, no
 - Prefer titles shaped like: "[Genre/technique] + [DJ crates/pack/download] + [for sale/download/2026]" over vague trend-chasing titles. Concrete example of the right shape: "Amapiano DJ Crates for Sale: The 2026 Log Drum Essentials" beats "Why Amapiano Is Taking Over 2026".
 - Always naturally work in the words "DJ crates", "DJ pack", or "download" at least once in the title or first paragraph — these are the words people actually search, confirmed from live data.
 
+STRICT TOPIC & CATALOGUE RULE — NON-NEGOTIABLE:
+- It is STRICTLY FORBIDDEN to generate a post about a music genre or crate for sale that does NOT exist on our website in OUR LIVE CATALOGUE (sourced from src/data/musicPacks.js).
+- Never advertise or title an article "[Genre] DJ Crates for Sale" unless that exact genre or crate is actually sold in OUR LIVE CATALOGUE below. Writing about genres we do not sell (e.g. Drum & Bass, UK Garage, Drift Phonk, Bhangra, Gqom, Singeli, Corridos, Trance, Dubstep, etc.) is completely forbidden.
+- Every single post MUST be centered on a music genre or specific crate title that already exists in OUR LIVE CATALOGUE (such as Afro House, Amapiano, Afrobeats & Shatta, Tech House, Melodic House, Funk / Disco House, 80s Revibe, Indie Dance / Dark Disco, Organic / Downtempo, Latin House / Latino House, Reggaeton, Arabic / Oriental / Rakkas, Soca, Russian Remixes, R&B / Hip Hop, Bollywood, Dance Mashups & Edits, DJ Transitions, or Wedding Anthems).
+- To keep daily posts fresh without ever leaving our real catalogue, find new practical angles around the crates we actually sell: deep-dive spotlights on specific crate titles in OUR LIVE CATALOGUE, warm-up to peak-time programming within an existing genre, cross-genre transitions between two crates we sell, harmonic/BPM mixing guides for our crates, or event/venue set preparation using our actual crates.
+
 LINKING TO OUR CRATES — every post must earn its keep commercially:
-- You will be given OUR LIVE CATALOGUE: the real crate titles we currently sell, with their exact URLs. It is regenerated from the store on every run, so it is always accurate. Never invent a crate title or URL that is not on that list.
-- Wherever a crate on that list genuinely fits the topic, link to it inline using its EXACT title as the link text, in normal Markdown: [TOP AFRO HOUSE VOL 7](https://topdjcrates.com/music?crate=1010). Weave links into the body where they help the reader, not dumped in a block at the end.
-- Aim for 2-4 crate links per article. Only link crates that are actually relevant — a forced link is worse than no link.
-- If the topic is a genre or style we do NOT currently stock, that is fine, write it anyway: it still brings in search traffic. In that case, do not pretend we sell it. Point readers to the closest relevant crates we DO have, or link the main store page [browse the full crate library](https://topdjcrates.com/music).
-- Always include at least one link to https://topdjcrates.com/music somewhere in the article.
-- Naming our real crate titles in the prose is good: it puts our exact product names into Google's index.
+- You will be given OUR LIVE CATALOGUE: the real crate titles we currently sell, with their exact URLs. It is regenerated from src/data/musicPacks.js on every run, so it is always accurate. Never invent a crate title or URL that is not on that list.
+- Wherever a crate on that list fits the topic, link to it inline using its EXACT title as the link text, in normal Markdown: [TOP AMAPIANO 2026](https://topdjcrates.com/music?crate=1017). Weave links into the body where they help the reader, not dumped in a block at the end.
+- Every article MUST link to 2-4 real crates from OUR LIVE CATALOGUE that directly match the article's genre/topic, plus at least one link to https://topdjcrates.com/music.
+- Naming our real crate titles in the prose (and in headings or titles when natural) is mandatory: it puts our exact product names into Google's index.
 
 RESEARCH:
 - Use the brave_search tool first to find what DJs and producers are actually searching for right now. Run several searches before you start writing.
@@ -437,14 +448,14 @@ function buildUserPrompt(existingPosts, crates) {
 
 Today's date is ${todayISO()}.
 
-Search the web to identify ONE trending, high-intent topic relevant to working DJs and producers shopping for music packs, edits, or transition packs right now. Then write the full article on it.
+CRITICAL RULE: You MUST pick a music genre or specific crate that ALREADY EXISTS in OUR LIVE CATALOGUE below (from src/data/musicPacks.js). It is STRICTLY FORBIDDEN to generate a post about a music genre or crate for sale that does NOT exist on our website.
 
-Give preference to topics where we already have matching crates in stock (see the catalogue below) — those posts convert. But a genuinely strong trending topic outside our stock is still worth writing; just link honestly to the closest crates we do have.
+First, pick 1 to 3 specific crates from OUR LIVE CATALOGUE below to be the commercial anchor of today's post. Then search the web to identify a fresh, high-intent angle for that exact genre/crate (e.g. a crate spotlight, BPM/key transition strategy, warm-up vs. peak-time set programming, cross-genre bridge between two of our crates, or event/club set blueprint) that we haven't covered yet, and write the full article on it.
 
-OUR LIVE CATALOGUE — these are the ONLY crates that exist. Use these exact titles and URLs when linking:
+OUR LIVE CATALOGUE — these are the ONLY crates and genres that exist on the website. Base your topic and title strictly on these crates and use these exact titles and URLs when linking:
 ${formatCatalogue(crates)}
 
-We have ALREADY published the following. Choose a genuinely different angle:
+We have ALREADY published the following. Choose a genuinely different angle while staying strictly within the genres and crates in OUR LIVE CATALOGUE:
 ${alreadyCovered}
 
 Return only the Markdown document, starting with the frontmatter block.`;
@@ -901,6 +912,16 @@ async function main() {
   const wordCount = markdown.split(/\s+/).length;
   if (wordCount < 300) {
     fail(`Generated post is only ~${wordCount} words. Refusing to publish.`);
+  }
+
+  if (crates.length > 0) {
+    const linkedCrates = crates.filter((c) => markdown.includes(c.url));
+    if (linkedCrates.length === 0) {
+      fail(
+        'Generated post does not link to any real crate from src/data/musicPacks.js. Refusing to publish.'
+      );
+    }
+    log(`Verified links to ${linkedCrates.length} live crate(s): ${linkedCrates.map((c) => c.title).join(', ')}`);
   }
 
   let slug = slugify(meta.title) || `dj-crates-${todayISO()}`;

@@ -126,6 +126,7 @@ export default function VideoCratesPage({
     const productSchemas = videomusicPacks.map(pack => ({
       '@type': 'Product',
       'name': pack.title,
+      'url': `https://topdjcrates.com/video-dj-crates?crate=${pack.id}`,
       'image': pack.cover,
       'description': pack.description,
       'sku': pack.id.toString(),
@@ -135,7 +136,7 @@ export default function VideoCratesPage({
       },
       'offers': {
         '@type': 'Offer',
-        'url': pack.gumroadLink,
+        'url': `https://topdjcrates.com/video-dj-crates?crate=${pack.id}`,
         'priceCurrency': 'USD',
         'price': pack.discountedPrice.toFixed(2),
         'availability': 'https://schema.org/InStock',

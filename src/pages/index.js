@@ -12,12 +12,61 @@ export default function Home({ musicPacks = [], latestPosts = [] }) {
   return (
     <>
       <Head>
-        <title>TOP DJ CRATES | Professional DJ Music Packs (40% OFF Code: LMS26)</title>
+        <title>TOP DJ CRATES | Buy Curated DJ Music Packs & Crates (WAV & MP3 Download)</title>
         <meta 
           name="description" 
-          content="Use coupon code LMS26 at checkout for 40% OFF all items! Save big on high-quality, professional DJ crates. Newly added 2026 Reggaeton, Wedding Anthems, and Indie Dance crates are now live. Start playing what professional DJs actually use."
+          content="Use coupon code LMS26 for 40% OFF! Download handpicked, gig-ready DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental, Latin House & Wedding sets. Ready for Rekordbox, Serato & Virtual DJ."
+        />
+        <meta
+          name="keywords"
+          content="DJ crates, DJ crates for sale, DJ music packs download, Afro House DJ crate, Amapiano DJ crate, Tech House DJ pack, Melodic House DJ crate, Funk Disco House crate, Reggaeton DJ edits, Arabic Oriental DJ remixes, WAV DJ crates, Rekordbox crates, Serato crates"
         />
         <link rel="canonical" href="https://topdjcrates.com/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://topdjcrates.com/" />
+        <meta property="og:title" content="TOP DJ CRATES | Buy Curated DJ Music Packs & Crates (WAV & MP3 Download)" />
+        <meta property="og:description" content="Download handpicked, gig-ready DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental & Open Format DJs. Use code LMS26 for 40% OFF!" />
+        <meta property="og:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
+        <meta property="og:site_name" content="TOP DJ CRATES" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://topdjcrates.com/" />
+        <meta name="twitter:title" content="TOP DJ CRATES | Buy Curated DJ Music Packs & Crates (WAV & MP3 Download)" />
+        <meta name="twitter:description" content="Download handpicked, gig-ready DJ crates in WAV & MP3 for Afro House, Amapiano, Tech House, Melodic House, Funk/Disco, Reggaeton, Arabic/Oriental & Open Format DJs. Use code LMS26 for 40% OFF!" />
+        <meta name="twitter:image" content="https://i.imgur.com/c2EkBbU.jpeg" />
+
+        {/* Organization & WebSite Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'OnlineStore',
+                  '@id': 'https://topdjcrates.com/#organization',
+                  name: 'TOP DJ CRATES',
+                  url: 'https://topdjcrates.com/',
+                  logo: 'https://i.imgur.com/c2EkBbU.jpeg',
+                  description:
+                    'Curated, club-ready WAV and MP3 DJ music packs and video DJ crates for professional DJs across Afro House, Amapiano, Tech House, Melodic House, Disco/Funk, Reggaeton, Arabic/Oriental, Latin House, and Open Format.',
+                  email: 'topdjcrates@proton.me',
+                  sameAs: ['https://topdjcrates.gumroad.com'],
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://topdjcrates.com/#website',
+                  url: 'https://topdjcrates.com/',
+                  name: 'TOP DJ CRATES',
+                  publisher: { '@id': 'https://topdjcrates.com/#organization' },
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
 
       {/* --- EVERYTHING BELOW THIS IS YOUR ORIGINAL CODE PRESERVED --- */}
